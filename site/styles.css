@@ -220,14 +220,52 @@ a {
   display: grid;
   min-height: 700px;
   align-items: center;
-  gap: clamp(44px, 6vw, 82px);
-  grid-template-columns: minmax(0, 1.03fr) minmax(420px, 0.97fr);
+  gap: clamp(34px, 4vw, 58px);
+  grid-template-columns: minmax(0, 1.22fr) minmax(380px, 0.78fr);
   padding-block: 82px 74px;
 }
 
 .hero-copy {
   position: relative;
   z-index: 2;
+  container-type: inline-size;
+}
+
+.hero-brand-lockup {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+}
+
+.hero-wordmark {
+  color: #f8fbff;
+  font-size: clamp(36px, 4.2vw, 52px);
+  font-weight: 850;
+  letter-spacing: -0.065em;
+  line-height: 0.92;
+}
+
+.hero-wordmark > span {
+  background: linear-gradient(100deg, var(--cyan-soft), #87ccff 45%, #b6a6ff 95%);
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-wordmark strong {
+  display: inline-flex;
+  margin-left: 12px;
+  padding: 5px 8px;
+  border: 1px solid rgba(101, 231, 239, 0.25);
+  border-radius: 7px;
+  background: rgba(101, 231, 239, 0.07);
+  color: var(--cyan-soft);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-transform: uppercase;
+  transform: translateY(-5px);
 }
 
 .eyebrow,
@@ -258,16 +296,21 @@ a {
 }
 
 .hero h1 {
-  max-width: 720px;
-  margin: 25px 0 23px;
+  max-width: none;
+  margin: 27px 0 23px;
   color: #f7f9fd;
-  font-size: clamp(50px, 6.2vw, 78px);
+  font-size: clamp(41px, 6.15cqw, 50px);
   font-weight: 780;
   letter-spacing: -0.062em;
-  line-height: 0.99;
+  line-height: 1.03;
 }
 
-.hero h1 span {
+.hero-headline-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.hero h1 .hero-headline-accent {
   background: linear-gradient(100deg, var(--cyan-soft), #87ccff 40%, #b6a6ff 82%);
   background-clip: text;
   color: transparent;
@@ -1321,7 +1364,8 @@ a {
   }
 
   .hero-copy {
-    max-width: 800px;
+    width: 100%;
+    max-width: 900px;
   }
 
   .hero-media {
@@ -1412,8 +1456,17 @@ a {
     padding-block: 54px 56px;
   }
 
+  .hero-brand-lockup {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hero-wordmark {
+    font-size: clamp(39px, 12vw, 52px);
+  }
+
   .hero h1 {
-    font-size: clamp(43px, 13vw, 61px);
+    font-size: clamp(34px, 6.2vw, 46px);
   }
 
   .hero-lede {
@@ -1503,6 +1556,16 @@ a {
 
   .cta-actions {
     width: 100%;
+  }
+}
+
+@media (max-width: 540px) {
+  .hero h1 {
+    font-size: clamp(38px, 10.5vw, 46px);
+  }
+
+  .hero-headline-line {
+    white-space: normal;
   }
 }
 
