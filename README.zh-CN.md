@@ -6,6 +6,7 @@
 
 <p align="center">
   <a href="README.md">English</a> ·
+  <a href="https://albuschen.github.io/GameForge-Harness/">项目主页</a> ·
   <a href="#实验结果">实验结果</a> ·
   <a href="#可玩案例">可玩案例</a> ·
   <a href="#快速开始">快速开始</a> ·
@@ -227,8 +228,6 @@ artifact hash。
 
 - 目前已在 Unity 和 Godot 上完成充分测试，未来计划支持 Unreal 等更多引擎；
 - 自动 gate 不能证明游戏主观好玩或达到商业质量；
-- GameCraft 63.15% 仍需官方 API judge 重算才能严格提交 leaderboard；
-- GameDevBench 的正确率提升伴随明显 token/时间代价；
 - Unity20 证明构建/Player 交付广度，不等于 20 个真实输入完整 playthrough；
 - 尚未内置具体强隔离 provider。
 
