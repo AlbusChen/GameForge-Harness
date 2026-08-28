@@ -1,0 +1,231 @@
+{
+  "actions": [
+    {
+      "frames": 2,
+      "keys": [
+        "SPACE"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 20,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "SPACE"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 12,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "SPACE"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 12,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "SPACE"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 12,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "SPACE"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 12,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "SPACE"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 12,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "SPACE"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 12,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "SPACE"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 12,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "SPACE"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 12,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "SPACE"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 12,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "SPACE"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 12,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "SPACE"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 12,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "SPACE"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 12,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "SPACE"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 12,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "SPACE"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 12,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "SPACE"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 12,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "SPACE"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 12,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "SPACE"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 90,
+      "keys": [
+        "SPACE",
+        "D"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 35,
+      "keys": [
+        "A"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 90,
+      "keys": [
+        "SPACE",
+        "A"
+      ],
+      "type": "key"
+    }
+  ],
+  "fps": 30,
+  "height": 720,
+  "interaction": "start, cast, hook timing, reel tension, and steering",
+  "schema_version": 1,
+  "settle_frames": 30,
+  "showcase_id": "godot-fishing_challenge",
+  "tail_frames": 60,
+  "task_id": "fishing_challenge",
+  "title": "Fishing Challenge",
+  "width": 1280
+}

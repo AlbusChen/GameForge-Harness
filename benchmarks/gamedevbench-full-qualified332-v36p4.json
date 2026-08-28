@@ -1,0 +1,3074 @@
+{
+  "benchmark_commit": "e3868bccbb88e86a3eb2d62154f1e9e0f3fd489a",
+  "code_freeze": {
+    "pre_freeze_verification": "Full pytest suite, Ruff, compileall, git diff --check, v35 141-task matched-prefix analysis, preservation false-failure audit, and pinned Godot 4.4.1 fresh-import probes completed on 2026-08-17.",
+    "runtime_file_count": 94,
+    "runtime_scope": [
+      "gameforge/**",
+      "pyproject.toml",
+      "uv.lock"
+    ],
+    "runtime_tree_sha256": "acc20d71db1ff4dbae5ada04052ae62e450140ef5a9f59d59699af19e1dbca84"
+  },
+  "experiment": {
+    "condition": "minimal-open-clean-v36p4-full332",
+    "infrastructure_policy": "Model-caused invalid output or code failure remains FAIL. A deterministic Harness admission limit remains BLOCKED and counts against coverage. A zero-turn pre-request infrastructure failure may receive one recorded retry; a repeated failure remains ERROR, is excluded from conditional accuracy, and is counted as a failure in the all-eligible lower-bound score.",
+    "model": "gpt-5.6-sol",
+    "parallelism": 4,
+    "primary_endpoint": "official evaluator PASS over all 332 eligible tasks",
+    "provider_sampling": "provider-default",
+    "quota_stop_remaining_percent": 35.0,
+    "reasoning_effort": "medium",
+    "repetitions_per_task": 1,
+    "runtime_protocol": "minimal-open-v1",
+    "secondary_endpoints": [
+      "coverage",
+      "passive tool audit completeness",
+      "latency",
+      "tokens",
+      "tool calls",
+      "model turns",
+      "workspace timeout rate"
+    ],
+    "stop_rule": "Stop before an attempt if weekly subscription remaining is below 35%. No task replacement or runtime change is permitted after protocol freeze."
+  },
+  "id": "gamedevbench-full-qualified332-v36p4",
+  "official_reference": {
+    "attempts": 333,
+    "comparison_note": "The public leaderboard does not include per-task outcomes. Because exactly one ground-truth-invalid task is excluded, Official's qualified score is reported as the two-value range obtained by assuming that task either passed or failed.",
+    "harness": "Codex",
+    "model": "gpt-5.6-sol",
+    "pass_rate": 0.5855855855855856,
+    "passes": 195,
+    "qualified_denominator_attempts": 332,
+    "qualified_denominator_pass_range": [
+      194,
+      195
+    ],
+    "reasoning_effort": "medium",
+    "reported_ci_95_percent": 5.3,
+    "reported_pass_at_1_percent": 58.6,
+    "source": "/private/tmp/gamedevbench-minimal-e3868-pinned/results/leaderboard.csv",
+    "source_sha256": "ba866f7c392b488f815f86bad7baa3178a17e34e995f94756764462365e59c3a"
+  },
+  "purpose": "Complete GameDevBench evaluation of the cumulative v36 minimal clean open-workspace Harness against the public same-model Official Codex aggregate.",
+  "qualification": {
+    "archive_counts": {
+      "ground_truth": 333,
+      "public": 333
+    },
+    "eligible_tasks": 332,
+    "excluded_tasks": [
+      {
+        "classification": "benchmark_ground_truth_invalid",
+        "reason": "Official ground truth failed twice: VisualShader must include distortionUV.gdshaderinc",
+        "task_id": "task_0097"
+      }
+    ],
+    "godot_executable": "/private/tmp/godot-4.4.1/Godot.app/Contents/MacOS/Godot",
+    "godot_executable_sha256": "8d402715e0b74db2d69ceeb86e78b8c6b270f1d9c16be1546958c8648d8e2e47",
+    "godot_version": "4.4.1.stable.official.49a5bc7b6",
+    "method": "Before any full-run model outcome, execute the benchmark's official validator on every ground-truth project using the benchmark-specified engine. Exclude only tasks whose ground truth fails both the parallel run and sequential retry.",
+    "summary_source": "/private/tmp/gamedevbench-minimal-e3868-pinned/results/gt_validation_summary.json",
+    "summary_source_sha256": "27b6a5cdc8ac20a05d791c1d715bf88c9cbb70d86b4989975a31888087d0d03d",
+    "total_tasks": 333
+  },
+  "schema_version": 1,
+  "stratum_counts": {
+    "2d": 119,
+    "3d": 9,
+    "script_resource": 124,
+    "ui": 80
+  },
+  "stratum_method": "The repository's frozen public-text regex taxonomy is retained for continuity; these are analysis strata, not the benchmark's headline categories.",
+  "tasks": [
+    {
+      "family_key": "video:9tu q t my",
+      "ground_truth_archive_sha256": "56d3e0cfe79cd6a4d1f7cd0c3a86859b4270d963b90af30b041e36ed03845b5f",
+      "instruction_sha256": "9a53a521f648ba8907075e2c2682f3d7e96e412c9b0dcd81c802860fec2f67b3",
+      "name": "Projectile Step Tracker",
+      "public_archive_sha256": "e29ee4a43d807ffe3107f827228171cb46cedabc3d2608b14c2bd46c8baea139",
+      "stratum": "2d",
+      "task_id": "task_0002"
+    },
+    {
+      "family_key": "video:pjpdnlbdstw",
+      "ground_truth_archive_sha256": "3ffabcc8b027fe8cce7de76c90fd0391d79a6d3e7a0e020130144966cfb27cbd",
+      "instruction_sha256": "bc1cb1f06a3e3059aaa0f51eda0cf70386a13d5c8c17b2d654307a13b2364fa0",
+      "name": "River Raid Player Jet Scene",
+      "public_archive_sha256": "348553eed2a8efa005b74f6e67ef5f74e534a1d02b12ac497330d0d8db83d300",
+      "stratum": "2d",
+      "task_id": "task_0003"
+    },
+    {
+      "family_key": "video:pjpdnlbdstw",
+      "ground_truth_archive_sha256": "ed5a8cb000abd48e20642c4e7d878751aca97eee87b19fd17557bd0453261d62",
+      "instruction_sha256": "1208bec3170bb86b356836ed74c1ee68c44a806bef0cc4c6f50e54445808ee5e",
+      "name": "River Raid Missile Projectile",
+      "public_archive_sha256": "9bd9a9f40f309d56ff4bbe9f01f334f8f5cf1cf3c9c4a5bc96f6ae02665bfbac",
+      "stratum": "2d",
+      "task_id": "task_0004"
+    },
+    {
+      "family_key": "video:pjpdnlbdstw",
+      "ground_truth_archive_sha256": "15dc5dd315e86064787b715de490cf9357d1dc07140d114d840fa0d11cd7b657",
+      "instruction_sha256": "a5148d6edb21c28d6bdc65135778dfe62b436d6bdef870e118eacaef19d3ba9c",
+      "name": "River Raid Power HUD",
+      "public_archive_sha256": "d4fce2b7c07987dbdb750f37603ecb0091c446c0b9231f6997b94026d01bbeff",
+      "stratum": "ui",
+      "task_id": "task_0005"
+    },
+    {
+      "family_key": "video:m4bq xx4emo",
+      "ground_truth_archive_sha256": "67c8a08481d6703222ab352f68a55e2035250a8a6f51d6e7e17e0bdea55e7eab",
+      "instruction_sha256": "a2f5851f8b6fe6225dace5d14e12fb1e1f5bb33303f96b3ab2e2dc4e662ae7ce",
+      "name": "Unit AI Debug Label",
+      "public_archive_sha256": "59d40d17c76fcd5fd33a56515fd626e277826dff411c87d30267672596e64fea",
+      "stratum": "2d",
+      "task_id": "task_0006"
+    },
+    {
+      "family_key": "video:8mdvvnurd3w",
+      "ground_truth_archive_sha256": "07c63d4feea5dcbe11c93c117b1f11e152355fe3e4899e6d9c3bf3a4f5fc214c",
+      "instruction_sha256": "d77da2806d419a2eb0e458df3f02c7517502d39086f147ed4f4b0f207750698f",
+      "name": "CardPile Resource Utilities",
+      "public_archive_sha256": "4f82afd81b8eaf3ba04955e3123f33f62f2094a72af3bb264bd1a9b7bba01fc8",
+      "stratum": "script_resource",
+      "task_id": "task_0007"
+    },
+    {
+      "family_key": "video:8mdvvnurd3w",
+      "ground_truth_archive_sha256": "533c2dd3e22d15720518cf33e6ddf9ae0bd900ed00ebb0416094ee15931e8986",
+      "instruction_sha256": "d6ae9480127cc5bfeadef746b0d135db3a02acc0eca461ee23eddb830dca5ee8",
+      "name": "Stats UI Overlay",
+      "public_archive_sha256": "a8ca617d0a7ea15750888023e62a17cc93e6fadd72f86bedce9510d190444beb",
+      "stratum": "ui",
+      "task_id": "task_0008"
+    },
+    {
+      "family_key": "video:caadorhnfwi",
+      "ground_truth_archive_sha256": "7f90bc013f8c813c0dad4363111fe7f3cdcb9a6301969b1538ef4a0940fa3513",
+      "instruction_sha256": "9bbc42f2f47a3ac3af0efbf7172a88dfc4622de5accfd471a45e829d81d2d1aa",
+      "name": "Unsafe Platform Warning Cycle",
+      "public_archive_sha256": "e2c283ce24854b4f134d2717e0e36899612a96feeb4a1a98edbd8cd723a5d1dc",
+      "stratum": "2d",
+      "task_id": "task_0009"
+    },
+    {
+      "family_key": "video:z9d8bu1o3zw",
+      "ground_truth_archive_sha256": "4a703f15cfd2ded24e99c2d8634c40b0542413b6563c1ac3f4d97ebd8bf5ce48",
+      "instruction_sha256": "3b0b2bd3e9dbd4d811afc04ffeb292742a83e789ec36d6b5ce4218592182b074",
+      "name": "Create Pickup Collectible",
+      "public_archive_sha256": "c07f5531623cde082fd67546600b6c86bdb0edd0b00981b49ecc3f1c075d91ce",
+      "stratum": "2d",
+      "task_id": "task_0010"
+    },
+    {
+      "family_key": "video:z9d8bu1o3zw",
+      "ground_truth_archive_sha256": "7bf4df07f51459e225cad655cc90cd3a692e1baf32dc9360979898545ef69c8d",
+      "instruction_sha256": "bccb69024d99d1272f0bcbf78e52adc92582ab9fa064193200ae05556980bbbb",
+      "name": "Configure Bullet Scene Signals",
+      "public_archive_sha256": "66a629dccccbcf019cd24200536629cbf7d662a7a97af762b0cdacfeffb9e43d",
+      "stratum": "2d",
+      "task_id": "task_0011"
+    },
+    {
+      "family_key": "video:z9d8bu1o3zw",
+      "ground_truth_archive_sha256": "28dfd04d8ac0489d485017e56001e87a2b16ddf056184df07f347b56bbaaef08",
+      "instruction_sha256": "b3a3eed59983fada87149c1adf59f9c547136df4a10570aa5738bc10fe72fe5f",
+      "name": "Implement Bullet Collision Cleanup",
+      "public_archive_sha256": "0e42b1146d350e4c71e58d5fa7ebf3052c977c5d3fff63e39bea43f5868719c5",
+      "stratum": "2d",
+      "task_id": "task_0012"
+    },
+    {
+      "family_key": "video:m4bq xx4emo",
+      "ground_truth_archive_sha256": "e35fd21e54521a5422f72ede67e68bb2e8aef5f684a0a0d45b703c3134c9012e",
+      "instruction_sha256": "588ccd281f49acc0ef55cbd5f971358d283cd55a51d1e053ed134ee361dcef9a",
+      "name": "Implement FSM Foundations",
+      "public_archive_sha256": "2d7bc918a9c0cb0550df21b6bf999f2fd838c746f9101f8e7a6e59818e36dcf1",
+      "stratum": "2d",
+      "task_id": "task_0013"
+    },
+    {
+      "family_key": "video:yw15z7xqmnw",
+      "ground_truth_archive_sha256": "c6008b1402d7e35997ed90270d316796a7c31b6c432b7b1c4b0f696a9be0343a",
+      "instruction_sha256": "a8c0a7362b5df086c9757a5a2b969889e60978723b2ff4f0220452ba051c58ad",
+      "name": "Build the gritty world environment stack",
+      "public_archive_sha256": "2d9508f3d10a49c0f0dc15e111cae36bd88105e8bcf8bde73913b40a267b312b",
+      "stratum": "script_resource",
+      "task_id": "task_0014"
+    },
+    {
+      "family_key": "video:yw15z7xqmnw",
+      "ground_truth_archive_sha256": "357adf75aadd13df0358e752034bc06a59c4fa52f37310ea8733f95a5ce39e69",
+      "instruction_sha256": "d5e8c2f4a8d7f6774c80a71f00ab8fcb689982ed07e45203bc06ab4b302f7f7d",
+      "name": "Enable fog and LUT grading",
+      "public_archive_sha256": "ff88cc6a9891906a4d1ac23d3d220ce8dae8dd5cb6bc7704b189b60492428c3a",
+      "stratum": "script_resource",
+      "task_id": "task_0015"
+    },
+    {
+      "family_key": "video:eeqhw3rrjgc",
+      "ground_truth_archive_sha256": "fc7588b9be072e50e5d21e6385ddd6b25aa2d2f99a868e942e8184f57cc36fbd",
+      "instruction_sha256": "adc03538ccd59345428cb4fbebf718eda1e2a04459c624df923af3b4bb9f1aff",
+      "name": "Install the cultist flashlight priority marker",
+      "public_archive_sha256": "a5cd813f0c1d7342672e4d597ef33710e920f04ff2b55a930b1251a2cec1e9f1",
+      "stratum": "3d",
+      "task_id": "task_0016"
+    },
+    {
+      "family_key": "video:fxhjlnay0nu",
+      "ground_truth_archive_sha256": "885126c18fe99600628b9c3466ba601b59ad2ff93114f02f9fb65bd3262de68f",
+      "instruction_sha256": "71105d5dd3e87b2dc937708ebc054baf7be0577e7d450c219f356bba7b64624d",
+      "name": "Cultist Limb SkeletonIK",
+      "public_archive_sha256": "9e0f8f66ed4083f7e30946ee81f1aa9aa0d1a47b591b89c1d726eb540c69108d",
+      "stratum": "3d",
+      "task_id": "task_0017"
+    },
+    {
+      "family_key": "video:obegpsnpqus",
+      "ground_truth_archive_sha256": "a14eb045bfc99f74fa750b3c4f27d02cbaf56e77b2727e14b6f0ee1011babb72",
+      "instruction_sha256": "b67495375e96df9ba9820b8a23829de2803f476de88fa8d9f351a687b3a09edb",
+      "name": "Wire the weapon effects controller",
+      "public_archive_sha256": "d93f110cbc1dfdb03201c370ce9cfe66f780417779239d7cd7b562f0c146086c",
+      "stratum": "3d",
+      "task_id": "task_0018"
+    },
+    {
+      "family_key": "video:obegpsnpqus",
+      "ground_truth_archive_sha256": "f2c097195f2efd16b21cca68bd3a5d8e85e9ed4e3d4b06eeab9cb20c709d9472",
+      "instruction_sha256": "003c3af66eb951f303a6e1b7b267e87873ec8c2a005043e68591cee655c08c52",
+      "name": "Build the muzzle flash effect prefab",
+      "public_archive_sha256": "3774dfe3652c40e64bda5b16628173123293cb093939c6b5f20926c716b19cb2",
+      "stratum": "script_resource",
+      "task_id": "task_0019"
+    },
+    {
+      "family_key": "video:oh70eo4pep8",
+      "ground_truth_archive_sha256": "d6761c744a4acbb96a6f973446f3a1e33c6c180a7bc84338e866eb614cb9e41e",
+      "instruction_sha256": "51db3223b65d4e1a3d10630dc86aca35974048d0a74fd1663b784c9d028fa5c5",
+      "name": "Transition Menu Prefab",
+      "public_archive_sha256": "a85ffeeb47be08b4cde6cd991d39f5b45f8aa7ee34c6e93ed569eb8e20627434",
+      "stratum": "ui",
+      "task_id": "task_0020"
+    },
+    {
+      "family_key": "video:oh70eo4pep8",
+      "ground_truth_archive_sha256": "4915ef36152d802e2bb1db8b9f676136892082bbc4cde434ba6d82fbf55c0035",
+      "instruction_sha256": "aa31717e4ca50541899685768f751e6e8b7130d6a0f1d3aad26e68091c16705d",
+      "name": "Level Camera Menu Hookup",
+      "public_archive_sha256": "5c86fbe2dd4484ddcff16f4f3f70963f6eb577ca727ad0f61ac64ed97e574d7d",
+      "stratum": "ui",
+      "task_id": "task_0021"
+    },
+    {
+      "family_key": "source_name:youtube cashew olddew signals in godot 4 3:trap spawning points",
+      "ground_truth_archive_sha256": "7c0f88615c3a4c9748f686a4a695f88a5d3f57185211dece5e28ad202021aad7",
+      "instruction_sha256": "e68e1d087f966bfc97ab98ec5c38d63a518b026ba8364a8a83e074250a87741d",
+      "name": "Trap Spawning Points",
+      "public_archive_sha256": "19998d8a00abaa6ce3b5cf90c3465a846bb9caa0292478f4eea1b45cb932723f",
+      "stratum": "2d",
+      "task_id": "task_0022"
+    },
+    {
+      "family_key": "video:uql0hc 2fnk",
+      "ground_truth_archive_sha256": "3d100258b0788c53642349c368fcfd1d56c74123230b9f085a8b308344a2714c",
+      "instruction_sha256": "78beb10e2041505e8f195f17f16cc6916d4152e63a9b3ec9438ff76efe9db415",
+      "name": "Player Damage Signal Bridge",
+      "public_archive_sha256": "33f0a1ab969fc460c815993deff7f1b30fe0c6cedb25e4061eeb2ceae2c21e35",
+      "stratum": "ui",
+      "task_id": "task_0023"
+    },
+    {
+      "family_key": "video:xljcmdy8jdw",
+      "ground_truth_archive_sha256": "e046a3e49bf9f663577bb209276a8f512d6445685d02f82a2a16fb386baff74d",
+      "instruction_sha256": "279eb24284480a2037d284cf0ac9ff8ca19e65d62a2188d30216edda5f746a41",
+      "name": "Codex Interactable Highlight Resource",
+      "public_archive_sha256": "721f290e659c9de2802ee82c8e08db055ed4543a85f4f14e7e1d406cf73e470a",
+      "stratum": "script_resource",
+      "task_id": "task_0024"
+    },
+    {
+      "family_key": "video:xljcmdy8jdw",
+      "ground_truth_archive_sha256": "3e3d5e72c517a45b40fe2c4a79c37a82067da1e1273bd6bb0bbaaf28b4c87bc0",
+      "instruction_sha256": "3903523b54231d69781cff7b33f94e919d13bf07ced8cbb0dbccc95487ef3795",
+      "name": "Codex Interaction Area Pickup",
+      "public_archive_sha256": "50ce30662f8b5c394cf62b3141c4704e59875d5213d9280f0fb3837ecc3dd066",
+      "stratum": "script_resource",
+      "task_id": "task_0025"
+    },
+    {
+      "family_key": "video:jnubpea inw",
+      "ground_truth_archive_sha256": "628ec7e0b7219f7a0e36fbd99ee37cc750d750eada012de9e8f75f22496fc38c",
+      "instruction_sha256": "c81eec272f3e4a9bf0d39367834284fa040af8c5bf4eed30c2b629f8395c2ad3",
+      "name": "Codex Camera Shake Rig",
+      "public_archive_sha256": "9bf17985857257b04caf9b58f3277a46e12d77350fa6f8076e773fb056b94eab",
+      "stratum": "script_resource",
+      "task_id": "task_0026"
+    },
+    {
+      "family_key": "video:jnubpea inw",
+      "ground_truth_archive_sha256": "4f7a2331cfbfb5839c4d1c6d809da8e623435e9a8f0257a7efea88b804fb46be",
+      "instruction_sha256": "efb3975a3315ff2d150bdc74f02f6e93ed15cf8fc13c13a3c6ec4600af9ccf67",
+      "name": "Codex Weapon Recoil Signal",
+      "public_archive_sha256": "5c0dbb6bcfa651f37fd97532768cbccc5c9d0b2caf8aa0317e64af65dee244f5",
+      "stratum": "3d",
+      "task_id": "task_0027"
+    },
+    {
+      "family_key": "video:qw3b7 kbbno",
+      "ground_truth_archive_sha256": "427e52e528768adf388861b845b37bb0703996a646ff3b76cd618fd08a6d2fe0",
+      "instruction_sha256": "2a33e2875e532644f8b16a5c8f2739235bf03764e987b7f2f5197be8b11b173d",
+      "name": "Bonkahe Flashlight Priority Points",
+      "public_archive_sha256": "5606d0021844fcf14cc0d01fb2d0b259d819eb7b5c3780f0974267a8cd7344a6",
+      "stratum": "3d",
+      "task_id": "task_0028"
+    },
+    {
+      "family_key": "video:rxvgwla6yb0",
+      "ground_truth_archive_sha256": "e4378b18e9b534155810cc78581881a5dc841e84d8ef755aab5c3b9799967da4",
+      "instruction_sha256": "ad835f06f887c1d752cadc54516e5b3ef12720766862c19f70264452b61ebb71",
+      "name": "Bonkahe Enemy Spawn Trigger",
+      "public_archive_sha256": "6da90e755f932e45b5713f95bf807de195d76110500b8ae40caa5990cf739dbc",
+      "stratum": "3d",
+      "task_id": "task_0029"
+    },
+    {
+      "family_key": "video:aeddkgifwdy",
+      "ground_truth_archive_sha256": "0e198d3436033e319d0461b22b302d5c97e7084a69b966f81664903072535c89",
+      "instruction_sha256": "5c5717e5e17068c6a0e48d20cad9ac77cc255bcbc4996c56e1ab992c3d19836a",
+      "name": "Bonkahe Sunshine Clouds Driver Setup",
+      "public_archive_sha256": "d317b25b106231b8783c8fce4d88808ea35af4870a5835a65267d7b15bff7902",
+      "stratum": "script_resource",
+      "task_id": "task_0030"
+    },
+    {
+      "family_key": "video:aeddkgifwdy",
+      "ground_truth_archive_sha256": "2556e62719505e54740ccfc2880c906ebf63949246ae0bd7335769a9ce034de6",
+      "instruction_sha256": "bad6ba6f2c70705c885c0695292a8a3cb6e30313f73fecf978c4f20c79632cc5",
+      "name": "Bonkahe Sunshine Clouds Effectors",
+      "public_archive_sha256": "e62f7066ee45545a1b4a4cf8570a3aaba369e4e427a8472c2c20c41e012ef468",
+      "stratum": "script_resource",
+      "task_id": "task_0031"
+    },
+    {
+      "family_key": "video:bua mkhepum",
+      "ground_truth_archive_sha256": "57da960e1afe6b4e5708289edb0e452dc3cef91812bad846e966870a497dd89d",
+      "instruction_sha256": "4c21c18f57e5a075ea958ac02515296a333bca9524f3765382521977479a8e3b",
+      "name": "Bonkahe GPU Smoke Plume",
+      "public_archive_sha256": "1b1e509cf72cc82ae3a8c6353e744895802f13596d36fc298addfddcf47b173f",
+      "stratum": "script_resource",
+      "task_id": "task_0032"
+    },
+    {
+      "family_key": "video:bua mkhepum",
+      "ground_truth_archive_sha256": "4870bd67da08a132263f199240d7c6a0b4ec49d1a0520911aac801ffec643cd9",
+      "instruction_sha256": "464fa52e4d3caec226baf73f83301af7910dee5938f6f5e7c16228d6d5b562c2",
+      "name": "Bonkahe Arcing Chunk Sub-Emitter",
+      "public_archive_sha256": "c9a46c8cae7e601e910cd8f1e1024bf79871597370c4a431abe697e755010554",
+      "stratum": "script_resource",
+      "task_id": "task_0033"
+    },
+    {
+      "family_key": "video:0mftanzadhw",
+      "ground_truth_archive_sha256": "c5cb3a26b2527ab8585da4314befe70832a87464d87640446be54d09d7bbfaae",
+      "instruction_sha256": "0a10be5ffaba5ebc2a374ac028fa5d7fab79ed9c9cfcd9043dc5907c431520d7",
+      "name": "Buffer Steering Debug Vectors",
+      "public_archive_sha256": "36ef6645cdaa0fb6677f05327f72159404ec5733c2faa66d917a8b959bc81e87",
+      "stratum": "ui",
+      "task_id": "task_0034"
+    },
+    {
+      "family_key": "video:0mftanzadhw",
+      "ground_truth_archive_sha256": "d5143c9c8e6e6d1cb011651490881e6a541574cdeb7819af7f62c304bd677db5",
+      "instruction_sha256": "5c9339fc7bbbc37450ff07c5fb24ca199d05f4b59f07199323ccd12ff9a01953",
+      "name": "Draw Steering Force Gizmos",
+      "public_archive_sha256": "c92e3a4376bf03ebca38eecca65e1a3e6ed390dfbe832416b7400e6654dc7cb1",
+      "stratum": "2d",
+      "task_id": "task_0035"
+    },
+    {
+      "family_key": "video:2dizu8jyhmg",
+      "ground_truth_archive_sha256": "7e5b36d0dc6840c1c87aa2b5e783f85db5224e7dae3f98e25c54dbbd4edb1422",
+      "instruction_sha256": "7b65086bdbfeffdd4c99ab287d022609c156f22f1ffff6a8272b8c5eda80fc19",
+      "name": "Trait UI Highlight",
+      "public_archive_sha256": "02bbc1cfd4e61771c208e0feaefe553c957db1b7fadf436117111a18bce7cc65",
+      "stratum": "ui",
+      "task_id": "task_0036"
+    },
+    {
+      "family_key": "video:2dizu8jyhmg",
+      "ground_truth_archive_sha256": "139834d86fcfaf5c5c37afbf154821fc3cddd8d8e7717368bef26affdfd6e9fb",
+      "instruction_sha256": "c49427a97e21b7f58cfef8d9d3474e8cb667340651897458e6a85607c0f82926",
+      "name": "Sell Portal Gold Preview",
+      "public_archive_sha256": "9e8171486f18282fe40670938a805dc8dbcb2c6f4390ce788b82afaa70ffdc28",
+      "stratum": "ui",
+      "task_id": "task_0037"
+    },
+    {
+      "family_key": "video:ykogubgzaty",
+      "ground_truth_archive_sha256": "bcb70248f02952aaad8d407db02a2e491bc5b984cf73b1ad3c6a781feada392a",
+      "instruction_sha256": "f6864b376d50da3de7d8b52eeadaff05a4abb6a18000b115a9d03a64a7ecdc2b",
+      "name": "Rain Splash Subemitters",
+      "public_archive_sha256": "f94387d6587f80a324c4b3e84ee4216b39b99f2a3da39cc7347c6549cb9b5d34",
+      "stratum": "script_resource",
+      "task_id": "task_0038"
+    },
+    {
+      "family_key": "video:ykogubgzaty",
+      "ground_truth_archive_sha256": "f9b564470fda566ec830414e4bafdceec32c035e7311dcb05b789165520e55b0",
+      "instruction_sha256": "fc41e82b13641f4b8b47638641a9473ca6bf2aa86e8305bc2b3485d1c02a6331",
+      "name": "Campfire Smoke Trails",
+      "public_archive_sha256": "9962af2d1c7ca935a3d871cf5e6d1ce83762abdc386612114223f2113ae5b5d3",
+      "stratum": "script_resource",
+      "task_id": "task_0039"
+    },
+    {
+      "family_key": "video:cwjttoupydy",
+      "ground_truth_archive_sha256": "e057643c0fc7c627d1ac908e7b86674018596dda0b241439f7d9e919713000de",
+      "instruction_sha256": "4c915f2ef31276516a815c0ff755cf2bf37cb61b840b50d6952d736a7a7595d5",
+      "name": "Day-Night Cycle Controller",
+      "public_archive_sha256": "d638636303a81c3e1924440acb08d46ffded21be36fc22fd4389c78868352f3b",
+      "stratum": "script_resource",
+      "task_id": "task_0040"
+    },
+    {
+      "family_key": "video:mv1ewf3mewc",
+      "ground_truth_archive_sha256": "ee8382db1dc6358c17c2210f28cde19cc442f116caccc5d8a069177dd1406cd3",
+      "instruction_sha256": "7a11292c4dc185dabbafe2b6552651cb67855f5c80befeb8c9d58ada174585d0",
+      "name": "Pong Scoreboard and Respawn",
+      "public_archive_sha256": "7df175fd8bb9c5d75141d03ebdbebd83070fc9a43fb1380c159224b6efc3d3c9",
+      "stratum": "ui",
+      "task_id": "task_0041"
+    },
+    {
+      "family_key": "video:mv1ewf3mewc",
+      "ground_truth_archive_sha256": "7c695d42e4374ad193e6b911d7cce35e308a45712a531c9f5b5070799d60a9e3",
+      "instruction_sha256": "b399cbeccfb73fd004cf7ba50c36e5693ef7af973b1da47f31211db9593de30e",
+      "name": "Pong Camera Spring Shake",
+      "public_archive_sha256": "08c1f058807ca8670df239b31e4d91b3c8eee54100ed8386dbad3c6f74049dd2",
+      "stratum": "2d",
+      "task_id": "task_0042"
+    },
+    {
+      "family_key": "video:x0e n7dbff8",
+      "ground_truth_archive_sha256": "e9b2caa8ce09d5ef6e42520989f0a3560cb8f789ee4740ae754a77d1ce8d569b",
+      "instruction_sha256": "b61e1fe830033b4a700b664835c62dcb218bc1de99564b491f033af5262525b2",
+      "name": "Portrait Balloon Layout",
+      "public_archive_sha256": "b42fed2359729d1afcac38115e6c8568ec7fb9a0e5bfb272d8f51cc44c2beb85",
+      "stratum": "ui",
+      "task_id": "task_0043"
+    },
+    {
+      "family_key": "video:rqkswxvvigw",
+      "ground_truth_archive_sha256": "cc847498de4a1cfac329c00599e9f4b728ec3b695c7861108be3d63f87ee0105",
+      "instruction_sha256": "0cb794f89944d215a42d6c0071e5310974c36c25c307d544ebda0f739160bd64",
+      "name": "Wire inventory add/clear buttons",
+      "public_archive_sha256": "9754110f9cad757ccb2c115bfdb7ac4e6683d22b6a1d54dc05abb1d75852d81b",
+      "stratum": "script_resource",
+      "task_id": "task_0044"
+    },
+    {
+      "family_key": "video:rkzpl1dmws",
+      "ground_truth_archive_sha256": "6315662991c36158a0fb5198f385da7c3e1a912972ebfc8da3590b26e1549cf0",
+      "instruction_sha256": "ca023bdab8d9cf3d7c3ee5b8033c8756b8407f123e5c0fed3dc15c380ae05215",
+      "name": "FPS Arms Prefab Wiring",
+      "public_archive_sha256": "fb1f7d22c41d76c14e332540761ecfe10426674e9329ed1c69d20d8ace34ecc3",
+      "stratum": "3d",
+      "task_id": "task_0045"
+    },
+    {
+      "family_key": "video:ke5kpqcoiiu",
+      "ground_truth_archive_sha256": "c21e599a98292919039d39f8f550b8e4fbdbc70f07ac28f44a662df67e45af5b",
+      "instruction_sha256": "e66399be767686f6edab76fe07acf368ffe976c8361c68d56f5cae55435b245d",
+      "name": "ProtoController Freefly Input Map",
+      "public_archive_sha256": "c5cdf2b631c6715e0588b12ea45df510c4b8183f2ae0cd6b6d6990203925b206",
+      "stratum": "3d",
+      "task_id": "task_0046"
+    },
+    {
+      "family_key": "video:qmwxsl9p05e",
+      "ground_truth_archive_sha256": "fff22b1a850eb069f440755ba6d312adf70a72b624b468f2d49ac00a941112f6",
+      "instruction_sha256": "317b70aad5ffe60e2dcb2d8488375c7e61dc5c28649597c2d69a60eed07411f6",
+      "name": "Additive Sprite Lights",
+      "public_archive_sha256": "1610c34a47ac98e8155a8d6dd4f34342e977cc0e9775b290f859b6a6569e3c52",
+      "stratum": "script_resource",
+      "task_id": "task_0047"
+    },
+    {
+      "family_key": "video:ihkfpcytdxg",
+      "ground_truth_archive_sha256": "7088042d1707fecb98c042d0e37ebef7f73f546be0111b14a04ce95ee3bc1367",
+      "instruction_sha256": "604810e5ab1b239488ecdec9baf0db6f581c6197044302ca0a0fe57895c0cf7c",
+      "name": "Codex Draggable Decorations",
+      "public_archive_sha256": "77d44738ae7a4c1a629d533a0afb9bcbe6544984624c70e57b88829b27caefff",
+      "stratum": "ui",
+      "task_id": "task_0048"
+    },
+    {
+      "family_key": "source_name:kidscancode grid based movement:build grid player nodes",
+      "ground_truth_archive_sha256": "c52c444fe22dad84d5204606a1049ed192f62f8acae48170e1b0c2cef2228954",
+      "instruction_sha256": "a19e1b862ddd096036bc4b2526bcdcbd9c0da6307f921c5ab9d87e393d6d3815",
+      "name": "Build Grid Player Nodes",
+      "public_archive_sha256": "f99ea5cd827175a4e5b5fc1b5975a610d9918947469beeecb5841dbfc0cb85f0",
+      "stratum": "2d",
+      "task_id": "task_0049"
+    },
+    {
+      "family_key": "source_name:kidscancode grid based movement:tween grid movement",
+      "ground_truth_archive_sha256": "845a808ca61029b6ce54f5bbb44ca686856063814ec4a1c1237c24a65dc4dc1d",
+      "instruction_sha256": "8bfcf609447d55828ff035f25918c95bf14c16342a035739a32f9ee14caddfe2",
+      "name": "Tween Grid Movement",
+      "public_archive_sha256": "768188fedd78acc64e6e5ad1828d8a670c6bfcb5d575ec8504085d89a4383853",
+      "stratum": "2d",
+      "task_id": "task_0050"
+    },
+    {
+      "family_key": "source_name:kidscancode platform character:platform character core movement",
+      "ground_truth_archive_sha256": "e3d6acee72784e145e41cb5783ea7088642aa37b3358f917f3ea7ef3b7cdf2d7",
+      "instruction_sha256": "e318ceb2254f510004a0a2d3d54e91aa1619b4a2011cd7487c224345675e8148",
+      "name": "Platform Character Core Movement",
+      "public_archive_sha256": "376abadee7c5279009451e57c67d47163f69a3f4237aed203c15c646da161890",
+      "stratum": "2d",
+      "task_id": "task_0051"
+    },
+    {
+      "family_key": "source_name:kidscancode platform character:platform character acceleration lerp",
+      "ground_truth_archive_sha256": "4bd5ba593f9294334956b80ec04297272f57b6b1debf62601a721fc308aaceb2",
+      "instruction_sha256": "5aabba66802fa2a4b6ee4eb3737b40029da114b2be3ba2b8d65e54a9bfcb7cbc",
+      "name": "Platform Character Acceleration Lerp",
+      "public_archive_sha256": "242421c4b38c9be6b95465e25dda1e968a496dd8508e73af565d09ed5037bf4a",
+      "stratum": "2d",
+      "task_id": "task_0052"
+    },
+    {
+      "family_key": "source_name:kidscancode car steering:car scene assembly",
+      "ground_truth_archive_sha256": "f18f45f414caf4e0bdb4ecf3374096beef3e53380cb4c57766a3d8626a450588",
+      "instruction_sha256": "bc195f0045630abb0fd35135c0c1f4a1c7b3dc0348415dc8836340390371de1f",
+      "name": "Car Scene Assembly",
+      "public_archive_sha256": "7288cacfa3501f1bd8d46f870f74f11f63612a5f8b6ab94c37631bbad0823ade",
+      "stratum": "2d",
+      "task_id": "task_0053"
+    },
+    {
+      "family_key": "source_name:kidscancode 8 directional movement animation:assemble crusader animatedsprite",
+      "ground_truth_archive_sha256": "69dea505720ceba1fa032beb6e7d928fb1bf57df711cd2345f07dfdd07902195",
+      "instruction_sha256": "3711ea9f60092fc49c4698460ddd9579b1a96a7d7e30813edd4f6bdf66284e85",
+      "name": "Assemble Crusader AnimatedSprite",
+      "public_archive_sha256": "b0a20ee05cf0a78804c9beea1d7e1b9b362e12bbe3ac9210356a4165149efba6",
+      "stratum": "2d",
+      "task_id": "task_0054"
+    },
+    {
+      "family_key": "source_name:kidscancode 8 directional movement animation:implement mouse direction controller",
+      "ground_truth_archive_sha256": "fad4a5ef4a3e74c474b5df3b0e40c7f820b5dbfb4ed8421fdb11cc199cad194f",
+      "instruction_sha256": "039d006b85bea9481328f7ab60b177a650aebdd09d245c15ac2ae994d6aaeff0",
+      "name": "Implement Mouse Direction Controller",
+      "public_archive_sha256": "3b226d0cc57bc2b6eb93c43e061671ca011ca5d9ef6e6e478caa0dd5e0a28ced",
+      "stratum": "2d",
+      "task_id": "task_0055"
+    },
+    {
+      "family_key": "source_name:kidscancode cooldown button:cooldown button ui shell",
+      "ground_truth_archive_sha256": "d32a980b9fa6218735788458274720da2114c9e478f8402d9267a81e5f5e6b33",
+      "instruction_sha256": "ecbffa85c1f5c5c2e89c033d670b9ae6f9610195767268c845b17beaadb63cb0",
+      "name": "Cooldown Button UI Shell",
+      "public_archive_sha256": "825aa413458a9b80260d16c16ce3210225f4d6d1dc5fb626bc4ea4597fcb0b9f",
+      "stratum": "ui",
+      "task_id": "task_0056"
+    },
+    {
+      "family_key": "source_name:https kidscancode org godot recipes 4 x input multi unit select index html:configure rts unit scene with aura highlight",
+      "ground_truth_archive_sha256": "f015c5372186fa7d1f980edfb4d61f0cd6d38071749386684fe3ae5f8717964a",
+      "instruction_sha256": "a5f8ea9df119051686627a504fa0ca208fab7160af0b0d94b63dcd8b8174ab84",
+      "name": "Configure RTS Unit Scene with Aura Highlight",
+      "public_archive_sha256": "20ab6a3521c10492df4518123aae76b2277dda290490d9bd56eea92609608981",
+      "stratum": "script_resource",
+      "task_id": "task_0057"
+    },
+    {
+      "family_key": "source_name:https kidscancode org godot recipes 4 x audio audio manager index html:audio demo grid ui",
+      "ground_truth_archive_sha256": "86e572836df6db031a67bffc5f1759bb6904c05f5e0494b66ea1a7e35aadc1ac",
+      "instruction_sha256": "1797b3114efe854e187de5f45f98faf686a164477eb01fdb3bedf2e02bcd3ddb",
+      "name": "Audio Demo Grid UI",
+      "public_archive_sha256": "ec039dbf6a1a9ab8e495b4e6a665137071ecec82969fe1a469a33a3d16e9981e",
+      "stratum": "ui",
+      "task_id": "task_0058"
+    },
+    {
+      "family_key": "source_name:https kidscancode org godot recipes 4 x ui minimap index html:minimap ui frame and markers",
+      "ground_truth_archive_sha256": "406306d53f75d7cdbf6872293586455d16e5f7ba63f344c4b1e9aaea06e6f2d9",
+      "instruction_sha256": "f272fe8191712cf1d12fb8bc0d3bb0e04e12d66145977859c5608b83de3abb3a",
+      "name": "Minimap UI frame and markers",
+      "public_archive_sha256": "483d9430f6bb72fdb1f36f47fb89d5faf0898b00ceffb460052a540ea646efe8",
+      "stratum": "ui",
+      "task_id": "task_0059"
+    },
+    {
+      "family_key": "source_name:https kidscancode org godot recipes 4 x ui minimap index html:minimap marker logic and zoom control",
+      "ground_truth_archive_sha256": "88a61764ddd9121cfd766e907bcd8b803571bc38a9153d9b5b22274d6ab24066",
+      "instruction_sha256": "b64809fca18247b9be9fbf8e6e71194a570a9e349070ae4d3dfded1d27c7f0f1",
+      "name": "Minimap marker logic and zoom control",
+      "public_archive_sha256": "4508852f8138454250b7378962e0dd22a8ae0f19c38b2d60013d22205e677a2d",
+      "stratum": "ui",
+      "task_id": "task_0060"
+    },
+    {
+      "family_key": "source_name:https kidscancode org godot recipes 4 x 3d shooting raycasts index html:fps hit label overlay",
+      "ground_truth_archive_sha256": "126aad36e41e878415daec5ec4e464ceb96cffacdc149b59b00b1dca02c5e66a",
+      "instruction_sha256": "a7aad6a7922f5f9a08ef2bf401965a08941ff8f89636b1b8a0c12a5bc57e386c",
+      "name": "fps_hit_label_overlay",
+      "public_archive_sha256": "6769799a3280c3a2507fc7addf62308ecf2a035d9bb67547aa047f37fc4222c5",
+      "stratum": "ui",
+      "task_id": "task_0061"
+    },
+    {
+      "family_key": "video:zvoqqhleans",
+      "ground_truth_archive_sha256": "12dface531084849d2f0efed18b9cb8f39baa3aa1ea3b8a5e4087d4e6978803d",
+      "instruction_sha256": "abc6bb57bf10d52f13cc8180926f6701b9ba9c570513b103e4b294e19084fe00",
+      "name": "Depth Ripple Geometry Setup",
+      "public_archive_sha256": "41ca1ee3e8e8867a6540b6470e91789d9694efa4c653e87892e2215d62cb7683",
+      "stratum": "script_resource",
+      "task_id": "task_0062"
+    },
+    {
+      "family_key": "video:n3mtpvuuywk",
+      "ground_truth_archive_sha256": "3218ff6670049a0f8d6f107578fe50d8b752b3af37288ebe4222e1c2b9bc72f1",
+      "instruction_sha256": "6d437173f9266898095c0e0fdba2349da887c9ad2de5a79eb96a3c46c8fb079b",
+      "name": "HUD GameOver Overlay",
+      "public_archive_sha256": "e3e19b22e5fbd28459110d0852a9330cfd02231e81a30dcba1dfd2e627202eeb",
+      "stratum": "ui",
+      "task_id": "task_0063"
+    },
+    {
+      "family_key": "video:kkyaevee7pc",
+      "ground_truth_archive_sha256": "4a83a98439045b0ac53c87230ebfbdaa89580968d74773609e767f5e4f961626",
+      "instruction_sha256": "9d830c61106cefd2ec30fdc494995afba89e32af0338ad852d3fde3c560cea01",
+      "name": "Build the door switch Phantom Camera transition",
+      "public_archive_sha256": "7710d90896a212d01573dc4f9b03238d91cf06194d5c896b72736278e47ba7ea",
+      "stratum": "2d",
+      "task_id": "task_0064"
+    },
+    {
+      "family_key": "video:n3mtpvuuywk",
+      "ground_truth_archive_sha256": "b4bf99d38cbb9908ef1d46363330b0cb455c8e208194fa9f2eb59d2d08b03b35",
+      "instruction_sha256": "61dcd357c092b1a1d9dabdbfb5fb9e8fb26861e851e86fcb6265353d2d4b8991",
+      "name": "HUD Status Bar",
+      "public_archive_sha256": "b788a3d87230f66cf2affbce2dce0594e652893307768397564e65aa85218819",
+      "stratum": "ui",
+      "task_id": "task_0065"
+    },
+    {
+      "family_key": "video:caadorhnfwi",
+      "ground_truth_archive_sha256": "b94d5d37932325b2ee403a74dbc6631c2a7956a91ca344820021265f2bbfc1de",
+      "instruction_sha256": "db85425c25a4482333a2bc9c3f7de355c8a7e26b1a881094add5033723910e2b",
+      "name": "Safe Platform Length Builder",
+      "public_archive_sha256": "abc74e760779baa6d514d404fbb03ddd688cd4c85f84df93043b547b424ab551",
+      "stratum": "script_resource",
+      "task_id": "task_0066"
+    },
+    {
+      "family_key": "video:pjpdnlbdstw",
+      "ground_truth_archive_sha256": "1598a9f4ac4a58f67db71f77797ecbea82504748ec44dfa32ca9a8d90d8e0519",
+      "instruction_sha256": "673c23bde50f62caa846c3db19118fc351604d099cb2c3fbf07bf352dff05f69",
+      "name": "River Raid Missile Projectile (Hard)",
+      "public_archive_sha256": "973bd385787085b6bbb9a25cea1f66921be90bd6fe039ddb08debd79fac1502c",
+      "stratum": "2d",
+      "task_id": "task_0067"
+    },
+    {
+      "family_key": "video:z9d8bu1o3zw",
+      "ground_truth_archive_sha256": "010c531fc987a5ea56b1c20b837faf7dc682663d31dc2176796fab5c3717516a",
+      "instruction_sha256": "b3a3eed59983fada87149c1adf59f9c547136df4a10570aa5738bc10fe72fe5f",
+      "name": "Implement Bullet Collision Cleanup",
+      "public_archive_sha256": "13cb795558216b854973920e9323c7b6fe5fbe465b4ecc4c3e22be12a08a881d",
+      "stratum": "2d",
+      "task_id": "task_0068"
+    },
+    {
+      "family_key": "video:zvoqqhleans",
+      "ground_truth_archive_sha256": "447c067d453e726041c0f2e51229ed8d5607fd912096e9f9253953c40aa7977c",
+      "instruction_sha256": "8f111d542ce82937dd2fec669f06134d712f0ffacbfe195ea2a401bd2fd9ec85",
+      "name": "Depth Ripple Geometry Setup",
+      "public_archive_sha256": "2b02cc5d33d38bffc5eb5c68c046a3cc0186867a9d8a6246708b48940f135111",
+      "stratum": "script_resource",
+      "task_id": "task_0069"
+    },
+    {
+      "family_key": "video:zvoqqhleans",
+      "ground_truth_archive_sha256": "3a9468e6334395af18f7a6aedd55430cc9164c1449db6628f374250c3b727788",
+      "instruction_sha256": "1e2c8aa6fa4b33582116a8d56c6b059243bc4978c95a9bdf3f404565ad4805cf",
+      "name": "Depth Ripple Geometry Setup",
+      "public_archive_sha256": "e428abe8a03f23f51f63a64b5af233cbb90c5661a725e42460a5c6d01cf3966e",
+      "stratum": "script_resource",
+      "task_id": "task_0070"
+    },
+    {
+      "family_key": "video:zvoqqhleans",
+      "ground_truth_archive_sha256": "d1082201490fb826f8a38b1bc93af91e5cb3bb1849aa5c9984f4b229d81d993b",
+      "instruction_sha256": "e9e3b2a671f74595c1e58721f23ef28a2d9bc495f6e5050925b131b539709716",
+      "name": "Depth Ripple Geometry Setup",
+      "public_archive_sha256": "8a0bf76b167d263a195e61eebab529bca0fd0f098a864a3512284c09168c9905",
+      "stratum": "script_resource",
+      "task_id": "task_0071"
+    },
+    {
+      "family_key": "video:zvoqqhleans",
+      "ground_truth_archive_sha256": "1adde1fbb5cec2dc113cb79e3028392292c46e6805dcb9db5ac8d300228871bf",
+      "instruction_sha256": "b3bf7476f58337d2ce9b902f9dc88d6f3c450c5d59f227376153c3f92e993578",
+      "name": "Depth Ripple Geometry Setup",
+      "public_archive_sha256": "93e4a5a8b04e6dcb69123f2004a22f8614f5aa526b0f8ebde1939d89f726f0a5",
+      "stratum": "script_resource",
+      "task_id": "task_0072"
+    },
+    {
+      "family_key": "video:zvoqqhleans",
+      "ground_truth_archive_sha256": "0dd5ff071514c9b32588f5695a5e2bbfed4097f9b74d114ef50bf49223308457",
+      "instruction_sha256": "9c3ca9f66dd51ded102532d9e82f0835841712b4b3c13949825dd4a6576e8c35",
+      "name": "Depth Ripple Geometry Setup",
+      "public_archive_sha256": "a31302afd477e8ac9b73095284f9b1a4bad211dfce671707d14486d1e2a2e4c1",
+      "stratum": "script_resource",
+      "task_id": "task_0073"
+    },
+    {
+      "family_key": "video:zvoqqhleans",
+      "ground_truth_archive_sha256": "df0c041d32cd0337c0aeb7cb403b2573979232fffb909b4c988ac67739fb3279",
+      "instruction_sha256": "efe30d2bdbd1fb5d752087892d7e650427345d680d75cc431788d67ec9f83ea1",
+      "name": "Depth Ripple Geometry Setup",
+      "public_archive_sha256": "6431928af20c5820ba7d4162c89e48afc87c056d26815737a0cb2e328c690f28",
+      "stratum": "script_resource",
+      "task_id": "task_0074"
+    },
+    {
+      "family_key": "video:zvoqqhleans",
+      "ground_truth_archive_sha256": "c0ea2408a8d3500e78fee5b35a8c314d62ae5dfb82dfef9878aa5cac75fad534",
+      "instruction_sha256": "db098dc6cbb946e51e86ed62da8ea313f1391ba0321bee2344275e4dd6913814",
+      "name": "Depth Ripple Geometry Setup",
+      "public_archive_sha256": "f84d39606b48e17a7143ead0fb15a6ac0237d1961bc347f175a7d2a6c76e8735",
+      "stratum": "script_resource",
+      "task_id": "task_0075"
+    },
+    {
+      "family_key": "video:zvoqqhleans",
+      "ground_truth_archive_sha256": "1fd3e2e19b99de7d42079d0eee32f100d12b34f718c5a6a5d8e0a16e5a8c6d7c",
+      "instruction_sha256": "fa0934ef4712c3489fcc474acdebfe9c26e8447cc97e1735bd2f01245e70232b",
+      "name": "Depth Ripple Geometry Setup",
+      "public_archive_sha256": "eb9128857d27c22e37a845e769f5e98a6569f1e304c2da703e5631aa0ebd25be",
+      "stratum": "script_resource",
+      "task_id": "task_0076"
+    },
+    {
+      "family_key": "video:zvoqqhleans",
+      "ground_truth_archive_sha256": "38325f866e83ddf23ec6f2c14f0feb63574dcf847ca39026288d726079c6e37e",
+      "instruction_sha256": "d702197fadb8ff92264cc6972f15e528cf712f8195b5bda1787dbb0df23e356e",
+      "name": "Depth Ripple Geometry Setup",
+      "public_archive_sha256": "888b4454cf1fa09a723ee489e6b39dae796c394ae77e2ed1c618d49abbf3dfc7",
+      "stratum": "script_resource",
+      "task_id": "task_0077"
+    },
+    {
+      "family_key": "video:zvoqqhleans",
+      "ground_truth_archive_sha256": "bbb4a1802cc707f06b88e99c2357237bd692068e0b37dc95291ec8979f76dba3",
+      "instruction_sha256": "d518564d6860e02f73341ca98f414e43133797a33f920ea893d6cf724dc14b4e",
+      "name": "Depth Ripple Geometry Setup",
+      "public_archive_sha256": "8971e9f0398c2fe0664d7a892bc32b440529fff585682d5e0ec1638cd65b43c9",
+      "stratum": "script_resource",
+      "task_id": "task_0078"
+    },
+    {
+      "family_key": "source_name:kidscancode 8 directional movement animation:assemble crusader animatedsprite with correct directions",
+      "ground_truth_archive_sha256": "7dc62931a9577df670d0ccf6714dfb796b8487e14cf808ed786d40090ee2cd34",
+      "instruction_sha256": "863d8d5861609e2c1221bef1bf21e5e03d6cdee8c46f03b37ee2c699da4e32ae",
+      "name": "Assemble Crusader AnimatedSprite with Correct Directions",
+      "public_archive_sha256": "5b20a84853ae8fba44db7f2dbdc890c9ba97bbd675aec4f56deab6ea73b244d5",
+      "stratum": "2d",
+      "task_id": "task_0079"
+    },
+    {
+      "family_key": "source_name:kidscancode 8 directional movement animation:assemble crusader animatedsprite with walk for running",
+      "ground_truth_archive_sha256": "62fcac6b1828024b23ea6b34e1cc994e7d47694e3d4ad8875941f9b40625c4c5",
+      "instruction_sha256": "bfb337ab9efd96a501b66b9afeab0ca9481fb9a69a110d37e70af020b13e2a64",
+      "name": "Assemble Crusader AnimatedSprite with Walk for Running",
+      "public_archive_sha256": "74dfa9d5811fb65797568e9d3da20d47c918f7231af00be62bda441022b29742",
+      "stratum": "2d",
+      "task_id": "task_0080"
+    },
+    {
+      "family_key": "source_name:kidscancode 8 directional movement animation:assemble crusader sprite sheet animation",
+      "ground_truth_archive_sha256": "a62059f771cd1042c1ffea54643cf378adc20a29109a810e086179b7eba4644c",
+      "instruction_sha256": "405b6f2d6848fe0df64f60c69d29e548201e0805f4447775716cf66ffc6c3d79",
+      "name": "Assemble Crusader Sprite Sheet Animation",
+      "public_archive_sha256": "a2b1c83764be8e681e709573dd0a666fd69204d6b342e8c4098c19865c8be02e",
+      "stratum": "2d",
+      "task_id": "task_0081"
+    },
+    {
+      "family_key": "source_name:kidscancode 8 directional movement animation:assemble crusader sprite sheet animation",
+      "ground_truth_archive_sha256": "f00c657c23c5bc02f18ded1e95896037eb932674d2d596e55d4c0afea47498d6",
+      "instruction_sha256": "fed154786d2f500b213cdaf612395aac98c48043b5837c62e705a1d2bf90f3cf",
+      "name": "Assemble Crusader Sprite Sheet Animation",
+      "public_archive_sha256": "f47a24fbc3e1072b08172cac00617f88cf79252700bc4f79bcf48cd7042a660f",
+      "stratum": "2d",
+      "task_id": "task_0082"
+    },
+    {
+      "family_key": "source_name:kidscancode 8 directional movement animation:assemble crusader collider placement",
+      "ground_truth_archive_sha256": "beb230bd7d45a4185b7d7a5d3fd023bb114a1cdba57d4d3164d04897ad420b27",
+      "instruction_sha256": "4563c41511bae09b7e6de4ff8f0d01efa5e489fa5d7afd0c472ca34304c2f9df",
+      "name": "Assemble Crusader Collider placement",
+      "public_archive_sha256": "cd0ebaf244b298e98e7a96b78c7c29d0eae102536a650d474d832e1984f0b60d",
+      "stratum": "2d",
+      "task_id": "task_0083"
+    },
+    {
+      "family_key": "source_name:kidscancode 8 directional movement animation:assemble crusader spritesheet death animation",
+      "ground_truth_archive_sha256": "20c2245d2ce26d03ef7de92d234a486e324c4aa5df926c99609462dd55c24144",
+      "instruction_sha256": "e10ec3955b39191407d6416705d1d5c914e9b62da6a4e517143d1421bf3abe54",
+      "name": "Assemble Crusader Spritesheet Death Animation Setup",
+      "public_archive_sha256": "5c6930f45bba8fda51ef05325ebc55da542dd25478890fafaa734a130250edd9",
+      "stratum": "2d",
+      "task_id": "task_0084"
+    },
+    {
+      "family_key": "video:ke5kpqcoiiu",
+      "ground_truth_archive_sha256": "8d86b54627c8cb4b57f77dd0a879499baa6554ed960a93fe6293d60f6ff6b057",
+      "instruction_sha256": "e552439535c43b069d114cca298fe80feb3616067e90cdd328a8942ea40d0e34",
+      "name": "ProtoController Freefly Input Map Controller",
+      "public_archive_sha256": "df39d162ac039a72c164e5b6e4a7d25093e113bbda1b6d29116e2dcc094ac115",
+      "stratum": "3d",
+      "task_id": "task_0085"
+    },
+    {
+      "family_key": "source_name:kidscancode grid based movement:build grid player nodes alt",
+      "ground_truth_archive_sha256": "2b37f5ad1fa3e88b15ad0a001aa2a62d13ebf4a46820dac73539478c0929c6d2",
+      "instruction_sha256": "a968231d93a99a0202aef2be6c57dcebf221749450a111ac441065f0f48bc1a1",
+      "name": "Build Grid Player Nodes Alt",
+      "public_archive_sha256": "38e9bfabc5dd2284465426162cca4fc322fbfc01ae4ccf5ee906725a1d24e6c0",
+      "stratum": "2d",
+      "task_id": "task_0086"
+    },
+    {
+      "family_key": "source_name:kidscancode grid based movement:build grid player nodes alt ii",
+      "ground_truth_archive_sha256": "cb3c93b951b8fd7d26b5e235ce538226b00fde511b04a038062a9ba9c14739fb",
+      "instruction_sha256": "4e4249dbde92b748100ba6ceedb9b5f2c69bd0444e3756d7bc4fbb1ead65e3d1",
+      "name": "Build Grid Player Nodes Alt II",
+      "public_archive_sha256": "669046cbd9b437fb416e006819178bcb387078fdc2bfdab96fe507a8a467a709",
+      "stratum": "2d",
+      "task_id": "task_0087"
+    },
+    {
+      "family_key": "source_name:kidscancode grid based movement:build grid player nodes strict shuffled",
+      "ground_truth_archive_sha256": "9b3987d580c905b02536dfeff922b3c978787a42e6b51933005c4f85d5d86717",
+      "instruction_sha256": "383958ed4f0e080cceb85e7947f1e77a430dfac47de82f276a25e78c67331892",
+      "name": "Build Grid Player Nodes Strict Shuffled",
+      "public_archive_sha256": "8f6fdbbe1e8b93bf45de3c52c9bb2981f7c97860ca81a64ca55134c1364a0ec7",
+      "stratum": "2d",
+      "task_id": "task_0088"
+    },
+    {
+      "family_key": "source_name:https kidscancode org godot recipes 4 x audio audio manager index html:audio demo grid ui formatting",
+      "ground_truth_archive_sha256": "c316c9b4eb5d990815f104f133edc63b1deaeff96f8d012bc043fb4df7595657",
+      "instruction_sha256": "e5b2e94cb13462e851cbdf91e8b90948339c5c47b62f1ac6ed3de3e53fe40c34",
+      "name": "Audio Demo Grid UI Formatting",
+      "public_archive_sha256": "0beac960a63e245bc62af1471b5f1c2f221e4bb3779600254ae86b5a8c82bfcf",
+      "stratum": "ui",
+      "task_id": "task_0089"
+    },
+    {
+      "family_key": "source_name:kidscancode grid based movement:build grid player nodes with correct sprite frames",
+      "ground_truth_archive_sha256": "f3c1234221d1ed43aa99ac7a915f700742c831a2d9847545647940e8e7e0ff96",
+      "instruction_sha256": "8637d0b850114dbab38a7c31462135b176906503d3f8de23a88ecc421576396e",
+      "name": "Build Grid Player Nodes with Correct Sprite Frames",
+      "public_archive_sha256": "e1c05576eea5a6c8f44235284c874a171defaf04235b5bac63196cfc9523a8e2",
+      "stratum": "2d",
+      "task_id": "task_0090"
+    },
+    {
+      "family_key": "video:gth6 ectxh4",
+      "ground_truth_archive_sha256": "0a80846fed51ec0824d414037d71c21fbf468f0f65e2f9b7691a19f48baa3ed8",
+      "instruction_sha256": "bc9b079915cd4bf36c638f052d56cdd31c21496e6d7163da3d428083da4192f2",
+      "name": "Sync Upper and Lower Animations",
+      "public_archive_sha256": "3df51f121af7958008b494bd2b01234a84c73e77faf07791c822c2f9979f14c3",
+      "stratum": "2d",
+      "task_id": "task_0091"
+    },
+    {
+      "family_key": "video:grdig96ames",
+      "ground_truth_archive_sha256": "8a0bad7457c28d081afec05ab00460c397f401a119940153c030b8e37a449c30",
+      "instruction_sha256": "9aaba0b7cace32a62b09580d4cbad60a1ad7a0504024ef36fe169c57fc2282ef",
+      "name": "Create Music Player Scene",
+      "public_archive_sha256": "04057586a8290099f5a09a91d63e6b9152b3335c1582d9b6484a988fab1dd79a",
+      "stratum": "2d",
+      "task_id": "task_0092"
+    },
+    {
+      "family_key": "video:grdig96ames",
+      "ground_truth_archive_sha256": "6b97a48107f927123310495ec37f34ad2599af0dcc897a996dc8b0983cb0b7fc",
+      "instruction_sha256": "d7f2db2952e9cf69e8b43e5edbc53096582f9960afb9b3e8aac0be32bb93f4fb",
+      "name": "Create Battle Over Panel",
+      "public_archive_sha256": "eafab9545af9f382923970647181ac41b961b611d8600b645ae632c237b63cb0",
+      "stratum": "ui",
+      "task_id": "task_0093"
+    },
+    {
+      "family_key": "video:x9 etelozla",
+      "ground_truth_archive_sha256": "d4f4a1ea4454bdaee54fa02726729be1543bf60ad85d15253343b0e4cdb1ced8",
+      "instruction_sha256": "44245e57befd8811c588666aa376de5627b6afbaf67fb02eb7efa7c5219c0041",
+      "name": "LibSM64 ROM Dialog and Connections",
+      "public_archive_sha256": "dd117323e5fe872d98536bdf568a7070cc03db4622ff4b5e6267bcd85bd39b50",
+      "stratum": "ui",
+      "task_id": "task_0094"
+    },
+    {
+      "family_key": "video:e401x98n6ia",
+      "ground_truth_archive_sha256": "cbf1c8efbe61efba06e8ac8d8dbe1c303919bf4600e8d6cc7c1ce1f80ccb0489",
+      "instruction_sha256": "6a907c3e2495f76c5886c34f5f0d789996b38174763db593a66532207d19321d",
+      "name": "CRT Shader Effect Implementation",
+      "public_archive_sha256": "53a790764762dc78429469ee50f5584f17d94c4c1120f84a017119f6d8fc4deb",
+      "stratum": "ui",
+      "task_id": "task_0095"
+    },
+    {
+      "family_key": "video:dhbqsr kjog",
+      "ground_truth_archive_sha256": "279115136019c0b05f9af4feffed83420497aadd61ebdebda09067a3005a957c",
+      "instruction_sha256": "f6ed59d2bf015002d697c5d4c4e45d97261085f86437f09c7845052d747ce26c",
+      "name": "Pixel Art Screen Quad Shader",
+      "public_archive_sha256": "8384e9f15461853b4d77891725db8069b9b91ac10bb5eec69d8f0682f36c84cf",
+      "stratum": "script_resource",
+      "task_id": "task_0096"
+    },
+    {
+      "family_key": "video:pwyxxq9p7e8",
+      "ground_truth_archive_sha256": "39d80f0fc0e199e979d615b559ed592c6379700df6c62b94c872691cb9e84305",
+      "instruction_sha256": "a3451f98c3476724fe2a9e3af2db1c569e7e3decc2c8bbc9187e45ef75d79a72",
+      "name": "Ninja Lower Run/Stand Animations",
+      "public_archive_sha256": "d68e231aca1f749678c95cbd7f223656c02c58a00cba029707f7b86fbf442e1b",
+      "stratum": "2d",
+      "task_id": "task_0098"
+    },
+    {
+      "family_key": "video:zfa0jldrcz4",
+      "ground_truth_archive_sha256": "6a819a69790e420e0b1b09fad749a5c8cccee4af1af51452eec3af9d5ef2f0b5",
+      "instruction_sha256": "8a1aa26b1dc144db235f943b53ee94cb50215771bc288a5cc98c195feddc7553",
+      "name": "Fractal Control UI Panel",
+      "public_archive_sha256": "49ddd18c0874c775311a8114eca27d335bb0040dcab4704fcb99905380e0be10",
+      "stratum": "ui",
+      "task_id": "task_0099"
+    },
+    {
+      "family_key": "video:gj2wpkaw6sw",
+      "ground_truth_archive_sha256": "1725b2945dc35c1908278058096b282c8e030c7fc233480347069ae887f55781",
+      "instruction_sha256": "40c9b3ae8d36f3912b17636e5a8923d303c7fd399319bd4af6a32e6dff3cea83",
+      "name": "Codex HQX Smooth Borders Shader",
+      "public_archive_sha256": "96b2f9d690794dce257e333c1ce6f03937c75a7a017b96b1dac49954d79ba034",
+      "stratum": "script_resource",
+      "task_id": "task_0100"
+    },
+    {
+      "family_key": "video:ztx4ov6syn8",
+      "ground_truth_archive_sha256": "85ace6f53aa22cec69509d716221161641a26a926e8acdf118f7d08639720f33",
+      "instruction_sha256": "f38ccf3c877f3f0329632bbebed4474839368e50f35a2c7988d7d43d6efb593b",
+      "name": "Enemy Navigation Node Setup",
+      "public_archive_sha256": "b6ed579ee11aee4621b9449582e8029301a0bea754922987d92fa8042d23d01a",
+      "stratum": "script_resource",
+      "task_id": "task_0101"
+    },
+    {
+      "family_key": "video:auvsx mtuns",
+      "ground_truth_archive_sha256": "5781b56c409efddd96e4e5cd21b9a55585b560e7cc3943e5c3d1c455493d436f",
+      "instruction_sha256": "367c200702db3a9ae9ff29032ee3766b2de457951ca2640076b45c52f41c712a",
+      "name": "TileMap Physics Layer and Details Layer",
+      "public_archive_sha256": "a3d4045b19c2ed74b1abdfa01b9c0c5f65ca2685ac7f7a6887f1594deb9605c6",
+      "stratum": "script_resource",
+      "task_id": "task_0102"
+    },
+    {
+      "family_key": "video:ztx4ov6syn8",
+      "ground_truth_archive_sha256": "18101e92c061fc4bb1ece2772d53df12095e9f9870124885c757aafc28102c3b",
+      "instruction_sha256": "52a2db01289c86d8fdc25f16e0feb1237932c279b09c15c50ab94b06e0cf07a6",
+      "name": "NavigationAgent2D Enemy Chase",
+      "public_archive_sha256": "bbc931f1c85ee73efc6e34db86dbb8afc3b50e729e69cf558732163d2b58a5b7",
+      "stratum": "script_resource",
+      "task_id": "task_0103"
+    },
+    {
+      "family_key": "video:5ztudwpzxh0",
+      "ground_truth_archive_sha256": "c9639a210a1d8a13b941ca65ce4653d5be2b70f6dd0f07233afb48762ba3fb40",
+      "instruction_sha256": "c619062f24b71da75d3cd12fa37396f5285e9eddf67f3fbbbd8ba0991835f831",
+      "name": "AnimatedSprite2D Sprite Sheet Slicing",
+      "public_archive_sha256": "b2abee641eb4e0e887871b7a053b9efd48400bec374dfbf9b7d7cf0a86029348",
+      "stratum": "2d",
+      "task_id": "task_0104"
+    },
+    {
+      "family_key": "video:grtnozaubba",
+      "ground_truth_archive_sha256": "1d06914e7bfd5969cd1b531c064c42f483aa0ea194f5372922d455d7725c1556",
+      "instruction_sha256": "2c88118ad6de3a1b32050a716fc0d002b38b0ebf165bfd75228a65b067cff481",
+      "name": "Create Music and SFX Audio Players",
+      "public_archive_sha256": "eccc5846c04f689a6027d57ac564e72d0eb7ede3c0c77e7cd2b677511f309eb8",
+      "stratum": "script_resource",
+      "task_id": "task_0105"
+    },
+    {
+      "family_key": "video:pqhexf sbb4",
+      "ground_truth_archive_sha256": "cf17a7122fbf116c138a2c859fa7bb7e2e78f75921e9370d8c556eb49a384115",
+      "instruction_sha256": "2a9d90c969c4f2231253dc3c3ebb70c2a217c399d6fb60d1296b0bf3486d7601",
+      "name": "Depth Outline Compositor Shader",
+      "public_archive_sha256": "a4390ae1451f5523b81467062aec912499b4bc05cdb6882e57a0054e1f103e60",
+      "stratum": "script_resource",
+      "task_id": "task_0106"
+    },
+    {
+      "family_key": "video:v6lkjuhjh4c",
+      "ground_truth_archive_sha256": "808ee6916784cd6f241da7a93735398e670b66745155449171d0282f1821c019",
+      "instruction_sha256": "1f2b23288e105bd94880efa99f98731d4847434ebc084f8b7dcfc8f7ed7d3e7d",
+      "name": "Apply View Model Clip Shader",
+      "public_archive_sha256": "ec05bdc4ead8752330dc4a9d2f048d6ee013df15b1f263ff4dd8fc658b51ddf6",
+      "stratum": "script_resource",
+      "task_id": "task_0107"
+    },
+    {
+      "family_key": "video:m1ri3zli2g0",
+      "ground_truth_archive_sha256": "75b88c53996c9bf45323bcb951e89a9eaf22cbe8e487bb418fdfee51459fd951",
+      "instruction_sha256": "65c128e9f80c06fa6bb47ddbf430da17deaa1c71ea9248d00977de9a1ac9e0fc",
+      "name": "Track Particles Driven by Tile Type Gradient",
+      "public_archive_sha256": "93bbc5372a25d1ad7fb50acb4b28fde84f99c0bccecabd16e52c38acf31ec6a9",
+      "stratum": "script_resource",
+      "task_id": "task_0108"
+    },
+    {
+      "family_key": "video:lrs teucq3w",
+      "ground_truth_archive_sha256": "ea674747155c2b4385542b7b8e7c9bc7a6fb2eed8c898f1f16b210cad219e839",
+      "instruction_sha256": "9ef52218240b2f782255200e4b36218c6a9b9bddfb476b9d7e9c0fda1fa47af7",
+      "name": "Player Hurt/Fall/Grounded Animations",
+      "public_archive_sha256": "80457abb8de3ec6e74ceee24075280aeaf3def35933bea4169c43c0c3db5c439",
+      "stratum": "2d",
+      "task_id": "task_0109"
+    },
+    {
+      "family_key": "video:e3luf7dxsey",
+      "ground_truth_archive_sha256": "a0044366d7005bfc2957776440729e29129fda78b48060aeaf9bbdf0d87100e8",
+      "instruction_sha256": "1891253f5de8bce372b99d449da1fdbf62c5f4a55c6e352cbe107cd704981e95",
+      "name": "Basic Triplanar Shader on a Sphere",
+      "public_archive_sha256": "0fad88610f20dd08dafb4cbaf1ac8255b24e1793355109899236dce9a6ba60f5",
+      "stratum": "script_resource",
+      "task_id": "task_0110"
+    },
+    {
+      "family_key": "video:e3luf7dxsey",
+      "ground_truth_archive_sha256": "4315944bcb1f3ff16032a68f227c852ba241d4b0d0d57ec13d81fb7d2ee0b5b0",
+      "instruction_sha256": "7a6162466cd4cee62cec3a0c4ae0672ec16fc142569f62680457f33b6bc521e3",
+      "name": "Axis Textures and Top-Only Grass Triplanar Shader",
+      "public_archive_sha256": "65a36868e078ad36a4fa6257e24073f7a92b7bc6ce7475fda03e2a39fd06b966",
+      "stratum": "script_resource",
+      "task_id": "task_0111"
+    },
+    {
+      "family_key": "video:z9fhl gnyjo",
+      "ground_truth_archive_sha256": "6bdef9afe34d2eb3b2d8f320d408a0b5cb4d02f3d0f74e949de12a8fe20a684f",
+      "instruction_sha256": "f2c7055bb1854d55c9f55d0cde49c400a07087771560f184bab359e8347220de",
+      "name": "Arena Visuals TileMapLayers",
+      "public_archive_sha256": "fd795287e43456eb804a3872246507825e8c7cdcae4473e17d927a0db17dc346",
+      "stratum": "script_resource",
+      "task_id": "task_0112"
+    },
+    {
+      "family_key": "video:z9fhl gnyjo",
+      "ground_truth_archive_sha256": "8a466c5406f0fb4bed1ba9b938b2428c91131ac35e912991b944906053059fd5",
+      "instruction_sha256": "891d27896fa6f41679a630be228d075bf596d72496401161443fafc2118d9622",
+      "name": "Game Area and Bench TileMapLayers",
+      "public_archive_sha256": "db9dda2e81bb7409883bc914f96c04d754fbcc60655301af89187fbe5d908ab0",
+      "stratum": "script_resource",
+      "task_id": "task_0113"
+    },
+    {
+      "family_key": "video:z9fhl gnyjo",
+      "ground_truth_archive_sha256": "f82c0e23e53347c619b9c39821432389116b6df79cc609125e28fb948d41540b",
+      "instruction_sha256": "cd44a5bc149bac992479a2f29b5066cb4ee89158cd93b27b9f3635f8e6eabd53",
+      "name": "Dust Particles Ambience",
+      "public_archive_sha256": "43e2e034ffdb335d36a36e8f48821692c1d30c86c39ce467d068ab99b2e7e542",
+      "stratum": "script_resource",
+      "task_id": "task_0114"
+    },
+    {
+      "family_key": "source_name:youtube cashew olddew signals in godot 4 3:trap spawning points visual alignment",
+      "ground_truth_archive_sha256": "50b30675ff0de3d8fe75655828ae103cbb30b30591b148857a360c1fd51a699b",
+      "instruction_sha256": "3ea8a8199ea47678dc593442efbae4913ccda8bc1a2c8c24a649173e728d004f",
+      "name": "Trap Spawning Points Visual Alignment",
+      "public_archive_sha256": "210ad7d9cd1e4a81a6c0305b1fdb80e3ec58d0d10cd7f4a09c0ad8d7e0bf5c26",
+      "stratum": "2d",
+      "task_id": "task_0115"
+    },
+    {
+      "family_key": "video:ykogubgzaty",
+      "ground_truth_archive_sha256": "044e0d9a58ca456738680a62820abc1a14f0e8263e00f0934cc6b3956fb61aaa",
+      "instruction_sha256": "1111e50479c2b0e4d80bee3d74a53d9dece72021205df5ea23a67d5a73b5483b",
+      "name": "Rain Splash Subemitters",
+      "public_archive_sha256": "ac609e3ded0f8206d2389da02cf101a1a45932033e6d63159d83ab8ccab53d41",
+      "stratum": "script_resource",
+      "task_id": "task_0116"
+    },
+    {
+      "family_key": "video:ykogubgzaty",
+      "ground_truth_archive_sha256": "c07073de096367023702911e7abff2565ab928610da7035b0b2cdd9b154bd335",
+      "instruction_sha256": "ae6e2189af86f38f3bc403c5b4e4bc24e63d6e71252e4142d897ae3b3d11325a",
+      "name": "Rain Splash Subemitters Red",
+      "public_archive_sha256": "2df8c073b395c70d88398b724ab68dc027d427c60c74b33f2fcbb4baf329b125",
+      "stratum": "script_resource",
+      "task_id": "task_0117"
+    },
+    {
+      "family_key": "source_name:youtube cashew olddew signals in godot 4 3:trap spawning points visual inverse",
+      "ground_truth_archive_sha256": "9467035f0a120be47fe0ebef4b230f7aba3704699c050a4c9d15bb3b06307837",
+      "instruction_sha256": "7947f55e07a7b170a74855a057493f2ff40e78fa10aca079af42ad9bce56c313",
+      "name": "Trap Spawning Points Visual Inverse",
+      "public_archive_sha256": "c87a84a800c722bc100458d6854ae36cb81c0968b63d992d89b0808d8b11292c",
+      "stratum": "2d",
+      "task_id": "task_0118"
+    },
+    {
+      "family_key": "source_name:youtube cashew olddew signals in godot 4 3:trap spawning points visual alignment horizontal",
+      "ground_truth_archive_sha256": "16b6b2c0a81bd6416f646cd1fb8a99a5093a4603d291e79f5607a0913f226dca",
+      "instruction_sha256": "eacb5e90d6b2eb79c776001a067682b48f1d361064a09e6dd14b851c1b3dff5e",
+      "name": "Trap Spawning Points Visual Alignment Horizontal",
+      "public_archive_sha256": "b4706bf7d6aa9d85b4d8618d53e87ef4026064c4aa1dcc089ed6c63f718a6383",
+      "stratum": "2d",
+      "task_id": "task_0119"
+    },
+    {
+      "family_key": "source_name:youtube cashew olddew signals in godot 4 3:trap spawning points imitating",
+      "ground_truth_archive_sha256": "5663baa0a98c0802ca24b239f3b02df2893828bcf27554758ae9039c88a12aac",
+      "instruction_sha256": "44c25931dd59491f51716bca5af178096e02be60dc29e9db768cca159ebba51e",
+      "name": "Trap Spawning Points Imitating",
+      "public_archive_sha256": "e90773916bc56c3758e1e9dc608b990164e1060769211166e2e9bb460ca77e18",
+      "stratum": "2d",
+      "task_id": "task_0120"
+    },
+    {
+      "family_key": "video:x0e n7dbff8",
+      "ground_truth_archive_sha256": "c070d0fe9c76cdecb6695de0dcc07d0225d49a8c9a1c3528bdd01c9648239aef",
+      "instruction_sha256": "cfc2985bb155334ecfd837be38f3d640363c35852e8507fa62032db017d70898",
+      "name": "Portrait Balloon Layout Alt",
+      "public_archive_sha256": "06b3ac8689855ec8beef2d2ac7bda36c0823a6542fc39e98efa8b7e82343a4ff",
+      "stratum": "ui",
+      "task_id": "task_0121"
+    },
+    {
+      "family_key": "video:xljcmdy8jdw",
+      "ground_truth_archive_sha256": "c0ca74dc0dc448fd2569129c2bb83ecec7a25201e8a1e489ccef9278f6cf3f34",
+      "instruction_sha256": "fb6fda50a04b88402869818873f0aff6151ab5bdb76bf59d347feef46f4f9ca7",
+      "name": "Codex Interactable Highlight Resource",
+      "public_archive_sha256": "02f7d60e8d6055f902dcb1ae6504cca28d0b33f1bc1b21bd615b074fd53c1be9",
+      "stratum": "script_resource",
+      "task_id": "task_0122"
+    },
+    {
+      "family_key": "video:auvsx mtuns",
+      "ground_truth_archive_sha256": "b72580986e3b40040dd5579b9c817897f5b322799b0aaee6c9f875bdf64ca2e7",
+      "instruction_sha256": "93698b032dfc5ee8d3034e5b161a6a9f56eec56258dc607cc2d764d05dd87301",
+      "name": "TileMap Migration",
+      "public_archive_sha256": "0c61d4ec798de384933ecb16023dcfa1f665e7f88ecabf33fabbb56bed22613b",
+      "stratum": "script_resource",
+      "task_id": "task_0123"
+    },
+    {
+      "family_key": "video:4vdfg9ki4xw",
+      "ground_truth_archive_sha256": "ead6ba7898eb15725bdd15b7cc71ee08594c6edd66ba03734a485d70aeaab66b",
+      "instruction_sha256": "e8f74d56c8e691eff6efab6589808d3ab798ab712396d59bf442e5d77dba9f9d",
+      "name": "Codex Enemy Hit SFX Plus",
+      "public_archive_sha256": "1c45b1b04fc37e34f5aa1ae2de6dc85437154de87e275e6be2610a81619b1ce6",
+      "stratum": "2d",
+      "task_id": "task_0124"
+    },
+    {
+      "family_key": "video:auvsx mtuns",
+      "ground_truth_archive_sha256": "9b189c1512d0613bdb632fc55e852e49575b4913f963ed20e38fd31f3e2d90c5",
+      "instruction_sha256": "7cc91ce7f074e1ebe1f46cec24b1d5c1511e9ce01519a9edb5bd72eae46fbc77",
+      "name": "TileMap Atlas Physics Layer Full Course",
+      "public_archive_sha256": "c100006e0f989a8cc7d803445c44803a378b785bd65c9a3e208f0401cf6cc899",
+      "stratum": "script_resource",
+      "task_id": "task_0125"
+    },
+    {
+      "family_key": "video:zfa0jldrcz4",
+      "ground_truth_archive_sha256": "fe03d16fe9ec3a937ac2fe480dd2aac85f8387ebf4aa5cea9fe8736d728ee31e",
+      "instruction_sha256": "5cb291bab2af0441e01cd87bb10b8dd8ce0274370a434e65399ec2378726a204",
+      "name": "Fractal Control UI Panel Original",
+      "public_archive_sha256": "2955b75c36d5f7606c5e8d40469d659a4a7a3ad0ead215e2600743fa7609fb16",
+      "stratum": "ui",
+      "task_id": "task_0126"
+    },
+    {
+      "family_key": "video:4vdfg9ki4xw",
+      "ground_truth_archive_sha256": "665c55bbb3804a9acfcfd7f6127b19a1b8af3f653821e77b144d7381965bd3e1",
+      "instruction_sha256": "fca8995f8537a760b87681b8108000696afa9fb6bfec5adf73fc65754e8e3e3a",
+      "name": "Codex Music Bus Autoload Alt",
+      "public_archive_sha256": "2892ccff2a9f6e960a21e82a7bb64f20dd146cd5421e63ccf16488ee6d42489f",
+      "stratum": "2d",
+      "task_id": "task_0127"
+    },
+    {
+      "family_key": "video:zfa0jldrcz4",
+      "ground_truth_archive_sha256": "7c760efba0b96d38ea2c677759caa07b2ec94a6eac434e8027ec13117a471b7e",
+      "instruction_sha256": "7ee86c6d1245a5deba72e4020cf5a2142142be667513d3d2f08aca175f50b3a3",
+      "name": "Fractal Panel With Julia Shader Alt",
+      "public_archive_sha256": "2812ef7aca377c60ebdcac51ec943c239c2c9df9af9354ee300f13b852a34cb5",
+      "stratum": "ui",
+      "task_id": "task_0128"
+    },
+    {
+      "family_key": "video:yw15z7xqmnw",
+      "ground_truth_archive_sha256": "c382fbf1dbc28c95a5c2eaa2d804085e3375b98d12afed4dbc05bd9fa97fe7d5",
+      "instruction_sha256": "e0b7949740e6f8a7e9a752fec3df38d6957ba711def0cca9f78083ed67389cb1",
+      "name": "Build the gritty world environment skybox",
+      "public_archive_sha256": "7d7ae2781b3d62874de5a52028b74517f3b40fbdaaa4089b33d4299a7d7936ba",
+      "stratum": "script_resource",
+      "task_id": "task_0129"
+    },
+    {
+      "family_key": "video:yw15z7xqmnw",
+      "ground_truth_archive_sha256": "84fb659b1fbba08922011cf26d2a9846b7a2a6bf8a09e96ed795748492feec00",
+      "instruction_sha256": "31726c18bf778fb61784d5dfd80d7bcb1fffe854c896cc847b8ffac818fd5029",
+      "name": "Enable fog and LUT grading",
+      "public_archive_sha256": "81a8ffa85f1a0990d27d3e32fd58a778087033d61b26f553b98645014b76dcaa",
+      "stratum": "script_resource",
+      "task_id": "task_0130"
+    },
+    {
+      "family_key": "source_name:https kidscancode org godot recipes 4 x ui minimap index html:minimap ui complex",
+      "ground_truth_archive_sha256": "56a6acc5263e27a6ae12c7923e83acf6eb405f1e0a35e94297760bdc2e68f2f4",
+      "instruction_sha256": "a8c1cba55df05584b9f5388df1226e23399d631925f3cad0ff8aeb9483cc9f9a",
+      "name": "Minimap UI Complex",
+      "public_archive_sha256": "30fbfc337d7d250e64a867fb6138e0cb4faf7bdb95b19b230ed4ab699a6ff6cc",
+      "stratum": "ui",
+      "task_id": "task_0131"
+    },
+    {
+      "family_key": "source_name:https kidscancode org godot recipes 4 x ui minimap index html:minimap marker logic complex",
+      "ground_truth_archive_sha256": "8138d12c56d97b2b583cd39c79de1a5d11a27b2de0bc843d762c970ee04909a6",
+      "instruction_sha256": "b64809fca18247b9be9fbf8e6e71194a570a9e349070ae4d3dfded1d27c7f0f1",
+      "name": "Minimap marker logic Complex",
+      "public_archive_sha256": "7c2c76a17d5a8bba7885377b51ddf2ad76bb08114d3cb3386ee2edb3b3dde4e2",
+      "stratum": "ui",
+      "task_id": "task_0132"
+    },
+    {
+      "family_key": "video:pjpdnlbdstw",
+      "ground_truth_archive_sha256": "3082fc88b617c650d93eb2fe6c320c171d75759162c6c8c3e3b7fcb323c747d0",
+      "instruction_sha256": "cd053fe9912229401176d2ace9e952f9392f682cba822ab1db53277dc9834095",
+      "name": "River Raid Power HUD",
+      "public_archive_sha256": "7bfc21346bf787766f998343679301c73ddbdd1ce41828f36fea388ce2f2d7bf",
+      "stratum": "ui",
+      "task_id": "task_0133"
+    },
+    {
+      "family_key": "variant_root:task 0133",
+      "ground_truth_archive_sha256": "6d805f89dea5e2a0c9c52c50ba372f60eb281a1d3a4ab0d3b0a4174080d05e65",
+      "instruction_sha256": "71d60a7426a11a8142c6ff4f173b78f8aa8afed37c7d7955961318581a6d7a79",
+      "name": "River Raid Power HUD A",
+      "public_archive_sha256": "bc74cb04f48ba30535776765ec95c428648f8964a877a3e9671f20a16045b1ac",
+      "stratum": "ui",
+      "task_id": "task_0134"
+    },
+    {
+      "family_key": "variant_root:task 0133",
+      "ground_truth_archive_sha256": "ab7892e094daf9fe3c9ac41e2aeacfcdc7c70085438b755771d90c59463b427d",
+      "instruction_sha256": "22a0f3a896e735df262647147259de375b83bfb899ebcae5eddbb5205c682efd",
+      "name": "River Raid Power HUD B",
+      "public_archive_sha256": "b3e4889ed7535f28362320d3b2a20b10915a5d62bb76ab428d1f3cc0f09e336e",
+      "stratum": "ui",
+      "task_id": "task_0135"
+    },
+    {
+      "family_key": "variant_root:task 0133",
+      "ground_truth_archive_sha256": "7c0420fd269d046bafa86f3798164b8fb989724b80d0946cc34648a2fc457609",
+      "instruction_sha256": "1f3314ce8c006bab054fc861fc71b3488edb32c04176a805bced80ac320b0797",
+      "name": "Sky Patrol Status Strip",
+      "public_archive_sha256": "63d143d2ed66c10efe00501d0ee213ba3c47012f77ebb115b2ca2572f25d8bb7",
+      "stratum": "ui",
+      "task_id": "task_0136"
+    },
+    {
+      "family_key": "variant_root:task 0133",
+      "ground_truth_archive_sha256": "4c2db0ef901c6c480447615d835875e66eeb8f0643aef4b04bdf63efbb7f4a9c",
+      "instruction_sha256": "0bef8af2eb7f3b1ce2bc71e4ac3191d6af9c4672ae677fd607ff3da36f8de5d0",
+      "name": "Canyon Raid Dashboard",
+      "public_archive_sha256": "eba0c5dfdacfcf5fce629027b3491746c8ce2a5abafebd8ab35b9e507fd78a70",
+      "stratum": "ui",
+      "task_id": "task_0137"
+    },
+    {
+      "family_key": "variant_root:task 0133",
+      "ground_truth_archive_sha256": "9a9b9759310a4fbecfef73a449d2a627c054c339447cc6ef51b1d5826690aac8",
+      "instruction_sha256": "27f653a1d37337150931ef1d3b415a8ac490d832f7896d144952a21ddd6d8cbb",
+      "name": "Alert Dialog Center Preset",
+      "public_archive_sha256": "f820e31d6e5f20ebd318eac48d66ddf300e344169094d00ac3ff57f1476b6b74",
+      "stratum": "ui",
+      "task_id": "task_0138"
+    },
+    {
+      "family_key": "variant_root:task 0133",
+      "ground_truth_archive_sha256": "7d869b92dd99e1d796866920159f6d5a6f8d981f6e5ef19ab5c3500dc4a05c0a",
+      "instruction_sha256": "aa116d478741c733e8081397baf261e882c5866019747fd0ab9f64d5fc5ce0eb",
+      "name": "Danger Dialog Center Preset",
+      "public_archive_sha256": "9df4e19a50d16a23f405aea78cd18869c6c2c79e6fc7adae6da1244ccd719830",
+      "stratum": "ui",
+      "task_id": "task_0139"
+    },
+    {
+      "family_key": "variant_root:task 0133",
+      "ground_truth_archive_sha256": "395150adebfba5bfe76593566887214da7e134d914601193c812eef3fd2de77f",
+      "instruction_sha256": "d02339cac8f1343f239ded1234f20bbb68a5d5d1699a9e066a1b000fd9c9cd0d",
+      "name": "Warning Dialog Center Preset",
+      "public_archive_sha256": "69d25779d3dc1bc750ab4022a6ad439cb4ae83cb4ddc661dc38dcddee1629db2",
+      "stratum": "ui",
+      "task_id": "task_0140"
+    },
+    {
+      "family_key": "variant_root:task 0133",
+      "ground_truth_archive_sha256": "380118039b238c24caf3c69278ca147f60661a50f50cbe926be21cb86f20ed91",
+      "instruction_sha256": "9876a0af589386d3efa30dca6bd6cc773e37aaaf887be6fa29cda63545d29c7d",
+      "name": "Top Wide HUD A",
+      "public_archive_sha256": "bda0f3f9437dc48aab3f0951089f85a2c7f09ad2316085cce392ae741e88884f",
+      "stratum": "ui",
+      "task_id": "task_0141"
+    },
+    {
+      "family_key": "variant_root:task 0133",
+      "ground_truth_archive_sha256": "f3f9637081acf1bfe6290a822368d3f727b4f114c5b455c995b8ad7a436d9322",
+      "instruction_sha256": "dc3222a4345ebb28b6684b8278a06189b964316dc034009197ea435e9a51b12b",
+      "name": "Top Wide HUD B",
+      "public_archive_sha256": "2719b3543ad18ad7aa65dd0bf7b9db371871d75d3c4cdaba4920154d316f012e",
+      "stratum": "ui",
+      "task_id": "task_0142"
+    },
+    {
+      "family_key": "variant_root:task 0133",
+      "ground_truth_archive_sha256": "80d965ead9aa893e7eef6d80d1216cb20e57e135175f89425f920cd9e8e4106d",
+      "instruction_sha256": "a0f443b28ce3df931600ed1f715b735085ffe0c5e18a3e06bb8c87924d74a189",
+      "name": "Top Wide Status Strip",
+      "public_archive_sha256": "06c251f9cd3abd0d3bfe8b8c8bb07fefb1c6d2a6aa63f2b977c7a3d52e10974a",
+      "stratum": "ui",
+      "task_id": "task_0143"
+    },
+    {
+      "family_key": "variant_root:task 0133",
+      "ground_truth_archive_sha256": "64b8fea21aceeb2bdc3da05053622fe4c668590fa1eddf439841fd2b368e1be4",
+      "instruction_sha256": "4ad5452afd991d3f0c33ea9d4e05b912a06f28ebf3548417badf4a8420cded55",
+      "name": "Left Wide HUD A",
+      "public_archive_sha256": "8bb5e7e17c16a7f93a60cc0647e955dfa9b6db96574d514d87aed7dfa625d6dd",
+      "stratum": "ui",
+      "task_id": "task_0144"
+    },
+    {
+      "family_key": "variant_root:task 0133",
+      "ground_truth_archive_sha256": "d9acd926d718477f50f44f760145d627e35d6432484330fb28491871c3a75fe7",
+      "instruction_sha256": "0df3d7e6fee5348451194d0f5d4815cf790c33ac6132d7175d70fe82734753a9",
+      "name": "Left Wide HUD B",
+      "public_archive_sha256": "c76b1efc7273dd6b41b8367b155d1fd6b30efd358e4ca55a136ccc98c905a341",
+      "stratum": "ui",
+      "task_id": "task_0145"
+    },
+    {
+      "family_key": "variant_root:task 0133",
+      "ground_truth_archive_sha256": "f0de24064f78e769e8755eafbc00b123441b38031c4345f30ecde46e32313888",
+      "instruction_sha256": "ee9b692ebab29d05d957a108f2f91498643f34cf49cc15c5e0c9c312fd3a353b",
+      "name": "Left Wide Status Strip",
+      "public_archive_sha256": "631620e1a4d7601237f4665d651805ab9e0c566fd488817942a730a447de57c8",
+      "stratum": "ui",
+      "task_id": "task_0146"
+    },
+    {
+      "family_key": "variant_root:task 0133",
+      "ground_truth_archive_sha256": "93a2981f01948410ae30f4be6b1b1202004cf8422486c515aa739175963ba24a",
+      "instruction_sha256": "ebef9dd25f6b9c10dc4e1fd425d462b5b87456e8ac0588ae4526169b94dc8cd0",
+      "name": "Right Wide HUD A",
+      "public_archive_sha256": "0c773d17f5e5d74a61798782b7e7f95ab6cd0e3a374d72162fba85d9b8348f59",
+      "stratum": "ui",
+      "task_id": "task_0147"
+    },
+    {
+      "family_key": "variant_root:task 0133",
+      "ground_truth_archive_sha256": "ac56f8d679c7ed99f003475cba2e255d192807c16dc4cad46ac03be24370d95e",
+      "instruction_sha256": "6be56bb0773976d5acb313c041f24bbd4e3f6d9c263f4054456e5df2af98b128",
+      "name": "Right Wide HUD B",
+      "public_archive_sha256": "e4e5967f81f3ae76706e893a1e556288b062e9d4f200b02d5ee220d55b9127de",
+      "stratum": "ui",
+      "task_id": "task_0148"
+    },
+    {
+      "family_key": "variant_root:task 0133",
+      "ground_truth_archive_sha256": "8233379973612a86442e216245c34d6deb4b357b21e0445dbbe8e08de4f44f47",
+      "instruction_sha256": "40275d5dfac910833d9e403c17e538460504a8b70d79fc57fb117eaa2ca9b496",
+      "name": "Right Wide Status Strip",
+      "public_archive_sha256": "347d6f7469447ff2c95ce546375052de868dff25c663e5d129e3186983c6947c",
+      "stratum": "ui",
+      "task_id": "task_0149"
+    },
+    {
+      "family_key": "video:grdig96ames",
+      "ground_truth_archive_sha256": "8cb5e7c1febec232128badbdcb008d582ac0c7ca243c5e58a61b4ce0a53e3be1",
+      "instruction_sha256": "d7f2db2952e9cf69e8b43e5edbc53096582f9960afb9b3e8aac0be32bb93f4fb",
+      "name": "Create Battle Over Panel",
+      "public_archive_sha256": "92e2fb70f347c1bff046d60380c41905c130648f0f9e0865e85836794918b2d5",
+      "stratum": "ui",
+      "task_id": "task_0150"
+    },
+    {
+      "family_key": "variant_root:task 0150",
+      "ground_truth_archive_sha256": "f4741ad39d97abe15ac20f189a3eae0f7c59caa901eac7af3650ebf9cb75cbb5",
+      "instruction_sha256": "7bae82769fdb4a24cc82baca9f5921508f413d85ddb539fc6a1765fd52a10844",
+      "name": "Battle Over Panel Expand Fill A",
+      "public_archive_sha256": "984bf5ed53fdca9596aa88a93005b97ca1195b87a4f1f4eab22a0ed2ef018646",
+      "stratum": "ui",
+      "task_id": "task_0151"
+    },
+    {
+      "family_key": "variant_root:task 0150",
+      "ground_truth_archive_sha256": "7d08856e23f2cf1d8044a1715874d916f03ab7b9762b1b783637c55c62986372",
+      "instruction_sha256": "5c8a12ca21eb8cd6ec277b6225427caee605a020920394262cafe158a9ab2957",
+      "name": "Battle Over Panel Fill A",
+      "public_archive_sha256": "b5918bad88ff4e895f2efaf76c256ef8a8f2e70345d93cc45e7f90a113004ae0",
+      "stratum": "ui",
+      "task_id": "task_0152"
+    },
+    {
+      "family_key": "variant_root:task 0150",
+      "ground_truth_archive_sha256": "6e5169b76ca9e078f2ce760b94914ff9500b80108a88740c1db1ab08476c6e78",
+      "instruction_sha256": "2e2cd2e9b8970afa41f46e868e2f934abe822f1f4203b2ef87d309033bfea97e",
+      "name": "Battle Over Panel Fill B",
+      "public_archive_sha256": "63d66943f63ea5f23d7a30d2c9b559dae414c0400e9871a565f8a5d8d341d52d",
+      "stratum": "ui",
+      "task_id": "task_0153"
+    },
+    {
+      "family_key": "variant_root:task 0150",
+      "ground_truth_archive_sha256": "b06c4a02987e688e2c70306abd2d13b178dfbba448f32bd0e86714f53d86b5ce",
+      "instruction_sha256": "2019625169cae3792c1aa9e8018f65ec94e04652dd9210d18a02a6d1f88582b1",
+      "name": "Battle Over Panel Fill C",
+      "public_archive_sha256": "574b828e93c85e48752dcd3d38adad6c6c85cd22cc08208a83f6e42c537fc56a",
+      "stratum": "ui",
+      "task_id": "task_0154"
+    },
+    {
+      "family_key": "variant_root:task 0150",
+      "ground_truth_archive_sha256": "63155f6665891ef1baad6fea810c641fd17267f3b957699f576cac7b90a2f204",
+      "instruction_sha256": "92ccde71d55e0993d0c8db320dacf6efb9b8b74c944bad4f7beb86cc402c84a3",
+      "name": "Battle Over Panel Expand B",
+      "public_archive_sha256": "6a4d8e280546a18db5970530a4b18bd747b5cb60d8ba4c289db47bbc10d461c7",
+      "stratum": "ui",
+      "task_id": "task_0155"
+    },
+    {
+      "family_key": "variant_root:task 0150",
+      "ground_truth_archive_sha256": "b2f57dfc435bb60b33e7a0fe617e03f22d1efe4bf4e684be49650abeebd38d82",
+      "instruction_sha256": "786c2723ce61bf1b59815b6160dc854ddcb64ae5d4de24b27b02c043cf6d9bee",
+      "name": "Battle Over Panel Shrink Begin A",
+      "public_archive_sha256": "1757677cd834ca7a7e2ec6505f28cab43cb78e641fc856df1aebe13239a491c6",
+      "stratum": "ui",
+      "task_id": "task_0156"
+    },
+    {
+      "family_key": "variant_root:task 0150",
+      "ground_truth_archive_sha256": "b71bcd0e46ff64da4e463a513d9dd32afb25d95e7a24af0e4490c3d242e65785",
+      "instruction_sha256": "690e04b7752c5081157fd6cc14ad0d399271728e1444456d83b0f7e9fc1862d2",
+      "name": "Battle Over Panel Shrink Begin B",
+      "public_archive_sha256": "6bf1b936c1398a0127dad253cc6e5208274f0e4c0bd059d1a15c7320172bcfba",
+      "stratum": "ui",
+      "task_id": "task_0157"
+    },
+    {
+      "family_key": "variant_root:task 0150",
+      "ground_truth_archive_sha256": "06d23696db3de64125a0e9b78207193bde08658b16acd4dd1b936f7934d2b879",
+      "instruction_sha256": "e19b7fdcdc78216277a8a8a94cd81f2b9af94fc1d119a6a34899d7d8f39f7908",
+      "name": "Battle Over Panel Expand C",
+      "public_archive_sha256": "4a187660bfd7749833552de576c539a84fc04bfd0484b2e3d15abdee1241048b",
+      "stratum": "ui",
+      "task_id": "task_0158"
+    },
+    {
+      "family_key": "variant_root:task 0150",
+      "ground_truth_archive_sha256": "fde261e4aea29b8b3743b2e262ed30dd7585d7a27f1029816883b129e4a82552",
+      "instruction_sha256": "a09dfc88b52eed92ffdcbb53e1af2085ad1a48c27a1d79434dbd259ee2f1650e",
+      "name": "Battle Over Panel Expand D",
+      "public_archive_sha256": "68c85543266663b50b7fd12723c010dafb41a1d423407133e0c4c5d8d49c2d64",
+      "stratum": "ui",
+      "task_id": "task_0159"
+    },
+    {
+      "family_key": "variant_root:task 0150",
+      "ground_truth_archive_sha256": "cd4db60eb0a3c8e16b43111f0ac72ac3feb3b1b503662841686f6e1cbb664baf",
+      "instruction_sha256": "14fbe03ea0db2d7794709b77322bbd20d3771e105df5f543968b2807bd1f3dda",
+      "name": "Battle Over Panel Expand Fill B",
+      "public_archive_sha256": "ebdcaca23e2e3723c2198f5bdaaedc15533f3bd8f267d78b62132083ec625178",
+      "stratum": "ui",
+      "task_id": "task_0160"
+    },
+    {
+      "family_key": "variant_root:task 0150",
+      "ground_truth_archive_sha256": "e08638ddabb4b6e279c08f961f0b3f87636ad27defb25f2459d604a240c46658",
+      "instruction_sha256": "fcc33d3c536d2c0c750fd1249fede1984519d584c629dd07a9196d3bf05ce21b",
+      "name": "Battle Over Panel Expand Fill C",
+      "public_archive_sha256": "6b1dcc9d3c4b10da06a690a216ed5c8948ee89805ec493436cb637a33d96d8f9",
+      "stratum": "ui",
+      "task_id": "task_0161"
+    },
+    {
+      "family_key": "variant_root:task 0150",
+      "ground_truth_archive_sha256": "f0be5ba24765af74cadaed6b568474448586052dda678af806aac4d4da012906",
+      "instruction_sha256": "1b5b39ad5d6feea5d9dfaafd79435dc6dd30b818363511da2855c363a5f7c0b4",
+      "name": "Battle Over Panel Shrink Begin C",
+      "public_archive_sha256": "64baca423cb2fa67319078afd9cb11b944ecad2e0a3723f9320f3c98797e1b15",
+      "stratum": "ui",
+      "task_id": "task_0162"
+    },
+    {
+      "family_key": "variant_root:task 0150",
+      "ground_truth_archive_sha256": "924f1f1d804a04a4a432a74a6cc3c8c7f1dd12ba55a946ee18119a6cffe284fb",
+      "instruction_sha256": "b642bb882dceaf59a528e2c5bbf480ea347ec213ceb4044d3679a7805d6529f5",
+      "name": "Battle Over Panel Shrink Begin D",
+      "public_archive_sha256": "57346f988c705a040be85cba82487f0e991e570e054695d8d3edfdf09f7d0c11",
+      "stratum": "ui",
+      "task_id": "task_0163"
+    },
+    {
+      "family_key": "video:25k0trbx0 e",
+      "ground_truth_archive_sha256": "dd0c7be03514da43ce0e6ac91ee9d1cb9c3f463b6f76c4143d36938b499dba0f",
+      "instruction_sha256": "63682873096dc702b5d3dd8807755c8d6511ef06f642a852ab7edd242059129b",
+      "name": "Fighter Player Jump",
+      "public_archive_sha256": "2043c6a3d282a9def14e86406c4422aa1a0a44a06a0030c606ea6513e7ddfddb",
+      "stratum": "2d",
+      "task_id": "task_0164"
+    },
+    {
+      "family_key": "video:25k0trbx0 e",
+      "ground_truth_archive_sha256": "37f221abfef8464cd7588f12c26e2e6a8a3ae41ebafd792aaf86c0dc0069c5d7",
+      "instruction_sha256": "c91d41090509763c120c64edf7f8585e135b88f92b0406225d9ab1b6139f242a",
+      "name": "Fighter Player Jumpkick",
+      "public_archive_sha256": "644c9ad579ab8ff72357d0e920dc025d332c07f324386565415db71f56f59a4f",
+      "stratum": "2d",
+      "task_id": "task_0165"
+    },
+    {
+      "family_key": "video:25k0trbx0 e",
+      "ground_truth_archive_sha256": "72e179c2807bbdde5948042a3b6be5c5b41632645bcc6f16f86683c3b021eb5a",
+      "instruction_sha256": "f36dfd2eeb4ecfa7d81c72bf065d56172b193673f3db084feb0acf05da2df112",
+      "name": "Fighter Player Kick",
+      "public_archive_sha256": "ab28fb467396f3404e033d8e52aa3d4f655755c05b94228bd9cd094dfce24811",
+      "stratum": "2d",
+      "task_id": "task_0166"
+    },
+    {
+      "family_key": "video:25k0trbx0 e",
+      "ground_truth_archive_sha256": "c96f8e9651a152ba5a809f41442c2af6ebb557b76055ba07ec81486b0a0c8f00",
+      "instruction_sha256": "b78c0803b130ef5d55ebde5808803aab634faafd77aa389d0b2c83b6e97db76b",
+      "name": "Fighter Player Jab",
+      "public_archive_sha256": "1a116f65d074cc236ff5d75b97000de8992b6c691173156a25db53b8d5370fbd",
+      "stratum": "2d",
+      "task_id": "task_0167"
+    },
+    {
+      "family_key": "video:25k0trbx0 e",
+      "ground_truth_archive_sha256": "710057e81b502defaf91be84eee0925e3dfd00f5bcccd7c522e171604dde70be",
+      "instruction_sha256": "75c042e84e35787e5b784a48592df3977e6799fec408b3ded1224fc9ea37556d",
+      "name": "Fighter Enemy Death",
+      "public_archive_sha256": "45f1e1b30232e7362269b13843abe608b2f8f9c947f8df013cd516495dbaf6c9",
+      "stratum": "2d",
+      "task_id": "task_0168"
+    },
+    {
+      "family_key": "video:25k0trbx0 e",
+      "ground_truth_archive_sha256": "031c9d42902800c3d90ba8a9da85650c5218d19bc7bcb5de012860601e5da34b",
+      "instruction_sha256": "6c017b5abca26e9cc94f518e0a49bb0586b6d2579970946a99cb6542ce988211",
+      "name": "Fighter Enemy Sprite Update",
+      "public_archive_sha256": "9b3d0d864f99f321ad9eb6eebda21562c7b55bfbd3d8bb00a3741f9fb8a857d2",
+      "stratum": "2d",
+      "task_id": "task_0169"
+    },
+    {
+      "family_key": "video:25k0trbx0 e",
+      "ground_truth_archive_sha256": "25f0cd556218bbcc68f7a879ca99bc177eaaaf119a787a49e678a8b8089df728",
+      "instruction_sha256": "522cf7316e0f8b39c3cb947ed84fadfe54beb78031df3f80b0ad0aab5a6d57c0",
+      "name": "Fighter Player Big Strike",
+      "public_archive_sha256": "dcc0a248c27357087adb1ab1d5d4f229f4db123b910a5f60e291429c070235d3",
+      "stratum": "2d",
+      "task_id": "task_0170"
+    },
+    {
+      "family_key": "video:25k0trbx0 e",
+      "ground_truth_archive_sha256": "a7a99c037923b83e7f750e9b1856816f3e9203c3ed5e464ae06d1636bf8513e8",
+      "instruction_sha256": "e7073734915e909df2c5ddb0dd2c788b2811cc9315a3486cf38d1cb89546243a",
+      "name": "Fighter Player Punch",
+      "public_archive_sha256": "06f5448aceb6f25c8cd5b729ce14d173c31ea154602532d88a8b49275f302b9d",
+      "stratum": "2d",
+      "task_id": "task_0171"
+    },
+    {
+      "family_key": "name:tilemap water data",
+      "ground_truth_archive_sha256": "c2f003b6cf007fc9c82a78aa733385862c2c44cdb9472f202b4a9cd96dcd80fe",
+      "instruction_sha256": "0ab3f84cf2e96794c120af6427711db5b99a00204dd08440f11e223bcacdc1f8",
+      "name": "Tilemap Water Data",
+      "public_archive_sha256": "f10dd7b05de9a41a6bc727ae9e5740789353e5d0635b8fceec81c94ca95bd4be",
+      "stratum": "script_resource",
+      "task_id": "task_0172"
+    },
+    {
+      "family_key": "name:tilemap pipes",
+      "ground_truth_archive_sha256": "db4c3cdb0b79833209d610ea578e7181ba36be5b7ccc0f8f44cca14ca1e832b8",
+      "instruction_sha256": "7f44f61bdea046c624401f34d0104b37edac8f4df1db2c6fead2962268503ed5",
+      "name": "Tilemap Pipes",
+      "public_archive_sha256": "d0fe76a221d3282a6d421f8c90edb6cb2fbe3ec5c8799d6a4605da8270f4c6db",
+      "stratum": "script_resource",
+      "task_id": "task_0173"
+    },
+    {
+      "family_key": "name:tilemap terrain",
+      "ground_truth_archive_sha256": "c2fc60a3f253a53c94cdfca29cc6241b00921b3dfc7c9e732418ebc5b1b7d636",
+      "instruction_sha256": "edc0248fed556aefc3138d8f67eaa916285d2e46ffb0a3d1d5d61e31c7761049",
+      "name": "Tilemap Terrain",
+      "public_archive_sha256": "92ef92ce558f4596ea3faaa8ef4c1922e718bb982cc5790df9de7057c5ac3604",
+      "stratum": "script_resource",
+      "task_id": "task_0174"
+    },
+    {
+      "family_key": "name:tilemap numbers",
+      "ground_truth_archive_sha256": "e0099f8edfe11966e8076b6e930b88d2f1211fc00439654d9e18a744acc25fb6",
+      "instruction_sha256": "ee4bf7bda1066e617c42a37ecd40f128b231ebe6c0b7549b9c023023772d8bb9",
+      "name": "Tilemap Numbers",
+      "public_archive_sha256": "aa1b19e9c54651fbf23da8f95f1ba0aebe2effd62e21a994c2bbda910b1d1987",
+      "stratum": "script_resource",
+      "task_id": "task_0175"
+    },
+    {
+      "family_key": "name:tilemap add terrain collisions",
+      "ground_truth_archive_sha256": "3500882cdfe97f7cccc65dbe426ebc1be0fecff959e5d698e67c009913e09400",
+      "instruction_sha256": "21db717323d54058d8efd0f819086c5acbe7d845baa34739425d5a2c3e8f585c",
+      "name": "Tilemap Add Terrain Collisions",
+      "public_archive_sha256": "934531216795338db148e19e39dee14d5644fd57d68025d8b97525c690558e59",
+      "stratum": "script_resource",
+      "task_id": "task_0176"
+    },
+    {
+      "family_key": "name:tilemap add terrains ii",
+      "ground_truth_archive_sha256": "52eb37acc5b5524f2d5ec079c5b4d48f5d04d1822ccb6f48abfa5144d3747d00",
+      "instruction_sha256": "38a26b483fbcacab34c56e2bd171471f2df85412ec8dbaa7690157962b2c1991",
+      "name": "Tilemap Add Terrains II",
+      "public_archive_sha256": "85e8927eb4cad054413b307385c81bd32ab49d25a901f123e452f62120080c08",
+      "stratum": "script_resource",
+      "task_id": "task_0177"
+    },
+    {
+      "family_key": "name:tilemap plant data",
+      "ground_truth_archive_sha256": "d895c5250a7d3931107235c7c64ceb4f011531910e828a435b5af0192858bd3b",
+      "instruction_sha256": "1e34b89f58bd749f3ea7c97ea8656c8590e719280c0284fbe35054a186221358",
+      "name": "Tilemap Plant Data",
+      "public_archive_sha256": "9b3401eb4c7c50eeda98a1bf361bac389294b73c7574b1da43517dcae5a1d6f2",
+      "stratum": "script_resource",
+      "task_id": "task_0178"
+    },
+    {
+      "family_key": "name:tilemap cloud one way collision",
+      "ground_truth_archive_sha256": "fa723c765c3e8b0f128503affed0dc558b4fc82f7d66edb21ba5a06cfe18e5ea",
+      "instruction_sha256": "e737c732ddf5bc6405f7dc892ef8254b6f3ba31bb028b68113f19b7f09287375",
+      "name": "Tilemap Cloud One-Way Collision",
+      "public_archive_sha256": "7314d396801f404d0c7384fb9e0176984c0d64135a52749f680f7b6021ddb31a",
+      "stratum": "script_resource",
+      "task_id": "task_0179"
+    },
+    {
+      "family_key": "name:tilemap waterfall z index",
+      "ground_truth_archive_sha256": "b68630babe588998a6739a48202528e2cb02069be7b5cff0fc9196aca5b0549c",
+      "instruction_sha256": "bb6d47a12b8c7e77df7398137279ac0be4f970f380da2d7b95b15eceb79103eb",
+      "name": "Tilemap Waterfall Z Index",
+      "public_archive_sha256": "35c847a36dc6f79f8ce990c235ce3175b03533176a70d648cfef12516e8179a0",
+      "stratum": "script_resource",
+      "task_id": "task_0180"
+    },
+    {
+      "family_key": "name:tilemap isometric i",
+      "ground_truth_archive_sha256": "ff0f5f538b756e54215e4b03a8cf975c7f000e508e1206ed4299dfe62a2f7bf2",
+      "instruction_sha256": "7977b5168afac81736198eb98ca833c229a6a6133fd4bdb8636e37d1164c8c69",
+      "name": "Tilemap Isometric I",
+      "public_archive_sha256": "bbad29110ae7b25495fde83d57ada4c935fc8932b31ce5649b14197b8ff30ce2",
+      "stratum": "script_resource",
+      "task_id": "task_0181"
+    },
+    {
+      "family_key": "name:tilemap isometric ii",
+      "ground_truth_archive_sha256": "a66f9462e955321fb8c15a380a67d9a485d8b5d14c9d27bf1983900493581888",
+      "instruction_sha256": "368de15c0408ba580b2b8e2bf6d8ac03363f97a04a105a3da2bed8edd5d7dabe",
+      "name": "Tilemap Isometric II",
+      "public_archive_sha256": "2dd625d130db38c3209d58a1ebcf418ef1797dcfc1ab263b74e43b29f4142e65",
+      "stratum": "script_resource",
+      "task_id": "task_0182"
+    },
+    {
+      "family_key": "name:tilemap isometric iii",
+      "ground_truth_archive_sha256": "b1f529118c2dd9c0e5fa528de013ef2bee6b87a4c1dc38c6ae45a22e7f19a95d",
+      "instruction_sha256": "b0e22d1861f9caabc68749fc9472fe5aeda534ea2ccf4655253e3216b3d59158",
+      "name": "Tilemap Isometric III",
+      "public_archive_sha256": "792916d111487f711ac489bd87e128c55d4fe01707a3c407cb6ecf63d6bd6a7a",
+      "stratum": "script_resource",
+      "task_id": "task_0183"
+    },
+    {
+      "family_key": "video:25k0trbx0 e",
+      "ground_truth_archive_sha256": "623852677748783ff8ec09f756ffd96fd4a792b8f91df9effa109bb595ae0c65",
+      "instruction_sha256": "12245821a118f65fc05c225c6e3735def1f63e53a9eec2cc4d4fb8217631899c",
+      "name": "Basic Enemies Boss",
+      "public_archive_sha256": "a8700919750798386a96e0cfb22baa58e4f66be2bed82873575cec7fdb75a06b",
+      "stratum": "2d",
+      "task_id": "task_0184"
+    },
+    {
+      "family_key": "name:tilemap isometric iv",
+      "ground_truth_archive_sha256": "ee3dc7149c199a5c92b249a7b4a6b4f21f5240ebcec23aca4e39a1fcdfedd636",
+      "instruction_sha256": "b6d88329d2a53e5f462266d5bf3ea7f1dee282b523e670f7b04c08910b780c0a",
+      "name": "Tilemap Isometric IV",
+      "public_archive_sha256": "3310810798f55ec44687c32b599e8eccbc39086b1262b8a7eb0382262b4298f0",
+      "stratum": "script_resource",
+      "task_id": "task_0185"
+    },
+    {
+      "family_key": "name:tilemap isometric v",
+      "ground_truth_archive_sha256": "320ef7e730b4f8f4670e4abf5a212db82c383aec14c2e6fe19c2783be2974dfc",
+      "instruction_sha256": "00a248ae1428924be60e3ceaeba6545eeaeae949d069942729be5b181f44faff",
+      "name": "Tilemap Isometric V",
+      "public_archive_sha256": "28d544e37ccfc7b6b1a04af50d150eda3186ea4557e3255dbf9997d863c52337",
+      "stratum": "script_resource",
+      "task_id": "task_0186"
+    },
+    {
+      "family_key": "video:yw15z7xqmnw",
+      "ground_truth_archive_sha256": "6f26167d8e8209ef1d894023cb7d552f98667b91c00053c5b19a9393048e3fb4",
+      "instruction_sha256": "cf1d6c9fe717e8233b7dfa22efb6cb6a7299e04afbf98b0c910429272106a7e4",
+      "name": "Build the gritty world environment stack i",
+      "public_archive_sha256": "9cd33bc9ee96c31ed011f271db5fc77bad2fbea4b43997d012fb1a030b84cc5b",
+      "stratum": "script_resource",
+      "task_id": "task_0187"
+    },
+    {
+      "family_key": "video:yw15z7xqmnw",
+      "ground_truth_archive_sha256": "45328594547a66d2a978dcb8c8632710cccf1295ea5cea606aa78ef122b8c9a5",
+      "instruction_sha256": "eb691dedd2c476076a07e69f1e30b951514cc1397940f114848abd7222e6791f",
+      "name": "Build the gritty world environment stack ii",
+      "public_archive_sha256": "58928b834f8f6b090b5afd1c040d94f93fa21545584ee00298ed51653fec457b",
+      "stratum": "script_resource",
+      "task_id": "task_0188"
+    },
+    {
+      "family_key": "name:tilemap signs",
+      "ground_truth_archive_sha256": "6124dcbe99056d62d034652132d46219bd52746f881f4dede681ce1e57fe9b08",
+      "instruction_sha256": "8a77bb109f7c74bdce21445ad274ff811f02c8a5c01df2d1130fc1032b734b2c",
+      "name": "Tilemap Signs",
+      "public_archive_sha256": "476f86885ab13fbba02e5462cb22156f41dc2f8e70817eb19d5a51f685ab8118",
+      "stratum": "script_resource",
+      "task_id": "task_0189"
+    },
+    {
+      "family_key": "name:tilemap new collision data",
+      "ground_truth_archive_sha256": "e383f116b273b2ee52bf614a43fe2bb28a8e44a87e81ffa1fbb8c3090138a9cf",
+      "instruction_sha256": "179879b00d149f510d6d79a5365aeb2a74b58198c4c75479e7b02b3a0b62ec5a",
+      "name": "Tilemap New Collision Data",
+      "public_archive_sha256": "3c5c7cdcfde4c9696ea6d3879c325b9d8412576087772de8194cfb9bce71f8b9",
+      "stratum": "script_resource",
+      "task_id": "task_0190"
+    },
+    {
+      "family_key": "video:yw15z7xqmnw",
+      "ground_truth_archive_sha256": "c044f11bf432c82a0834a383e0fcbdec2f161c7b233cccf2301090df0abcbed5",
+      "instruction_sha256": "725f800c9c6c03ff66cbc7fc3f4b5be51803f16dae3111bfcab52d814c5960f6",
+      "name": "Build the gritty world environment stack iii",
+      "public_archive_sha256": "43263b09d7d87c46a6abfe63c44f0df05abe741f384cbf2b1321270caf1bd7df",
+      "stratum": "script_resource",
+      "task_id": "task_0191"
+    },
+    {
+      "family_key": "video:z9fhl gnyjo",
+      "ground_truth_archive_sha256": "7b49534ee3d1df30317aebc671797a0ca146a8f67c0643c01ddf1b7b3a90b3fa",
+      "instruction_sha256": "321b5c3a2207d69026c4e0924dcdcdcbd012818eaf4b1480e2f9e060aaf141e2",
+      "name": "Dust Particles Ambience",
+      "public_archive_sha256": "3f3fe6f9855675e11cc830ed89051405043b9ac8c75c0df2f687f813dff9e16c",
+      "stratum": "script_resource",
+      "task_id": "task_0192"
+    },
+    {
+      "family_key": "variant_root:task 0192",
+      "ground_truth_archive_sha256": "9f3e4f4e9c719ab6e2eec43429a014866cb98d0c3baf8454a288976b0310ea6f",
+      "instruction_sha256": "d77656b66335c87980c0b96d5fbd307482c80bed87c15552fe0f80dc830b44cd",
+      "name": "Dust Particles Point Emission",
+      "public_archive_sha256": "7035ec4a069ec89a428e35c237811e8b0a67ca653d5008224a468e1f17846823",
+      "stratum": "script_resource",
+      "task_id": "task_0193"
+    },
+    {
+      "family_key": "variant_root:task 0192",
+      "ground_truth_archive_sha256": "cb9079a1bcc2cb9d1fc1b2fc407c8d92c2fbc7ee0f38111330bf8b2c9824ea84",
+      "instruction_sha256": "a846ff07043269ea9a6ab126f0882cd6e49707119416f7e13e27f2925dd14fac",
+      "name": "Dust Particles Sphere Emission",
+      "public_archive_sha256": "b950c44cc5a442ca8f30aa6e6f7ca171b2319d529fa50589dba01c30c619abea",
+      "stratum": "script_resource",
+      "task_id": "task_0194"
+    },
+    {
+      "family_key": "variant_root:task 0192",
+      "ground_truth_archive_sha256": "10d9227cc417504d3749f64aee521edcf27e91e4a9252f4c7742979b32c74dd4",
+      "instruction_sha256": "c0b1147b31b2b2c30daa5618d965f4d7806ff870163ac5a541798bf2e3bedaec",
+      "name": "Dust Particles Sphere Surface Emission",
+      "public_archive_sha256": "c23773ce52433d96091e8f2a6a8f6d3458ab732b8e25c8388b3c074fea74c012",
+      "stratum": "script_resource",
+      "task_id": "task_0195"
+    },
+    {
+      "family_key": "variant_root:task 0192",
+      "ground_truth_archive_sha256": "03e80434c4d5b102b363911499c44f6fcffb174f28443650d410f06cd498766b",
+      "instruction_sha256": "9708eb18cd17f63a7a062c0e9fc194073989d10e76dc23cbb66ad0032888f9ee",
+      "name": "Dust Particles Box Emission",
+      "public_archive_sha256": "8e87949d9dc21664676955529949a45a82993c175c349d6a5eff827552181484",
+      "stratum": "script_resource",
+      "task_id": "task_0196"
+    },
+    {
+      "family_key": "variant_root:task 0192",
+      "ground_truth_archive_sha256": "770d4d1d2ed23161f58974f7eea86efc1a1261ab083ad5d460cedbdcbbc3cbdc",
+      "instruction_sha256": "f2e95d40eae87d462f9afeac492311d6de45ca6561e8675ca1c965b1cf9728ec",
+      "name": "Dust Particles Points Emission",
+      "public_archive_sha256": "a915b7d865a22ced5a5be7bb1700f446abe31d20198f05ac2051bd81b17cab14",
+      "stratum": "script_resource",
+      "task_id": "task_0197"
+    },
+    {
+      "family_key": "variant_root:task 0192",
+      "ground_truth_archive_sha256": "38ad47e27b4ae0e47f25a952adaa3b7524ec1681ebab4c819437433fa250264b",
+      "instruction_sha256": "79dc63b693ec915df5911539b0894970ef111086e399ab7aafc38a7cc87fab86",
+      "name": "Dust Particles Directed Points Emission",
+      "public_archive_sha256": "dda35f5ab69c88aa37a529848be0f50cb7876a1e7af5b7ae9022c3e786e58fc5",
+      "stratum": "script_resource",
+      "task_id": "task_0198"
+    },
+    {
+      "family_key": "variant_root:task 0192",
+      "ground_truth_archive_sha256": "953b4d76f3b73598e53cd2e418095c5548a6037d8a3178494e29993131a0f2dc",
+      "instruction_sha256": "7655c934bd7e8fc7e1ca9e65feef94be8e561557df27784156d7abbdc30eca4c",
+      "name": "Dust Particles Ring Emission",
+      "public_archive_sha256": "0c5b2811a35f8108d757c124e2ce392f2c5709084407c8313ccdc2d4f7a54b14",
+      "stratum": "script_resource",
+      "task_id": "task_0199"
+    },
+    {
+      "family_key": "source_name:youtube cashew olddew signals in godot 4 3:trap spawning points visual alignment",
+      "ground_truth_archive_sha256": "d96be261f85c14feb26eea8fc8769d6e1863a05a0053d50a47c7f17519a7b1ea",
+      "instruction_sha256": "3ea8a8199ea47678dc593442efbae4913ccda8bc1a2c8c24a649173e728d004f",
+      "name": "Trap Spawning Points Visual Alignment",
+      "public_archive_sha256": "2fac05246dbec94e899dbd03126d4d5706469481a952544c3933646c6fb99a19",
+      "stratum": "2d",
+      "task_id": "task_0200"
+    },
+    {
+      "family_key": "variant_root:task 0200",
+      "ground_truth_archive_sha256": "ca650060582903e598777dc22574648ac8cd2228b26c4b5bcde3cbca7ff89b2e",
+      "instruction_sha256": "41d43e8c6be5a86c53c0ecc542fbda4c79bd66824892dc6db5204acae7281e22",
+      "name": "Trap Spawning Points Centered Variant",
+      "public_archive_sha256": "6f10bf9f742185f500a5cae00cab5378adb737815f15cfdcd7355387c7a743a4",
+      "stratum": "2d",
+      "task_id": "task_0201"
+    },
+    {
+      "family_key": "variant_root:task 0200",
+      "ground_truth_archive_sha256": "d3e9376d811acbc7dd6c53ff82347b66f80e12761a1b784cac41dd0d244c604a",
+      "instruction_sha256": "3ea8a8199ea47678dc593442efbae4913ccda8bc1a2c8c24a649173e728d004f",
+      "name": "Trap Spawning Points Rotated Variant",
+      "public_archive_sha256": "57d28a13d86730d3dc1cf45a82206dc44ad6d538339747ced71db282c870f06f",
+      "stratum": "2d",
+      "task_id": "task_0202"
+    },
+    {
+      "family_key": "variant_root:task 0200",
+      "ground_truth_archive_sha256": "14528db3593b1639f29572e4dd1d92ed14241c8e2be8d2d3448e201d4692fbc0",
+      "instruction_sha256": "0909f8c9da4f1666c6ca62f54d4be041def78d5aba6020af5cdc731fba566191",
+      "name": "Trap Spawning Points Spike Count Variant",
+      "public_archive_sha256": "d8e2b6964047aff06ca6198f8df10a506e8db8d3a906c0de7db48cde084a4465",
+      "stratum": "2d",
+      "task_id": "task_0203"
+    },
+    {
+      "family_key": "variant_root:task 0200",
+      "ground_truth_archive_sha256": "951e0f1a7f56a974c62bf208a0609a3eb103f9ad249407d188d645da24550b09",
+      "instruction_sha256": "353418f3b466e12c121b5275fcc26875d97941c095f2a472902c173dedfba53f",
+      "name": "Tree Spawning Points Branch Variant",
+      "public_archive_sha256": "37276795867c343ff12d19f8bcc67f34bc9b9ba5c0ee594f6630d41769d5cbfa",
+      "stratum": "2d",
+      "task_id": "task_0204"
+    },
+    {
+      "family_key": "variant_root:task 0204",
+      "ground_truth_archive_sha256": "52c741de91c433a6a0c60965c1ff3e0ee4a35d23e31e5f53182993b10c854024",
+      "instruction_sha256": "353418f3b466e12c121b5275fcc26875d97941c095f2a472902c173dedfba53f",
+      "name": "Tree Spawning Points Scale Variant E",
+      "public_archive_sha256": "32ca2277d9e869737fb8baa1f88c38411f65226a664e4046cf974f0760abd4e1",
+      "stratum": "2d",
+      "task_id": "task_0205"
+    },
+    {
+      "family_key": "variant_root:task 0204",
+      "ground_truth_archive_sha256": "fc63f0a408471a8c81cdfccb221f0f02bbfbd3ed8f1c3734483fc86f030569c1",
+      "instruction_sha256": "353418f3b466e12c121b5275fcc26875d97941c095f2a472902c173dedfba53f",
+      "name": "Tree Spawning Points Scale Variant F",
+      "public_archive_sha256": "27d9c3574667b9fab7f3292036671186f50052baa694a400daa487819d8d9e54",
+      "stratum": "2d",
+      "task_id": "task_0206"
+    },
+    {
+      "family_key": "variant_root:task 0204",
+      "ground_truth_archive_sha256": "1ef57881fba6d6680a1ed8af0e9e8fcee3b9c3b2b72f589c2b994f8a74e4fce2",
+      "instruction_sha256": "353418f3b466e12c121b5275fcc26875d97941c095f2a472902c173dedfba53f",
+      "name": "Tree Spawning Points Scale Variant G",
+      "public_archive_sha256": "6c47f9ead88e697d9a027eadb11167754f09f0bd6205db2376e17c3b7aa99fdc",
+      "stratum": "2d",
+      "task_id": "task_0207"
+    },
+    {
+      "family_key": "variant_root:task 0204",
+      "ground_truth_archive_sha256": "2c658333ac7da1e6e76b2eeb946d46d438413c578bf226614dc08d6983b8aa48",
+      "instruction_sha256": "353418f3b466e12c121b5275fcc26875d97941c095f2a472902c173dedfba53f",
+      "name": "Tree Spawning Points Scale Variant H",
+      "public_archive_sha256": "b34fc7dce70ccd451f0e8b8518a8eb3b362e64f4add586859082be4b0b268ffc",
+      "stratum": "2d",
+      "task_id": "task_0208"
+    },
+    {
+      "family_key": "variant_root:task 0204",
+      "ground_truth_archive_sha256": "38ae5b4f0c90e5e6a2b7fe79c72bc8aa0b039fd67bfc44ceed7c7617abe159e9",
+      "instruction_sha256": "353418f3b466e12c121b5275fcc26875d97941c095f2a472902c173dedfba53f",
+      "name": "Tree Spawning Points Scale Variant I",
+      "public_archive_sha256": "b6e1c98e028db0fd012542b32e0b5f05dac29f6ceb1f77de92415bda8fa02385",
+      "stratum": "2d",
+      "task_id": "task_0209"
+    },
+    {
+      "family_key": "variant_root:task 0204",
+      "ground_truth_archive_sha256": "377f954d81b2ea5c0fdafbc64781f43e13266b13ad339c14f70f78f97d07dd20",
+      "instruction_sha256": "353418f3b466e12c121b5275fcc26875d97941c095f2a472902c173dedfba53f",
+      "name": "Tree Spawning Points Scale Variant J",
+      "public_archive_sha256": "dedde54faed2a10d76b48557a423329502088ad99235ed2a7547f9ffe6e0fa55",
+      "stratum": "2d",
+      "task_id": "task_0210"
+    },
+    {
+      "family_key": "variant_root:task 0205",
+      "ground_truth_archive_sha256": "1669cb22b20ab53154760c0313e31bcb2fb56e9e8defd1dd70178eb8b3e8612a",
+      "instruction_sha256": "480d32591c6589ba7101122e665d8c649577a4d360700871907fb4ec0b41a105",
+      "name": "Tree Spawning Points Restore Variant K",
+      "public_archive_sha256": "eb172fd3048ea38c89d1951a4e185e21fd3a4e4e5a735438891039f3e7e38e63",
+      "stratum": "2d",
+      "task_id": "task_0211"
+    },
+    {
+      "family_key": "variant_root:task 0206",
+      "ground_truth_archive_sha256": "b679b005ec6a852dfbd2a96e7d75c24be10e1d35944f1392bdc8a5e095ebb26c",
+      "instruction_sha256": "480d32591c6589ba7101122e665d8c649577a4d360700871907fb4ec0b41a105",
+      "name": "Tree Spawning Points Restore Variant L",
+      "public_archive_sha256": "2c2de3957e9ee6a9b949ee57ba7840d3c23b1b98325f96221111a5175e2840c1",
+      "stratum": "2d",
+      "task_id": "task_0212"
+    },
+    {
+      "family_key": "variant_root:task 0207",
+      "ground_truth_archive_sha256": "5c1cbf9700164613fcfeaea7c62ee475fdc64d7dba5b37eb68493e56df4aae75",
+      "instruction_sha256": "480d32591c6589ba7101122e665d8c649577a4d360700871907fb4ec0b41a105",
+      "name": "Tree Spawning Points Restore Variant M",
+      "public_archive_sha256": "29b3f7fdc7259f01362426495ed276ed33f7590da39b7ee74a24913933750cf4",
+      "stratum": "2d",
+      "task_id": "task_0213"
+    },
+    {
+      "family_key": "variant_root:task 0208",
+      "ground_truth_archive_sha256": "2bd6ade493a39191355102136cd0774e919631f766c364befdcd56413dde9f41",
+      "instruction_sha256": "480d32591c6589ba7101122e665d8c649577a4d360700871907fb4ec0b41a105",
+      "name": "Tree Spawning Points Restore Variant N",
+      "public_archive_sha256": "6023ee4ad3058e5af458abb2f83990fe5271b7d48a8d8dbbaa3d6d8d725834a7",
+      "stratum": "2d",
+      "task_id": "task_0214"
+    },
+    {
+      "family_key": "variant_root:task 0209",
+      "ground_truth_archive_sha256": "980a9b7350fd5134bf2b92e0d961f17aa6a85084701d38cb6c2b946c647cbde0",
+      "instruction_sha256": "480d32591c6589ba7101122e665d8c649577a4d360700871907fb4ec0b41a105",
+      "name": "Tree Spawning Points Restore Variant O",
+      "public_archive_sha256": "6099d1a85d72d3b716d8d01f62a8c456a2385ca784eccb823be298ddcf35eb39",
+      "stratum": "2d",
+      "task_id": "task_0215"
+    },
+    {
+      "family_key": "variant_root:task 0200",
+      "ground_truth_archive_sha256": "8c32f93ba2b460088c262c6383363c725d3c11073b5f7d7f351a9d2bbc743901",
+      "instruction_sha256": "36262c59fc41cb05a5e19512a446feb61dc8ce3f73cbbff51084f0361fbaab70",
+      "name": "Platformer Coin Highlights",
+      "public_archive_sha256": "0e60a77d855029188690346991e5efbfd274845a3f7c3adea56d92915547f32e",
+      "stratum": "2d",
+      "task_id": "task_0216"
+    },
+    {
+      "family_key": "variant_root:task 0216",
+      "ground_truth_archive_sha256": "426398ab7713e9d8b6ebb4da00bd5375917a8909a272a9e28398910ef0ee3c5c",
+      "instruction_sha256": "36262c59fc41cb05a5e19512a446feb61dc8ce3f73cbbff51084f0361fbaab70",
+      "name": "Platformer Coin Highlights Variant Q",
+      "public_archive_sha256": "59a0d2996e41ee6d42ce445ec7db811e5f77e4f5d3e28f07ef2aefe8a102f7b6",
+      "stratum": "2d",
+      "task_id": "task_0217"
+    },
+    {
+      "family_key": "variant_root:task 0216",
+      "ground_truth_archive_sha256": "0958f85e691b60b93b7908c44c4b8638c111d403e184a5c9cf5310d6ad42033a",
+      "instruction_sha256": "36262c59fc41cb05a5e19512a446feb61dc8ce3f73cbbff51084f0361fbaab70",
+      "name": "Platformer Coin Highlights Variant R",
+      "public_archive_sha256": "a6b4ec2ca25ee8c872a6c1ab8970957898ff8d6c454f38ca1d4e35abcaf4790f",
+      "stratum": "2d",
+      "task_id": "task_0218"
+    },
+    {
+      "family_key": "variant_root:task 0216",
+      "ground_truth_archive_sha256": "28f47b0ac692a07aa9fd7055d5a50aca9706a044bd59c20af0a4ee50becec5e6",
+      "instruction_sha256": "36262c59fc41cb05a5e19512a446feb61dc8ce3f73cbbff51084f0361fbaab70",
+      "name": "Platformer Coin Highlights Variant S",
+      "public_archive_sha256": "ca6f0601d74f907684e4b9f989407a85c69ebc7d30a43ca78a8044aebc55adee",
+      "stratum": "2d",
+      "task_id": "task_0219"
+    },
+    {
+      "family_key": "variant_root:task 0216",
+      "ground_truth_archive_sha256": "6c245715c0e5572b124d77003f6240b4ffe51f1b9ce4ebf6ac95f3eb73912239",
+      "instruction_sha256": "36262c59fc41cb05a5e19512a446feb61dc8ce3f73cbbff51084f0361fbaab70",
+      "name": "Platformer Coin Highlights Variant T",
+      "public_archive_sha256": "b9eaa6198bbc0fce053fe219ab511bc96e2e1c712c9de65acbd4c973387ce3a5",
+      "stratum": "2d",
+      "task_id": "task_0220"
+    },
+    {
+      "family_key": "variant_root:task 0216",
+      "ground_truth_archive_sha256": "c16c10333a95ef4e0e2bd1c96dd699ba327c3866b912bca4c7b8b96d036bd586",
+      "instruction_sha256": "36262c59fc41cb05a5e19512a446feb61dc8ce3f73cbbff51084f0361fbaab70",
+      "name": "Platformer Coin Highlights Variant U",
+      "public_archive_sha256": "5a9e64da37cd027fdff8fad578a7c28e8171cbaf0943533951229f8bded392d8",
+      "stratum": "2d",
+      "task_id": "task_0221"
+    },
+    {
+      "family_key": "variant_root:task 0217",
+      "ground_truth_archive_sha256": "ba658118af03c0d4cd27690f261de89d80395454a19242bdbc4f5d7122e634c2",
+      "instruction_sha256": "125fde979592c7dbbb5ba366be3ce1e7d60d4e9035c134f9b741e139936d794a",
+      "name": "Platformer Coin Highlights Rotated Variant V",
+      "public_archive_sha256": "16bbfb5405b039905f20174dba996818e785f3b148f59b964381b7dbe525dfbf",
+      "stratum": "2d",
+      "task_id": "task_0222"
+    },
+    {
+      "family_key": "variant_root:task 0218",
+      "ground_truth_archive_sha256": "1ef79141b7f949c3b85e5bf5b5f8683f82c4b164c48ac4f9d29184df166ead5f",
+      "instruction_sha256": "37cd4a20f181adcdb962bf5b2002c790b3ddcd36a64f3e3f48ec9cdfcd80da7d",
+      "name": "Platformer Coin Highlights Rotated Variant X",
+      "public_archive_sha256": "273bff2e3e98e1bc43acc1ef1c5ffb375b87638e073017b4e20c64cbb3557048",
+      "stratum": "2d",
+      "task_id": "task_0223"
+    },
+    {
+      "family_key": "variant_root:task 0219",
+      "ground_truth_archive_sha256": "b948277f6089302711e4628e8f6a878ff2f3de068a222843dc7ce12f204e7a94",
+      "instruction_sha256": "4fafad61cacc6fc5c6d10df64ae5cd74ddce5d88cbdec3867769ab5ec5b830ff",
+      "name": "Platformer Coin Highlights Rotated Variant Y",
+      "public_archive_sha256": "f1eba435c8443361105fa17f578a5e1ab39e9af3cb4151e783346702668ba209",
+      "stratum": "2d",
+      "task_id": "task_0224"
+    },
+    {
+      "family_key": "variant_root:task 0220",
+      "ground_truth_archive_sha256": "3dd5e4b548c3837cdaf0e036216bffa7424ac057e5bbefea0979af20e18aba58",
+      "instruction_sha256": "81cd38c8b4cb138295499c98d5ed4c82f08b7b2d554bba0ec19227f44b108cc2",
+      "name": "Platformer Coin Highlights Rotated Variant Z",
+      "public_archive_sha256": "51e8f08d02e0db8920fb6ca266cd24399f4adcc808bbfb11387322edf16a014c",
+      "stratum": "2d",
+      "task_id": "task_0225"
+    },
+    {
+      "family_key": "variant_root:task 0221",
+      "ground_truth_archive_sha256": "d85016cc089456c3327c6117c1f0d1402f675ea09343a89f228f070c48b102f8",
+      "instruction_sha256": "c4fcf73be1a6245805b84278605976192846ed8d251805a59c8e8583f8e574fb",
+      "name": "Platformer Coin Highlights Rotated Variant Z_1",
+      "public_archive_sha256": "28a009a685d9746ad5014e93971d8269def47a0f979edb1d5ca3282294068bfb",
+      "stratum": "2d",
+      "task_id": "task_0226"
+    },
+    {
+      "family_key": "variant_root:task 0227",
+      "ground_truth_archive_sha256": "d554ae908d135857a0ab6f70ece8fe1c49a54f2dc0df25f0ad2e1c4b00a6d30d",
+      "instruction_sha256": "21088c7fcf23baf255bf74dff63adda4bd0b1c4089106ff1603431b31a7d2b78",
+      "name": "Platformer Star Highlight",
+      "public_archive_sha256": "b8f0f89c064807fc99c339aa51e1314be5164151cdcc8299d2456a23e3089a5d",
+      "stratum": "2d",
+      "task_id": "task_0227"
+    },
+    {
+      "family_key": "variant_root:task 0227",
+      "ground_truth_archive_sha256": "0daae77708b9d2320d2dae6d94c78df921768fa548bd7cc61eb6355a9a668a97",
+      "instruction_sha256": "d00f395f4266cca9c33339567c2dea9794e31bb06e5967aa23680ace13e17d62",
+      "name": "Platformer Star Highlight Variant B",
+      "public_archive_sha256": "2a96c4509aaee81bb63d26f10c4a82af21e7ef0b61611dc9e407cd1d7bd02929",
+      "stratum": "2d",
+      "task_id": "task_0228"
+    },
+    {
+      "family_key": "variant_root:task 0227",
+      "ground_truth_archive_sha256": "a2402a67600c25bade9bbd0d27054cbde3b70e13a72336f181d149555b062c49",
+      "instruction_sha256": "5dca10b35b18aabbd88dc8e24faf046f25e32b0d6c4450b98df8bd592547d1c7",
+      "name": "Platformer Star Highlight Variant C",
+      "public_archive_sha256": "18161bb170aac5256807e27fda448a422a333b5045e0bc09ae31b7034e24a837",
+      "stratum": "2d",
+      "task_id": "task_0229"
+    },
+    {
+      "family_key": "variant_root:task 0227",
+      "ground_truth_archive_sha256": "3d08257b42a4397663eda4cd104c58789bf2873e7f3743aca8c66163ebab031c",
+      "instruction_sha256": "d0f0e92c4ec7c9d8821a072288588e6fd67fbc8c547b0674030f4823dd7504ae",
+      "name": "Platformer Star Highlight Variant D",
+      "public_archive_sha256": "41f74e9c71eab501d4c39931e8227005609d7e0fc579d3b8e7404eb2b22ec3f5",
+      "stratum": "2d",
+      "task_id": "task_0230"
+    },
+    {
+      "family_key": "variant_root:task 0227",
+      "ground_truth_archive_sha256": "90b30f6282181fb14e392a751837f5b7bfbd331fe13403d99fc755ecee03718c",
+      "instruction_sha256": "e82b1a7a45c25369a723316542569e464f6157031d62aa6eaaf406d75a8574a8",
+      "name": "Platformer Star Highlight Variant E",
+      "public_archive_sha256": "fc8f0a7d05dc84f5eee9aaaf9b8fe8464167df475e562705265abcdec157f7c3",
+      "stratum": "2d",
+      "task_id": "task_0231"
+    },
+    {
+      "family_key": "variant_root:task 0227",
+      "ground_truth_archive_sha256": "596a85410114a42e8a73f6ceff43f918243b844cb26f7ca3a27a8ea3617cb304",
+      "instruction_sha256": "70f35aa24028f148db05c96d7dbb0e9fb56820f4a3f45c115d94ab6f7ce527cf",
+      "name": "Platformer Star Highlight Variant F",
+      "public_archive_sha256": "db1c258e43505324c610a65c538726abe7aee3d0c80c1b53b6ceeb1574b15f72",
+      "stratum": "2d",
+      "task_id": "task_0232"
+    },
+    {
+      "family_key": "variant_root:task 0227",
+      "ground_truth_archive_sha256": "772a5476ade83afb67a6d6a07eb68de641677bc725bc12743e0e1a2d40d08d08",
+      "instruction_sha256": "ad6f5ca5016c2eff4735f569edf3ef2bfd54fd6570af91455a95a7136593ac7a",
+      "name": "Platformer Star Highlight Variant G",
+      "public_archive_sha256": "87bed82d4f4ed2ee6e3c95030ed1e6937b82c99ce19aba2334e6a8702d679dc7",
+      "stratum": "2d",
+      "task_id": "task_0233"
+    },
+    {
+      "family_key": "variant_root:task 0227",
+      "ground_truth_archive_sha256": "f77881aa739b504bc3e8ad6705474cc09e41cb70907df2264e082a9be63b4722",
+      "instruction_sha256": "bb1b2c618ee44da4fcf898a5327acec020d07842bd2a17c5e05cc944972a2e1d",
+      "name": "Platformer Star Highlight Variant H",
+      "public_archive_sha256": "037a800dd84ef19f72a1cadad99c76ffa8aa84fc4639038e581bc0a441e70630",
+      "stratum": "2d",
+      "task_id": "task_0234"
+    },
+    {
+      "family_key": "variant_root:task 0227",
+      "ground_truth_archive_sha256": "ab5890e25e7d78b4592b6444d4e3f61a4bf1ad96b477f1abee647fb6922745b4",
+      "instruction_sha256": "d953de2416ee6b014bfbe72550bfc290b52bee6a539f35a48bf6688765a26bd1",
+      "name": "Platformer Star Highlight Variant I",
+      "public_archive_sha256": "f48ba30495b7f381c494669e01526f7b1cb23428fef0fbf0abc4cc65140848d6",
+      "stratum": "2d",
+      "task_id": "task_0235"
+    },
+    {
+      "family_key": "variant_root:task 0227",
+      "ground_truth_archive_sha256": "e3fe56452332461702c2b429e41be9d7f273a11d26541df31a1b52251624c1e9",
+      "instruction_sha256": "e51590665518853641f5cbb07f8ccdb76521e92f7f6cdafba8a41c5e23456cf5",
+      "name": "Platformer Star Highlight Variant J",
+      "public_archive_sha256": "06d2aa42865ea3e6bf764099d472fed5c75fdd93d875158ad5277ce77c701607",
+      "stratum": "2d",
+      "task_id": "task_0236"
+    },
+    {
+      "family_key": "variant_root:task 0227",
+      "ground_truth_archive_sha256": "c6212c85ad00bf7f31a576fc3ee0afef97b36ee24d3e38ea13bbc8fa11e71f96",
+      "instruction_sha256": "1c19eb446b09b29fb6a35e98a208d0503ba65f1ce42cd393a82516a0bbd9e895",
+      "name": "Platformer Star Highlight Variant K",
+      "public_archive_sha256": "3a08e7109c25d73afc699fc36fc1a8b19ede695ec1cb82d4299acc1793a15412",
+      "stratum": "2d",
+      "task_id": "task_0237"
+    },
+    {
+      "family_key": "variant_root:task 0238",
+      "ground_truth_archive_sha256": "206cd0a126e1eff20196e5fb947fa4e079b71fcc6d7288b8f7cbf52df01d8db3",
+      "instruction_sha256": "2b543a62c5104b34a2a04b2cf5ec319106e29e0aa652ce837253e7367afc95e0",
+      "name": "Platformer Gemstone Highlight Variant L",
+      "public_archive_sha256": "197fcff48752be160c106421846d2db1ab6ad4dc9ac6bef4a15086f075dcbd34",
+      "stratum": "2d",
+      "task_id": "task_0238"
+    },
+    {
+      "family_key": "variant_root:task 0238",
+      "ground_truth_archive_sha256": "377042198db25f12c3e74dbf10894247ac3d45b12c59006ad6e200f60377544e",
+      "instruction_sha256": "ac5d913d817e2657b28c04ff5c679d063876e5e232ae9dd10ad7dd440f265e5d",
+      "name": "Platformer Gemstone Highlight Variant M",
+      "public_archive_sha256": "8dbb7b865c5e0210465eaab8b11258f743688008194c2bd158b79c0781d9ab95",
+      "stratum": "2d",
+      "task_id": "task_0239"
+    },
+    {
+      "family_key": "variant_root:task 0238",
+      "ground_truth_archive_sha256": "027b0675a9af93c1865ee198240697b732bf847518006e6dd3677455204ac2cc",
+      "instruction_sha256": "8424076b47ac444fd0c0adbbe005e294b66d67834404376be9e9bf2bc5d36400",
+      "name": "Platformer Gemstone Highlight Variant N",
+      "public_archive_sha256": "d34e1034ee4b1b543444e6f23cbf00b27f06ea2f06dc8715a6110082749fd75c",
+      "stratum": "2d",
+      "task_id": "task_0240"
+    },
+    {
+      "family_key": "variant_root:task 0238",
+      "ground_truth_archive_sha256": "7e91066a07fc2350fbe80454f0fb212d77a184dd7fababfda98d74b45ec9af7e",
+      "instruction_sha256": "62e8664d426e538018d6d232d4fb54e4e828b0b6af373773c01740df524f4979",
+      "name": "Platformer Gemstone Highlight Variant O",
+      "public_archive_sha256": "d3092927fb1a589453e1cac0d108d9c1ecbdb78787426c4739ec4314bcf1aa0a",
+      "stratum": "2d",
+      "task_id": "task_0241"
+    },
+    {
+      "family_key": "variant_root:task 0238",
+      "ground_truth_archive_sha256": "f2f2bd8f7552dcdd87e1d6b712a71e05a5137b79ad23b58d5d6c565bf00fdec1",
+      "instruction_sha256": "b682d9368a0a763cd350a2a2dc278310f3ecd96108c612a9f9ced685a365d0e3",
+      "name": "Platformer Gemstone Highlight Variant P",
+      "public_archive_sha256": "4720a39407c2ab5c44908b0ef40ad4b8a7ef7dc2b8a8c04d09a4435f3ffbd7b9",
+      "stratum": "2d",
+      "task_id": "task_0242"
+    },
+    {
+      "family_key": "variant_root:task 0238",
+      "ground_truth_archive_sha256": "eb6508422647ecb93008dd9e4a9572c05bd017374ac8de755e402e878c621ebb",
+      "instruction_sha256": "d27558082f14fa51c168a54f36d83f1490e7912c291f61a3ec3a06b14e79bd25",
+      "name": "Platformer Gemstone Highlight Variant Q",
+      "public_archive_sha256": "e10ab90e0dcd8be59c115c117302d71b0cafabf3d68266a1db83f415e9c86811",
+      "stratum": "2d",
+      "task_id": "task_0243"
+    },
+    {
+      "family_key": "variant_root:task 0238",
+      "ground_truth_archive_sha256": "a595fb81b10eaaefe4d1675da9201a28cb316e92575cd829c5732ad2cea1f71d",
+      "instruction_sha256": "5e52edc628e7054b2f00175472599e2514f40cc4d4cac5344e3edb910359272c",
+      "name": "Platformer Gemstone Highlight Variant R",
+      "public_archive_sha256": "6b367c0856d85bd09bdeaf55bdf9c6880fae643eb4e27385c1431e445e840a96",
+      "stratum": "2d",
+      "task_id": "task_0244"
+    },
+    {
+      "family_key": "variant_root:task 0238",
+      "ground_truth_archive_sha256": "048e3e3d0785b6c69d3bc69394ad61172a18c993399c2f139426e4cf141a8090",
+      "instruction_sha256": "d9308b4851a191ca1f397c63e48907d99ad142fbe11e47b4c4f39889e9376773",
+      "name": "Platformer Gemstone Highlight Variant S",
+      "public_archive_sha256": "5d1818665ef3b954bf73e70de0cac6fe03b860db6a0fc8de4c7638e5017340ce",
+      "stratum": "2d",
+      "task_id": "task_0245"
+    },
+    {
+      "family_key": "variant_root:task 0238",
+      "ground_truth_archive_sha256": "11f920ec79b0ba62f98818a8702d6f4895b9cbc92449a16273eca219b81b80fd",
+      "instruction_sha256": "903171fdd943f2ac41e1385ac1c8ed0f03ca9b19eedd20d7256628e6fdc83db0",
+      "name": "Platformer Gemstone Highlight Variant T",
+      "public_archive_sha256": "65eb7d9283361ec65471898d3f6037d93ff546881b7a7b5bb8752446d9d75ec1",
+      "stratum": "2d",
+      "task_id": "task_0246"
+    },
+    {
+      "family_key": "variant_root:task 0238",
+      "ground_truth_archive_sha256": "f284f4f266fd6aa9249cd90123f318c198d298f3900792ee71b4a06174cd36a9",
+      "instruction_sha256": "c9224b9b54e222e038c8e03a1a99508dffbcd3f56ec29fa11b7fb4864841c967",
+      "name": "Platformer Gemstone Highlight Variant U",
+      "public_archive_sha256": "6a25a80ea447146e1e0ace5bda584d2ccd977876f9ae926f46995748aad4d5fb",
+      "stratum": "2d",
+      "task_id": "task_0247"
+    },
+    {
+      "family_key": "variant_root:task 0238",
+      "ground_truth_archive_sha256": "49013852026ed111fb6895f57a1cdf15566d968f3ac03965a5feb8f185de987f",
+      "instruction_sha256": "1ceeaec9599a43b5320481dfd514b3c6b7ea8d02b7c384383f8590141237794d",
+      "name": "Platformer Gemstone Highlight Variant V",
+      "public_archive_sha256": "b19d6e7df580ef2c7cd6d2c733817cffe29bc40de8d70b453ca1f3f9331a42fb",
+      "stratum": "2d",
+      "task_id": "task_0248"
+    },
+    {
+      "family_key": "video:ztx4ov6syn8",
+      "ground_truth_archive_sha256": "0d8ed44917c61de04f118c097934f6245df8e2f118272921c279e3a19e5905c7",
+      "instruction_sha256": "5db1103d0435d24967f457a45f369e5aa795bee5dde65f5266ae8151dcaf09ed",
+      "name": "Tilemap Navigation Chase",
+      "public_archive_sha256": "2d3786253f9ef4d73e97b22f91db34ce590b26f528d2ab068ee56841a6d3f2e6",
+      "stratum": "script_resource",
+      "task_id": "task_0249"
+    },
+    {
+      "family_key": "video:ztx4ov6syn8",
+      "ground_truth_archive_sha256": "7d5732ee59b9220121f76d1af032f031504c369d5335f1f9655e8bdf641b22dc",
+      "instruction_sha256": "ca30bae4c3ec851bde03f1ebf0ca096fda4f906f175f764b70baf92fe79e8e84",
+      "name": "Tilemap Chaser Goal Variant A",
+      "public_archive_sha256": "3c3618e5bf0555595dbbefd834e874878e9dbcbc750fdcf03d86dd2518434ba4",
+      "stratum": "script_resource",
+      "task_id": "task_0250"
+    },
+    {
+      "family_key": "video:ztx4ov6syn8",
+      "ground_truth_archive_sha256": "06f297834c930640d20209a3fb78795878d9776b3b078ef8f6894f1e90f08588",
+      "instruction_sha256": "88bcde0c8ba29c24d8395830006bb3f44e4a1176ed6fb46ee398aa499412143b",
+      "name": "Tilemap Guard Beacon Variant B",
+      "public_archive_sha256": "03c27ea95c72d202898ed55e3f8e6b486a5105d6e760c22e47f49137ca7bf7c5",
+      "stratum": "script_resource",
+      "task_id": "task_0251"
+    },
+    {
+      "family_key": "video:ztx4ov6syn8",
+      "ground_truth_archive_sha256": "53398e027759893a07d446d79b38061f844abeaeae9d819838f2722b6b4f64b4",
+      "instruction_sha256": "c520f4b3296757f72fb5370a9f13b72d357b10787f429fdf111f13ecbe61cfce",
+      "name": "Tilemap Drone Focus Variant C",
+      "public_archive_sha256": "f36238d2cc09ac5afc7d6cdab2685fea7be4b7d8c9da36e44a86ea9164ebcc87",
+      "stratum": "script_resource",
+      "task_id": "task_0252"
+    },
+    {
+      "family_key": "video:ztx4ov6syn8",
+      "ground_truth_archive_sha256": "afe88487a526ae5e4a11e618e225d7886f8eed27f0f52f3a26ce4678255b5eb1",
+      "instruction_sha256": "3dd429ab905635c0caa867b57044b052ec7c8873d9f7ab712e8a58ba7dbbc642",
+      "name": "Tilemap Hunter Marker Variant D",
+      "public_archive_sha256": "19afd544af88b6be52fde65b3e1de74b9f14217ea0d13c7d4459498ce51066b5",
+      "stratum": "script_resource",
+      "task_id": "task_0253"
+    },
+    {
+      "family_key": "video:ztx4ov6syn8",
+      "ground_truth_archive_sha256": "cb29185e5a5d52d8f22fe1f0fb190ae3238344c71e23d7698e9bb57d7e5c0c3e",
+      "instruction_sha256": "c97df70d008e3e4bb38ac854f7f52689b69bb94ae2e4f6611dd05b048623cafa",
+      "name": "Tilemap Seeker Objective Variant E",
+      "public_archive_sha256": "3a884d9c4174397b81ecb0c41da94e53bdfd0788b30ef3ce42019ce4a5fa33a7",
+      "stratum": "script_resource",
+      "task_id": "task_0254"
+    },
+    {
+      "family_key": "video:ztx4ov6syn8",
+      "ground_truth_archive_sha256": "563a5c5e2cb5412a8cd3b387491a47dcfd6ebad8b4bb6d6b09036072ee9a8bfd",
+      "instruction_sha256": "c7b80857066d2d2b8c85cb6d649ec3eec079aae95e61ff5abbbfa53e3587010e",
+      "name": "Tilemap Bot Checkpoint Variant F",
+      "public_archive_sha256": "9bc1d896eb5785d0206ec5cfc42c5d341c83c52eaaa4998622375cc483fa02d4",
+      "stratum": "script_resource",
+      "task_id": "task_0255"
+    },
+    {
+      "family_key": "video:i8ysmmgx 0",
+      "ground_truth_archive_sha256": "0c4d4b41174cd8c5f3fd8edbbca30ced42597e5b32fc1271294a6ff00e525d17",
+      "instruction_sha256": "42b480b591fcd26f97c262d1a7e0f9f71b3feaa0b7b5938ac79495fdc8f0d0cf",
+      "name": "Tank UI Signals Exact",
+      "public_archive_sha256": "b9e22d0fec2998588de05a2efe385be956b50abc7f6f924684d684870aae8868",
+      "stratum": "ui",
+      "task_id": "task_0256"
+    },
+    {
+      "family_key": "video:i8ysmmgx 0",
+      "ground_truth_archive_sha256": "278d3ab601dc5af39d66eaedefea06f87461244eb5690a088f74143242a8bb2b",
+      "instruction_sha256": "1115102a5703418ca650d507897bb57e1d2b956039ce4e4d80ab6980ff8d8eae",
+      "name": "Tank Battle HUD Wiring",
+      "public_archive_sha256": "0d318006a1ccb61fbc5a1ddc24600e0ee4b9d4745769fdfebc21b5b272ed4b3e",
+      "stratum": "ui",
+      "task_id": "task_0257"
+    },
+    {
+      "family_key": "video:i8ysmmgx 0",
+      "ground_truth_archive_sha256": "1a133b21aacb8b031e9805ae3c22f11994b6a16e8a7ef6ca0cf87f1dc92ff35f",
+      "instruction_sha256": "61b517658a86fc0e64129b04a6aa324ac02d00c8ee321824a9d804f38dcd9df9",
+      "name": "Tank Status Overlay Restore",
+      "public_archive_sha256": "0bf8fa8c01a49170c7fb0e65b0823694259051ad273f479efa2ca0105560711e",
+      "stratum": "ui",
+      "task_id": "task_0258"
+    },
+    {
+      "family_key": "video:i8ysmmgx 0",
+      "ground_truth_archive_sha256": "b8ceeb296a95194cab4f6ed930fe724f452d3138d17972d7d4a4b68ba6afc0b4",
+      "instruction_sha256": "53e2373d86004b76281d063da692357e5642551165e9fa6d0a9d34ce5c61915d",
+      "name": "Tank Overlay Signal Repair",
+      "public_archive_sha256": "ae8c8ca7a6f4e8c3d1f41c1c40d29cac4d4b306fe91405439ffbc058c42154c6",
+      "stratum": "ui",
+      "task_id": "task_0259"
+    },
+    {
+      "family_key": "video:i8ysmmgx 0",
+      "ground_truth_archive_sha256": "e9cc7c34c89ef901319ef806d335ea5af3f65c4fcd37b49fec246db23b021b29",
+      "instruction_sha256": "ccf74b405dd2e34cf0ebf0321c5f932dd38547b8857a9e1a7a3246715d7f782a",
+      "name": "Tank Combat HUD Restore",
+      "public_archive_sha256": "2f2359897c4ba202cef822dd4f5cf97bf92437363ac0a336f910aad83e67d250",
+      "stratum": "ui",
+      "task_id": "task_0260"
+    },
+    {
+      "family_key": "video:i8ysmmgx 0",
+      "ground_truth_archive_sha256": "d95a4bd59c615c13e5d8456127192b7814022adf91ec8ea04e67c4d65136133e",
+      "instruction_sha256": "7b10ea1d217c5d7c8783f0b412442688b2fffa43406b614dfdf80d111064de96",
+      "name": "Tank Stage HUD Restore",
+      "public_archive_sha256": "6d95f9dd36b39ab28c616dee044e23fa9919d40f09c6429b31004aaafe3dab65",
+      "stratum": "ui",
+      "task_id": "task_0261"
+    },
+    {
+      "family_key": "video:gpzdfznq060",
+      "ground_truth_archive_sha256": "33644592bcba1d886074b6534edb070bcc09bf1e0ca7ae62b720f8b38072a3bd",
+      "instruction_sha256": "a1b05e0210a7e72428f98b4531eca1170f7961358dc7137e4ba544bfd117f2e6",
+      "name": "Save User Preferences",
+      "public_archive_sha256": "b226e04d4bf44482b9718fa17cca364aac9b486a4ed6f7d00a846a1257152e8b",
+      "stratum": "ui",
+      "task_id": "task_0262"
+    },
+    {
+      "family_key": "video:zbjpjjearwa",
+      "ground_truth_archive_sha256": "ba30b2f5a7934454a433ca8088e9fe002ae9d4895d36d776af8085356a68d5e2",
+      "instruction_sha256": "ccdfb5fbcc868c3d51448c96bccfbb934249ea18b31d399e3043fb2b6efbb9c0",
+      "name": "task_0263",
+      "public_archive_sha256": "c94bf44b8eac78cb931536c93df33f052972266304c8bc4535833aa6b17d5462",
+      "stratum": "2d",
+      "task_id": "task_0263"
+    },
+    {
+      "family_key": "video:zbjpjjearwa",
+      "ground_truth_archive_sha256": "7573f6fe9bb545a4691d292ac5bea471f7aa97a90b0629829acfd3e42d6382c6",
+      "instruction_sha256": "85871f6298ae154ff65eafe8102f9b5a104ed9f013f9513b9468cf093529bfbe",
+      "name": "task_0264",
+      "public_archive_sha256": "08fb738cd53ee0157513fcfd6ffa07df00bdff10aeb27e709270b9978ceaccd6",
+      "stratum": "2d",
+      "task_id": "task_0264"
+    },
+    {
+      "family_key": "video:zbjpjjearwa",
+      "ground_truth_archive_sha256": "e4653a6247e2873893999e65682a1780363cd6c8e3844b026b2dcead4bdd2a84",
+      "instruction_sha256": "bb8217d3045967ee49ab61273ac5760aa6879917fd048dab88e6a820e129f5da",
+      "name": "task_0265",
+      "public_archive_sha256": "b35dc93850a26da03baea24935361ae82e5e692d2d2f62b159f0e0edab472b8d",
+      "stratum": "2d",
+      "task_id": "task_0265"
+    },
+    {
+      "family_key": "video:zbjpjjearwa",
+      "ground_truth_archive_sha256": "de4627eeecc279e8c4eb483d73f564a31beb9f0039f8f2f482e5ae717292b252",
+      "instruction_sha256": "fbb18540d0ae68a814cc795ea0944d563e32d7712ef341e7eb902b848683cb83",
+      "name": "task_0266",
+      "public_archive_sha256": "4f25c25df8a94b7b10e3338a03f4bf339a7954d6c01c44a069a2a783d6c14593",
+      "stratum": "2d",
+      "task_id": "task_0266"
+    },
+    {
+      "family_key": "video:zbjpjjearwa",
+      "ground_truth_archive_sha256": "4514ae146fbae5435b6d53f72f58df27fc6c76adc140b77cfebac3638757ef6d",
+      "instruction_sha256": "1e7aacc5b1a716429dea15a6e912e0786c9e37fc298934f60a6525759e73a5d5",
+      "name": "detect_range_target_finder",
+      "public_archive_sha256": "e23ecd20b1daa417cb58316f7ba9f9188469bb2b175c7751487edda759d64f52",
+      "stratum": "2d",
+      "task_id": "task_0267"
+    },
+    {
+      "family_key": "video:zbjpjjearwa",
+      "ground_truth_archive_sha256": "04e22be9e83415aedcb7c65fa2de1f78045b6a8f30557995d842bf761cb70226",
+      "instruction_sha256": "f954aac6f21ba7c8534c2f193523defc989d24af55677944becc5e3cdc557811",
+      "name": "task_0268",
+      "public_archive_sha256": "e84db157cbf3f4546af36174e3c3741e6e84a0f3df8b4f6503f63567127ce62e",
+      "stratum": "2d",
+      "task_id": "task_0268"
+    },
+    {
+      "family_key": "video:zbjpjjearwa",
+      "ground_truth_archive_sha256": "30c6715776fbf120964b5010c6b2906edbb8ee713f6617e70320677c947de56e",
+      "instruction_sha256": "58edb820f4352097af204c7c291702801b0491f1702713d52ea2d948f056fe0b",
+      "name": "task_0269",
+      "public_archive_sha256": "a2fbcdabccbb6eddaa211a0e670abf000bf063086f03c46d33e138822d9513b4",
+      "stratum": "2d",
+      "task_id": "task_0269"
+    },
+    {
+      "family_key": "video:zbjpjjearwa",
+      "ground_truth_archive_sha256": "1670b1bc9be86416cef86503a613d5e7fd3a7fc8cb69bc92b2c0d6654a3cba61",
+      "instruction_sha256": "7ee81331bba024c5d193fe9a61e78c17210db4bb4a9defc41dbc1075d2a306c3",
+      "name": "task_0270",
+      "public_archive_sha256": "eac4164e9449530e2b6703c3af06fae20bf11d170bcfa6dfcb91609f32cb0037",
+      "stratum": "2d",
+      "task_id": "task_0270"
+    },
+    {
+      "family_key": "video:zbjpjjearwa",
+      "ground_truth_archive_sha256": "8c8dcbe7cb15eda86c3924cbd34fb0d22c88eb4b79ff4144d8ebdbed18dde7f0",
+      "instruction_sha256": "b4d682387a90e72bf8ea0995f932e1f9538f56766bdc930b28a7495089dee5b4",
+      "name": "task_0271",
+      "public_archive_sha256": "ec83596f3d5d251a885bbb499492300bb3f690214794300e1c228e60e05cc13c",
+      "stratum": "2d",
+      "task_id": "task_0271"
+    },
+    {
+      "family_key": "video:zbjpjjearwa",
+      "ground_truth_archive_sha256": "7cd6d292e0682f94cb4da8522b04e045663dc4323040599bae16dbb6c50d04a8",
+      "instruction_sha256": "bf91c7c24faddd0cd25e530a68261a1c30948f3736c8ee7bc90833f33d48ff3b",
+      "name": "task_0272",
+      "public_archive_sha256": "0aacc0b84f17d6859d09e097cb53d89b073cecd13860cbea5b537bda7766d4ff",
+      "stratum": "2d",
+      "task_id": "task_0272"
+    },
+    {
+      "family_key": "video:zbjpjjearwa",
+      "ground_truth_archive_sha256": "188d980c1cefa3c834dabe7e378e21a728d5caff06d8ff1daf6a0b629b63e908",
+      "instruction_sha256": "f7a21e17ac3fd2f6801d9b5a6d4f7e3bd9fb974fabf770196c5eb0131784060d",
+      "name": "task_0273",
+      "public_archive_sha256": "9bb7b6ab8ba5d592fbb0f9da27bd47bf3c4c2f7f82075d416e89b981bc299e94",
+      "stratum": "2d",
+      "task_id": "task_0273"
+    },
+    {
+      "family_key": "video:zbjpjjearwa",
+      "ground_truth_archive_sha256": "7b6d96335178621b1df64f75614f0192209f13a22ecc319af0eb84c5713ecd46",
+      "instruction_sha256": "80beb201e88e3dd5ccc6995d07853b9c7a6e5ca86ba3ba85bfc331ca796a06fd",
+      "name": "task_0274",
+      "public_archive_sha256": "bcdf390098890e9c66d39007c86582fa6a3848ebf0884a8249b8793e14dd32e6",
+      "stratum": "2d",
+      "task_id": "task_0274"
+    },
+    {
+      "family_key": "video:zbjpjjearwa",
+      "ground_truth_archive_sha256": "2ffc3d12a12c1e6599a447e3816efd79bbe9e035872991f8ac200db9df579fab",
+      "instruction_sha256": "f6ed396081786c74037be3329ce156a670a129abd199eaece8abf2e8a303e2cd",
+      "name": "task_0275",
+      "public_archive_sha256": "0cfbd7a57d7b59833ca934c548a5d96bb5e33a72b0b65a6ad0ad458b729d457d",
+      "stratum": "2d",
+      "task_id": "task_0275"
+    },
+    {
+      "family_key": "video:zbjpjjearwa",
+      "ground_truth_archive_sha256": "36349bfae95f7acda47068916ca8f7b4233c9dd5f1c3c51f955d2f059ef7119f",
+      "instruction_sha256": "2e7f87fd762bfc29b5da746f231a9b6aa6f17ce40af715dd43ac6df5552f45da",
+      "name": "task_0276",
+      "public_archive_sha256": "43d85315670de59343d4d29923f621e817731dff355c4999bd4fba02feedba00",
+      "stratum": "2d",
+      "task_id": "task_0276"
+    },
+    {
+      "family_key": "video:zbjpjjearwa",
+      "ground_truth_archive_sha256": "03a7840bb6bfa53fe1570314c0b32e11974dd0876e26c323f55579fe25873321",
+      "instruction_sha256": "a9824f4bb6f03ba2330fc552a334304f333faecd281e78724fb57f4b1a4058ca",
+      "name": "task_0277",
+      "public_archive_sha256": "301fbfd11c27f350aad7842c517f2a62cb39eaae9385e8e957fedc40f5a322eb",
+      "stratum": "2d",
+      "task_id": "task_0277"
+    },
+    {
+      "family_key": "video:zbjpjjearwa",
+      "ground_truth_archive_sha256": "c23568132ba7990a1785b226f133027830893fa5cbdfb8d4f95294fe4bf66780",
+      "instruction_sha256": "f4e0f10e5624a2e3cfb4c1c0b523d5ffd0ce084116e4e0279b27732100455a1e",
+      "name": "task_0278",
+      "public_archive_sha256": "e8a0f5ff7d843ac814354e1431a01d593c96b5ebf676aa0d3e9f169b8688933f",
+      "stratum": "2d",
+      "task_id": "task_0278"
+    },
+    {
+      "family_key": "video:zbjpjjearwa",
+      "ground_truth_archive_sha256": "5d39ac0c154dd9068c7f11ebb1789c6b0a9e5492792f22108a62e28c460ddd15",
+      "instruction_sha256": "a6251b6d06c72cceaa0a44591f6b0c78fe248206f09eb8459fd4a4ab8e0bee63",
+      "name": "task_0279",
+      "public_archive_sha256": "c6e41ed597c155659596deb1f859e7b7d1cce4f03fb69a977096ce0dfa7bc0ec",
+      "stratum": "2d",
+      "task_id": "task_0279"
+    },
+    {
+      "family_key": "video:zbjpjjearwa",
+      "ground_truth_archive_sha256": "c2ec832598189e2be4a1aab4bff0d4a66310c37e3c1f6962371b011c8d2a3b8f",
+      "instruction_sha256": "3a52107d4d5544c88140b634e1be85ebbde4263ef0bcf9028f9835271baef1d3",
+      "name": "task_0280",
+      "public_archive_sha256": "25edb737da4c2d49016946aac7f3bbf152183c46b41f24a5c4a936612cd196ea",
+      "stratum": "2d",
+      "task_id": "task_0280"
+    },
+    {
+      "family_key": "video:pa0p1luoc m",
+      "ground_truth_archive_sha256": "6f5ccf2376405c0766832a1f6372a944c1d9ab602530072fb44f35cbed5f4d92",
+      "instruction_sha256": "105144bb30be6628c4dda789fbc7fbd2a8934844e53fe7f38980e8ba79dcfc63",
+      "name": "card_dragging_state_machine_a",
+      "public_archive_sha256": "d83bbaa923bd83111f712ff73849bf2178b4db8526f3bdf51f9ce883396f25ed",
+      "stratum": "ui",
+      "task_id": "task_0281"
+    },
+    {
+      "family_key": "video:pa0p1luoc m",
+      "ground_truth_archive_sha256": "9d708a0e2f1ad5ac18d2816f16589bbd6dfbc80bc50ab8b3425d0c8d24a13480",
+      "instruction_sha256": "a547011665a530068418d80af0ee794651eded48f8650097780073b68e474a2c",
+      "name": "card_dragging_state_machine_b",
+      "public_archive_sha256": "e10fe88a9a0e9e5dbdfe3bfc0a82ec1a119e90652afd6bdee1236fd1708d67f9",
+      "stratum": "ui",
+      "task_id": "task_0282"
+    },
+    {
+      "family_key": "video:pa0p1luoc m",
+      "ground_truth_archive_sha256": "30ca25c360aba748894829095eafc1a5781311393f1b8e95df89edb965139d25",
+      "instruction_sha256": "6cd16f2ccfd198beefd43e4995b808ed56678471322081589950ec1c1656558d",
+      "name": "card_dragging_state_machine_c",
+      "public_archive_sha256": "a84d84d9bdad4efe6ac971dd74e7cf6f0cca1210cad6adecdb5f9ab1336c1b0e",
+      "stratum": "ui",
+      "task_id": "task_0283"
+    },
+    {
+      "family_key": "video:pa0p1luoc m",
+      "ground_truth_archive_sha256": "eb6afb89d655a469074979a28228baa3cfdacb0b4718b8725cb8cff78a951a30",
+      "instruction_sha256": "830ed1afb42060807ff3c3c1fd82d0a5af233fda7b846bad3f398c3cd8fbe2b3",
+      "name": "card_dragging_state_machine",
+      "public_archive_sha256": "9102c951b5184a152bb25bcb885f4a3d376ace138aa119aeba48d0bd95eb3c48",
+      "stratum": "ui",
+      "task_id": "task_0284"
+    },
+    {
+      "family_key": "video:pa0p1luoc m",
+      "ground_truth_archive_sha256": "23b332d5374b4b394c17c082bb5cf003b10395745ae7aa6e36ddf64412c61c8e",
+      "instruction_sha256": "42aae998bde6d847e4d63ad54a1da6981f14c8d04d1fdb82cefcd04a1e0167a9",
+      "name": "card_dragging_state_machine_d",
+      "public_archive_sha256": "a55dc8326c070aba2663698b2e2fc59242fe761174e34aef23b2233807ebd63a",
+      "stratum": "ui",
+      "task_id": "task_0285"
+    },
+    {
+      "family_key": "video:pa0p1luoc m",
+      "ground_truth_archive_sha256": "ca3c9e92aad315880d70255fef73a6b99d1885313c968c75a6f5e7d8ff53a299",
+      "instruction_sha256": "d09f7dba5c2b9b7c55d89be80adc22d97991c78a7f5d8abffe11cf0b5f774108",
+      "name": "card_dragging_state_machine_e",
+      "public_archive_sha256": "75d18630da62273e3b4c3638f7f0653642a58c99b3ed322fdeecefb789cd6635",
+      "stratum": "ui",
+      "task_id": "task_0286"
+    },
+    {
+      "family_key": "video:pa0p1luoc m",
+      "ground_truth_archive_sha256": "e6a46afbb33e804fe6ee6b298e3057ad35b02dc4bd044aacd2c6763dc5b36e2c",
+      "instruction_sha256": "c4f1ae46499e958af96f0ee935f28f0a27c926440cf43b6adf5056aac69f938e",
+      "name": "card_dragging_state_machine_f",
+      "public_archive_sha256": "df87e73682153963d4b4e9dfe5524da6fd1e03afa70f07200e12c5cada6b5668",
+      "stratum": "ui",
+      "task_id": "task_0287"
+    },
+    {
+      "family_key": "video:pa0p1luoc m",
+      "ground_truth_archive_sha256": "b74218ca27b932fd95a6f39e1fe747af0157ed18c96ba212805c5cca7206d6b2",
+      "instruction_sha256": "7c500d1855354f49a39882548e39c336efddd1dae8ddf5e0a6cfc5c6eb9f2e8a",
+      "name": "card_dragging_state_machine_g",
+      "public_archive_sha256": "7821a33e44f12e3ee617cdd7cc820bdec3ac2bc771e725df042d6929b21395b1",
+      "stratum": "ui",
+      "task_id": "task_0288"
+    },
+    {
+      "family_key": "video:pa0p1luoc m",
+      "ground_truth_archive_sha256": "e1580086faff125b0825727dbdd5d6aa541d6cf8fbddb5747e161e64a941824c",
+      "instruction_sha256": "f284b79bc1daa5afc3f7ba6ffd36eb02a66070941a2e8420c48c810e82faf32f",
+      "name": "card_dragging_state_machine_h",
+      "public_archive_sha256": "6d39b45133b47c71fa7b1a89f91a0dc22e2c485c390a614bba10783f8f3eb80c",
+      "stratum": "ui",
+      "task_id": "task_0289"
+    },
+    {
+      "family_key": "video:pa0p1luoc m",
+      "ground_truth_archive_sha256": "4be69d610187b3d693921b52d48c6056feb15b8cc7ee52f3ec203eb8de32301b",
+      "instruction_sha256": "87cf302c126dc34f2830f411b927905c020ed6d8c4b6a49a5ca03a7735d6946a",
+      "name": "card_dragging_state_machine_i",
+      "public_archive_sha256": "a01e70b1a4676e66608625ee79edb4ed96fbb731ea164c8dd3e3a37ddd0ccc67",
+      "stratum": "ui",
+      "task_id": "task_0290"
+    },
+    {
+      "family_key": "video:pa0p1luoc m",
+      "ground_truth_archive_sha256": "daf345d54335def2f9126fa3180744b6ceb28c12fe138c8fd75aba3f9fbec100",
+      "instruction_sha256": "105eaa4fb8ac32952d1b78a416b8cdc2d7c5613a80ee179585f1c0e3a045328e",
+      "name": "card_dragging_state_machine_j",
+      "public_archive_sha256": "54814dbffc102fad26014d975ae7ea5a1e0f0fdf84c764447cbc7a5df22f3de1",
+      "stratum": "ui",
+      "task_id": "task_0291"
+    },
+    {
+      "family_key": "video:pa0p1luoc m",
+      "ground_truth_archive_sha256": "de905d6d9d8508283ec47a1959e5c045e3a1be0cef58824e1a8f5e56cb8488c2",
+      "instruction_sha256": "ae5285965182a15d3f7d65c80e52638c575acddcc30733853d05e7255d24f4e7",
+      "name": "card_dragging_state_machine_l",
+      "public_archive_sha256": "441e62ac4b1179cac71badfdd8aa3c53b4c5c885e82334acd0b6bd5a7b10f15c",
+      "stratum": "ui",
+      "task_id": "task_0292"
+    },
+    {
+      "family_key": "video:pa0p1luoc m",
+      "ground_truth_archive_sha256": "0f7dbe295cbfc43a7c7bd4625ff95aa19afdb03d51caba73c7f878c3fd622b0f",
+      "instruction_sha256": "6a81eea6c540c32e53b9b4aa8b3a11f6626e81bee05e4f1717ac5aa2b7eaa98f",
+      "name": "card_dragging_state_machine_p",
+      "public_archive_sha256": "ed086756d7b44b4923952c7b3c5f973207104e3c34476aa58fc490d1edbea504",
+      "stratum": "ui",
+      "task_id": "task_0293"
+    },
+    {
+      "family_key": "video:pa0p1luoc m",
+      "ground_truth_archive_sha256": "2c848d2e00de86831e59c45184714dcdc2056c81c978fc427fdcdd517fa4fe1e",
+      "instruction_sha256": "7893c56f4868d5657b90f6ea3f3b9da680ff3feab2a7caa5e98230d30a39c8b5",
+      "name": "card_dragging_state_machine_q",
+      "public_archive_sha256": "5b673f7f7b9300cf4ff28bbfeac5a4e56feb9c63da187e7801f4eb74451b6695",
+      "stratum": "ui",
+      "task_id": "task_0294"
+    },
+    {
+      "family_key": "variant_root:task 0038",
+      "ground_truth_archive_sha256": "718a06f5ca06f25da595a836f95c7f5a38349033e710531a337a6fe6711c747d",
+      "instruction_sha256": "41757a496c90faa80fb087f736b0b2f99e40bbae70cf1a76defbfc10f11d51cf",
+      "name": "Rain Splash - Light Drizzle",
+      "public_archive_sha256": "18ff11a3f2a20ba9f8649a99eade63d3196f5a3ca845e720a0e448b1b5a7d6a1",
+      "stratum": "script_resource",
+      "task_id": "task_0295"
+    },
+    {
+      "family_key": "variant_root:task 0038",
+      "ground_truth_archive_sha256": "80a589bc5ee4bbabb2a019ceb2ce6a6acd7c6f3d492bb52f4b77e8c767822797",
+      "instruction_sha256": "5654a97dfd73ed14d808aba6b92177c74fab389f2ea32ea44b7fd2c2c0056825",
+      "name": "Rain Splash - Heavy Downpour",
+      "public_archive_sha256": "62fd4817e38764e3043deb558857e3a6434222f3dd4e0c5ac5a88f69f1ed6887",
+      "stratum": "script_resource",
+      "task_id": "task_0296"
+    },
+    {
+      "family_key": "variant_root:task 0038",
+      "ground_truth_archive_sha256": "055824fc3d20f3ad44b858db56a4a9ef1f6bbcf10309ca046dc7ed647ff1fd7d",
+      "instruction_sha256": "78e95aba88c99519a578ac82c5bbf96db1a31a62df898af95a82f5dfb15f5e93",
+      "name": "Rain Splash - Wind Slanted",
+      "public_archive_sha256": "a124f67d980bbd1066f36b9785a78510787ac8e83755b17d1fe706c7f08a5930",
+      "stratum": "script_resource",
+      "task_id": "task_0297"
+    },
+    {
+      "family_key": "variant_root:task 0038",
+      "ground_truth_archive_sha256": "dca1104a0e628125cafec710170604e49f03a6326bb8789b27ce7505b3173916",
+      "instruction_sha256": "d351937224ba453a4a94336d15f80493619f3c8aeb8c885b1eb5369fc6ef20f4",
+      "name": "Rain Splash - Tropical Burst",
+      "public_archive_sha256": "f3f6becb2a8f4ec8fb9d6b9f6c1e07618b253c95beadb8faf10573d75f95d861",
+      "stratum": "script_resource",
+      "task_id": "task_0298"
+    },
+    {
+      "family_key": "variant_root:task 0038",
+      "ground_truth_archive_sha256": "233833d24b22319625b07e99a44e9b44f9ba7b0eca44a09f93abb9da7e4cdb03",
+      "instruction_sha256": "80ab1a5898e27fee14e70a0d6c7244abe8643dbd4fba13274b8cd7d58128625c",
+      "name": "Rain Splash - Gentle Mist",
+      "public_archive_sha256": "0b550dc9169afd0a6090a2768a1c7ef6422f1c87624f3a68d8cf45c76b88e258",
+      "stratum": "script_resource",
+      "task_id": "task_0299"
+    },
+    {
+      "family_key": "variant_root:task 0038",
+      "ground_truth_archive_sha256": "9bebb438daa7b323028399278075cdc371de9f385615da3385f851d5d66ddab7",
+      "instruction_sha256": "699872e4ffdb1f8f4303af4f74fc6dbf1ba3c662f4a4c95d0d5588ba35035db5",
+      "name": "Rain Splash - Monsoon Wall",
+      "public_archive_sha256": "0e9275ccc4617d3aaed68a02df31ea79d891ebdeacdfcf26dd2bf89ffb0864e9",
+      "stratum": "script_resource",
+      "task_id": "task_0300"
+    },
+    {
+      "family_key": "variant_root:task 0038",
+      "ground_truth_archive_sha256": "9317af5cdbd1b0efb757c5a3bd446993f34fb33923be1c92d50af1025e5d1add",
+      "instruction_sha256": "b758e8d260ac7cf98046fbe90734aad38c0de912e6c1607f9cd24e8d40c7948d",
+      "name": "Rain Splash - Autumn Shower",
+      "public_archive_sha256": "af7fc91cfc4c94b835122ba6edb584d8384d3a35ec82dca90bc5da622f4e0e48",
+      "stratum": "script_resource",
+      "task_id": "task_0301"
+    },
+    {
+      "family_key": "variant_root:task 0038",
+      "ground_truth_archive_sha256": "2c2890a43925f8396672ec9e5954c342ccb85e9451c750291d38b7a20107eb5b",
+      "instruction_sha256": "5b73f9461b55f5184cf36d9be61c3fe465513b28a5143ce0469911000d425721",
+      "name": "Rain Splash - Ice Pellets",
+      "public_archive_sha256": "44985fb5a63ce3eb6ec3d7899f9022a36c2658e92cb317760936129eceb3c8d2",
+      "stratum": "script_resource",
+      "task_id": "task_0302"
+    },
+    {
+      "family_key": "variant_root:task 0038",
+      "ground_truth_archive_sha256": "27574fc6e1c56e8ca734e0ff22d1124bd0758f7d1210374e6de64b1b8befe09d",
+      "instruction_sha256": "49b77048acb674e9d5986d55c126dd0f196098f0d12444db213a59a7f33d6020",
+      "name": "Rain Splash - Scattered Drops",
+      "public_archive_sha256": "9f19c980064138ec1fac354d0097d4c92df081352e6006ab9c8b7264a33e3ea3",
+      "stratum": "script_resource",
+      "task_id": "task_0303"
+    },
+    {
+      "family_key": "variant_root:task 0038",
+      "ground_truth_archive_sha256": "26ce87bf19df0487245574956984ae3f932c9c3276f44b3504ccab657ab24a3d",
+      "instruction_sha256": "28496d876830a07f4c51b1079f4a63b4323942b5dc87d1244b49b51ac0c977a3",
+      "name": "Rain Splash - Storm Sheets",
+      "public_archive_sha256": "05b365b2f271f06eff5bed728a775c874faa188e6673505b046ca0d25923fee9",
+      "stratum": "script_resource",
+      "task_id": "task_0304"
+    },
+    {
+      "family_key": "variant_root:task 0038",
+      "ground_truth_archive_sha256": "44aa93a0664d81a585bee74aadbf3ce0688958bd003960ffdfcddccce758267d",
+      "instruction_sha256": "45601b1f25d6a10141163ee34bfe0db70f487f1d8db9a60ec430e5da994c7eec",
+      "name": "Rain Splash - Spring Rain",
+      "public_archive_sha256": "7f9883eac46840cbfe2dcd4be4792eb5c8631e8776e7318c7d9c9c5fa300cf62",
+      "stratum": "script_resource",
+      "task_id": "task_0305"
+    },
+    {
+      "family_key": "variant_root:task 0038",
+      "ground_truth_archive_sha256": "8802d2628537bae43774b3b4b518e3e8c4dadd8c6b8d109f1f69fce3a50eb6f1",
+      "instruction_sha256": "c68d12035cfbc4429ada94678b98b8125a7accc3b4374efa0fa889b400284be1",
+      "name": "Rain Splash - Hail Mix",
+      "public_archive_sha256": "661b2414327bdb35661a23df013bd5e62d0c7f53e142702fefa80131a0717f55",
+      "stratum": "script_resource",
+      "task_id": "task_0306"
+    },
+    {
+      "family_key": "variant_root:task 0038",
+      "ground_truth_archive_sha256": "607582a65f52126f4459b55bc949765f44a3c2a6945573200b9e30ba284b32b5",
+      "instruction_sha256": "3a3d5e7457c2b7d9edabe4003cf789c977fef0d5b7673b702ccffef956e94434",
+      "name": "Rain Splash - Fog Rain",
+      "public_archive_sha256": "d02dae3f510a590da6ab773e65ca74be520d1f1692a9dc14e85a1e59b5bf6a0a",
+      "stratum": "script_resource",
+      "task_id": "task_0307"
+    },
+    {
+      "family_key": "variant_root:task 0038",
+      "ground_truth_archive_sha256": "ddfc869572a395cb1268c093adcb9449f9b2c0888d2f82c41d7ef75c89ca76b1",
+      "instruction_sha256": "6f00193bff81b1e0bc09c46957d157bfadd599fa27c7c91ae5e9e7c19162ec89",
+      "name": "Rain Splash - Thunder Shower",
+      "public_archive_sha256": "ab407877587ae935afdb21bb19cc6497de16e3d445de380273fe473c1cef5036",
+      "stratum": "script_resource",
+      "task_id": "task_0308"
+    },
+    {
+      "family_key": "variant_root:task 0038",
+      "ground_truth_archive_sha256": "0ef38ca48c537acb0b7a20a44be214cc57205294b397f881276cf5e376ccba45",
+      "instruction_sha256": "fe31ce76eb50c9e8a613246d2bc18eaee98fd465b6e933e20f3169a23459db14",
+      "name": "Rain Splash - Needle Rain",
+      "public_archive_sha256": "350a6cf107769341e403753ca46107925b1a4f76f26c676940162c607c145351",
+      "stratum": "script_resource",
+      "task_id": "task_0309"
+    },
+    {
+      "family_key": "variant_root:task 0038",
+      "ground_truth_archive_sha256": "94b3b3e240d09bc649f97c2708a9c5b0c5f6add75e378e2be43d29959fdb5654",
+      "instruction_sha256": "8a4785c23598e32bbc19bc405f319ccb80b31fd3dc4e9740cf9ed81ae5d5dd4f",
+      "name": "Rain Splash - Warm Rain",
+      "public_archive_sha256": "449dfb7b492d7fae2fa7eac24f2a8b70505dc2b659b21d1fc4361079213c0ad2",
+      "stratum": "script_resource",
+      "task_id": "task_0310"
+    },
+    {
+      "family_key": "variant_root:task 0038",
+      "ground_truth_archive_sha256": "207e57814d6b94c8b7661f69576624a5d7d07ce82421541c33002dfa49d31562",
+      "instruction_sha256": "123dd5255d7a71f066ee8ab9c5b0d83aefc47fbd70bdeb0212c513284eebef88",
+      "name": "Rain Splash - Sideways Gale",
+      "public_archive_sha256": "6327844e68009d4feb18830709b16e609cd671d8a471f6ce67be8360448185f2",
+      "stratum": "script_resource",
+      "task_id": "task_0311"
+    },
+    {
+      "family_key": "variant_root:task 0038",
+      "ground_truth_archive_sha256": "3ed655f835431d676e566ea5efe30cad0f5f59e39ac097d396a2d8fdb555d4fe",
+      "instruction_sha256": "2654cd082e0ff0dc886f842268f00bc323ec6e942e69fe1182715ffa454893d4",
+      "name": "Rain Splash - Fine Spray",
+      "public_archive_sha256": "0110df9bd694e2405efc7cbcbfeb9f2e1f69d2bb9608e28382906c2370b5cb17",
+      "stratum": "script_resource",
+      "task_id": "task_0312"
+    },
+    {
+      "family_key": "variant_root:task 0038",
+      "ground_truth_archive_sha256": "db4f6f5f21acaa91b5812347662646e018ad959f4cd816425c68d3c286aafc36",
+      "instruction_sha256": "4dbc3b531286604fa39e85618f3674fa62158d85b49c8d5a726bc213f2df63a0",
+      "name": "Rain Splash - Cloudburst",
+      "public_archive_sha256": "0e6af0d6ed70c53374921d2af9133ecaa3fc2433de80fd97c218606058db2609",
+      "stratum": "script_resource",
+      "task_id": "task_0313"
+    },
+    {
+      "family_key": "variant_root:task 0038",
+      "ground_truth_archive_sha256": "580722530c38ff37fd5af8b9bbecabe9f8e0ae54bf6fdf658bf49383441edf22",
+      "instruction_sha256": "685187b2326c243eedcbcb20d1bbea3a856ad94d78baf44cd2e12f1222444b52",
+      "name": "Rain Splash - Evening Patter",
+      "public_archive_sha256": "75d0b5b2c9dabe83631bd68abc68ed9ccbef24ad78d19f8c5f7539d2f9ca4c7a",
+      "stratum": "script_resource",
+      "task_id": "task_0314"
+    },
+    {
+      "family_key": "variant_root:task 0039",
+      "ground_truth_archive_sha256": "81b6811179be2c316ac326e29f6d3e6269a6078bc0cd059fa431304e7e2f876f",
+      "instruction_sha256": "8a23c0a853932968bcbfb82a129e977bcc233fb887f859cd51d96032f9ae828c",
+      "name": "Campfire Smoke - Thin Wisps",
+      "public_archive_sha256": "5c4d9a8c4c2e6695ddbfa9b73373e790b89c67f5c0e989f2ccbb49d7c13ed90f",
+      "stratum": "script_resource",
+      "task_id": "task_0315"
+    },
+    {
+      "family_key": "variant_root:task 0039",
+      "ground_truth_archive_sha256": "0422a5084d290694e7de70043f66768b8d864bfc84b4ddaaa2104787cfd29ab6",
+      "instruction_sha256": "51b5bbc551fed5ef1ed8f9f89ead869fc923424c1e98bdb340204cd7d51e1764",
+      "name": "Campfire Smoke - Thick Plume",
+      "public_archive_sha256": "667e2a4d22e1e79f48f7851deb5a21f2d6a93cf0059ce6310fae5d4aa0e81aa0",
+      "stratum": "script_resource",
+      "task_id": "task_0316"
+    },
+    {
+      "family_key": "variant_root:task 0039",
+      "ground_truth_archive_sha256": "00dd5c8c5f0d91416137d7a08105126d796a4a989e16a7b3f277ecd7e5934002",
+      "instruction_sha256": "f3904b3d4662294770853d1d9858ef6c2cb3e7b9a3aeddeabc262f5c0723c448",
+      "name": "Campfire Smoke - Fast Smoke",
+      "public_archive_sha256": "ad80737b63e90697e731bd51cc0a3336321d89e47a076420d148687a581981a7",
+      "stratum": "script_resource",
+      "task_id": "task_0317"
+    },
+    {
+      "family_key": "variant_root:task 0039",
+      "ground_truth_archive_sha256": "095028051a8ad9f97c992bbea04d5f5c471b7c8f9e5c5defed968f32f9fa76fd",
+      "instruction_sha256": "96cb24bcef3cc9220c376a4878b0015bf131194f6c90c1bdb058326ab73b6e45",
+      "name": "Campfire Smoke - Lazy Drift",
+      "public_archive_sha256": "8f388c79efa077c24643db1652aa792d26734d28bde0791e5115b69f594793cb",
+      "stratum": "script_resource",
+      "task_id": "task_0318"
+    },
+    {
+      "family_key": "variant_root:task 0039",
+      "ground_truth_archive_sha256": "62cb3893d32fcc3728bdd0859aaa21243b9cb7bcdda0496ac42c8cd3b2bff14c",
+      "instruction_sha256": "59406f6194a603e6816f3c4cdacd1e73ab2a57abfff4397452c91bb7fa8e9ba4",
+      "name": "Campfire Smoke - Wide Sway",
+      "public_archive_sha256": "e8c2ec0d66c1ae4b3a5184e9025b81e91e1eeec7689fd3cc18ed018637d7c4e5",
+      "stratum": "script_resource",
+      "task_id": "task_0319"
+    },
+    {
+      "family_key": "variant_root:task 0039",
+      "ground_truth_archive_sha256": "bee6a74477344f700741db7761158612801bd13ced6923b3527cde338fa3a589",
+      "instruction_sha256": "5b128e077f4bd884ea121dbc753e5dfae55f1e68440ece66a604570857e9f149",
+      "name": "Campfire Smoke - Narrow Column",
+      "public_archive_sha256": "5a91449cf65e4827e1c3450bb37643a016928d511cb2b9d9bc5c2ebd70a10a3f",
+      "stratum": "script_resource",
+      "task_id": "task_0320"
+    },
+    {
+      "family_key": "variant_root:task 0039",
+      "ground_truth_archive_sha256": "c12cb4e4dcf3cae03da85f6eb59985b0d7ca4973fd6d9712b9d5460863b7fffc",
+      "instruction_sha256": "18e18cf9d526e467a3e9762bf468c47a30ebb4bb0861c787cbd0b05f2e11b351",
+      "name": "Campfire Smoke - Bonfire Billows",
+      "public_archive_sha256": "23183a7e5b2f0803e0f14af23167c8b8ff9c27d83c9fd7da6f61319d026127b9",
+      "stratum": "script_resource",
+      "task_id": "task_0321"
+    },
+    {
+      "family_key": "variant_root:task 0039",
+      "ground_truth_archive_sha256": "4d02218b772e5c9028f72b48a84da3875503ad50348cf83f20349f06cf6c3603",
+      "instruction_sha256": "eaa09fbae22ff034822c460c9412cc1297882301510dbd403dd14a82eaeb0c58",
+      "name": "Campfire Smoke - Candle Trail",
+      "public_archive_sha256": "7a4f7c8478dc941bea8f065433421326d9d77698f4012d9682cec30120e33001",
+      "stratum": "script_resource",
+      "task_id": "task_0322"
+    },
+    {
+      "family_key": "variant_root:task 0039",
+      "ground_truth_archive_sha256": "f8b880df4d429275c84c920e9affa9386e678269744df0cac77bbe56c0b78c44",
+      "instruction_sha256": "8d7128bb5142f11a40f33e7ba68b7a357cd9408173b41352ea7ae6c57e570095",
+      "name": "Campfire Smoke - Volcanic Vent",
+      "public_archive_sha256": "a47b799846ac036a88d594da3d0f1746d2fac4cd031ed5b9d9f5f0ab4f61d399",
+      "stratum": "script_resource",
+      "task_id": "task_0323"
+    },
+    {
+      "family_key": "variant_root:task 0039",
+      "ground_truth_archive_sha256": "fcdc179c55820607aeb2533dfd5013dfdddae5db053792ff0a93c03c6fb4e867",
+      "instruction_sha256": "8c3342e3e3fd7df258194479ff5bcaa12ec3adca30e49107ea0f66d28fc013ee",
+      "name": "Campfire Smoke - Chimney Smoke",
+      "public_archive_sha256": "a8d420468d38157315833ac329a556b119052c3038d5e0e54f029dbcc49e7b13",
+      "stratum": "script_resource",
+      "task_id": "task_0324"
+    },
+    {
+      "family_key": "variant_root:task 0039",
+      "ground_truth_archive_sha256": "fc3c8d95721428365f17f3ecf8a738bbcdf617848d88bc31bef8889f0b28db82",
+      "instruction_sha256": "748408359a8871971af971cc783d1b0adf969cd4a6dbcb482a46175c35daf961",
+      "name": "Campfire Smoke - Torch Flicker",
+      "public_archive_sha256": "ea1cf7dc0edf16b75f019be55db2bb4a8057895b000fd439dd1e87af5f40e784",
+      "stratum": "script_resource",
+      "task_id": "task_0325"
+    },
+    {
+      "family_key": "variant_root:task 0039",
+      "ground_truth_archive_sha256": "36e386f399ee6a9a22ed4e3c2c809c4c1c228e03695e82905268f2e4c3f1849a",
+      "instruction_sha256": "1f79a292aab1130f96d0f4b1de3693c1900d3c7c0bd73c59d0e9c0735de4200a",
+      "name": "Campfire Smoke - Incense Curl",
+      "public_archive_sha256": "bd981c6ea887fc2da13019ad4e0f58e2983384e84895bb1026a2433dc3eaaeb7",
+      "stratum": "script_resource",
+      "task_id": "task_0326"
+    },
+    {
+      "family_key": "variant_root:task 0039",
+      "ground_truth_archive_sha256": "aec88910ea8c16f6f142f4b9e2fb65ac1becfb67e9175b20c5ed1e5b2050760c",
+      "instruction_sha256": "7ea695333f13b0a217c764864a0c1a4bd0f47f29274feb050ee5d876d772cdee",
+      "name": "Campfire Smoke - Wildfire Haze",
+      "public_archive_sha256": "6faa41c711d240ddad9d6b9f93ae234127df59c775437e8a62ec91d041d63e85",
+      "stratum": "script_resource",
+      "task_id": "task_0327"
+    },
+    {
+      "family_key": "variant_root:task 0039",
+      "ground_truth_archive_sha256": "a8f0b3bf5a7a7566a51eeb0268766d8e8bf55ef36a177d1f504d5210c9b99e5b",
+      "instruction_sha256": "1e72efa9c67be1326d4107cc3fb19a8ffede0c664dc99b1078b9ed5c0c3bae6b",
+      "name": "Campfire Smoke - Steam Vent",
+      "public_archive_sha256": "f7fdbd46a4a48becf627f9e10b4aa039793a9151716f44bc8aed4e9fbee4a2b5",
+      "stratum": "script_resource",
+      "task_id": "task_0328"
+    },
+    {
+      "family_key": "variant_root:task 0039",
+      "ground_truth_archive_sha256": "75a0a05347f69ec5681e1ccb7927ae4f500705c24e6ec45b0c372aedc52cb202",
+      "instruction_sha256": "9852417986918e142ed0eb47e51922186d005ac582db7c18412773b9e801e37f",
+      "name": "Campfire Smoke - Smolder Low",
+      "public_archive_sha256": "5ea8a2ce9af0448a2da909ec16b07972fc894d7c92e5f9d6085b7de2c0b6b1c0",
+      "stratum": "script_resource",
+      "task_id": "task_0329"
+    },
+    {
+      "family_key": "variant_root:task 0039",
+      "ground_truth_archive_sha256": "df3a41e93451b1cd0f99c5408106adb3a4edc8ec4015150d37b78c281cf8b280",
+      "instruction_sha256": "59ed50f715a4dab8e1e64a6ec53cf25d46808eb72ae99886d2a1e50a7ad9d32c",
+      "name": "Campfire Smoke - Exhaust Pipe",
+      "public_archive_sha256": "0d1ecbbb6ae1fa401cd037c667aa178e96e302e62809260e3d3b61921877c13a",
+      "stratum": "script_resource",
+      "task_id": "task_0330"
+    },
+    {
+      "family_key": "variant_root:task 0039",
+      "ground_truth_archive_sha256": "a93943e1976d9cf7106448c8f5a60f2faaea31e0e8735c28ea63a413eb4668b5",
+      "instruction_sha256": "eced09458f9331726397a006ae18cf5b3d3260c0ede4735cf3ef34c06b11e628",
+      "name": "Campfire Smoke - Ritual Smoke",
+      "public_archive_sha256": "db6af18dc7ee410bbfd110ff9b53b8c5867fc1d1a8879b89bab585a7950b40f1",
+      "stratum": "script_resource",
+      "task_id": "task_0331"
+    },
+    {
+      "family_key": "variant_root:task 0039",
+      "ground_truth_archive_sha256": "23c6ae4340cc1a0cc8e18f9c8c77bb0c7c0aa4941d91cd11f26b83d9216c854c",
+      "instruction_sha256": "01755d24d8ac28f4f2d3c281e35a7c7e4d9c6df448ee55ecb86fb760cbd39946",
+      "name": "Campfire Smoke - Factory Stack",
+      "public_archive_sha256": "175c03706cda4a934052c25aba893388add7e8c50c874eea0bcc0957bb5b961e",
+      "stratum": "script_resource",
+      "task_id": "task_0332"
+    },
+    {
+      "family_key": "variant_root:task 0039",
+      "ground_truth_archive_sha256": "1d9598b93579dc463d943dbf3b55d98bbf32c6692e089fff90b6b55befe0863e",
+      "instruction_sha256": "06777a2aef88a8eec25a7aef8072c366f3b518d5bdf5af19dd88c98b0bea4f3a",
+      "name": "Campfire Smoke - Dying Ember",
+      "public_archive_sha256": "e3bebf638c3a411cf835dbe3c93a22718bc91099b5b77fc2b48aa9ad928a419d",
+      "stratum": "script_resource",
+      "task_id": "task_0333"
+    },
+    {
+      "family_key": "variant_root:task 0039",
+      "ground_truth_archive_sha256": "53f9df0360c187366a204e8db7047e0f51d4fb16b95f507e44bef1646c266783",
+      "instruction_sha256": "7b4aba08876b1c98589475b24921b8bcce8ffc1e6713a01c56d34a37b53a46f1",
+      "name": "Campfire Smoke - Furnace Blast",
+      "public_archive_sha256": "aa1cecb28b2b9d5e03bbe59e66b89d46891845d44e46c02e847249786f97434b",
+      "stratum": "script_resource",
+      "task_id": "task_0334"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Local configuration and credentials
+.env
+.env.local
+.env.*.local
+!.env.example
+model.local.yaml
+
+# Generated run evidence and builds
+runs/
+
+# External benchmark checkouts and pinned engine archives
+third_party/
+
+# Internal candidate worktrees and version archives are not public release content
+variants/
+/versions/
+
+# Unity generated directories
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+unity/**/Build/
+unity/**/Builds/
+unity/**/.vs/
+unity/**/*.csproj
+unity/**/*.sln
+unity/**/*.suo
+unity/**/*.user
+unity/**/*.userprefs
+
+# macOS and editors
+.DS_Store
+.idea/
+.vscode/
+*.swp

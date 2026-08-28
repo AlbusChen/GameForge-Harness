@@ -1,0 +1,45 @@
+{
+  "claim_boundary": "The model-generated project's own smoke path advances gameplay state while an independent evaluator records rendered frames. This is not raw keyboard/mouse replay.",
+  "evaluator": {
+    "build_seconds": 6.241,
+    "editor_builder_sha256": "8f74453e20e96583cd277aee9c6de9323697d3baca36dcc1598055bb2cd63339",
+    "editor_script_in_temporary_copy": "${TEMP_DIRECTORY}/gameforge-unity-gameplay-dtb00zmc/project-09-stealth_infiltration/Assets/GameForgeGameplayRecorder/Editor/BuildEntry.cs",
+    "runtime_recorder_sha256": "6dec1c8a8a102adbd44021d8c589ace8b3582bb671872cf46119e0752b42ad11",
+    "runtime_script_in_temporary_copy": "${TEMP_DIRECTORY}/gameforge-unity-gameplay-dtb00zmc/project-09-stealth_infiltration/Assets/GameForgeGameplayRecorder/Runtime/FrameRecorder.cs",
+    "unity": "/Applications/Unity/Hub/Editor/6000.3.20f1/Unity.app/Contents/MacOS/Unity",
+    "unity_sha256": "0bb649811e4298aece941fc66d82ccc1e49ef5d82fa56cda8a769974aef21aa1"
+  },
+  "evidence_grade": "project-authored-behavior-smoke-replay",
+  "interaction": "project-authored runtime world/guard validation",
+  "recording": {
+    "distinct_frame_sha256_count": 40,
+    "encoder_return_code": 0,
+    "expected_marker": "RUNTIME SMOKE PASSED",
+    "finished_at": "2026-08-26T10:36:58.622559+00:00",
+    "fps": 30,
+    "frame_count": 41,
+    "marker_found": true,
+    "movie": "showcases/unity/stealth-infiltration-scripted/gameplay.mp4",
+    "movie_bytes": 107750,
+    "movie_sha256": "499e9839a3b7b51110bd77fc218be636d55ef831d4b9165ac7e67a691dcd3a32",
+    "player_return_code": 0,
+    "project_smoke_flag": "-blacksiteSmokeCapture",
+    "runtime_error_count": 0,
+    "runtime_error_lines": [],
+    "started_at": "2026-08-26T10:36:51.414502+00:00",
+    "video_seconds": 1.367,
+    "wall_seconds": 6.715
+  },
+  "schema_version": 1,
+  "source": {
+    "benchmark_run": "${INTERNAL_RUNS}/experiments/unity-open-game-creation20-showcase-run3",
+    "public_file_count": 34,
+    "public_tree_sha256": "4b7946bd61ea52c408381c6e02162635d60d20340c1ea9082041fffc7768cc14",
+    "receipt": "${INTERNAL_RUNS}/experiments/unity-open-game-creation20-showcase-run3/receipts/09-stealth_infiltration.json",
+    "receipt_sha256": "8e7a4bcde0feea6d4bc304d01c06307010cbce29da901b83db101faf6c1a3aab",
+    "workspace": "${INTERNAL_RUNS}/game-open-workspaces/20260825T085921736091Z-unity20-09-stealth_infiltration/project"
+  },
+  "status": "PASS",
+  "task_id": "stealth_infiltration",
+  "title": "Stealth Infiltration"
+}

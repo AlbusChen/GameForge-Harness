@@ -1,0 +1,45 @@
+{
+  "claim_boundary": "Proves the preserved project launches, renders, receives the listed normal Godot InputEvent trace, and changes over time; it does not claim level completion.",
+  "evidence_grade": "engine-input-replay",
+  "interaction": "mode selection, movement, combat pulse, and live enemies",
+  "recording": {
+    "distinct_frame_sha256_count": 358,
+    "duration_seconds": 11.933,
+    "encoder_return_code": 0,
+    "engine_return_code": 0,
+    "expected_action_count": 8,
+    "final_sha256": "d73a2a9998517c93974007369fb5f48fc8879d85e0fb2139f489374a43ade8d1",
+    "finished_at": "2026-08-26T10:23:18.018737+00:00",
+    "fps": 30,
+    "frame_count": 358,
+    "initial_sha256": "23e3bf5b3e5965617e9ef6aaafed817e4ab3e06d1110950a35a9ccb1320b5ddf",
+    "movie": "showcases/godot/local-coop-arena/gameplay.mp4",
+    "movie_bytes": 893081,
+    "movie_sha256": "0355717a1f206af6bab14ac84da167988a0fbad231bf6f526c8d7c538a9ec6dd",
+    "passed_action_count": 8,
+    "started_at": "2026-08-26T10:23:10.002961+00:00",
+    "trace": "showcases/godot/local-coop-arena/input-trace.json",
+    "trace_sha256": "864fe7fe76b002954a4d313e762bfb0b06b9d3e4b312ca7bf606a044eaab4cb2",
+    "wall_seconds": 6.977
+  },
+  "runtime": {
+    "isolated_executable": "/Applications/Godot.app/Contents/MacOS/Godot",
+    "isolation_mode": "installed-executable-private-home",
+    "probe": "experiments/assets/showcase_record_probe.gd",
+    "probe_sha256": "ce5a8a3e5769b1a52f02eb690689df673eecfc65c231a84cbc9abfbe7ee516d3",
+    "source_godot": "/Applications/Godot.app/Contents/MacOS/Godot",
+    "source_godot_sha256": "ecc8da2d60100102cfca6e833d3860d7436b46ae062fa072ce89a6c95d664a3f"
+  },
+  "schema_version": 1,
+  "source": {
+    "benchmark_run": "${INTERNAL_RUNS}/experiments/godot-open-game-creation20-native-open-minimal-run2",
+    "receipt": "${INTERNAL_RUNS}/experiments/godot-open-game-creation20-native-open-minimal-run2/receipts/12.json",
+    "receipt_sha256": "5f1225c4c1452e1c3f6d6eb6266506a5a05daabdc00ac50e9628e72d90c596bb",
+    "workspace": "${INTERNAL_RUNS}/experiments/godot-open-game-creation20-native-open-minimal-run2/attempts/12-local_coop_arena-native-open-minimal/workspace",
+    "workspace_file_count": 5,
+    "workspace_tree_sha256": "e28a73b64f7041e9bc1d89fc3823ef722067d8f99643386ba6f5ecfa91ff9f25"
+  },
+  "status": "PASS",
+  "task_id": "local_coop_arena",
+  "title": "Local Co-op Arena"
+}

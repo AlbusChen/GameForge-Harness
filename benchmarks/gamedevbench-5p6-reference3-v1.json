@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "gamedevbench-5p6-reference3-v1",
+  "benchmark_commit": "e3868bccbb88e86a3eb2d62154f1e9e0f3fd489a",
+  "selection_seed": "pilot20-v1:reference3:post-v4",
+  "selection_method": "Three diagnostic tasks selected from the pre-registered pilot20 manifest before the 5.6 runs: one prior Harness pass, one simple prior failure, and one visual prior failure. This is a mechanism reference sample, not a random benchmark estimate.",
+  "population_counts": {
+    "pilot20": 20
+  },
+  "quotas": {
+    "ui": 1,
+    "2d": 2
+  },
+  "excluded_archives": [],
+  "tasks": [
+    {
+      "task_id": "task_0151",
+      "stratum": "ui",
+      "selection_rank_sha256": "0bb0bcccfc9674719c70330d00004967a0f90d9628f41c17d7b97e99ad041302",
+      "instruction_sha256": "7bae82769fdb4a24cc82baca9f5921508f413d85ddb539fc6a1765fd52a10844"
+    },
+    {
+      "task_id": "task_0313",
+      "stratum": "2d",
+      "selection_rank_sha256": "07f21415747f85ff51f775fca213f2607ee5b675b22d2022ef53cdc8815bc12c",
+      "instruction_sha256": "4dbc3b531286604fa39e85618f3674fa62158d85b49c8d5a726bc213f2df63a0"
+    },
+    {
+      "task_id": "task_0223",
+      "stratum": "2d",
+      "selection_rank_sha256": "0ac79f7e46395988808d03139e7879004797f72ab954a8d961a83461a56c4a07",
+      "instruction_sha256": "37cd4a20f181adcdb962bf5b2002c790b3ddcd36a64f3e3f48ec9cdfcd80da7d"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "actions": [
+    {
+      "at": 2.0,
+      "executed_at": "2026-08-26T15:38:12.697554+00:00",
+      "kind": "click",
+      "label": "play Pulse",
+      "resolved": {
+        "x": 1170,
+        "y": 600
+      },
+      "return_code": 0,
+      "stderr": "",
+      "stdout": "posted_click=1170,600",
+      "x": 0.664,
+      "y": 0.735
+    },
+    {
+      "at": 4.0,
+      "executed_at": "2026-08-26T15:38:14.780062+00:00",
+      "kind": "click",
+      "label": "play Ward",
+      "resolved": {
+        "x": 550,
+        "y": 600
+      },
+      "return_code": 0,
+      "stderr": "",
+      "stdout": "posted_click=550,600",
+      "x": 0.18,
+      "y": 0.735
+    },
+    {
+      "at": 6.0,
+      "executed_at": "2026-08-26T15:38:16.737306+00:00",
+      "key_code": 49,
+      "kind": "key",
+      "label": "end turn with Space",
+      "resolved": {
+        "key_code": 49
+      },
+      "return_code": 0,
+      "stderr": "",
+      "stdout": "posted_key=49"
+    }
+  ],
+  "application": "${INTERNAL_RUNS}/game-open-workspaces/20260825T095021052806Z-unity20-17-deckbuilding_duel/project/Builds/AetherDuel.app",
+  "application_executable": "${INTERNAL_RUNS}/game-open-workspaces/20260825T095021052806Z-unity20-17-deckbuilding_duel/project/Builds/AetherDuel.app/Contents/MacOS/Aether Duel",
+  "application_executable_sha256": "d9578e9d7adbee794e5cb31a82bd6cc9a1efeca699b068e1ae2358d9ac9f80e4",
+  "application_process_id": 92508,
+  "capture_rectangle": [
+    320,
+    78,
+    1280,
+    720
+  ],
+  "capture_transport": "macOS screencapture window rectangle",
+  "claim_boundary": "An unmodified generated Unity Player received operating-system mouse/keyboard events while an external evaluator captured its window. Semantic gameplay progress is recorded separately by manual visual review.",
+  "evidence_grade": "macos-native-window-input-and-external-screen-capture",
+  "finished_at": "2026-08-26T15:38:23.411130+00:00",
+  "input_helper_source": "experiments/tools/macos_input_event.swift",
+  "input_helper_source_sha256": "792c90e8a6fdfd3c17abe40fb5b67de0513a23457e6231e2e14c74a276514bcd",
+  "input_transport": "CoreGraphics CGEvent at cghidEventTap",
+  "project_modified": false,
+  "recording": {
+    "distinct_frame_sha256_count": 106,
+    "duration_seconds": 10.6,
+    "encoder_return_code": 0,
+    "fps": 10,
+    "frame_count": 106,
+    "movie": "showcases/unity/deckbuilding-duel-native/gameplay.mp4",
+    "movie_bytes": 442234,
+    "movie_sha256": "73f135025158317fc759343d4690a4883fd0bd4ebc04fe19c467bee8275eebdb",
+    "runtime_error_count": 0,
+    "runtime_error_lines": [],
+    "sample_frames": [
+      "${INTERNAL_RUNS}/showcases/gameplay-showcase-2026-08-26/unity-native-input/17-deckbuilding_duel-run4/sample-frames/frame-00000.png",
+      "${INTERNAL_RUNS}/showcases/gameplay-showcase-2026-08-26/unity-native-input/17-deckbuilding_duel-run4/sample-frames/frame-00026.png",
+      "${INTERNAL_RUNS}/showcases/gameplay-showcase-2026-08-26/unity-native-input/17-deckbuilding_duel-run4/sample-frames/frame-00053.png",
+      "${INTERNAL_RUNS}/showcases/gameplay-showcase-2026-08-26/unity-native-input/17-deckbuilding_duel-run4/sample-frames/frame-00079.png",
+      "${INTERNAL_RUNS}/showcases/gameplay-showcase-2026-08-26/unity-native-input/17-deckbuilding_duel-run4/sample-frames/frame-00105.png"
+    ]
+  },
+  "schema_version": 1,
+  "started_at": "2026-08-26T15:38:10.066347+00:00",
+  "status": "PASS",
+  "window_rectangle": [
+    320,
+    50,
+    1280,
+    748
+  ]
+}

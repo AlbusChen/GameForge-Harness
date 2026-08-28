@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "id": "gamecraft-bench-family15-v1",
+  "purpose": "Second public game-generation benchmark pilot with one reproducibly sampled task from every GameCraft-Bench family.",
+  "benchmark": {
+    "name": "GameCraft-Bench",
+    "repository": "https://github.com/FreedomIntelligence/gamecraft-bench",
+    "commit": "a43347534374df9a0c1a6c001aa9380862783f6d",
+    "license": "Apache-2.0",
+    "public_task_count": 140,
+    "family_count": 15,
+    "selection_rule": "Within each family, choose the task whose SHA-256 of 'gamecraft-pilot15-v1:<task_id>' is lexicographically smallest.",
+    "selection_seed": "gamecraft-pilot15-v1"
+  },
+  "solver": {
+    "harness_version": "unified-game-workspace-harness",
+    "harness_source": ".",
+    "provider": "codex-subscription",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "high",
+    "execution_profile": "native-open",
+    "timeout_seconds": 7200,
+    "attempts_per_task": 1,
+    "workflow": "one open model-selected workspace session; no automatic repair"
+  },
+  "workspace_mapping": {
+    "project": "The official /workspace/game contract is mapped to the disposable current workspace.",
+    "kenney_assets": "The official Kenney library is exposed read-only through a workspace symlink.",
+    "oga_assets": "Not provisioned in family15-v1; disclose as an environment limitation.",
+    "tools": "The official screenshot helper and Godot CLI reference are exposed read-only through a workspace symlink.",
+    "internet": "available under native-open"
+  },
+  "evaluation": {
+    "build_and_replay": "Official pinned GameCraft code in native Linux/arm64, official Godot 4.6.2, Xvfb, xdotool, and ffmpeg. Native arm64 avoids a known llvmpipe LLVM abort under x86_64 QEMU on Apple Silicon.",
+    "evidence_judge": "gpt-5.5 through Codex subscription with the official requirement prompt and sampled frames",
+    "strict_leaderboard_comparable": false,
+    "non_comparability_reason": "The public verifier's OpenAI judge uses API chat completions; this host has no paid API key. Build, replay, traces, frames, formula, and rubric remain official, but judge transport is a disclosed approximation. Replay also uses the official arm64 rather than x86_64 Godot build of the same 4.6.2 release.",
+    "required_outputs": [
+      "project.godot",
+      "demo_outputs/*.json",
+      "official build result",
+      "official replay MP4s and sampled frames",
+      "per-requirement judge log",
+      "formula score",
+      "solver time and token usage"
+    ]
+  },
+  "published_reference": {
+    "harness": "Codex",
+    "model": "GPT-5.6-sol high",
+    "date": "2026-07-09",
+    "tasks": 140,
+    "overall_percent": 60.50,
+    "mechanics_percent": 74.50,
+    "depth_percent": 56.10,
+    "visuals_percent": 64.80,
+    "art_percent": 57.00,
+    "comparison_status": "context only until our full140 run uses the official API judge"
+  },
+  "tasks": [
+    {"ordinal": 1, "task_id": "cardgame-autobattler", "family": "cardgame", "requirements": 14, "instruction_sha256": "ad638bef26281b0fc18e865f31ce5638762cd95bc8d100b4ea421a104972dfe5", "rubric_sha256": "dd4b8c0c721c9ec3719edb61fcc8cb26b949f6dffb2ed8ee62dcd9cb91feb48c"},
+    {"ordinal": 2, "task_id": "horror-lighthouse", "family": "horror", "requirements": 13, "instruction_sha256": "f904a323629bcd6589aad48e282c75f47d122f1444a34e4a4af69f5455a4be71", "rubric_sha256": "7626fd21f653a1af0a69fc699921ef362f0858bc28814ff3452acb4113158a95"},
+    {"ordinal": 3, "task_id": "idle-spell-tower", "family": "idle", "requirements": 13, "instruction_sha256": "8b97c5fdc82e1052d2c116a83386d6c3eea0bec1c07567031ac49bf2cc1c1061", "rubric_sha256": "c0cd71603779788b10f5be18db9586e3e56b5bbb10a36877544cad65e25a3444"},
+    {"ordinal": 4, "task_id": "openworld-archaeology", "family": "openworld", "requirements": 18, "instruction_sha256": "053b29e4e31dfa1855161560a673cc4f3b9ac6629bf31631a8f66683b9496551", "rubric_sha256": "5391c36e3b543c4ab2df02febd682d7ecba924dc074b23a970681e4edbd39d88"},
+    {"ordinal": 5, "task_id": "platformer-iron-vanguard", "family": "platformer", "requirements": 18, "instruction_sha256": "6c55462065e32079abcb238112b2f9ff709e5e2b75c4d2b76a67587c2eea562f", "rubric_sha256": "d81e2510a7c925bb7152218adfd1a8e0c4065ec8e12473af7ea6ff0445607cdb"},
+    {"ordinal": 6, "task_id": "puzzle-lemming-factory", "family": "puzzle", "requirements": 14, "instruction_sha256": "677118c33de35307453b25ecf07e9b379b8b6d1595ad80f0d84d87ea97db9238", "rubric_sha256": "cba220bf1ac6c3ba85213f8b3161cf527e1d72fbb534f6df88e381c61d8ff37a"},
+    {"ordinal": 7, "task_id": "racing-terrain-climb", "family": "racing", "requirements": 14, "instruction_sha256": "f981b34b2e6ccae4ac3e781c2f6a4f26682dfd51d3ec66456c259b11cbe75462", "rubric_sha256": "5cd8a64da4586061fcfe6510c9599ce1defa0823afe97cf29b2ab292a99807ea"},
+    {"ordinal": 8, "task_id": "rhythm-dj-arena", "family": "rhythm", "requirements": 14, "instruction_sha256": "64930a93921ae95a3f138d14747759f5f4c558ecd972c33db910bcff97e2aaac", "rubric_sha256": "8203ef664257c78164265fe5e4bdad15ddf9e5ebb6e43bc5f70ed3504f9df68a"},
+    {"ordinal": 9, "task_id": "roguelike-dice-throne", "family": "roguelike", "requirements": 18, "instruction_sha256": "692fcb99f0645a2f79f0bc09892c933ff21ceccfa21b8c523eebf429eaf91835", "rubric_sha256": "5c41f77bbe9edff2ea9c4ebb7b9321b90734a7b8725b2f6412c9ee5aa8bf062b"},
+    {"ordinal": 10, "task_id": "shooter-mech-sortie", "family": "shooter", "requirements": 18, "instruction_sha256": "68bbde67560c16b19d7db6bc0f1f41c0748f5bdcaed575482bc312c39234dd43", "rubric_sha256": "fca9bee409a3afc3d65f8b2a7b072e635d11b4429d7b23a6d3f7757ae5b3503c"},
+    {"ordinal": 11, "task_id": "simulation-space-station", "family": "simulation", "requirements": 18, "instruction_sha256": "4c074e0b601f791354e3c82c3868d03c3703911d86274e0a0c2e27755a1e6931", "rubric_sha256": "1ca14822db71572b46ba4710bd020af83a7815cd2b178d10934948f344b48968"},
+    {"ordinal": 12, "task_id": "sports-fishing-tournament", "family": "sports", "requirements": 13, "instruction_sha256": "68e2222af495e8cafc0d6ebdc6fbc271240b7ac8a380097746ff8a764cce54ca", "rubric_sha256": "b9b1608b3e444db4c97fd11f381aa7e99e99f2a190e4a82d3c1dc2b3d032afb5"},
+    {"ordinal": 13, "task_id": "strategy-towerdefense", "family": "strategy", "requirements": 16, "instruction_sha256": "2247dc051da8a97c1b49b9b007530b2462d850de39a3ddfa83620e89d656be1e", "rubric_sha256": "a690d569641f4ab7aac5384e25e6a368dfe8ecd4e28afa66d54243ed9c4fdd4f"},
+    {"ordinal": 14, "task_id": "tycoon-zoo-keeper", "family": "tycoon", "requirements": 18, "instruction_sha256": "3305133a4ceaab4db9be2178b2d815dc53ba1e7eed96636f91193633fd48b832", "rubric_sha256": "13c8588a1862d51cb52d3feb1d39f6f70c1605c141f3fbbc8ab0cdc2be59c14b"},
+    {"ordinal": 15, "task_id": "visualnovel-lastsignal", "family": "visualnovel", "requirements": 17, "instruction_sha256": "815cf7aecff8b09897065e3f48f5b36095d5a304e36e5e9383f7dd38de5ce84d", "rubric_sha256": "3f2c4bd04bb1b29adc2d25325e0a0f89c695b8d7a2c9bfb4a0bbf576a131423b"}
+  ],
+  "promotion_rule": {
+    "full140_after_family15": "Run all 140 tasks only after zero evaluator infrastructure failures, at least 14/15 build-and-replay-valid submissions, and a judge-repeatability audit on three tasks.",
+    "paired_official_local": "Use a same-task official-local arm only if the family15 score is not interpretable against the public reference or if prompt transport appears causal."
+  }
+}

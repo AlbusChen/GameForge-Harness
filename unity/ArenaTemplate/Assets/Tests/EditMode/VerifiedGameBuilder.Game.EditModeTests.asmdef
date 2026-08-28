@@ -1,0 +1,23 @@
+{
+  "name": "VerifiedGameBuilder.Game.EditModeTests",
+  "rootNamespace": "VerifiedGameBuilder.Game.Tests",
+  "references": [
+    "VerifiedGameBuilder.Game.Runtime"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [
+    "UNITY_INCLUDE_TESTS"
+  ],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}

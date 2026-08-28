@@ -1,0 +1,10 @@
+{
+  "name": "com.albuschen.gameforge.agent-bridge",
+  "version": "0.1.0",
+  "displayName": "GameForge Agent Bridge",
+  "description": "Narrow, typed Unity editor and runtime verification bridge.",
+  "unity": "6000.3",
+  "author": {
+    "name": "AlbusChen"
+  }
+}

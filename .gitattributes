@@ -1,0 +1,4 @@
+*.asset -whitespace
+*.mat -whitespace
+*.meta -whitespace
+*.unity -whitespace

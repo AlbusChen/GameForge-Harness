@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "id": "gamedevbench-harness10-v1",
+  "benchmark_commit": "e3868bccbb88e86a3eb2d62154f1e9e0f3fd489a",
+  "selection_seed": "e3868bccbb88e86a3eb2d62154f1e9e0f3fd489a:pilot20:v1",
+  "selection_method": "Reuse the preregistered pilot20 population and selection ranks. Within each stratum, sort by selection_rank_sha256 and take fixed quotas of 5 2d, 3 ui, 1 3d, and 1 script_resource tasks before any harness10 model run.",
+  "parent_manifest": "gamedevbench-pilot20-v1",
+  "quotas": {
+    "2d": 5,
+    "ui": 3,
+    "3d": 1,
+    "script_resource": 1
+  },
+  "tasks": [
+    {
+      "task_id": "task_0065",
+      "stratum": "ui",
+      "selection_rank_sha256": "0adf706e5a3a1fbb3a47a92adc23339689c83232be6e84e240a84905ac8e6f46",
+      "instruction_sha256": "61dcd357c092b1a1d9dabdbfb5fb9e8fb26861e851e86fcb6265353d2d4b8991"
+    },
+    {
+      "task_id": "task_0110",
+      "stratum": "3d",
+      "selection_rank_sha256": "11c5b34978d922bb7885b092a3c8181110d4c02b434d35110ebca47759e7c777",
+      "instruction_sha256": "1891253f5de8bce372b99d449da1fdbf62c5f4a55c6e352cbe107cd704981e95"
+    },
+    {
+      "task_id": "task_0124",
+      "stratum": "ui",
+      "selection_rank_sha256": "0c296ab345d1a78adb08e91fa8b2f944845cf4c227dfac081d12fc0b9236b203",
+      "instruction_sha256": "e8f74d56c8e691eff6efab6589808d3ab798ab712396d59bf442e5d77dba9f9d"
+    },
+    {
+      "task_id": "task_0151",
+      "stratum": "ui",
+      "selection_rank_sha256": "0bb0bcccfc9674719c70330d00004967a0f90d9628f41c17d7b97e99ad041302",
+      "instruction_sha256": "7bae82769fdb4a24cc82baca9f5921508f413d85ddb539fc6a1765fd52a10844"
+    },
+    {
+      "task_id": "task_0180",
+      "stratum": "script_resource",
+      "selection_rank_sha256": "035637b5e5bd7788af2afe53dd2955886e200059c008c47194c237f51b627370",
+      "instruction_sha256": "bb6d47a12b8c7e77df7398137279ac0be4f970f380da2d7b95b15eceb79103eb"
+    },
+    {
+      "task_id": "task_0208",
+      "stratum": "2d",
+      "selection_rank_sha256": "024774171c0d0863cb38668c1f4293246864fbc4cefcf588f0239cfdf577738d",
+      "instruction_sha256": "353418f3b466e12c121b5275fcc26875d97941c095f2a472902c173dedfba53f"
+    },
+    {
+      "task_id": "task_0220",
+      "stratum": "2d",
+      "selection_rank_sha256": "03a807106cf650726bbf17a50d7c760c2b5298f838f3dc3c36ca300d6ec07d0b",
+      "instruction_sha256": "36262c59fc41cb05a5e19512a446feb61dc8ce3f73cbbff51084f0361fbaab70"
+    },
+    {
+      "task_id": "task_0222",
+      "stratum": "2d",
+      "selection_rank_sha256": "04655766bb90ab2cf0c2f34deedcae0aed9a6664dbd2faaca50e1433998d8748",
+      "instruction_sha256": "125fde979592c7dbbb5ba366be3ce1e7d60d4e9035c134f9b741e139936d794a"
+    },
+    {
+      "task_id": "task_0277",
+      "stratum": "2d",
+      "selection_rank_sha256": "072f260a54bf50c548dc654d8a0f5e6d3b67f242705729785c8f233d41716964",
+      "instruction_sha256": "a9824f4bb6f03ba2330fc552a334304f333faecd281e78724fb57f4b1a4058ca"
+    },
+    {
+      "task_id": "task_0313",
+      "stratum": "2d",
+      "selection_rank_sha256": "07f21415747f85ff51f775fca213e2607ee5b675b22d2022ef53cdc8815bc12c",
+      "instruction_sha256": "4dbc3b531286604fa39e85618f3674fa62158d85b49c8d5a726bc213f2df63a0"
+    }
+  ]
+}

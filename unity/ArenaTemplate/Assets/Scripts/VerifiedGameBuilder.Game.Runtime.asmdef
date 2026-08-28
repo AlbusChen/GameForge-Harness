@@ -1,0 +1,17 @@
+{
+  "name": "VerifiedGameBuilder.Game.Runtime",
+  "rootNamespace": "VerifiedGameBuilder.Game",
+  "references": [
+    "VerifiedGameBuilder.AgentBridge.Runtime",
+    "Unity.ugui"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

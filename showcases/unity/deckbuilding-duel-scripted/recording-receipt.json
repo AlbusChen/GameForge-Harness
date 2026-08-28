@@ -1,0 +1,45 @@
+{
+  "claim_boundary": "The model-generated project's own smoke path advances gameplay state while an independent evaluator records rendered frames. This is not raw keyboard/mouse replay.",
+  "evaluator": {
+    "build_seconds": 7.852,
+    "editor_builder_sha256": "8f74453e20e96583cd277aee9c6de9323697d3baca36dcc1598055bb2cd63339",
+    "editor_script_in_temporary_copy": "${TEMP_DIRECTORY}/gameforge-unity-gameplay-an7lsdg5/project-17-deckbuilding_duel/Assets/GameForgeGameplayRecorder/Editor/BuildEntry.cs",
+    "runtime_recorder_sha256": "6dec1c8a8a102adbd44021d8c589ace8b3582bb671872cf46119e0752b42ad11",
+    "runtime_script_in_temporary_copy": "${TEMP_DIRECTORY}/gameforge-unity-gameplay-an7lsdg5/project-17-deckbuilding_duel/Assets/GameForgeGameplayRecorder/Runtime/FrameRecorder.cs",
+    "unity": "/Applications/Unity/Hub/Editor/6000.3.20f1/Unity.app/Contents/MacOS/Unity",
+    "unity_sha256": "0bb649811e4298aece941fc66d82ccc1e49ef5d82fa56cda8a769974aef21aa1"
+  },
+  "evidence_grade": "project-authored-behavior-smoke-replay",
+  "interaction": "project-authored card play, resolution, and turn progression",
+  "recording": {
+    "distinct_frame_sha256_count": 115,
+    "encoder_return_code": 0,
+    "expected_marker": "AETHER_SMOKE_OK",
+    "finished_at": "2026-08-26T10:35:47.389255+00:00",
+    "fps": 30,
+    "frame_count": 129,
+    "marker_found": true,
+    "movie": "showcases/unity/deckbuilding-duel-scripted/gameplay.mp4",
+    "movie_bytes": 257270,
+    "movie_sha256": "82d3ab385421867562a6ba2e904ea87ba41697e5b744689f3018eec44f511507",
+    "player_return_code": 0,
+    "project_smoke_flag": "-aetherSmoke",
+    "runtime_error_count": 0,
+    "runtime_error_lines": [],
+    "started_at": "2026-08-26T10:35:39.148519+00:00",
+    "video_seconds": 4.3,
+    "wall_seconds": 6.971
+  },
+  "schema_version": 1,
+  "source": {
+    "benchmark_run": "${INTERNAL_RUNS}/experiments/unity-open-game-creation20-showcase-run3",
+    "public_file_count": 35,
+    "public_tree_sha256": "52e161af51b06bc645890fae133173a0c34a82eca9a239249c1994c848fdb77d",
+    "receipt": "${INTERNAL_RUNS}/experiments/unity-open-game-creation20-showcase-run3/receipts/17-deckbuilding_duel.json",
+    "receipt_sha256": "b4d770849d72229d6a019114d51ca498d5c570026a7eb482aacff8e52cbfea15",
+    "workspace": "${INTERNAL_RUNS}/game-open-workspaces/20260825T095021052806Z-unity20-17-deckbuilding_duel/project"
+  },
+  "status": "PASS",
+  "task_id": "deckbuilding_duel",
+  "title": "Deckbuilding Duel"
+}

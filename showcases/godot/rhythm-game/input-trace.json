@@ -1,0 +1,465 @@
+{
+  "actions": [
+    {
+      "frames": 2,
+      "keys": [
+        "ENTER"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 50,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "D"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "F"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "J"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "K"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "D"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "F"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "J"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "K"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "D"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "F"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "J"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "K"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "D"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "F"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "J"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "K"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "D"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "F"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "J"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "K"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "D"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "F"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "J"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "K"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "D"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "F"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "J"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "K"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "D"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "F"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "J"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "K"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "D"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "F"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "J"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "K"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "D"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "F"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "J"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "keys": [
+        "K"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 8,
+      "type": "wait"
+    }
+  ],
+  "fps": 30,
+  "height": 720,
+  "interaction": "start flow and four independent note lanes",
+  "schema_version": 1,
+  "settle_frames": 30,
+  "showcase_id": "godot-rhythm_game",
+  "tail_frames": 60,
+  "task_id": "rhythm_game",
+  "title": "Rhythm Game",
+  "width": 1280
+}

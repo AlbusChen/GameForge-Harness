@@ -1,0 +1,49 @@
+{
+  "claim_boundary": "Proves the preserved project launches, renders, receives the listed normal Godot InputEvent trace, and changes over time; it does not claim level completion.",
+  "evidence_grade": "engine-input-replay",
+  "interaction": "tower selection/placement, wave start, and speed control",
+  "recording": {
+    "distinct_frame_sha256_count": 412,
+    "duration_seconds": 14.8,
+    "encoder_return_code": 0,
+    "engine_return_code": 0,
+    "expected_action_count": 8,
+    "final_sha256": "6b666cf773d24664d77094d6f77421786e5f8afd7d519d15626f819ee47eb1f5",
+    "finished_at": "2026-08-26T10:30:44.274267+00:00",
+    "fps": 30,
+    "frame_count": 444,
+    "initial_sha256": "71ec37ae719f26e89b3fb34a1e6eb8b718a5955ffee73ec3ff3ebaaf7bb239dc",
+    "movie": "showcases/godot/tower-defense/gameplay.mp4",
+    "movie_bytes": 1545007,
+    "movie_sha256": "0e8be42de0d994839692d986a95ebf7391b56b14ae24b9cf507ac7a110efc591",
+    "passed_action_count": 8,
+    "runtime_error_count": 0,
+    "runtime_error_lines": [],
+    "started_at": "2026-08-26T10:30:26.010406+00:00",
+    "trace": "showcases/godot/tower-defense/input-trace.json",
+    "trace_sha256": "da3998e1f80b8cbfc2fbf5709b0dee2b106d4055a33f4cd3da01ff2d3552e62a",
+    "wall_seconds": 15.785
+  },
+  "runtime": {
+    "adhoc_signed": true,
+    "isolated_executable": "${TEMP_DIRECTORY}/gameforge-gameplay-showcase-bej7uc_c/runtime/Godot.app/Contents/MacOS/Godot",
+    "isolation_mode": "macos-self-contained-app-clone-adhoc-signed",
+    "prepared_godot_sha256": "688b24b88cbb13a42c0ce79589d3d9fa9c4c73753c123209ce8140b0227c2596",
+    "probe": "experiments/assets/showcase_record_probe.gd",
+    "probe_sha256": "ce5a8a3e5769b1a52f02eb690689df673eecfc65c231a84cbc9abfbe7ee516d3",
+    "source_godot": "/private/tmp/godot-4.4.1/Godot.app/Contents/MacOS/Godot",
+    "source_godot_sha256": "8d402715e0b74db2d69ceeb86e78b8c6b270f1d9c16be1546958c8648d8e2e47"
+  },
+  "schema_version": 1,
+  "source": {
+    "benchmark_run": "${INTERNAL_RUNS}/experiments/godot-open-game-creation20-native-open-minimal-run2",
+    "receipt": "${INTERNAL_RUNS}/experiments/godot-open-game-creation20-native-open-minimal-run2/receipts/04.json",
+    "receipt_sha256": "536079aa170b22ad33dca1295d525c04d7963bf9f6b83b0e9a8470685cb21023",
+    "workspace": "${INTERNAL_RUNS}/experiments/godot-open-game-creation20-native-open-minimal-run2/attempts/04-tower_defense-native-open-minimal/workspace",
+    "workspace_file_count": 4,
+    "workspace_tree_sha256": "78c3b774ea32984fc1a9e4872c24b2ab8f7a55144b19c1e1635ad71e5a6519c4"
+  },
+  "status": "PASS",
+  "task_id": "tower_defense",
+  "title": "Tower Defense"
+}

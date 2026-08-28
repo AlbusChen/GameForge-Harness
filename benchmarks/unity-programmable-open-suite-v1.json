@@ -1,0 +1,58 @@
+{
+  "engine_profile": "unity-batch-programmable-v1",
+  "target_platforms": [
+    "macos-standalone"
+  ],
+  "entry_points": [
+    "Assets/Scenes/Arena.unity"
+  ],
+  "requirements": [
+    {
+      "id": "compilation",
+      "dimension": "structure",
+      "enforcement": "required",
+      "evaluator_ref": "wait_for_compilation",
+      "evaluator_arguments": {},
+      "threshold": {},
+      "scenario_refs": [],
+      "model_visible": true
+    },
+    {
+      "id": "task-acceptance",
+      "dimension": "structure",
+      "enforcement": "required",
+      "evaluator_ref": "task_acceptance",
+      "evaluator_arguments": {},
+      "threshold": {},
+      "scenario_refs": [],
+      "model_visible": false
+    },
+    {
+      "id": "preservation",
+      "dimension": "preservation",
+      "enforcement": "required",
+      "evaluator_ref": "preservation",
+      "evaluator_arguments": {},
+      "threshold": {},
+      "scenario_refs": [],
+      "model_visible": false
+    }
+  ],
+  "playtest_scenarios": [],
+  "asset_policy": {
+    "allowed_license_ids": [],
+    "generated_roots": [
+      "Library",
+      "Temp",
+      "Logs"
+    ],
+    "allow_binary_mutation": false,
+    "require_provenance": true
+  },
+  "evidence_policy": {
+    "require_environment_digest": true,
+    "require_input_trace_for_runtime_evidence": true,
+    "conservative_invalidation": true,
+    "maximum_observation_bytes": 65536
+  }
+}

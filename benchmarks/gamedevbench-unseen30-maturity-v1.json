@@ -1,0 +1,328 @@
+{
+  "schema_version": 1,
+  "id": "gamedevbench-unseen30-maturity-v1",
+  "benchmark_commit": "e3868bccbb88e86a3eb2d62154f1e9e0f3fd489a",
+  "purpose": "Preregistered holdout evaluation following the 2026-08-10 Harness maturity cycle; no Harness tuning is permitted from these outcomes.",
+  "parent_report": "reports/harness-maturity-evaluation-2026-08-10/report.html",
+  "selection_seed": "e3868bccbb88e86a3eb2d62154f1e9e0f3fd489a:unseen30:maturity:v1",
+  "selection_method": "Exclude every previously attempted task id, exact instruction hash, and normalized tutorial/variant family. Verify public and ground-truth archives are readable without inspecting evaluator content. Rank all remaining tasks by SHA-256(selection_seed + ':' + task_id), traverse ascending rank, and take the first family-unique tasks that fill the fixed stratum quotas. Public task names, instructions, and metadata are used only for novelty and stratum assignment; no model result or evaluator content participates in selection.",
+  "excluded_seen_task_ids": [
+    "task_0009",
+    "task_0012",
+    "task_0024",
+    "task_0040",
+    "task_0065",
+    "task_0099",
+    "task_0110",
+    "task_0124",
+    "task_0151",
+    "task_0180",
+    "task_0181",
+    "task_0191",
+    "task_0208",
+    "task_0220",
+    "task_0222",
+    "task_0223",
+    "task_0277",
+    "task_0292",
+    "task_0313",
+    "task_0333",
+    "task_0334"
+  ],
+  "novelty_rule": {
+    "instruction": "SHA-256 of the exact public instruction must not occur in the excluded set or another selected task.",
+    "family": "A family key is derived in this order: generic synthetic-platformer source; known generated name family; declared variant_of root; meaningful video_id; normalized tutorial_source; normalized task name. It must not occur in the excluded set or another selected task.",
+    "archive_preflight": "Both public and ground-truth ZIPs must pass ZIP/CRC validation and the public archive must expose one valid task_config.json. Ground-truth contents are not read for selection.",
+    "mechanical_exclusion": "task_0021 was excluded because its public archive is not a ZIP file."
+  },
+  "stratum_rules": {
+    "ui": "Word-boundary UI/HUD/dialog/menu/panel/scoreboard/overlay/balloon signals or public CanvasLayer/FileDialog/UI-path instructions.",
+    "script_resource": "Word-boundary shader/tilemap/terrain/environment/resource signals or public .tres/.gdshader/TileSet/WorldEnvironment instructions.",
+    "3d": "Word-boundary 3D or public Godot 3D node-type instructions.",
+    "2d": "All remaining tasks."
+  },
+  "quotas": {
+    "2d": 15,
+    "ui": 9,
+    "3d": 3,
+    "script_resource": 3
+  },
+  "experiment": {
+    "conditions": [
+      "official-default",
+      "legacy-tool-v1",
+      "programmable-v1"
+    ],
+    "repetitions_per_task_condition": 3,
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "medium",
+    "parallelism": 1,
+    "official_use_mcp": false,
+    "official_use_runtime_video": false,
+    "primary_endpoint": "official evaluator PASS with BLOCKED and errors retained in the denominator",
+    "secondary_endpoints": [
+      "preservation",
+      "required-evidence lineage",
+      "policy violations",
+      "latency",
+      "reported token usage",
+      "reported API-equivalent cost"
+    ],
+    "schedule": "For repetition r in 0..2, rotate the 30-task manifest order left by 10*r. For each task with original zero-based manifest index i, execute the three conditions in the cyclic order starting at (i+r) mod 3. This gives each condition exactly ten first, ten second, and ten third positions per repetition while keeping all three trials adjacent at task level.",
+    "stop_rule": "Before every model-backed attempt, stop if weekly subscription remaining is below 50%. Infrastructure failures may be repaired and the identical attempt resumed; candidate Harness code may not change after freeze.",
+    "analysis_rule": "Use all valid first attempts. Report task-clustered condition means, per-task majority outcomes, paired condition deltas with uncertainty, safety/resource totals, and all missing or infrastructure records. No result-driven task replacement or task-specific Harness rule is allowed."
+  },
+  "code_freeze": {
+    "git_head": "ce057678dec35c5a3a1ba6a59d9434a1ef273515",
+    "runtime_scope": [
+      "gameforge/** excluding Python cache files",
+      "pyproject.toml",
+      "uv.lock"
+    ],
+    "runtime_file_count": 87,
+    "runtime_tree_sha256": "8156f22e412576e830c9114a15eb158699e5ae386667d09d1479669f5c95b01d",
+    "pre_freeze_verification": "168 pytest tests passed and Ruff reported no violations on 2026-08-10."
+  },
+  "tasks": [
+    {
+      "task_id": "task_0108",
+      "stratum": "script_resource",
+      "name": "Track Particles Driven by Tile Type Gradient",
+      "selection_rank_sha256": "012d0168e4c1b4c50d22d1d471a98ece17c400ae34f6ecaabfd263e80f6b241d",
+      "instruction_sha256": "65c128e9f80c06fa6bb47ddbf430da17deaa1c71ea9248d00977de9a1ac9e0fc",
+      "family_key": "video:m1ri3zli2g0"
+    },
+    {
+      "task_id": "task_0070",
+      "stratum": "script_resource",
+      "name": "Depth Ripple Geometry Setup",
+      "selection_rank_sha256": "02e963a7eea4c32ff6da1c2e4820ca85c4d2a54903818d9e6415901c4f38c7eb",
+      "instruction_sha256": "1e2c8aa6fa4b33582116a8d56c6b059243bc4978c95a9bdf3f404565ad4805cf",
+      "family_key": "video:zvoqqhleans"
+    },
+    {
+      "task_id": "task_0026",
+      "stratum": "3d",
+      "name": "Codex Camera Shake Rig",
+      "selection_rank_sha256": "031f7fe86d8e1d9e0aa0895af514d012e1410440b3be529fbab7d714e821e20d",
+      "instruction_sha256": "c81eec272f3e4a9bf0d39367834284fa040af8c5bf4eed30c2b629f8395c2ad3",
+      "family_key": "video:jnubpea inw"
+    },
+    {
+      "task_id": "task_0164",
+      "stratum": "2d",
+      "name": "Fighter Player Jump",
+      "selection_rank_sha256": "0381d5ad6a41ac8806666abbd66fb40637248121f3c079c4886bcf3e626b8355",
+      "instruction_sha256": "63682873096dc702b5d3dd8807755c8d6511ef06f642a852ab7edd242059129b",
+      "family_key": "video:25k0trbx0 e"
+    },
+    {
+      "task_id": "task_0100",
+      "stratum": "script_resource",
+      "name": "Codex HQX Smooth Borders Shader",
+      "selection_rank_sha256": "05f1708e18b3db241f38345912814bee72ededfe0ed97e35353757d7c40c5017",
+      "instruction_sha256": "40c9b3ae8d36f3912b17636e5a8923d303c7fd399319bd4af6a32e6dff3cea83",
+      "family_key": "video:gj2wpkaw6sw"
+    },
+    {
+      "task_id": "task_0094",
+      "stratum": "ui",
+      "name": "LibSM64 ROM Dialog and Connections",
+      "selection_rank_sha256": "06099169ccf2d961fba8d09f6faf450817247fd1e3e9e4a6b7baa0b363c7b933",
+      "instruction_sha256": "44245e57befd8811c588666aa376de5627b6afbaf67fb02eb7efa7c5219c0041",
+      "family_key": "video:x9 etelozla"
+    },
+    {
+      "task_id": "task_0193",
+      "stratum": "2d",
+      "name": "Dust Particles Point Emission",
+      "selection_rank_sha256": "077aa6ea36fa5026b7a55152487ca44169ef3154a73a6362afa0b2d550bd4434",
+      "instruction_sha256": "d77656b66335c87980c0b96d5fbd307482c80bed87c15552fe0f80dc830b44cd",
+      "family_key": "generated:dust_particles"
+    },
+    {
+      "task_id": "task_0201",
+      "stratum": "2d",
+      "name": "Trap Spawning Points Centered Variant",
+      "selection_rank_sha256": "07e195176c28620096df56a9b2bb2ea9cc729da0c39e397e81aaca44a8d7a7f5",
+      "instruction_sha256": "41d43e8c6be5a86c53c0ecc542fbda4c79bd66824892dc6db5204acae7281e22",
+      "family_key": "generated:trap_spawning_points"
+    },
+    {
+      "task_id": "task_0262",
+      "stratum": "ui",
+      "name": "Save User Preferences",
+      "selection_rank_sha256": "1660a5443044e7448c1a57307c3c74a85d4c749b8a3f8cfa055e7ad288f09a8c",
+      "instruction_sha256": "a1b05e0210a7e72428f98b4531eca1170f7961358dc7137e4ba544bfd117f2e6",
+      "family_key": "video:gpzdfznq060"
+    },
+    {
+      "task_id": "task_0145",
+      "stratum": "ui",
+      "name": "Left Wide HUD B",
+      "selection_rank_sha256": "17011e6a06a7a72cb21c732a0bd7497525535dc0f590ba2e7e9fb9e57d771dd8",
+      "instruction_sha256": "0df3d7e6fee5348451194d0f5d4815cf790c33ac6132d7175d70fe82734753a9",
+      "family_key": "name:left wide hud"
+    },
+    {
+      "task_id": "task_0109",
+      "stratum": "2d",
+      "name": "Player Hurt/Fall/Grounded Animations",
+      "selection_rank_sha256": "18c4a5d5aaa6eb62ef57a84d5fbdde2ea528ce2208660d5b090ef09ab6146815",
+      "instruction_sha256": "9ef52218240b2f782255200e4b36218c6a9b9bddfb476b9d7e9c0fda1fa47af7",
+      "family_key": "video:lrs teucq3w"
+    },
+    {
+      "task_id": "task_0257",
+      "stratum": "ui",
+      "name": "Tank Battle HUD Wiring",
+      "selection_rank_sha256": "26c7eb2907b8627ee66f6cd0e886421e6bbd37d2d834804fe04e99309f5d2f46",
+      "instruction_sha256": "1115102a5703418ca650d507897bb57e1d2b956039ce4e4d80ab6980ff8d8eae",
+      "family_key": "video:i8ysmmgx 0"
+    },
+    {
+      "task_id": "task_0083",
+      "stratum": "2d",
+      "name": "Assemble Crusader Collider placement",
+      "selection_rank_sha256": "276f4a6a0085364c73af206e10adbd34f7ceb2fcb5dc34bee0242794850f8fe4",
+      "instruction_sha256": "4563c41511bae09b7e6de4ff8f0d01efa5e489fa5d7afd0c472ca34304c2f9df",
+      "family_key": "source:kidscancode 8 directional movement animation"
+    },
+    {
+      "task_id": "task_0104",
+      "stratum": "2d",
+      "name": "AnimatedSprite2D Sprite Sheet Slicing",
+      "selection_rank_sha256": "2b3d573a088b3d33d94f95febd09eeffd64c7e67d3120bf142e2a1359ebaa1e4",
+      "instruction_sha256": "c619062f24b71da75d3cd12fa37396f5285e9eddf67f3fbbbd8ba0991835f831",
+      "family_key": "video:5ztudwpzxh0"
+    },
+    {
+      "task_id": "task_0135",
+      "stratum": "ui",
+      "name": "River Raid Power HUD B",
+      "selection_rank_sha256": "2c5596da5bbc56566e2a29d1388a285b9fb8cef656aad4ccb2925a8f3847e8a3",
+      "instruction_sha256": "22a0f3a896e735df262647147259de375b83bfb899ebcae5eddbb5205c682efd",
+      "family_key": "generated:river_raid_power_hud"
+    },
+    {
+      "task_id": "task_0149",
+      "stratum": "ui",
+      "name": "Right Wide Status Strip",
+      "selection_rank_sha256": "2c8b70dc92beaed5dd2c2656baad564373d1c386036c5aa383602984c657ed3c",
+      "instruction_sha256": "40275d5dfac910833d9e403c17e538460504a8b70d79fc57fb117eaa2ca9b496",
+      "family_key": "name:right wide status strip"
+    },
+    {
+      "task_id": "task_0090",
+      "stratum": "2d",
+      "name": "Build Grid Player Nodes with Correct Sprite Frames",
+      "selection_rank_sha256": "2c952951c23c15086d2c182dcb078e84f556dd52c3db2e4d2b259fc3380a44e3",
+      "instruction_sha256": "8637d0b850114dbab38a7c31462135b176906503d3f8de23a88ecc421576396e",
+      "family_key": "generated:build_grid_player_nodes"
+    },
+    {
+      "task_id": "task_0034",
+      "stratum": "2d",
+      "name": "Buffer Steering Debug Vectors",
+      "selection_rank_sha256": "2f22283058beae27b34b6ab99f2468830cc805d7e1ee21eddf1cc5406fb8f5ac",
+      "instruction_sha256": "0a10be5ffaba5ebc2a374ac028fa5d7fab79ed9c9cfcd9043dc5907c431520d7",
+      "family_key": "video:0mftanzadhw"
+    },
+    {
+      "task_id": "task_0150",
+      "stratum": "ui",
+      "name": "Create Battle Over Panel",
+      "selection_rank_sha256": "2fd7f8707c6887a3bd2299fefb2e59164e25a4cb81111db84a24cf913e7db8b5",
+      "instruction_sha256": "d7f2db2952e9cf69e8b43e5edbc53096582f9960afb9b3e8aac0be32bb93f4fb",
+      "family_key": "video:grdig96ames"
+    },
+    {
+      "task_id": "task_0139",
+      "stratum": "ui",
+      "name": "Danger Dialog Center Preset",
+      "selection_rank_sha256": "36c5ae4cbbee681780f4d75a452333c3a08a7464e7170cdf9e423e4e5d008a3b",
+      "instruction_sha256": "aa116d478741c733e8081397baf261e882c5866019747fd0ab9f64d5fc5ce0eb",
+      "family_key": "name:danger dialog center preset"
+    },
+    {
+      "task_id": "task_0042",
+      "stratum": "2d",
+      "name": "Pong Camera Spring Shake",
+      "selection_rank_sha256": "3b05019c7881cae63bf8f037ee9473175ea78b2c4e0d88d80226ff09c4a66369",
+      "instruction_sha256": "b399cbeccfb73fd004cf7ba50c36e5693ef7af973b1da47f31211db9593de30e",
+      "family_key": "video:mv1ewf3mewc"
+    },
+    {
+      "task_id": "task_0028",
+      "stratum": "2d",
+      "name": "Bonkahe Flashlight Priority Points",
+      "selection_rank_sha256": "3fa8be9aa33717de2b13c9c09e073953382cbe1894f8146756c0f583f3cb505b",
+      "instruction_sha256": "2a33e2875e532644f8b16a5c8f2739235bf03764e987b7f2f5197be8b11b173d",
+      "family_key": "video:qw3b7 kbbno"
+    },
+    {
+      "task_id": "task_0051",
+      "stratum": "2d",
+      "name": "Platform Character Core Movement",
+      "selection_rank_sha256": "4bb5fe9d1f743f28172a3b0c2e29f8a9ba268f8c662e46e82abb337e24932823",
+      "instruction_sha256": "e318ceb2254f510004a0a2d3d54e91aa1619b4a2011cd7487c224345675e8148",
+      "family_key": "source:kidscancode platform character"
+    },
+    {
+      "task_id": "task_0044",
+      "stratum": "2d",
+      "name": "Wire inventory add/clear buttons",
+      "selection_rank_sha256": "4fd03df59b4cb8f303490deecf001dcb7c653165f8c5877532afd79b5f95c576",
+      "instruction_sha256": "0cb794f89944d215a42d6c0071e5310974c36c25c307d544ebda0f739160bd64",
+      "family_key": "video:rqkswxvvigw"
+    },
+    {
+      "task_id": "task_0043",
+      "stratum": "ui",
+      "name": "Portrait Balloon Layout",
+      "selection_rank_sha256": "50cfb56e09bad5a1545c20ecf0b3b67ffcda58a330dee002bf564ffe1e260c78",
+      "instruction_sha256": "b61e1fe830033b4a700b664835c62dcb218bc1de99564b491f033af5262525b2",
+      "family_key": "video:x0e n7dbff8"
+    },
+    {
+      "task_id": "task_0101",
+      "stratum": "2d",
+      "name": "Enemy Navigation Node Setup",
+      "selection_rank_sha256": "55f3c09981f3dc527e0fb936135d195f5f7c359d7b88321db849609fd2cd81c5",
+      "instruction_sha256": "f38ccf3c877f3f0329632bbebed4474839368e50f35a2c7988d7d43d6efb593b",
+      "family_key": "video:ztx4ov6syn8"
+    },
+    {
+      "task_id": "task_0045",
+      "stratum": "3d",
+      "name": "FPS Arms Prefab Wiring",
+      "selection_rank_sha256": "5fc61b8602977bd571f222a614f12af1186d53d626df1fc09facc255cb28231f",
+      "instruction_sha256": "ca023bdab8d9cf3d7c3ee5b8033c8756b8407f123e5c0fed3dc15c380ae05215",
+      "family_key": "video:rkzpl1dmws"
+    },
+    {
+      "task_id": "task_0006",
+      "stratum": "2d",
+      "name": "Unit AI Debug Label",
+      "selection_rank_sha256": "617ed3acac2a3cc04e7f42960fff2a247bf268dfcc3c5b5fa7a7603496386fd2",
+      "instruction_sha256": "a2f5851f8b6fe6225dace5d14e12fb1e1f5bb33303f96b3ab2e2dc4e662ae7ce",
+      "family_key": "video:m4bq xx4emo"
+    },
+    {
+      "task_id": "task_0212",
+      "stratum": "2d",
+      "name": "Tree Spawning Points Restore Variant L",
+      "selection_rank_sha256": "647396f6ffbda5f77452139f9b084511bd409a651ae3c2aaed4ca63c4a9f9c63",
+      "instruction_sha256": "480d32591c6589ba7101122e665d8c649577a4d360700871907fb4ec0b41a105",
+      "family_key": "variant_root:task 0206"
+    },
+    {
+      "task_id": "task_0018",
+      "stratum": "3d",
+      "name": "Wire the weapon effects controller",
+      "selection_rank_sha256": "d0c78ce94d9a7c1cdd64d26f5d9da5975887ee8f20b6375c05071d304132c8b5",
+      "instruction_sha256": "b67495375e96df9ba9820b8a23829de2803f476de88fa8d9f351a687b3a09edb",
+      "family_key": "video:obegpsnpqus"
+    }
+  ]
+}

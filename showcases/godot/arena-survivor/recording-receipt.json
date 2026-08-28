@@ -1,0 +1,45 @@
+{
+  "claim_boundary": "Proves the preserved project launches, renders, receives the listed normal Godot InputEvent trace, and changes over time; it does not claim level completion.",
+  "evidence_grade": "engine-input-replay",
+  "interaction": "movement, continuous fire, aiming, and dash",
+  "recording": {
+    "distinct_frame_sha256_count": 371,
+    "duration_seconds": 12.367,
+    "encoder_return_code": 0,
+    "engine_return_code": 0,
+    "expected_action_count": 6,
+    "final_sha256": "d89d239dd2162431df1cac33cb5a50722fbf5932d3a0f8d74f57353c6a74caaf",
+    "finished_at": "2026-08-26T10:22:43.099410+00:00",
+    "fps": 30,
+    "frame_count": 371,
+    "initial_sha256": "fffb024d2d3e5c3605045e31c875f8e6802b3b85c911be264de3dc2ac2db8eaf",
+    "movie": "showcases/godot/arena-survivor/gameplay.mp4",
+    "movie_bytes": 2773597,
+    "movie_sha256": "936c7c8020c899986307306ff26bbd5ab0fea5fd1df0bcfd58c4c8dd99774121",
+    "passed_action_count": 6,
+    "started_at": "2026-08-26T10:22:31.445131+00:00",
+    "trace": "showcases/godot/arena-survivor/input-trace.json",
+    "trace_sha256": "2713de09bc151135219fbe05c9e6c780e0bf5c99b519ff6696d53788d5974e9a",
+    "wall_seconds": 10.024
+  },
+  "runtime": {
+    "isolated_executable": "/Applications/Godot.app/Contents/MacOS/Godot",
+    "isolation_mode": "installed-executable-private-home",
+    "probe": "experiments/assets/showcase_record_probe.gd",
+    "probe_sha256": "ce5a8a3e5769b1a52f02eb690689df673eecfc65c231a84cbc9abfbe7ee516d3",
+    "source_godot": "/Applications/Godot.app/Contents/MacOS/Godot",
+    "source_godot_sha256": "ecc8da2d60100102cfca6e833d3860d7436b46ae062fa072ce89a6c95d664a3f"
+  },
+  "schema_version": 1,
+  "source": {
+    "benchmark_run": "${INTERNAL_RUNS}/experiments/godot-open-game-creation20-native-open-minimal-run2",
+    "receipt": "${INTERNAL_RUNS}/experiments/godot-open-game-creation20-native-open-minimal-run2/receipts/02.json",
+    "receipt_sha256": "353becea24592def2beaf528f6aac336197b59f22812de10d3c262f5e5223549",
+    "workspace": "${INTERNAL_RUNS}/experiments/godot-open-game-creation20-native-open-minimal-run2/attempts/02-arena_survivor-native-open-minimal/workspace",
+    "workspace_file_count": 4,
+    "workspace_tree_sha256": "dce5731e995d4db0a2561ed21d68ddb46b057711da29e6b158b2b8537dfcf7f0"
+  },
+  "status": "PASS",
+  "task_id": "arena_survivor",
+  "title": "Arena Survivor"
+}

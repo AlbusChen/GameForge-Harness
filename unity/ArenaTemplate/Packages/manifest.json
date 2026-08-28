@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "com.albuschen.gameforge.agent-bridge": "file:../../AgentBridge",
+    "com.unity.modules.physics": "1.0.0",
+    "com.unity.modules.screencapture": "1.0.0",
+    "com.unity.test-framework": "1.6.0",
+    "com.unity.ugui": "2.0.0"
+  }
+}

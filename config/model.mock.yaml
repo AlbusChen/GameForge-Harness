@@ -1,0 +1,7 @@
+provider: mock
+model: deterministic-mock
+reasoning_effort: null
+input_usd_per_million: 0
+output_usd_per_million: 0
+timeout_seconds: 60
+max_output_tokens: 1200

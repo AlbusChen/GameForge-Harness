@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "id": "godot-open-game-creation6-v1",
+  "purpose": "Authored proxy for open-ended game creation from an empty workspace. It measures a bounded set of genres and is not an estimate of a natural user-request distribution.",
+  "design": {
+    "type": "paired same-brief comparison",
+    "frozen_before_model_execution": true,
+    "task_count": 6,
+    "conditions": [
+      "baseline-minimal-open",
+      "official-local"
+    ],
+    "repetitions_per_task": 1,
+    "schedule_seed": 240822,
+    "judge_blinding": "Per-task A/B labels are fixed below and do not reveal the condition to the judge.",
+    "interpretation": "This authored suite measures whether a condition can create a runnable, coherent small game across six mechanic families. Six tasks and one repetition are mechanism evidence, not a benchmark-wide quality estimate."
+  },
+  "execution": {
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "medium",
+    "solver_timeout_seconds": 900,
+    "parallelism": 2,
+    "engine": "Godot",
+    "engine_version": "4.4.1.stable.official.49a5bc7b6",
+    "target": "desktop 2D",
+    "starting_workspace": "empty directory",
+    "network": "not required",
+    "intermediate_harness_validation": false,
+    "automatic_repair": false
+  },
+  "evaluation": {
+    "hard_gate": "The delivered project imports and its configured main scene can be instantiated and rendered by the pinned Godot runtime.",
+    "generic_probe": "An external evaluator captures the initial frame, sends a fixed engine-agnostic keyboard/mouse input sequence, captures a later frame, and records public runtime state. No project-specific test hook or node/API convention is required.",
+    "blind_review_dimensions": {
+      "brief_fulfillment": "0-4",
+      "gameplay_systems": "0-4",
+      "visual_coherence": "0-4",
+      "usability_and_feedback": "0-4"
+    },
+    "pairwise_preference": [
+      "A",
+      "B",
+      "TIE"
+    ],
+    "judge_inputs": [
+      "the same natural-language brief",
+      "anonymous source excerpts",
+      "anonymous deterministic runtime evidence",
+      "initial and post-input screenshots"
+    ],
+    "judge_exclusions": [
+      "condition name",
+      "solver prompt",
+      "solver trajectory",
+      "token usage",
+      "duration"
+    ]
+  },
+  "schedule": [
+    {"ordinal": 1, "task_id": "arena_survivor", "condition": "official-local"},
+    {"ordinal": 2, "task_id": "arena_survivor", "condition": "baseline-minimal-open"},
+    {"ordinal": 3, "task_id": "precision_platformer", "condition": "baseline-minimal-open"},
+    {"ordinal": 4, "task_id": "precision_platformer", "condition": "official-local"},
+    {"ordinal": 5, "task_id": "brick_breaker", "condition": "official-local"},
+    {"ordinal": 6, "task_id": "brick_breaker", "condition": "baseline-minimal-open"},
+    {"ordinal": 7, "task_id": "tower_defense", "condition": "baseline-minimal-open"},
+    {"ordinal": 8, "task_id": "tower_defense", "condition": "official-local"},
+    {"ordinal": 9, "task_id": "sokoban_puzzle", "condition": "official-local"},
+    {"ordinal": 10, "task_id": "sokoban_puzzle", "condition": "baseline-minimal-open"},
+    {"ordinal": 11, "task_id": "turn_based_battler", "condition": "baseline-minimal-open"},
+    {"ordinal": 12, "task_id": "turn_based_battler", "condition": "official-local"}
+  ],
+  "judge_labels": {
+    "arena_survivor": {"A": "baseline-minimal-open", "B": "official-local"},
+    "precision_platformer": {"A": "official-local", "B": "baseline-minimal-open"},
+    "brick_breaker": {"A": "official-local", "B": "baseline-minimal-open"},
+    "tower_defense": {"A": "baseline-minimal-open", "B": "official-local"},
+    "sokoban_puzzle": {"A": "baseline-minimal-open", "B": "official-local"},
+    "turn_based_battler": {"A": "official-local", "B": "baseline-minimal-open"}
+  },
+  "tasks": [
+    {
+      "task_id": "arena_survivor",
+      "genre": "top-down action survival",
+      "brief": "Use the available Godot 4.4.1 engine to create a compact, polished 2D top-down arena survival game from this empty workspace. The player should be able to move and attack, enemies should actively pressure the player, and the game should communicate health, score or progress, loss, and restart clearly. Make the result immediately understandable and visually coherent. You choose the project structure, art approach, controls, and implementation, and should deliver a runnable game without further assistance."
+    },
+    {
+      "task_id": "precision_platformer",
+      "genre": "one-screen platformer",
+      "brief": "Use the available Godot 4.4.1 engine to create a compact, polished 2D one-screen platform game from this empty workspace. It should support responsive movement and jumping, contain platforms plus meaningful hazards and collectibles or a goal, and clearly handle success, failure, and restart. Make the level readable and the game immediately playable. You choose the project structure, art approach, controls, and implementation, and should deliver a runnable game without further assistance."
+    },
+    {
+      "task_id": "brick_breaker",
+      "genre": "arcade physics",
+      "brief": "Use the available Godot 4.4.1 engine to create a compact, polished 2D brick-breaker arcade game from this empty workspace. It should have a controllable paddle, a visibly moving ball with convincing rebounds, a varied field of destructible bricks, score and lives or an equivalent failure budget, and clear win, loss, and restart behavior. You choose the project structure, art approach, controls, and implementation, and should deliver a runnable game without further assistance."
+    },
+    {
+      "task_id": "tower_defense",
+      "genre": "real-time strategy",
+      "brief": "Use the available Godot 4.4.1 engine to create a compact, polished 2D tower-defense game from this empty workspace. Enemies should travel along a readable route in waves, the player should be able to place useful defenses through an understandable interface, and money or another placement resource, base health, progress, win or loss, and restart should be communicated clearly. You choose the project structure, art approach, controls, and implementation, and should deliver a runnable game without further assistance."
+    },
+    {
+      "task_id": "sokoban_puzzle",
+      "genre": "grid puzzle",
+      "brief": "Use the available Godot 4.4.1 engine to create a compact, polished 2D box-pushing grid puzzle from this empty workspace. Include at least one coherent solvable level with walls, movable crates, target cells, constrained grid movement, a move counter, and clear win, restart, and undo behavior. Make the state easy to read without external instructions. You choose the project structure, art approach, controls, and implementation, and should deliver a runnable game without further assistance."
+    },
+    {
+      "task_id": "turn_based_battler",
+      "genre": "turn-based tactics/UI",
+      "brief": "Use the available Godot 4.4.1 engine to create a compact, polished 2D turn-based battle game from this empty workspace. The player should make meaningful choices among multiple actions, an opponent should take understandable turns, health and any action resource or status effects should be visible, and win, loss, feedback, and restart should be clear. You choose whether the actions resemble cards, skills, or tactical commands, as well as the project structure, art approach, controls, and implementation, and should deliver a runnable game without further assistance."
+    }
+  ]
+}

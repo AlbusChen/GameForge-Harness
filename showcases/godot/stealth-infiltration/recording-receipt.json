@@ -1,0 +1,45 @@
+{
+  "claim_boundary": "Proves the preserved project launches, renders, receives the listed normal Godot InputEvent trace, and changes over time; it does not claim level completion.",
+  "evidence_grade": "engine-input-replay",
+  "interaction": "movement, crouching, guard simulation, and interaction",
+  "recording": {
+    "distinct_frame_sha256_count": 440,
+    "duration_seconds": 14.667,
+    "encoder_return_code": 0,
+    "engine_return_code": 0,
+    "expected_action_count": 6,
+    "final_sha256": "ae7c4a979f821986ffbef231585dc33a5f898f1541882cc2237923e5548bbe3f",
+    "finished_at": "2026-08-26T10:23:30.738884+00:00",
+    "fps": 30,
+    "frame_count": 440,
+    "initial_sha256": "0cd410a6c203f44dcb916974b35d6cfd21f7fab2c998d9449722ca119ec10051",
+    "movie": "showcases/godot/stealth-infiltration/gameplay.mp4",
+    "movie_bytes": 1885669,
+    "movie_sha256": "857b67ddeda497460058f39d6fe5c36f4d3b7dfaec092d5c8400f9aa2b580c7c",
+    "passed_action_count": 6,
+    "started_at": "2026-08-26T10:23:18.024180+00:00",
+    "trace": "showcases/godot/stealth-infiltration/input-trace.json",
+    "trace_sha256": "ded600652bf0f2c6900fcac841d344c690a74005708eed6fea33b7fdaebfffef",
+    "wall_seconds": 10.612
+  },
+  "runtime": {
+    "isolated_executable": "/Applications/Godot.app/Contents/MacOS/Godot",
+    "isolation_mode": "installed-executable-private-home",
+    "probe": "experiments/assets/showcase_record_probe.gd",
+    "probe_sha256": "ce5a8a3e5769b1a52f02eb690689df673eecfc65c231a84cbc9abfbe7ee516d3",
+    "source_godot": "/Applications/Godot.app/Contents/MacOS/Godot",
+    "source_godot_sha256": "ecc8da2d60100102cfca6e833d3860d7436b46ae062fa072ce89a6c95d664a3f"
+  },
+  "schema_version": 1,
+  "source": {
+    "benchmark_run": "${INTERNAL_RUNS}/experiments/godot-open-game-creation20-native-open-minimal-run2",
+    "receipt": "${INTERNAL_RUNS}/experiments/godot-open-game-creation20-native-open-minimal-run2/receipts/13.json",
+    "receipt_sha256": "ef71297b98ef41bbce90f0da5f4c6ec8dcb35c75b4546c69215c27dbda549430",
+    "workspace": "${INTERNAL_RUNS}/experiments/godot-open-game-creation20-native-open-minimal-run2/attempts/13-stealth_infiltration-native-open-minimal/workspace",
+    "workspace_file_count": 5,
+    "workspace_tree_sha256": "1598cea8444e1015fce30cba28878949f6bc89133024b2fb5d891f9ea0d3e66d"
+  },
+  "status": "PASS",
+  "task_id": "stealth_infiltration",
+  "title": "Stealth Infiltration"
+}

@@ -1,0 +1,12 @@
+# Copy to model.local.yaml, then set the local agent executable and model name.
+# This profile reuses the agent's saved subscription login; it contains no API key.
+provider: codex-subscription
+model: gpt-5.6-terra
+executable: replace-with-local-agent-executable
+execution_profile: native-open
+reasoning_effort: medium
+input_usd_per_million: 0
+cached_input_usd_per_million: 0
+output_usd_per_million: 0
+timeout_seconds: 900
+max_output_tokens: 1200

@@ -1,0 +1,59 @@
+{
+  "actions": [
+    {
+      "type": "mouse_move",
+      "x": 760,
+      "y": 330
+    },
+    {
+      "frames": 75,
+      "keys": [
+        "D",
+        "SPACE"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 60,
+      "keys": [
+        "W",
+        "SPACE"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 20,
+      "keys": [
+        "D",
+        "SHIFT"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 75,
+      "keys": [
+        "A",
+        "SPACE"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 45,
+      "keys": [
+        "S",
+        "SPACE"
+      ],
+      "type": "key"
+    }
+  ],
+  "fps": 30,
+  "height": 720,
+  "interaction": "movement, continuous fire, aiming, and dash",
+  "schema_version": 1,
+  "settle_frames": 30,
+  "showcase_id": "godot-arena_survivor",
+  "tail_frames": 60,
+  "task_id": "arena_survivor",
+  "title": "Arena Survivor",
+  "width": 1280
+}

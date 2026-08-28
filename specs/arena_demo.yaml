@@ -1,0 +1,73 @@
+version: 0
+
+game:
+  id: arena_demo
+  genre: top_down_arena
+  template: top_down_arena_v0
+  build_target: macos
+
+player:
+  max_health: 100
+  movement:
+    input: wasd
+    speed: 6.0
+  weapon:
+    input: mouse_left
+    damage: 10
+    fire_rate: 4.0
+    range: 20.0
+
+enemies:
+  - id: grunt
+    behavior: chase_melee
+    initial_count: 5
+    health: 20
+    damage: 10
+    speed: 3.0
+
+rules:
+  win_when: all_enemies_dead
+  lose_when: player_health_zero
+  restart_enabled: true
+
+ui:
+  - health_bar
+  - enemies_remaining
+  - end_screen
+  - restart_button
+
+budgets:
+  max_repair_loops: 3
+  max_run_minutes: 30
+  target_fps: 60
+
+acceptance:
+  - id: player_moves
+    given: play_mode_started
+    when: hold_key_w_for_1_second
+    assert: player_translation_meters_gte_3
+
+  - id: shooting_damages_enemy
+    given: enemy_in_weapon_range
+    when: fire_once
+    assert: enemy_health_decreased_by_10
+
+  - id: enemy_dies
+    when: enemy_health_reaches_zero
+    assert: enemy_removed_from_alive_set
+
+  - id: player_wins
+    when: all_enemies_eliminated
+    assert: game_status_equals_won
+
+  - id: player_loses
+    when: player_health_reaches_zero
+    assert: game_status_equals_lost
+
+  - id: restart_resets_game
+    given: game_has_ended
+    when: restart_requested
+    assert:
+      - game_status_equals_playing
+      - player_health_equals_100
+      - enemies_alive_equals_5

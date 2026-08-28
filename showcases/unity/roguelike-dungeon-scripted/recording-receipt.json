@@ -1,0 +1,45 @@
+{
+  "claim_boundary": "The model-generated project's own smoke path advances gameplay state while an independent evaluator records rendered frames. This is not raw keyboard/mouse replay.",
+  "evaluator": {
+    "build_seconds": 6.1,
+    "editor_builder_sha256": "8f74453e20e96583cd277aee9c6de9323697d3baca36dcc1598055bb2cd63339",
+    "editor_script_in_temporary_copy": "${TEMP_DIRECTORY}/gameforge-unity-gameplay-dtb00zmc/project-12-roguelike_dungeon/Assets/GameForgeGameplayRecorder/Editor/BuildEntry.cs",
+    "runtime_recorder_sha256": "6dec1c8a8a102adbd44021d8c589ace8b3582bb671872cf46119e0752b42ad11",
+    "runtime_script_in_temporary_copy": "${TEMP_DIRECTORY}/gameforge-unity-gameplay-dtb00zmc/project-12-roguelike_dungeon/Assets/GameForgeGameplayRecorder/Runtime/FrameRecorder.cs",
+    "unity": "/Applications/Unity/Hub/Editor/6000.3.20f1/Unity.app/Contents/MacOS/Unity",
+    "unity_sha256": "0bb649811e4298aece941fc66d82ccc1e49ef5d82fa56cda8a769974aef21aa1"
+  },
+  "evidence_grade": "project-authored-behavior-smoke-replay",
+  "interaction": "project-authored turn movement and enemy simulation",
+  "recording": {
+    "distinct_frame_sha256_count": 21,
+    "encoder_return_code": 0,
+    "expected_marker": "MOONVAULT_SMOKE_OK",
+    "finished_at": "2026-08-26T10:37:10.516216+00:00",
+    "fps": 30,
+    "frame_count": 21,
+    "marker_found": true,
+    "movie": "showcases/unity/roguelike-dungeon-scripted/gameplay.mp4",
+    "movie_bytes": 85767,
+    "movie_sha256": "f5d9a7e6dac2acf184053bb48b2e836663b99cb143033ce022619b1de2c0f4d5",
+    "player_return_code": 0,
+    "project_smoke_flag": "-moonvaultSmoke",
+    "runtime_error_count": 0,
+    "runtime_error_lines": [],
+    "started_at": "2026-08-26T10:37:05.195007+00:00",
+    "video_seconds": 0.7,
+    "wall_seconds": 5.046
+  },
+  "schema_version": 1,
+  "source": {
+    "benchmark_run": "${INTERNAL_RUNS}/experiments/unity-open-game-creation20-showcase-run3",
+    "public_file_count": 36,
+    "public_tree_sha256": "b376c1e4e2e13808c4df294cd1e426b79479c7f8e58dddf42b03df5d34ef8614",
+    "receipt": "${INTERNAL_RUNS}/experiments/unity-open-game-creation20-showcase-run3/receipts/12-roguelike_dungeon.json",
+    "receipt_sha256": "4ff733b874b8c3febd0d65a0e8d72961e9d4741c8724c3e865219007893ec3a4",
+    "workspace": "${INTERNAL_RUNS}/game-open-workspaces/20260825T091907423069Z-unity20-12-roguelike_dungeon/project"
+  },
+  "status": "PASS",
+  "task_id": "roguelike_dungeon",
+  "title": "Roguelike Dungeon"
+}

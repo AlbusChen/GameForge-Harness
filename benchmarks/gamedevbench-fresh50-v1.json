@@ -1,0 +1,551 @@
+{
+  "benchmark_commit": "e3868bccbb88e86a3eb2d62154f1e9e0f3fd489a",
+  "code_freeze": {
+    "pre_freeze_verification": "183 pytest tests passed and Ruff passed on 2026-08-11.",
+    "runtime_file_count": 88,
+    "runtime_scope": [
+      "gameforge/**",
+      "pyproject.toml",
+      "uv.lock"
+    ],
+    "runtime_tree_sha256": "a67ec4ad93b5214173d72e3a261470333793f4f7c46ee66e810c9058a6114896"
+  },
+  "excluded_seen_task_ids": [
+    "task_0006",
+    "task_0009",
+    "task_0012",
+    "task_0018",
+    "task_0024",
+    "task_0026",
+    "task_0028",
+    "task_0034",
+    "task_0040",
+    "task_0042",
+    "task_0043",
+    "task_0044",
+    "task_0045",
+    "task_0051",
+    "task_0065",
+    "task_0070",
+    "task_0083",
+    "task_0090",
+    "task_0094",
+    "task_0100",
+    "task_0101",
+    "task_0104",
+    "task_0108",
+    "task_0109",
+    "task_0110",
+    "task_0124",
+    "task_0135",
+    "task_0139",
+    "task_0145",
+    "task_0149",
+    "task_0150",
+    "task_0151",
+    "task_0164",
+    "task_0180",
+    "task_0181",
+    "task_0191",
+    "task_0193",
+    "task_0201",
+    "task_0208",
+    "task_0212",
+    "task_0220",
+    "task_0222",
+    "task_0223",
+    "task_0257",
+    "task_0262",
+    "task_0277",
+    "task_0292",
+    "task_0313",
+    "task_0333",
+    "task_0334"
+  ],
+  "experiment": {
+    "conditions": [
+      "official-default",
+      "programmable-open-global-diagnostic-v4"
+    ],
+    "model": "gpt-5.6-sol",
+    "parallelism": 1,
+    "primary_endpoint": "official evaluator PASS",
+    "reasoning_effort": "medium",
+    "repetitions_per_task_condition": 1,
+    "runtime_protocol": "programmable-v1",
+    "schedule": "Each task's two attempts are adjacent. Even manifest positions run Official first; odd positions run v4 first, yielding 25 first positions per condition.",
+    "stop_rule": "Stop before any model attempt if weekly subscription remaining is below 50%. No task replacement or task-specific Harness change is allowed."
+  },
+  "id": "gamedevbench-fresh50-v1",
+  "mechanically_rejected_archives": {
+    "task_0021": "BadZipFile"
+  },
+  "purpose": "Fresh paired Official Default versus programmable-open-global-diagnostic-v4 generalization evaluation. Selection is frozen before any outcome is observed.",
+  "quotas": {
+    "2d": 25,
+    "3d": 4,
+    "script_resource": 7,
+    "ui": 14
+  },
+  "schema_version": 1,
+  "selection_method": "Exclude every task in prior repository benchmark manifests and exact public instruction duplicates. Verify public and ground-truth archive CRCs without reading ground-truth contents. Prefer historically new normalized families, then use at most one task from each historically related family when necessary to fill fixed strata quotas; rank deterministically by SHA-256(seed:task_id).",
+  "selection_seed": "e3868bccbb88e86a3eb2d62154f1e9e0f3fd489a:fresh50:official-v4:v1",
+  "stratum_rules": {
+    "2d": "all remaining tasks",
+    "3d": "public 3D or Godot 3D node-type signals",
+    "script_resource": "public shader/tile/resource/environment/particle signals",
+    "ui": "public UI/HUD/dialog/menu/panel/control/container/label/button signals"
+  },
+  "tasks": [
+    {
+      "family_key": "name:tilemap add terrains ii",
+      "instruction_sha256": "38a26b483fbcacab34c56e2bd171471f2df85412ec8dbaa7690157962b2c1991",
+      "name": "Tilemap Add Terrains II",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "013d3eb0ada8cd9e94dbb43a3e7458ade234195c765d08599eecc881c03e42e5",
+      "stratum": "script_resource",
+      "task_id": "task_0177"
+    },
+    {
+      "family_key": "variant_root:task 0227",
+      "instruction_sha256": "ad6f5ca5016c2eff4735f569edf3ef2bfd54fd6570af91455a95a7136593ac7a",
+      "name": "Platformer Star Highlight Variant G",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "02ed2865e9e3b50c2afe78b2f89e645ed21bb1498e71e60309e082b091f4e170",
+      "stratum": "2d",
+      "task_id": "task_0233"
+    },
+    {
+      "family_key": "video:pjpdnlbdstw",
+      "instruction_sha256": "bc1cb1f06a3e3059aaa0f51eda0cf70386a13d5c8c17b2d654307a13b2364fa0",
+      "name": "River Raid Player Jet Scene",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "05b73f28cc7d36ed6a9198be431aaf307eeb228bc8ae27ac56e542edcefd05cd",
+      "stratum": "2d",
+      "task_id": "task_0003"
+    },
+    {
+      "family_key": "variant_root:task 0238",
+      "instruction_sha256": "62e8664d426e538018d6d232d4fb54e4e828b0b6af373773c01740df524f4979",
+      "name": "Platformer Gemstone Highlight Variant O",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "07c953981c3806f13a1c43cfeed2b6611619be137fb90c96c0d49070df998222",
+      "stratum": "2d",
+      "task_id": "task_0241"
+    },
+    {
+      "family_key": "source_name:https kidscancode org godot recipes 4 x ui minimap index html:minimap marker logic complex",
+      "instruction_sha256": "b64809fca18247b9be9fbf8e6e71194a570a9e349070ae4d3dfded1d27c7f0f1",
+      "name": "Minimap marker logic Complex",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "08477071a7ad30bb06f55a067c710f400bb3926e5a679040514db5aac3f54572",
+      "stratum": "ui",
+      "task_id": "task_0132"
+    },
+    {
+      "family_key": "video:ke5kpqcoiiu",
+      "instruction_sha256": "e552439535c43b069d114cca298fe80feb3616067e90cdd328a8942ea40d0e34",
+      "name": "ProtoController Freefly Input Map Controller",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "0c534bf58cd8fdc4e4e3531eb26a3b93e55ec0abcfdb9352672e4538d24d2a1c",
+      "stratum": "3d",
+      "task_id": "task_0085"
+    },
+    {
+      "family_key": "video:fxhjlnay0nu",
+      "instruction_sha256": "71105d5dd3e87b2dc937708ebc054baf7be0577e7d450c219f356bba7b64624d",
+      "name": "Cultist Limb SkeletonIK",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "0d9f01f7f6f73b17b29a854780acba7e72b6b521c060d1c382b9b4b601a13236",
+      "stratum": "3d",
+      "task_id": "task_0017"
+    },
+    {
+      "family_key": "video:8mdvvnurd3w",
+      "instruction_sha256": "d6ae9480127cc5bfeadef746b0d135db3a02acc0eca461ee23eddb830dca5ee8",
+      "name": "Stats UI Overlay",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "0dc6a84a196a2a23fd90893234f50545383a13e11eef01b984ce323703f0e308",
+      "stratum": "ui",
+      "task_id": "task_0008"
+    },
+    {
+      "family_key": "source_name:kidscancode 8 directional movement animation:assemble crusader animatedsprite with walk for running",
+      "instruction_sha256": "bfb337ab9efd96a501b66b9afeab0ca9481fb9a69a110d37e70af020b13e2a64",
+      "name": "Assemble Crusader AnimatedSprite with Walk for Running",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "119b1d97d7efc59a490a29573967ce361975fc9e200c47d25491d05ca19cabf5",
+      "stratum": "2d",
+      "task_id": "task_0080"
+    },
+    {
+      "family_key": "source_name:youtube cashew olddew signals in godot 4 3:trap spawning points visual alignment",
+      "instruction_sha256": "3ea8a8199ea47678dc593442efbae4913ccda8bc1a2c8c24a649173e728d004f",
+      "name": "Trap Spawning Points Visual Alignment",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "1d1a1a4e7c1bdfde0a92a6c5ac6c91801d3ef9e839f9cadba1b1016388d63209",
+      "stratum": "2d",
+      "task_id": "task_0115"
+    },
+    {
+      "family_key": "video:aeddkgifwdy",
+      "instruction_sha256": "bad6ba6f2c70705c885c0695292a8a3cb6e30313f73fecf978c4f20c79632cc5",
+      "name": "Bonkahe Sunshine Clouds Effectors",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "1dfcfbedac6eb075eb38591b33f117405a07b5242198818cf6129c6ade27b58f",
+      "stratum": "script_resource",
+      "task_id": "task_0031"
+    },
+    {
+      "family_key": "source_name:kidscancode cooldown button:cooldown button ui shell",
+      "instruction_sha256": "ecbffa85c1f5c5c2e89c033d670b9ae6f9610195767268c845b17beaadb63cb0",
+      "name": "Cooldown Button UI Shell",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "2634faf91ea29f7fdd14ea62cc403ca77e4ebfba4b38dd6af767620b0fb28540",
+      "stratum": "ui",
+      "task_id": "task_0056"
+    },
+    {
+      "family_key": "name:tilemap isometric ii",
+      "instruction_sha256": "368de15c0408ba580b2b8e2bf6d8ac03363f97a04a105a3da2bed8edd5d7dabe",
+      "name": "Tilemap Isometric II",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "2a238fa7dd46d0900999e36b5820b1c6f2eac166b4ea938b9541330b9035fbf7",
+      "stratum": "script_resource",
+      "task_id": "task_0182"
+    },
+    {
+      "family_key": "source_name:https kidscancode org godot recipes 4 x input multi unit select index html:configure rts unit scene with aura highlight",
+      "instruction_sha256": "a5f8ea9df119051686627a504fa0ca208fab7160af0b0d94b63dcd8b8174ab84",
+      "name": "Configure RTS Unit Scene with Aura Highlight",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "2ca6c2817d9dc1723b281316e9175704f5cd8fb5e37c45e54213175d1cd59d73",
+      "stratum": "script_resource",
+      "task_id": "task_0057"
+    },
+    {
+      "family_key": "video:zfa0jldrcz4",
+      "instruction_sha256": "7ee86c6d1245a5deba72e4020cf5a2142142be667513d3d2f08aca175f50b3a3",
+      "name": "Fractal Panel With Julia Shader Alt",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "2fd7a59188dbb8d81764b9366056ebade8c377e29d49bc6db00b99f6a0244f7f",
+      "stratum": "ui",
+      "task_id": "task_0128"
+    },
+    {
+      "family_key": "source_name:youtube cashew olddew signals in godot 4 3:trap spawning points",
+      "instruction_sha256": "e68e1d087f966bfc97ab98ec5c38d63a518b026ba8364a8a83e074250a87741d",
+      "name": "Trap Spawning Points",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "30a5660d2f49094292b06a18c925262425e9594d4197071e73f61393509c31f8",
+      "stratum": "2d",
+      "task_id": "task_0022"
+    },
+    {
+      "family_key": "video:auvsx mtuns",
+      "instruction_sha256": "7cc91ce7f074e1ebe1f46cec24b1d5c1511e9ce01519a9edb5bd72eae46fbc77",
+      "name": "TileMap Atlas Physics Layer Full Course",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "31d0c1a3c028fe4dbf31f847453681e1ffbdefdb69546873dc513a19ff5a743e",
+      "stratum": "script_resource",
+      "task_id": "task_0125"
+    },
+    {
+      "family_key": "source_name:kidscancode grid based movement:build grid player nodes",
+      "instruction_sha256": "a19e1b862ddd096036bc4b2526bcdcbd9c0da6307f921c5ab9d87e393d6d3815",
+      "name": "Build Grid Player Nodes",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "3551603a9bf7857bea8398edee7c83f26fd69d62726ac2f647b4c1228db1b378",
+      "stratum": "2d",
+      "task_id": "task_0049"
+    },
+    {
+      "family_key": "name:tilemap isometric iv",
+      "instruction_sha256": "b6d88329d2a53e5f462266d5bf3ea7f1dee282b523e670f7b04c08910b780c0a",
+      "name": "Tilemap Isometric IV",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "3827c7bd46a7532b5cc12060f4179818c0e6471a1ac2a9cac26738515a8e68f0",
+      "stratum": "script_resource",
+      "task_id": "task_0185"
+    },
+    {
+      "family_key": "name:tilemap plant data",
+      "instruction_sha256": "1e34b89f58bd749f3ea7c97ea8656c8590e719280c0284fbe35054a186221358",
+      "name": "Tilemap Plant Data",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "38397e68074acc4a181ccaccbc5a69f572231dcb1d94583844f18f4c6a000408",
+      "stratum": "script_resource",
+      "task_id": "task_0178"
+    },
+    {
+      "family_key": "video:ihkfpcytdxg",
+      "instruction_sha256": "604810e5ab1b239488ecdec9baf0db6f581c6197044302ca0a0fe57895c0cf7c",
+      "name": "Codex Draggable Decorations",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "4c6ffe131d858a44c83c56e0f5bd1409beb52d304ea05ee6dcf171d8400959fd",
+      "stratum": "ui",
+      "task_id": "task_0048"
+    },
+    {
+      "family_key": "source_name:https kidscancode org godot recipes 4 x audio audio manager index html:audio demo grid ui formatting",
+      "instruction_sha256": "e5b2e94cb13462e851cbdf91e8b90948339c5c47b62f1ac6ed3de3e53fe40c34",
+      "name": "Audio Demo Grid UI Formatting",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "4fc73f14024f4c515c638476928d4e69bdf67939f678d8350da790ada6652677",
+      "stratum": "ui",
+      "task_id": "task_0089"
+    },
+    {
+      "family_key": "source_name:kidscancode platform character:platform character acceleration lerp",
+      "instruction_sha256": "5aabba66802fa2a4b6ee4eb3737b40029da114b2be3ba2b8d65e54a9bfcb7cbc",
+      "name": "Platform Character Acceleration Lerp",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "524f66c63123c4f0309eb61ae10792e955db30702aa7919cd75d4368dca37a4a",
+      "stratum": "2d",
+      "task_id": "task_0052"
+    },
+    {
+      "family_key": "video:e401x98n6ia",
+      "instruction_sha256": "6a907c3e2495f76c5886c34f5f0d789996b38174763db593a66532207d19321d",
+      "name": "CRT Shader Effect Implementation",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "525bfa4f59e21d0de4bf795f90111671643f8b156fa9ef97063e38090ec93335",
+      "stratum": "ui",
+      "task_id": "task_0095"
+    },
+    {
+      "family_key": "video:uql0hc 2fnk",
+      "instruction_sha256": "78beb10e2041505e8f195f17f16cc6916d4152e63a9b3ec9438ff76efe9db415",
+      "name": "Player Damage Signal Bridge",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "5476e6db538cf905e7f13a043eedf71042e508af19276cc8a28861a9bbff85ed",
+      "stratum": "ui",
+      "task_id": "task_0023"
+    },
+    {
+      "family_key": "source_name:youtube cashew olddew signals in godot 4 3:trap spawning points visual inverse",
+      "instruction_sha256": "7947f55e07a7b170a74855a057493f2ff40e78fa10aca079af42ad9bce56c313",
+      "name": "Trap Spawning Points Visual Inverse",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "610190256be3db6bf0db7f18b8fd2aae272ca3f65aa202d244fb0521b6163b97",
+      "stratum": "2d",
+      "task_id": "task_0118"
+    },
+    {
+      "family_key": "source_name:kidscancode 8 directional movement animation:assemble crusader animatedsprite with correct directions",
+      "instruction_sha256": "863d8d5861609e2c1221bef1bf21e5e03d6cdee8c46f03b37ee2c699da4e32ae",
+      "name": "Assemble Crusader AnimatedSprite with Correct Directions",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "651932623b64088cedfb07c0af06fa95e73ffb632dbaa7bc22ad7b9e72814950",
+      "stratum": "2d",
+      "task_id": "task_0079"
+    },
+    {
+      "family_key": "video:oh70eo4pep8",
+      "instruction_sha256": "51db3223b65d4e1a3d10630dc86aca35974048d0a74fd1663b784c9d028fa5c5",
+      "name": "Transition Menu Prefab",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "6a1154efea61f69893731486c8e8757c26b16d29f3de5062f98b5e5d89daabfd",
+      "stratum": "ui",
+      "task_id": "task_0020"
+    },
+    {
+      "family_key": "video:9tu q t my",
+      "instruction_sha256": "9a53a521f648ba8907075e2c2682f3d7e96e412c9b0dcd81c802860fec2f67b3",
+      "name": "Projectile Step Tracker",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "702b01aa91643fb0378163b2672c8f46f043a5406798f19e160f983c6d07d0fd",
+      "stratum": "2d",
+      "task_id": "task_0002"
+    },
+    {
+      "family_key": "source_name:youtube cashew olddew signals in godot 4 3:trap spawning points imitating",
+      "instruction_sha256": "44c25931dd59491f51716bca5af178096e02be60dc29e9db768cca159ebba51e",
+      "name": "Trap Spawning Points Imitating",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "7e6328e48f049f7caafe5162abbe7023c3a2fc14506d6d17ecdb99e3daacc5a7",
+      "stratum": "2d",
+      "task_id": "task_0120"
+    },
+    {
+      "family_key": "source_name:kidscancode 8 directional movement animation:implement mouse direction controller",
+      "instruction_sha256": "039d006b85bea9481328f7ab60b177a650aebdd09d245c15ac2ae994d6aaeff0",
+      "name": "Implement Mouse Direction Controller",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "832095641ce2bb395a0548c6a2a0bd8b03796472a5980aad6c476b1243dccea2",
+      "stratum": "2d",
+      "task_id": "task_0055"
+    },
+    {
+      "family_key": "source_name:kidscancode grid based movement:build grid player nodes strict shuffled",
+      "instruction_sha256": "383958ed4f0e080cceb85e7947f1e77a430dfac47de82f276a25e78c67331892",
+      "name": "Build Grid Player Nodes Strict Shuffled",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "832985206802a93a43926ad591e2479023071df02ed8af4d1db2a0fd8ba953bf",
+      "stratum": "2d",
+      "task_id": "task_0088"
+    },
+    {
+      "family_key": "source_name:kidscancode grid based movement:tween grid movement",
+      "instruction_sha256": "8bfcf609447d55828ff035f25918c95bf14c16342a035739a32f9ee14caddfe2",
+      "name": "Tween Grid Movement",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "8a3075f3aca554cd1f59e8a6fb05d46fefb6475a0e46b47c03ca0cd56b78d646",
+      "stratum": "2d",
+      "task_id": "task_0050"
+    },
+    {
+      "family_key": "source_name:kidscancode car steering:car scene assembly",
+      "instruction_sha256": "bc195f0045630abb0fd35135c0c1f4a1c7b3dc0348415dc8836340390371de1f",
+      "name": "Car Scene Assembly",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "8daf9e3df3341b4024f4ad509d900bd215d503170979acfaac9c02dab00d41e0",
+      "stratum": "2d",
+      "task_id": "task_0053"
+    },
+    {
+      "family_key": "source_name:https kidscancode org godot recipes 4 x 3d shooting raycasts index html:fps hit label overlay",
+      "instruction_sha256": "a7aad6a7922f5f9a08ef2bf401965a08941ff8f89636b1b8a0c12a5bc57e386c",
+      "name": "fps_hit_label_overlay",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "8ec18ec7ed6bec059dcbbca9b53116a61700d1b3939c5c57bf2bdf7aaa0d0c37",
+      "stratum": "ui",
+      "task_id": "task_0061"
+    },
+    {
+      "family_key": "video:pwyxxq9p7e8",
+      "instruction_sha256": "a3451f98c3476724fe2a9e3af2db1c569e7e3decc2c8bbc9187e45ef75d79a72",
+      "name": "Ninja Lower Run/Stand Animations",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "904cdb9c5ab6ec71fa1b0b6f317dbb0134df0c4f52c9d36be6c9fd38266d3988",
+      "stratum": "2d",
+      "task_id": "task_0098"
+    },
+    {
+      "family_key": "video:eeqhw3rrjgc",
+      "instruction_sha256": "adc03538ccd59345428cb4fbebf718eda1e2a04459c624df923af3b4bb9f1aff",
+      "name": "Install the cultist flashlight priority marker",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "90fc2d4cf21c41bb0bff23e20dd7e39ff88f968d4c75df657f69443024827013",
+      "stratum": "3d",
+      "task_id": "task_0016"
+    },
+    {
+      "family_key": "source_name:https kidscancode org godot recipes 4 x ui minimap index html:minimap ui complex",
+      "instruction_sha256": "a8c1cba55df05584b9f5388df1226e23399d631925f3cad0ff8aeb9483cc9f9a",
+      "name": "Minimap UI Complex",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "92a51c9c7dfc6ab2d566217769a31eb8066472110ab0060c3dfd72651fca5380",
+      "stratum": "ui",
+      "task_id": "task_0131"
+    },
+    {
+      "family_key": "source_name:https kidscancode org godot recipes 4 x ui minimap index html:minimap ui frame and markers",
+      "instruction_sha256": "f272fe8191712cf1d12fb8bc0d3bb0e04e12d66145977859c5608b83de3abb3a",
+      "name": "Minimap UI frame and markers",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "977a200197db209ea5d28fbc4ba88843e96825a4ab71b2ae705227ac8b31f4be",
+      "stratum": "ui",
+      "task_id": "task_0059"
+    },
+    {
+      "family_key": "source_name:https kidscancode org godot recipes 4 x audio audio manager index html:audio demo grid ui",
+      "instruction_sha256": "1797b3114efe854e187de5f45f98faf686a164477eb01fdb3bedf2e02bcd3ddb",
+      "name": "Audio Demo Grid UI",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "9785c5d07784c2120f20a37dc9d14f85386e69323e5db76b2a1fb15434711be8",
+      "stratum": "ui",
+      "task_id": "task_0058"
+    },
+    {
+      "family_key": "variant_root:task 0221",
+      "instruction_sha256": "c4fcf73be1a6245805b84278605976192846ed8d251805a59c8e8583f8e574fb",
+      "name": "Platformer Coin Highlights Rotated Variant Z_1",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "97bea13ff8da5153e03b7ce9fee4a3af189895e5fa2429509bf483c7ef75a73c",
+      "stratum": "2d",
+      "task_id": "task_0226"
+    },
+    {
+      "family_key": "video:2dizu8jyhmg",
+      "instruction_sha256": "7b65086bdbfeffdd4c99ab287d022609c156f22f1ffff6a8272b8c5eda80fc19",
+      "name": "Trait UI Highlight",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "99cbd46cecf510a9a316131726021c87e7880eb9b77b3a3e32c165b7e786a431",
+      "stratum": "ui",
+      "task_id": "task_0036"
+    },
+    {
+      "family_key": "source_name:kidscancode grid based movement:build grid player nodes alt ii",
+      "instruction_sha256": "4e4249dbde92b748100ba6ceedb9b5f2c69bd0444e3756d7bc4fbb1ead65e3d1",
+      "name": "Build Grid Player Nodes Alt II",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "9e02eba63afe169a0c01d85ab7cd9ba8c85f3a78b3ad4fde18d5da97ac395a8c",
+      "stratum": "2d",
+      "task_id": "task_0087"
+    },
+    {
+      "family_key": "source_name:youtube cashew olddew signals in godot 4 3:trap spawning points visual alignment horizontal",
+      "instruction_sha256": "eacb5e90d6b2eb79c776001a067682b48f1d361064a09e6dd14b851c1b3dff5e",
+      "name": "Trap Spawning Points Visual Alignment Horizontal",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "b6e464d3799230c950752c65edf00cd21284e9dd6c1a49b24cf971c2068c1456",
+      "stratum": "2d",
+      "task_id": "task_0119"
+    },
+    {
+      "family_key": "source_name:kidscancode 8 directional movement animation:assemble crusader spritesheet death animation",
+      "instruction_sha256": "e10ec3955b39191407d6416705d1d5c914e9b62da6a4e517143d1421bf3abe54",
+      "name": "Assemble Crusader Spritesheet Death Animation Setup",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "bca636c0f80962efe606d1e48ee1bef00a45a20138cd9ceb1fc6393ccfeb8c58",
+      "stratum": "2d",
+      "task_id": "task_0084"
+    },
+    {
+      "family_key": "source_name:kidscancode grid based movement:build grid player nodes alt",
+      "instruction_sha256": "a968231d93a99a0202aef2be6c57dcebf221749450a111ac441065f0f48bc1a1",
+      "name": "Build Grid Player Nodes Alt",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "d5d8d5c02d1e3c302888074f7c5be792ccf713fb3ff37a14ff5ef052b27954d7",
+      "stratum": "2d",
+      "task_id": "task_0086"
+    },
+    {
+      "family_key": "source_name:kidscancode 8 directional movement animation:assemble crusader animatedsprite",
+      "instruction_sha256": "3711ea9f60092fc49c4698460ddd9579b1a96a7d7e30813edd4f6bdf66284e85",
+      "name": "Assemble Crusader AnimatedSprite",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "d750332637c366e9d2d8d52d682041f6227b68abc97c9841ea770bc291181e3c",
+      "stratum": "2d",
+      "task_id": "task_0054"
+    },
+    {
+      "family_key": "source_name:kidscancode 8 directional movement animation:assemble crusader sprite sheet animation",
+      "instruction_sha256": "405b6f2d6848fe0df64f60c69d29e548201e0805f4447775716cf66ffc6c3d79",
+      "name": "Assemble Crusader Sprite Sheet Animation",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "d96b2f5395a3878995a2b4f65a7ccec630d39856a0c90c5e99a123345f5bb9e8",
+      "stratum": "2d",
+      "task_id": "task_0081"
+    },
+    {
+      "family_key": "video:rxvgwla6yb0",
+      "instruction_sha256": "ad835f06f887c1d752cadc54516e5b3ef12720766862c19f70264452b61ebb71",
+      "name": "Bonkahe Enemy Spawn Trigger",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "e061cc9e9b10b7d47428d27202359bb82a5a25a2b5a97ceef635306f05f9ada2",
+      "stratum": "3d",
+      "task_id": "task_0029"
+    },
+    {
+      "family_key": "video:kkyaevee7pc",
+      "instruction_sha256": "9d830c61106cefd2ec30fdc494995afba89e32af0338ad852d3fde3c560cea01",
+      "name": "Build the door switch Phantom Camera transition",
+      "novelty_tier": "family_new",
+      "selection_rank_sha256": "e3c303e4717eb5ebfadcc2919d2daf1f2ce3af1d46d0729bb9549066fbb206ef",
+      "stratum": "2d",
+      "task_id": "task_0064"
+    }
+  ]
+}

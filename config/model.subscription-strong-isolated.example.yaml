@@ -1,0 +1,13 @@
+# Strong isolation is supplied by a separately installed VM/container/remote provider.
+# The runner must implement gameforge-isolation-runner-v1; no provider is bundled.
+provider: codex-subscription
+model: gpt-5.6-terra
+executable: replace-with-local-agent-executable
+execution_profile: strong-isolated
+isolation_runner: replace-with-isolation-runner-executable
+reasoning_effort: medium
+input_usd_per_million: 0
+cached_input_usd_per_million: 0
+output_usd_per_million: 0
+timeout_seconds: 900
+max_output_tokens: 1200

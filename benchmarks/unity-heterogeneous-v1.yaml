@@ -1,0 +1,228 @@
+name: gameforge-unity-heterogeneous
+version: "1.0.0"
+engine: unity
+tasks:
+  - id: compile-weapon-class
+    title: Repair a malformed weapon class declaration
+    instruction: The Unity project no longer compiles after a malformed WeaponController declaration. Repair only the approved source file and prove compilation succeeds.
+    failure_class: compilation
+    required_gates: [compilation]
+    editable_paths: [Assets/Scripts/WeaponController.cs]
+    fixture:
+      path: Assets/Scripts/WeaponController.cs
+      expected: "public sealed class WeaponController : MonoBehaviour"
+      replacement: "public sealed class WeaponController : MonoBehaviour BROKEN"
+
+  - id: compile-player-using
+    title: Repair a missing using terminator
+    instruction: PlayerController has a C# syntax error near its imports. Make the smallest approved repair and prove compilation succeeds.
+    failure_class: compilation
+    required_gates: [compilation]
+    editable_paths: [Assets/Scripts/PlayerController.cs]
+    fixture:
+      path: Assets/Scripts/PlayerController.cs
+      expected: "using System.Collections;"
+      replacement: "using System.Collections"
+
+  - id: compile-enemy-field
+    title: Repair a malformed enemy field
+    instruction: EnemyController does not compile because one field declaration is malformed. Repair only the approved file.
+    failure_class: compilation
+    required_gates: [compilation]
+    editable_paths: [Assets/Scripts/EnemyController.cs]
+    fixture:
+      path: Assets/Scripts/EnemyController.cs
+      expected: "private Rigidbody body;"
+      replacement: "private Rigidbody body"
+
+  - id: compile-health-class
+    title: Repair an invalid player health base type
+    instruction: PlayerHealth has an invalid class declaration. Restore a compiling MonoBehaviour without touching other files.
+    failure_class: compilation
+    required_gates: [compilation]
+    editable_paths: [Assets/Scripts/PlayerHealth.cs]
+    fixture:
+      path: Assets/Scripts/PlayerHealth.cs
+      expected: "public sealed class PlayerHealth : MonoBehaviour"
+      replacement: "public sealed class PlayerHealth :: MonoBehaviour"
+
+  - id: compile-hud-import
+    title: Repair a malformed HUD import
+    instruction: HudController has a syntax error in its Unity UI import. Make a minimal repair and prove compilation.
+    failure_class: compilation
+    required_gates: [compilation]
+    editable_paths: [Assets/Scripts/HudController.cs]
+    fixture:
+      path: Assets/Scripts/HudController.cs
+      expected: "using UnityEngine.UI;"
+      replacement: "using UnityEngine.UI"
+
+  - id: structure-game-controller
+    title: Restore the game controller system
+    instruction: A freshly generated Arena scene is missing its GameController component. Repair ArenaSetup so the required structure test passes.
+    failure_class: structure
+    required_gates: [compilation, structure]
+    editable_paths: [Assets/Editor/ArenaSetup.cs, Assets/Scenes/Arena.unity]
+    fixture:
+      path: Assets/Editor/ArenaSetup.cs
+      expected: "systems.AddComponent<GameController>();"
+      replacement: "// GameController component accidentally removed."
+      regenerate_scene: true
+
+  - id: structure-player-controller
+    title: Restore the player controller component
+    instruction: A freshly generated Arena player lacks PlayerController. Repair the approved scene setup source and pass structure verification.
+    failure_class: structure
+    required_gates: [compilation, structure]
+    editable_paths: [Assets/Editor/ArenaSetup.cs, Assets/Scenes/Arena.unity]
+    fixture:
+      path: Assets/Editor/ArenaSetup.cs
+      expected: "player.AddComponent<PlayerController>().Configure(6f);"
+      replacement: "// PlayerController component accidentally removed."
+      regenerate_scene: true
+
+  - id: structure-weapon-controller
+    title: Restore the weapon controller component
+    instruction: A freshly generated Arena player lacks WeaponController. Repair only ArenaSetup and pass the required structure gate.
+    failure_class: structure
+    required_gates: [compilation, structure]
+    editable_paths: [Assets/Editor/ArenaSetup.cs, Assets/Scenes/Arena.unity]
+    fixture:
+      path: Assets/Editor/ArenaSetup.cs
+      expected: "player.AddComponent<WeaponController>().Configure(10, 4f, 20f);"
+      replacement: "// WeaponController component accidentally removed."
+      regenerate_scene: true
+
+  - id: structure-runtime-probe
+    title: Restore the runtime state probe
+    instruction: A freshly generated Arena scene lacks its RuntimeStateProbe. Repair the setup source and verify project structure.
+    failure_class: structure
+    required_gates: [compilation, structure]
+    editable_paths: [Assets/Editor/ArenaSetup.cs, Assets/Scenes/Arena.unity]
+    fixture:
+      path: Assets/Editor/ArenaSetup.cs
+      expected: "systems.AddComponent<RuntimeStateProbe>();"
+      replacement: "// RuntimeStateProbe component accidentally removed."
+      regenerate_scene: true
+
+  - id: structure-arena-floor
+    title: Restore the required arena floor name
+    instruction: A freshly generated scene no longer contains the required Arena Floor object name. Repair the setup source and pass structure tests.
+    failure_class: structure
+    required_gates: [compilation, structure]
+    editable_paths: [Assets/Editor/ArenaSetup.cs, Assets/Scenes/Arena.unity]
+    fixture:
+      path: Assets/Editor/ArenaSetup.cs
+      expected: 'floor.name = "Arena Floor";'
+      replacement: 'floor.name = "Broken Floor";'
+      regenerate_scene: true
+
+  - id: gameplay-player-movement
+    title: Restore player movement
+    instruction: The player no longer moves far enough under deterministic input. Diagnose PlayerController and restore the verified movement behavior.
+    failure_class: gameplay
+    required_gates: [compilation, gameplay]
+    editable_paths: [Assets/Scripts/PlayerController.cs]
+    fixture:
+      path: Assets/Scripts/PlayerController.cs
+      expected: "body.MovePosition(body.position + normalized * speed * deltaTime);"
+      replacement: "body.MovePosition(body.position + normalized * 0f * deltaTime);"
+
+  - id: gameplay-weapon-damage
+    title: Restore weapon damage
+    instruction: A deterministic shot no longer damages an enemy by ten. Repair WeaponController and pass gameplay acceptance.
+    failure_class: gameplay
+    required_gates: [compilation, gameplay]
+    editable_paths: [Assets/Scripts/WeaponController.cs]
+    fixture:
+      path: Assets/Scripts/WeaponController.cs
+      expected: "Projectile.Create(origin + direction * 0.8f, direction, damage, projectileSpeed, range);"
+      replacement: "Projectile.Create(origin + direction * 0.8f, direction, 1, projectileSpeed, range);"
+
+  - id: gameplay-enemy-removal
+    title: Restore enemy removal and victory state
+    instruction: Eliminated enemies remain registered, preventing victory. Repair GameController and pass gameplay acceptance.
+    failure_class: gameplay
+    required_gates: [compilation, gameplay]
+    editable_paths: [Assets/Scripts/GameController.cs]
+    fixture:
+      path: Assets/Scripts/GameController.cs
+      expected: "enemies.Remove(enemy);"
+      replacement: "// enemies.Remove(enemy);"
+
+  - id: gameplay-player-defeat
+    title: Restore player defeat state
+    instruction: Reducing player health to zero reports the wrong terminal state. Repair GameController and pass gameplay acceptance.
+    failure_class: gameplay
+    required_gates: [compilation, gameplay]
+    editable_paths: [Assets/Scripts/GameController.cs]
+    fixture:
+      path: Assets/Scripts/GameController.cs
+      expected: "public void NotifyPlayerDied()\n        {\n            if (Status != GameStatus.Playing)\n            {\n                return;\n            }\n\n            Status = GameStatus.Lost;\n            StateChanged?.Invoke();\n        }"
+      replacement: "public void NotifyPlayerDied()\n        {\n            if (Status != GameStatus.Playing)\n            {\n                return;\n            }\n\n            Status = GameStatus.Won;\n            StateChanged?.Invoke();\n        }"
+
+  - id: gameplay-restart-health
+    title: Restore health on restart
+    instruction: Restart no longer restores the player's configured maximum health. Repair PlayerHealth and pass gameplay acceptance.
+    failure_class: gameplay
+    required_gates: [compilation, gameplay]
+    editable_paths: [Assets/Scripts/PlayerHealth.cs]
+    fixture:
+      path: Assets/Scripts/PlayerHealth.cs
+      expected: "public void ResetHealth()\n        {\n            CurrentHealth = maxHealth;"
+      replacement: "public void ResetHealth()\n        {\n            CurrentHealth = 1;"
+
+  - id: build-no-scenes
+    title: Restore enabled scene selection
+    instruction: The macOS player build reports that no enabled scenes were found. Repair only ArenaBuild and pass build verification.
+    failure_class: build_launch
+    required_gates: [compilation, build]
+    editable_paths: [Assets/Editor/ArenaBuild.cs]
+    fixture:
+      path: Assets/Editor/ArenaBuild.cs
+      expected: ".Where(scene => scene.enabled)"
+      replacement: ".Where(scene => false)"
+
+  - id: build-target-macos
+    title: Restore the macOS build target
+    instruction: The approved build no longer produces the required macOS application. Restore the target in ArenaBuild and pass build verification.
+    failure_class: build_launch
+    required_gates: [compilation, build]
+    editable_paths: [Assets/Editor/ArenaBuild.cs]
+    fixture:
+      path: Assets/Editor/ArenaBuild.cs
+      expected: "target = BuildTarget.StandaloneOSX,"
+      replacement: "target = BuildTarget.StandaloneWindows64,"
+
+  - id: launch-state-output
+    title: Restore smoke-state output
+    instruction: The built player starts but never writes its required runtime state artifact. Repair BuildSmokeProbe and pass launch smoke verification.
+    failure_class: build_launch
+    required_gates: [compilation, build, smoke]
+    editable_paths: [Assets/Scripts/BuildSmokeProbe.cs]
+    fixture:
+      path: Assets/Scripts/BuildSmokeProbe.cs
+      expected: 'string output = ReadArgument("-gameforgeSmokeOutput");'
+      replacement: 'string output = ReadArgument("-brokenSmokeOutput");'
+
+  - id: launch-screenshot-output
+    title: Restore smoke screenshot output
+    instruction: The built player does not produce the required fixed-camera screenshot. Repair BuildSmokeProbe and pass launch smoke verification.
+    failure_class: build_launch
+    required_gates: [compilation, build, smoke]
+    editable_paths: [Assets/Scripts/BuildSmokeProbe.cs]
+    fixture:
+      path: Assets/Scripts/BuildSmokeProbe.cs
+      expected: 'string screenshot = ReadArgument("-gameforgeScreenshot");'
+      replacement: 'string screenshot = ReadArgument("-brokenScreenshot");'
+
+  - id: launch-exit-code
+    title: Restore successful player shutdown
+    instruction: The smoke player writes evidence but exits with a failure status. Repair BuildSmokeProbe and pass launch verification.
+    failure_class: build_launch
+    required_gates: [compilation, build, smoke]
+    editable_paths: [Assets/Scripts/BuildSmokeProbe.cs]
+    fixture:
+      path: Assets/Scripts/BuildSmokeProbe.cs
+      expected: "Application.Quit(0);"
+      replacement: "Application.Quit(17);"

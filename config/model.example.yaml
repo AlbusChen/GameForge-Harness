@@ -1,0 +1,9 @@
+# Copy to model.local.yaml and edit the model name. Never put the API key in this file.
+provider: openai
+model: replace-with-model-name
+api_key_env: OPENAI_API_KEY
+reasoning_effort: null
+input_usd_per_million: 0
+output_usd_per_million: 0
+timeout_seconds: 60
+max_output_tokens: 1200

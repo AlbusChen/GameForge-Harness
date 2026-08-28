@@ -1,0 +1,114 @@
+name: unity-project-tasks
+version: "1.0.0"
+engine: unity
+control_policy: scripted-control-v1
+tasks:
+  - id: change-weapon-fire-rate
+    source: change
+    instruction: Increase the arena weapon fire rate from four to six shots per second.
+    editable_paths:
+      - Assets/Scripts/WeaponController.cs
+    acceptance:
+      - "file_contains:Assets/Scripts/WeaponController.cs::private float fireRate = 6f;"
+      - "file_not_contains:Assets/Scripts/WeaponController.cs::private float fireRate = 4f;"
+    engine_gates: [specification, compilation, gameplay]
+    decisions:
+      - kind: tool
+        tool: apply_code_patch
+        arguments:
+          path: Assets/Scripts/WeaponController.cs
+          expected: "private float fireRate = 4f;"
+          replacement: "private float fireRate = 6f;"
+        rationale: Apply the one approved, exact tuning change.
+      - kind: tool
+        tool: wait_for_compilation
+        arguments: {}
+        rationale: Verify the changed C# source compiles before finishing.
+      - kind: finish
+        outcome: success
+        summary: Weapon fire rate updated in the approved file.
+        rationale: The exact patch and compilation tool both succeeded.
+
+  - id: change-enemy-speed
+    source: change
+    instruction: Increase the default enemy movement speed from three to 3.5.
+    editable_paths:
+      - Assets/Scripts/EnemySpawner.cs
+    acceptance:
+      - "file_contains:Assets/Scripts/EnemySpawner.cs::private float speed = 3.5f;"
+      - "file_not_contains:Assets/Scripts/EnemySpawner.cs::private float speed = 3f;"
+    engine_gates: [specification, compilation, gameplay]
+    decisions:
+      - kind: tool
+        tool: apply_code_patch
+        arguments:
+          path: Assets/Scripts/EnemySpawner.cs
+          expected: "private float speed = 3f;"
+          replacement: "private float speed = 3.5f;"
+        rationale: Apply the approved enemy tuning change only.
+      - kind: tool
+        tool: wait_for_compilation
+        arguments: {}
+        rationale: Verify the changed C# source compiles before finishing.
+      - kind: finish
+        outcome: success
+        summary: Enemy speed updated in the approved file.
+        rationale: The exact patch and compilation tool both succeeded.
+
+  - id: change-hud-health-label
+    source: change
+    instruction: Shorten the HUD health label from Health to HP without changing other HUD text.
+    editable_paths:
+      - Assets/Scripts/HudController.cs
+    acceptance:
+      - "file_contains:Assets/Scripts/HudController.cs::healthText.text = $\"HP: {playerHealth.CurrentHealth}/{playerHealth.MaxHealth}\";"
+      - "file_contains:Assets/Scripts/HudController.cs::enemiesText.text = $\"Enemies: {gameController.EnemiesAlive}\";"
+    engine_gates: [specification, compilation, gameplay]
+    decisions:
+      - kind: tool
+        tool: apply_code_patch
+        arguments:
+          path: Assets/Scripts/HudController.cs
+          expected: "healthText.text = $\"Health: {playerHealth.CurrentHealth}/{playerHealth.MaxHealth}\";"
+          replacement: "healthText.text = $\"HP: {playerHealth.CurrentHealth}/{playerHealth.MaxHealth}\";"
+        rationale: Replace only the approved health label anchor.
+      - kind: tool
+        tool: wait_for_compilation
+        arguments: {}
+        rationale: Verify the changed C# source compiles before finishing.
+      - kind: finish
+        outcome: success
+        summary: HUD health label updated and other HUD text retained.
+        rationale: The bounded patch and compilation tool both succeeded.
+
+  - id: create-arena-tuning-script
+    source: create
+    instruction: Add a small compile-safe arena tuning definition for future difficulty work.
+    editable_paths:
+      - Assets/Scripts/ArenaTuning.cs
+    acceptance:
+      - "file_exists:Assets/Scripts/ArenaTuning.cs"
+      - "file_contains:Assets/Scripts/ArenaTuning.cs::public const int DifficultyTier = 2;"
+    engine_gates: [specification, compilation, structure, gameplay, build, smoke]
+    decisions:
+      - kind: tool
+        tool: create_script
+        arguments:
+          path: Assets/Scripts/ArenaTuning.cs
+          content: |
+            namespace VerifiedGameBuilder.Game
+            {
+                public static class ArenaTuning
+                {
+                    public const int DifficultyTier = 2;
+                }
+            }
+        rationale: Create the one approved source file without overwriting existing work.
+      - kind: tool
+        tool: wait_for_compilation
+        arguments: {}
+        rationale: Verify the new C# source compiles before finishing.
+      - kind: finish
+        outcome: success
+        summary: Arena tuning source created in the approved path.
+        rationale: The creation and compilation tool both succeeded.

@@ -1,0 +1,60 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  python:
+    runs-on: macos-14
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+        with:
+          enable-cache: true
+          version: "0.8.4"
+      - name: Install locked dependencies
+        run: uv sync --locked --all-groups
+      - name: Lint
+        run: uv run ruff check gameforge tests
+      - name: Release contract tests
+        run: uv run pytest
+      - name: Validate shell launchers
+        run: zsh -n scripts/*.command
+      - name: Verify single public source tree
+        run: |
+          test -f RELEASE.json
+          test ! -e versions
+          if git ls-files | grep -Eq '(^|/)source/gameforge/'; then
+            echo "Duplicate Harness source tree found outside repository root" >&2
+            exit 1
+          fi
+      - name: Build distributions
+        run: uv build
+      - name: Verify installed wheel and bundled starter
+        run: |
+          uv venv --python 3.12 "$RUNNER_TEMP/wheel-venv"
+          uv pip install --python "$RUNNER_TEMP/wheel-venv/bin/python" dist/*.whl
+          "$RUNNER_TEMP/wheel-venv/bin/gameforge" --version
+          "$RUNNER_TEMP/wheel-venv/bin/gameforge" run-game-workspace --help
+          "$RUNNER_TEMP/wheel-venv/bin/gameforge" init "$RUNNER_TEMP/starter"
+          test -f "$RUNNER_TEMP/starter/config/model.example.yaml"
+          test -f "$RUNNER_TEMP/starter/config/model.responses-api.example.yaml"
+          test -f "$RUNNER_TEMP/starter/benchmarks/unity-heterogeneous-v1.yaml"
+          test -f "$RUNNER_TEMP/starter/unity/ArenaTemplate/ProjectSettings/ProjectVersion.txt"
+          test -f "$RUNNER_TEMP/starter/unity/EmptyGameTemplate/ProjectSettings/ProjectVersion.txt"
+          cd "$RUNNER_TEMP/starter"
+          "$RUNNER_TEMP/wheel-venv/bin/gameforge" validate --spec specs/arena_demo.yaml
+          "$RUNNER_TEMP/wheel-venv/bin/gameforge" model-check \
+            --profile config/model.mock.yaml --json
+      - name: Scan tracked files for private keys and live GitHub tokens
+        run: |
+          if git grep -nE -- '-----BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY-----|gh[pousr]_[A-Za-z0-9]{20,}'; then
+            echo "Potential secret found in tracked files" >&2
+            exit 1
+          fi

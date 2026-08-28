@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this harness or its evaluation fixtures, please cite this repository."
+title: "GameForge Harness: open execution and independent verification for game agents"
+type: software
+authors:
+  - family-names: Chen
+    given-names: Albus
+    alias: AlbusChen
+version: 0.1.0
+date-released: 2026-08-05
+repository-code: "https://github.com/AlbusChen/GameForge-Harness"
+license: Apache-2.0

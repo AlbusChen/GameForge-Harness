@@ -1,0 +1,246 @@
+{
+  "schema_version": 1,
+  "id": "unity-open-request-proxy-v2",
+  "purpose": "Authored proxy scenarios for measuring open-request Harness mechanics. This is not a sample of production users and its class mix must not be reported as a real-world request distribution.",
+  "source_project": "unity/ArenaTemplate",
+  "game_task": "benchmarks/unity-programmable-open-suite-v1.json",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "cases": [
+    {
+      "id": "query-enemy-speed",
+      "intent_class": "read_only_query",
+      "mode": "query",
+      "question": "敌人的移动速度在哪里控制？初始默认值、生成时传递路径和运行时下限分别是什么？请只解释，不要修改项目。",
+      "paths": [
+        "Assets/Scripts/EnemyController.cs",
+        "Assets/Scripts/EnemySpawner.cs"
+      ]
+    },
+    {
+      "id": "query-end-screen",
+      "intent_class": "read_only_query",
+      "mode": "query",
+      "question": "游戏结束界面在什么条件下显示，并且如何决定显示 Victory 还是 Defeat？请串联相关状态变化，只解释、不修改。",
+      "paths": [
+        "Assets/Scripts/HudController.cs",
+        "Assets/Scripts/GameController.cs",
+        "Assets/Scripts/GameStatus.cs"
+      ]
+    },
+    {
+      "id": "query-weapon-cooldown",
+      "intent_class": "read_only_query",
+      "mode": "query",
+      "question": "武器射速如何转换成两次射击之间的冷却时间？测试射击和玩家输入是否走同一条限制路径？只解释、不修改。",
+      "paths": [
+        "Assets/Scripts/WeaponController.cs",
+        "Assets/Scripts/TestCommandReceiver.cs"
+      ]
+    },
+    {
+      "id": "query-damage-flow",
+      "intent_class": "read_only_query",
+      "mode": "query",
+      "question": "分别说明敌人接触伤害和玩家投射物伤害怎样到达生命值组件，以及哪些地方会把非法伤害值夹到安全范围。只解释、不修改。",
+      "paths": [
+        "Assets/Scripts/EnemyController.cs",
+        "Assets/Scripts/PlayerHealth.cs",
+        "Assets/Scripts/Projectile.cs",
+        "Assets/Scripts/EnemyHealth.cs"
+      ]
+    },
+    {
+      "id": "query-spawn-lifecycle",
+      "intent_class": "read_only_query",
+      "mode": "query",
+      "question": "敌人从生成、注册到死亡移除的生命周期是什么？请指出 ID、初始状态和胜利条件在哪里产生，只解释、不修改。",
+      "paths": [
+        "Assets/Scripts/EnemySpawner.cs",
+        "Assets/Scripts/EnemyHealth.cs",
+        "Assets/Scripts/GameController.cs"
+      ]
+    },
+    {
+      "id": "clarify-make-more-fun",
+      "intent_class": "underspecified_mutation",
+      "mode": "unapproved",
+      "request": "让游戏更有趣。",
+      "editable_paths": ["Assets/Scripts/GameController.cs"],
+      "acceptance": ["file_contains:Assets/Scripts/GameController.cs::namespace VerifiedGameBuilder.Game"],
+      "gates": ["compilation"],
+      "expected_disposition": "approval_or_clarification_required"
+    },
+    {
+      "id": "clarify-improve-ui",
+      "intent_class": "underspecified_mutation",
+      "mode": "unapproved",
+      "request": "把 UI 做得更好看一点。",
+      "editable_paths": ["Assets/Scripts/HudController.cs"],
+      "acceptance": ["file_contains:Assets/Scripts/HudController.cs::public sealed class HudController"],
+      "gates": ["compilation"],
+      "expected_disposition": "approval_or_clarification_required"
+    },
+    {
+      "id": "clarify-balance-difficulty",
+      "intent_class": "underspecified_mutation",
+      "mode": "unapproved",
+      "request": "重新平衡难度，让新手和高手都玩得舒服。",
+      "editable_paths": ["Assets/Scripts/EnemySpawner.cs"],
+      "acceptance": ["file_contains:Assets/Scripts/EnemySpawner.cs::public sealed class EnemySpawner"],
+      "gates": ["compilation", "gameplay"],
+      "expected_disposition": "approval_or_clarification_required"
+    },
+    {
+      "id": "clarify-add-boss",
+      "intent_class": "underspecified_mutation",
+      "mode": "unapproved",
+      "request": "加一个最终 Boss，要有独特机制。",
+      "editable_paths": ["Assets/Scripts/EnemySpawner.cs"],
+      "acceptance": ["file_contains:Assets/Scripts/EnemySpawner.cs::public sealed class EnemySpawner"],
+      "gates": ["compilation", "gameplay"],
+      "expected_disposition": "approval_or_clarification_required"
+    },
+    {
+      "id": "change-weapon-fire-rate",
+      "intent_class": "bounded_change",
+      "mode": "change",
+      "request": "Increase the arena weapon fire rate from four to six shots per second.",
+      "editable_paths": ["Assets/Scripts/WeaponController.cs"],
+      "acceptance": [
+        "file_contains:Assets/Scripts/WeaponController.cs::private float fireRate = 6f;",
+        "file_not_contains:Assets/Scripts/WeaponController.cs::private float fireRate = 4f;"
+      ],
+      "gates": ["compilation", "gameplay"]
+    },
+    {
+      "id": "change-enemy-speed",
+      "intent_class": "bounded_change",
+      "mode": "change",
+      "request": "Increase the default spawned-enemy movement speed from three to 3.5.",
+      "editable_paths": ["Assets/Scripts/EnemySpawner.cs"],
+      "acceptance": [
+        "file_contains:Assets/Scripts/EnemySpawner.cs::private float speed = 3.5f;",
+        "file_not_contains:Assets/Scripts/EnemySpawner.cs::private float speed = 3f;"
+      ],
+      "gates": ["compilation", "gameplay"]
+    },
+    {
+      "id": "change-hud-health-label",
+      "intent_class": "bounded_change",
+      "mode": "change",
+      "request": "Shorten the HUD health label from Health to HP without changing the enemy counter text.",
+      "editable_paths": ["Assets/Scripts/HudController.cs"],
+      "acceptance": [
+        "file_contains:Assets/Scripts/HudController.cs::healthText.text = $\"HP: {playerHealth.CurrentHealth}/{playerHealth.MaxHealth}\";",
+        "file_contains:Assets/Scripts/HudController.cs::enemiesText.text = $\"Enemies: {gameController.EnemiesAlive}\";"
+      ],
+      "gates": ["compilation", "gameplay"]
+    },
+    {
+      "id": "change-player-speed",
+      "intent_class": "bounded_change",
+      "mode": "change",
+      "request": "Raise the player's default movement speed from 6 to 7.5 while preserving the non-negative runtime clamp.",
+      "editable_paths": ["Assets/Scripts/PlayerController.cs"],
+      "acceptance": [
+        "file_contains:Assets/Scripts/PlayerController.cs::private float speed = 7.5f;",
+        "file_contains:Assets/Scripts/PlayerController.cs::speed = Mathf.Max(0f, movementSpeed);"
+      ],
+      "gates": ["compilation", "gameplay"]
+    },
+    {
+      "id": "change-player-max-health",
+      "intent_class": "bounded_change",
+      "mode": "change",
+      "request": "Increase the player's default maximum health from 100 to 125 without changing the reset behavior.",
+      "editable_paths": ["Assets/Scripts/PlayerHealth.cs"],
+      "acceptance": [
+        "file_contains:Assets/Scripts/PlayerHealth.cs::private int maxHealth = 125;",
+        "file_contains:Assets/Scripts/PlayerHealth.cs::CurrentHealth = maxHealth;"
+      ],
+      "gates": ["compilation", "gameplay"]
+    },
+    {
+      "id": "change-enemy-count",
+      "intent_class": "bounded_change",
+      "mode": "change",
+      "request": "Increase the default number of spawned enemies from five to seven without changing health, damage, or speed defaults.",
+      "editable_paths": ["Assets/Scripts/EnemySpawner.cs"],
+      "acceptance": [
+        "file_contains:Assets/Scripts/EnemySpawner.cs::private int count = 7;",
+        "file_contains:Assets/Scripts/EnemySpawner.cs::private int health = 20;",
+        "file_contains:Assets/Scripts/EnemySpawner.cs::private int damage = 10;",
+        "file_contains:Assets/Scripts/EnemySpawner.cs::private float speed = 3f;"
+      ],
+      "gates": ["compilation", "gameplay"]
+    },
+    {
+      "id": "change-projectile-speed",
+      "intent_class": "bounded_change",
+      "mode": "change",
+      "request": "Raise the weapon projectile speed from 18 to 22 without changing range, fire rate, or damage.",
+      "editable_paths": ["Assets/Scripts/WeaponController.cs"],
+      "acceptance": [
+        "file_contains:Assets/Scripts/WeaponController.cs::private float projectileSpeed = 22f;",
+        "file_contains:Assets/Scripts/WeaponController.cs::private float range = 20f;",
+        "file_contains:Assets/Scripts/WeaponController.cs::private float fireRate = 4f;",
+        "file_contains:Assets/Scripts/WeaponController.cs::private int damage = 10;"
+      ],
+      "gates": ["compilation", "gameplay"]
+    },
+    {
+      "id": "change-victory-copy",
+      "intent_class": "bounded_change",
+      "mode": "change",
+      "request": "Change only the winning end-screen copy from Victory to You Win; keep the losing copy exactly Defeat.",
+      "editable_paths": ["Assets/Scripts/HudController.cs"],
+      "acceptance": [
+        "file_contains:Assets/Scripts/HudController.cs::gameController.Status == GameStatus.Won ? \"You Win\" : \"Defeat\";",
+        "file_not_contains:Assets/Scripts/HudController.cs::? \"Victory\" : \"Defeat\";"
+      ],
+      "gates": ["compilation", "gameplay"]
+    },
+    {
+      "id": "create-arena-tuning-script",
+      "intent_class": "create",
+      "mode": "create",
+      "brief": "benchmarks/briefs/create-arena-tuning-script.md",
+      "editable_paths": ["Assets/Scripts/ArenaTuning.cs"],
+      "acceptance": [
+        "file_exists:Assets/Scripts/ArenaTuning.cs",
+        "file_contains:Assets/Scripts/ArenaTuning.cs::public const int DifficultyTier = 2;"
+      ],
+      "gates": ["specification", "compilation", "structure", "gameplay", "build", "smoke"]
+    },
+    {
+      "id": "create-arena-limits-script",
+      "intent_class": "create",
+      "mode": "create",
+      "inline_brief": "Create Assets/Scripts/ArenaLimits.cs in namespace VerifiedGameBuilder.Game. Define a public static class ArenaLimits with public const int MaximumEnemies = 12 and public const float MaximumWeaponRange = 30f. Do not modify any existing file.",
+      "editable_paths": ["Assets/Scripts/ArenaLimits.cs"],
+      "acceptance": [
+        "file_exists:Assets/Scripts/ArenaLimits.cs",
+        "file_contains:Assets/Scripts/ArenaLimits.cs::public static class ArenaLimits",
+        "file_contains:Assets/Scripts/ArenaLimits.cs::public const int MaximumEnemies = 12;",
+        "file_contains:Assets/Scripts/ArenaLimits.cs::public const float MaximumWeaponRange = 30f;"
+      ],
+      "gates": ["specification", "compilation", "structure", "gameplay"]
+    },
+    {
+      "id": "create-arena-difficulty-enum",
+      "intent_class": "create",
+      "mode": "create",
+      "inline_brief": "Create Assets/Scripts/ArenaDifficulty.cs in namespace VerifiedGameBuilder.Game. Define a public enum ArenaDifficulty with exactly the ordered members Easy, Normal, and Hard. Do not modify existing files.",
+      "editable_paths": ["Assets/Scripts/ArenaDifficulty.cs"],
+      "acceptance": [
+        "file_exists:Assets/Scripts/ArenaDifficulty.cs",
+        "file_contains:Assets/Scripts/ArenaDifficulty.cs::public enum ArenaDifficulty",
+        "file_contains:Assets/Scripts/ArenaDifficulty.cs::Easy,",
+        "file_contains:Assets/Scripts/ArenaDifficulty.cs::Normal,",
+        "file_contains:Assets/Scripts/ArenaDifficulty.cs::Hard"
+      ],
+      "gates": ["specification", "compilation", "structure", "gameplay"]
+    }
+  ]
+}

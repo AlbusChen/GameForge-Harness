@@ -1,0 +1,56 @@
+{
+  "actions": [
+    {
+      "frames": 75,
+      "keys": [
+        "D"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 65,
+      "keys": [
+        "D",
+        "SHIFT"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 45,
+      "keys": [
+        "S"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 55,
+      "keys": [
+        "A",
+        "SHIFT"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 45,
+      "keys": [
+        "W",
+        "E"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 60,
+      "type": "wait"
+    }
+  ],
+  "fps": 30,
+  "height": 720,
+  "interaction": "movement, crouching, guard simulation, and interaction",
+  "schema_version": 1,
+  "settle_frames": 30,
+  "showcase_id": "godot-stealth_infiltration",
+  "tail_frames": 60,
+  "task_id": "stealth_infiltration",
+  "title": "Stealth Infiltration",
+  "width": 1280
+}

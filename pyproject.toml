@@ -1,0 +1,107 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "gameforge-harness"
+version = "0.1.0"
+description = "An open game-development harness for multiple engines, currently tested on Unity and Godot."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+authors = [{ name = "AlbusChen" }]
+keywords = ["agents", "benchmark", "game-development", "godot", "harness", "unity", "verification"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Games/Entertainment",
+  "Topic :: Software Development :: Testing",
+]
+dependencies = [
+  "Pillow>=11,<13",
+  "pydantic>=2.11,<3",
+  "PyYAML>=6.0.2,<7",
+]
+
+[project.urls]
+Homepage = "https://github.com/AlbusChen/GameForge-Harness"
+Issues = "https://github.com/AlbusChen/GameForge-Harness/issues"
+Repository = "https://github.com/AlbusChen/GameForge-Harness.git"
+
+[project.scripts]
+gameforge = "gameforge.cli:main"
+
+[dependency-groups]
+dev = [
+  "pytest>=8.3,<9",
+  "ruff>=0.12,<1",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["gameforge"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"benchmarks" = "gameforge/resources/benchmarks"
+"config" = "gameforge/resources/config"
+"docs" = "gameforge/resources/docs"
+"specs" = "gameforge/resources/specs"
+"unity/AgentBridge" = "gameforge/resources/unity/AgentBridge"
+"unity/ArenaTemplate/Assets" = "gameforge/resources/unity/ArenaTemplate/Assets"
+"unity/ArenaTemplate/Packages" = "gameforge/resources/unity/ArenaTemplate/Packages"
+"unity/ArenaTemplate/ProjectSettings" = "gameforge/resources/unity/ArenaTemplate/ProjectSettings"
+"unity/EmptyGameTemplate/Assets" = "gameforge/resources/unity/EmptyGameTemplate/Assets"
+"unity/EmptyGameTemplate/Packages" = "gameforge/resources/unity/EmptyGameTemplate/Packages"
+"unity/EmptyGameTemplate/ProjectSettings" = "gameforge/resources/unity/EmptyGameTemplate/ProjectSettings"
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "/.github",
+  "/benchmarks",
+  "/config",
+  "/docs",
+  "/gameforge",
+  "/scripts",
+  "/specs",
+  "/tests",
+  "/unity/AgentBridge",
+  "/unity/ArenaTemplate/Assets",
+  "/unity/ArenaTemplate/Packages",
+  "/unity/ArenaTemplate/ProjectSettings",
+  "/unity/EmptyGameTemplate/Assets",
+  "/unity/EmptyGameTemplate/Packages",
+  "/unity/EmptyGameTemplate/ProjectSettings",
+  "/CHANGELOG.md",
+  "/CODE_OF_CONDUCT.md",
+  "/CONTRIBUTING.md",
+  "/LICENSE",
+  "/README.md",
+  "/README.zh-CN.md",
+  "/RELEASE.json",
+  "/SECURITY.md",
+  "/pyproject.toml",
+  "/uv.lock",
+]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = [
+  "tests/test_direct_api_workspace.py",
+  "tests/test_execution_boundaries.py",
+  "tests/test_game_workspace_entrypoint.py",
+  "tests/test_native_open_profile.py",
+  "tests/test_shell_environment.py",
+  "tests/test_solver_backends.py",
+  "tests/test_unity_open_workspace.py",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]

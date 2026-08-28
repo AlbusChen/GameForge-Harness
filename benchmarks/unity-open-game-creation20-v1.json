@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "id": "unity-open-game-creation20-v1",
+  "purpose": "A single-condition Unity showcase of the same twenty authored mechanic and presentation families used by the Godot open-creation suite. It demonstrates breadth and produces inspectable games; it is not an execution-profile comparison or an estimate of a natural request distribution.",
+  "design": {
+    "type": "single-condition showcase",
+    "frozen_before_model_execution": true,
+    "task_count": 20,
+    "condition": "unified-game-workspace-native-open",
+    "repetitions_per_task": 1,
+    "interpretation": "Report engine/solver/infrastructure outcomes separately, then summarize playable breadth and select representative artifacts with disclosed criteria."
+  },
+  "execution": {
+    "harness": "unified-game-workspace-harness",
+    "command": "run-game-workspace",
+    "engine_selection": "auto",
+    "solver_backend": "codex-subscription",
+    "execution_profile": "native-open",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "medium",
+    "solver_timeout_seconds": 1200,
+    "parallelism": 1,
+    "engine": "Unity",
+    "engine_version": "6000.3.20f1",
+    "target": "desktop 2D",
+    "starting_workspace": "minimal empty Unity project",
+    "network": "model-selected under native-open",
+    "intermediate_harness_validation": false,
+    "automatic_repair": false
+  },
+  "evaluation": {
+    "solver_blind": true,
+    "hard_gate": "The delivered project imports and compiles in pinned Unity; an evaluator copy contains a discoverable scene, builds a macOS player, launches it, and captures runtime metadata plus initial and later screenshots.",
+    "generic_probe": "After solving, the evaluator injects only a generic build/screenshot/quit probe into a separate project copy. It does not require project-specific APIs, object names, coordinates, hooks, or a prescribed solver workflow.",
+    "quality_dimensions": {
+      "brief_fulfillment": "0-4",
+      "gameplay_systems": "0-4",
+      "visual_coherence": "0-4",
+      "usability_and_feedback": "0-4"
+    },
+    "showcase_selection": "Select representative games only after all twenty finish, prioritizing hard-gate pass, genre diversity, visible completeness, and artifact inspectability; disclose that this is curated showcase selection rather than a random sample."
+  },
+  "schedule": [
+    {
+      "ordinal": 1,
+      "task_id": "arena_survivor"
+    },
+    {
+      "ordinal": 2,
+      "task_id": "precision_platformer"
+    },
+    {
+      "ordinal": 3,
+      "task_id": "brick_breaker"
+    },
+    {
+      "ordinal": 4,
+      "task_id": "tower_defense"
+    },
+    {
+      "ordinal": 5,
+      "task_id": "sokoban_puzzle"
+    },
+    {
+      "ordinal": 6,
+      "task_id": "turn_based_battler"
+    },
+    {
+      "ordinal": 7,
+      "task_id": "top_down_racing"
+    },
+    {
+      "ordinal": 8,
+      "task_id": "rhythm_game"
+    },
+    {
+      "ordinal": 9,
+      "task_id": "stealth_infiltration"
+    },
+    {
+      "ordinal": 10,
+      "task_id": "farming_day"
+    },
+    {
+      "ordinal": 11,
+      "task_id": "match_three"
+    },
+    {
+      "ordinal": 12,
+      "task_id": "roguelike_dungeon"
+    },
+    {
+      "ordinal": 13,
+      "task_id": "pinball_table"
+    },
+    {
+      "ordinal": 14,
+      "task_id": "endless_runner"
+    },
+    {
+      "ordinal": 15,
+      "task_id": "factory_logistics"
+    },
+    {
+      "ordinal": 16,
+      "task_id": "artillery_duel"
+    },
+    {
+      "ordinal": 17,
+      "task_id": "deckbuilding_duel"
+    },
+    {
+      "ordinal": 18,
+      "task_id": "physics_sandbox"
+    },
+    {
+      "ordinal": 19,
+      "task_id": "fishing_challenge"
+    },
+    {
+      "ordinal": 20,
+      "task_id": "local_coop_arena"
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "arena_survivor",
+      "genre": "top-down action survival",
+      "brief": "Use the available Unity 6000.3.20f1 engine to create a compact, polished 2D top-down arena survival game from this empty workspace. The player should be able to move and attack, enemies should actively pressure the player, and the game should communicate health, score or progress, loss, and restart clearly. Make the result immediately understandable and visually coherent. You choose the project structure, art approach, controls, and implementation, and should deliver a runnable game without further assistance."
+    },
+    {
+      "task_id": "precision_platformer",
+      "genre": "one-screen platformer",
+      "brief": "Use the available Unity 6000.3.20f1 engine to create a compact, polished 2D one-screen platform game from this empty workspace. It should support responsive movement and jumping, contain platforms plus meaningful hazards and collectibles or a goal, and clearly handle success, failure, and restart. Make the level readable and the game immediately playable. You choose the project structure, art approach, controls, and implementation, and should deliver a runnable game without further assistance."
+    },
+    {
+      "task_id": "brick_breaker",
+      "genre": "arcade physics",
+      "brief": "Use the available Unity 6000.3.20f1 engine to create a compact, polished 2D brick-breaker arcade game from this empty workspace. It should have a controllable paddle, a visibly moving ball with convincing rebounds, a varied field of destructible bricks, score and lives or an equivalent failure budget, and clear win, loss, and restart behavior. You choose the project structure, art approach, controls, and implementation, and should deliver a runnable game without further assistance."
+    },
+    {
+      "task_id": "tower_defense",
+      "genre": "real-time strategy",
+      "brief": "Use the available Unity 6000.3.20f1 engine to create a compact, polished 2D tower-defense game from this empty workspace. Enemies should travel along a readable route in waves, the player should be able to place useful defenses through an understandable interface, and money or another placement resource, base health, progress, win or loss, and restart should be communicated clearly. You choose the project structure, art approach, controls, and implementation, and should deliver a runnable game without further assistance."
+    },
+    {
+      "task_id": "sokoban_puzzle",
+      "genre": "grid puzzle",
+      "brief": "Use the available Unity 6000.3.20f1 engine to create a compact, polished 2D box-pushing grid puzzle from this empty workspace. Include at least one coherent solvable level with walls, movable crates, target cells, constrained grid movement, a move counter, and clear win, restart, and undo behavior. Make the state easy to read without external instructions. You choose the project structure, art approach, controls, and implementation, and should deliver a runnable game without further assistance."
+    },
+    {
+      "task_id": "turn_based_battler",
+      "genre": "turn-based tactics and UI",
+      "brief": "Use the available Unity 6000.3.20f1 engine to create a compact, polished 2D turn-based battle game from this empty workspace. The player should make meaningful choices among multiple actions, an opponent should take understandable turns, health and any action resource or status effects should be visible, and win, loss, feedback, and restart should be clear. You choose whether the actions resemble cards, skills, or tactical commands, as well as the project structure, art approach, controls, and implementation, and should deliver a runnable game without further assistance."
+    },
+    {
+      "task_id": "top_down_racing",
+      "genre": "top-down racing",
+      "brief": "Use Unity 6000.3.20f1 to create a polished compact 2D top-down racing game from this empty workspace. Include a readable closed track, responsive steering and acceleration, collisions or off-track consequences, at least one active opponent or meaningful time-trial pressure, lap or checkpoint progress, a finish result, and a clear restart. Make speed and direction easy to understand through visual feedback. Choose your own architecture, art, and controls and deliver a runnable game without further assistance."
+    },
+    {
+      "task_id": "rhythm_game",
+      "genre": "rhythm and timing",
+      "brief": "Use Unity 6000.3.20f1 to create a polished compact 2D rhythm game from this empty workspace. Present a readable timed sequence of notes or beats across multiple input lanes, accept player timing with clear hit and miss feedback, track score and combo or accuracy, increase or vary challenge, and communicate completion plus restart. It must remain playable without external audio assets, so provide strong visual timing cues. Choose your own architecture, art, and controls and deliver a runnable game without further assistance."
+    },
+    {
+      "task_id": "stealth_infiltration",
+      "genre": "stealth puzzle",
+      "brief": "Use Unity 6000.3.20f1 to create a polished compact 2D top-down stealth infiltration game from this empty workspace. The player should navigate around patrolling guards with visible or understandable detection zones, use cover or timing to reach an objective, receive escalating detection feedback, and have clear success, capture, and restart states. Include a coherent small level rather than a technology demo. Choose your own architecture, art, and controls and deliver a runnable game without further assistance."
+    },
+    {
+      "task_id": "farming_day",
+      "genre": "farming and time management",
+      "brief": "Use Unity 6000.3.20f1 to create a polished compact 2D farming and time-management game from this empty workspace. Let the player move through a readable plot, prepare soil, plant and grow or harvest crops, manage a limited day timer or energy resource, earn visible progress or currency, and complete a small goal with restart or replay. Make tool state and crop progression clear. Choose your own architecture, art, and controls and deliver a runnable game without further assistance."
+    },
+    {
+      "task_id": "match_three",
+      "genre": "match-three puzzle",
+      "brief": "Use Unity 6000.3.20f1 to create a polished compact 2D match-three puzzle game from this empty workspace. Provide a readable grid of varied pieces, allow adjacent swaps, detect and clear valid matches, reject or undo invalid moves, refill the board, track score and a limited move or time objective, and clearly handle completion and restart. Add satisfying visual feedback rather than only changing text. Choose your own architecture, art, and controls and deliver a runnable game without further assistance."
+    },
+    {
+      "task_id": "roguelike_dungeon",
+      "genre": "turn-based dungeon roguelike",
+      "brief": "Use Unity 6000.3.20f1 to create a polished compact 2D turn-based dungeon roguelike from this empty workspace. Build a readable dungeon with movement on a grid, enemies that act in response to turns, combat and health, pickups or progression choices, a goal or exit, death and restart, and enough procedural or randomized variation to support replay. Make rules and feedback understandable on screen. Choose your own architecture, art, and controls and deliver a runnable game without further assistance."
+    },
+    {
+      "task_id": "pinball_table",
+      "genre": "pinball physics",
+      "brief": "Use Unity 6000.3.20f1 to create a polished compact 2D pinball game from this empty workspace. Include a launchable ball, player-controlled flippers, convincing collisions, bumpers or targets that affect score, drains and a limited ball count, a visually readable table, game-over, and restart. The game should feel active and provide impact feedback. Choose your own architecture, art, and controls and deliver a runnable game without further assistance."
+    },
+    {
+      "task_id": "endless_runner",
+      "genre": "endless runner",
+      "brief": "Use Unity 6000.3.20f1 to create a polished compact 2D endless-runner game from this empty workspace. Provide automatic forward motion or scrolling, responsive jump or dodge controls, varied obstacles and collectibles, increasing challenge, distance and score feedback, collision and loss, and immediate restart. Make motion and danger readable at a glance. Choose your own architecture, art, and controls and deliver a runnable game without further assistance."
+    },
+    {
+      "task_id": "factory_logistics",
+      "genre": "factory and logistics puzzle",
+      "brief": "Use Unity 6000.3.20f1 to create a polished compact 2D factory-logistics game from this empty workspace. Let the player place or rotate a small set of conveyors or routing devices, move distinct resources from sources to matching destinations, consume a limited build budget or track efficiency, detect a completed production goal, and support clear editing and restart. Make flow direction and machine state visually obvious. Choose your own architecture, art, and controls and deliver a runnable game without further assistance."
+    },
+    {
+      "task_id": "artillery_duel",
+      "genre": "turn-based artillery",
+      "brief": "Use Unity 6000.3.20f1 to create a polished compact 2D turn-based artillery duel from this empty workspace. Let the player aim and choose shot power, simulate a visible ballistic projectile affected by gravity and optionally wind, damage an opponent or target, alternate turns with an AI response, show health and aiming feedback, and handle victory, defeat, and restart. Choose your own architecture, art, and controls and deliver a runnable game without further assistance."
+    },
+    {
+      "task_id": "deckbuilding_duel",
+      "genre": "deckbuilding card duel",
+      "brief": "Use Unity 6000.3.20f1 to create a polished compact 2D deckbuilding card duel from this empty workspace. Present a hand of readable cards with costs and different effects, energy or another per-turn resource, draw and discard behavior, an opponent that takes turns, health and combat feedback, at least one meaningful card choice or reward between rounds, and clear victory, defeat, and restart. Choose your own architecture, art, and controls and deliver a runnable game without further assistance."
+    },
+    {
+      "task_id": "physics_sandbox",
+      "genre": "physics construction sandbox",
+      "brief": "Use Unity 6000.3.20f1 to create a polished compact 2D physics construction sandbox from this empty workspace. Allow the player to spawn, drag, connect, or otherwise arrange multiple physical objects, provide gravity and convincing collisions, include a small objective such as guiding an object to a target or building a stable structure, expose clear controls, and support reset. Make experimentation visually satisfying and immediately understandable. Choose your own architecture, art, and controls and deliver a runnable game without further assistance."
+    },
+    {
+      "task_id": "fishing_challenge",
+      "genre": "fishing timing game",
+      "brief": "Use Unity 6000.3.20f1 to create a polished compact 2D fishing game from this empty workspace. Let the player cast, wait for a readable bite signal, hook with timing, and complete an interactive reeling or tension challenge against varied fish. Track catches, score, time or attempts, communicate success and escape clearly, and provide replay or restart. Choose your own architecture, art, and controls and deliver a runnable game without further assistance."
+    },
+    {
+      "task_id": "local_coop_arena",
+      "genre": "local cooperative arena",
+      "brief": "Use Unity 6000.3.20f1 to create a polished compact 2D local two-player cooperative arena game from this empty workspace. Two players sharing one keyboard should have distinct controls and visible characters, work together against active enemies or hazards, have a meaningful cooperation mechanic such as revival, shared objectives, or complementary abilities, and receive clear score, health, win or loss, and restart feedback. Also keep a one-player fallback understandable for evaluation. Choose your own architecture and art and deliver a runnable game without further assistance."
+    }
+  ]
+}

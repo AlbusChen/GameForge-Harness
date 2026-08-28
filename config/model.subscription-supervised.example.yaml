@@ -1,0 +1,13 @@
+# Subscription login plus the supervised-native execution boundary.
+# The model still chooses every command and Unity/Godot argument; only pinned engine
+# processes cross the transparent Host broker.
+provider: codex-subscription
+model: gpt-5.6-terra
+executable: replace-with-local-agent-executable
+execution_profile: supervised-native
+reasoning_effort: medium
+input_usd_per_million: 0
+cached_input_usd_per_million: 0
+output_usd_per_million: 0
+timeout_seconds: 900
+max_output_tokens: 1200

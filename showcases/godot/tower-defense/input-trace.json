@@ -1,0 +1,58 @@
+{
+  "actions": [
+    {
+      "frames": 2,
+      "type": "mouse_click",
+      "x": 1100,
+      "y": 233
+    },
+    {
+      "frames": 2,
+      "type": "mouse_click",
+      "x": 455,
+      "y": 578
+    },
+    {
+      "frames": 2,
+      "type": "mouse_click",
+      "x": 1100,
+      "y": 469
+    },
+    {
+      "frames": 2,
+      "type": "mouse_click",
+      "x": 678,
+      "y": 600
+    },
+    {
+      "frames": 2,
+      "type": "mouse_click",
+      "x": 1189,
+      "y": 629
+    },
+    {
+      "frames": 90,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "type": "mouse_click",
+      "x": 1067,
+      "y": 629
+    },
+    {
+      "frames": 240,
+      "type": "wait"
+    }
+  ],
+  "fps": 30,
+  "height": 720,
+  "interaction": "tower selection/placement, wave start, and speed control",
+  "schema_version": 1,
+  "settle_frames": 30,
+  "showcase_id": "godot-tower_defense",
+  "tail_frames": 60,
+  "task_id": "tower_defense",
+  "title": "Tower Defense",
+  "width": 1280
+}

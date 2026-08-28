@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "id": "gamedevbench-pilot20-v1",
+  "benchmark_commit": "e3868bccbb88e86a3eb2d62154f1e9e0f3fd489a",
+  "selection_seed": "e3868bccbb88e86a3eb2d62154f1e9e0f3fd489a:pilot20:v1",
+  "selection_method": "Within each public-task stratum, sort by SHA-256 of selection_seed plus task_id and take the fixed quota before any model run.",
+  "population_counts": {
+    "2d": 176,
+    "ui": 91,
+    "script_resource": 32,
+    "3d": 33
+  },
+  "quotas": {
+    "ui": 6,
+    "2d": 10,
+    "3d": 2,
+    "script_resource": 2
+  },
+  "excluded_archives": [
+    {
+      "task_id": "task_0021",
+      "reason": "The pinned public task archive is a 134-byte unresolved LFS pointer, not a ZIP archive. It was excluded before selection."
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "task_0009",
+      "stratum": "2d",
+      "selection_rank_sha256": "0bfb8c3cb346745afae3559408624d43d1b7cb491aa873c352a07d647b8489c5",
+      "instruction_sha256": "9bbc42f2f47a3ac3af0efbf7172a88dfc4622de5accfd471a45e829d81d2d1aa"
+    },
+    {
+      "task_id": "task_0012",
+      "stratum": "2d",
+      "selection_rank_sha256": "07a041efd1932746fecba3840f4771da960bcc2a9cdd9d9b153217aacb99f9c7",
+      "instruction_sha256": "b3a3eed59983fada87149c1adf59f9c547136df4a10570aa5738bc10fe72fe5f"
+    },
+    {
+      "task_id": "task_0024",
+      "stratum": "3d",
+      "selection_rank_sha256": "171f6da201ff9e3985d3c21f3d365d36c25bce53d2dd4a5d6a870d6df32599a7",
+      "instruction_sha256": "279eb24284480a2037d284cf0ac9ff8ca19e65d62a2188d30216edda5f746a41"
+    },
+    {
+      "task_id": "task_0040",
+      "stratum": "ui",
+      "selection_rank_sha256": "0ee5a85c04a05a7cf9633fac717cac68fc8fae4d6731fd741fa6330c38ac86c1",
+      "instruction_sha256": "4c915f2ef31276516a815c0ff755cf2bf37cb61b840b50d6952d736a7a7595d5"
+    },
+    {
+      "task_id": "task_0065",
+      "stratum": "ui",
+      "selection_rank_sha256": "0adf706e5a3a1fbb3a47a92adc23339689c83232be6e84e240a84905ac8e6f46",
+      "instruction_sha256": "61dcd357c092b1a1d9dabdbfb5fb9e8fb26861e851e86fcb6265353d2d4b8991"
+    },
+    {
+      "task_id": "task_0110",
+      "stratum": "3d",
+      "selection_rank_sha256": "11c5b34978d922bb7885b092a3c8181110d4c02b434d35110ebca47759e7c777",
+      "instruction_sha256": "1891253f5de8bce372b99d449da1fdbf62c5f4a55c6e352cbe107cd704981e95"
+    },
+    {
+      "task_id": "task_0124",
+      "stratum": "ui",
+      "selection_rank_sha256": "0c296ab345d1a78adb08e91fa8b2f944845cf4c227dfac081d12fc0b9236b203",
+      "instruction_sha256": "e8f74d56c8e691eff6efab6589808d3ab798ab712396d59bf442e5d77dba9f9d"
+    },
+    {
+      "task_id": "task_0151",
+      "stratum": "ui",
+      "selection_rank_sha256": "0bb0bcccfc9674719c70330d00004967a0f90d9628f41c17d7b97e99ad041302",
+      "instruction_sha256": "7bae82769fdb4a24cc82baca9f5921508f413d85ddb539fc6a1765fd52a10844"
+    },
+    {
+      "task_id": "task_0180",
+      "stratum": "script_resource",
+      "selection_rank_sha256": "035637b5e5bd7788af2afe53dd2955886e200059c008c47194c237f51b627370",
+      "instruction_sha256": "bb6d47a12b8c7e77df7398137279ac0be4f970f380da2d7b95b15eceb79103eb"
+    },
+    {
+      "task_id": "task_0181",
+      "stratum": "ui",
+      "selection_rank_sha256": "18cfd41e0fbfd8c7752dd241aeb71ebadcf8cd2623e1b7cd431ac948e68f1fe1",
+      "instruction_sha256": "7977b5168afac81736198eb98ca833c229a6a6133fd4bdb8636e37d1164c8c69"
+    },
+    {
+      "task_id": "task_0191",
+      "stratum": "script_resource",
+      "selection_rank_sha256": "03969eb370ff56d8fb0a717fc3afa2571cd1a580ff0d56dc3368a28f539725fc",
+      "instruction_sha256": "725f800c9c6c03ff66cbc7fc3f4b5be51803f16dae3111bfcab52d814c5960f6"
+    },
+    {
+      "task_id": "task_0208",
+      "stratum": "2d",
+      "selection_rank_sha256": "024774171c0d0863cb38668c1f4293246864fbc4cefcf588f0239cfdf577738d",
+      "instruction_sha256": "353418f3b466e12c121b5275fcc26875d97941c095f2a472902c173dedfba53f"
+    },
+    {
+      "task_id": "task_0220",
+      "stratum": "2d",
+      "selection_rank_sha256": "03a807106cf650726bbf17a50d7c760c2b5298f838f3dc3c36ca300d6ec07d0b",
+      "instruction_sha256": "36262c59fc41cb05a5e19512a446feb61dc8ce3f73cbbff51084f0361fbaab70"
+    },
+    {
+      "task_id": "task_0222",
+      "stratum": "2d",
+      "selection_rank_sha256": "04655766bb90ab2cf0c2f34deedcae0aed9a6664dbd2faaca50e1433998d8748",
+      "instruction_sha256": "125fde979592c7dbbb5ba366be3ce1e7d60d4e9035c134f9b741e139936d794a"
+    },
+    {
+      "task_id": "task_0223",
+      "stratum": "2d",
+      "selection_rank_sha256": "0ac79f7e46395988808d03139e7879004797f72ab954a8d961a83461a56c4a07",
+      "instruction_sha256": "37cd4a20f181adcdb962bf5b2002c790b3ddcd36a64f3e3f48ec9cdfcd80da7d"
+    },
+    {
+      "task_id": "task_0277",
+      "stratum": "2d",
+      "selection_rank_sha256": "072f260a54bf50c548dc654d8a0f5e6d3b67f242705729785c8f233d41716964",
+      "instruction_sha256": "a9824f4bb6f03ba2330fc552a334304f333faecd281e78724fb57f4b1a4058ca"
+    },
+    {
+      "task_id": "task_0292",
+      "stratum": "ui",
+      "selection_rank_sha256": "1afab172bf789367857f9afe9bb3b0e1b6b5db64c6d62ae8709611f5e2ff38fd",
+      "instruction_sha256": "ae5285965182a15d3f7d65c80e52638c575acddcc30733853d05e7255d24f4e7"
+    },
+    {
+      "task_id": "task_0313",
+      "stratum": "2d",
+      "selection_rank_sha256": "07f21415747f85ff51f775fca213e2607ee5b675b22d2022ef53cdc8815bc12c",
+      "instruction_sha256": "4dbc3b531286604fa39e85618f3674fa62158d85b49c8d5a726bc213f2df63a0"
+    },
+    {
+      "task_id": "task_0333",
+      "stratum": "2d",
+      "selection_rank_sha256": "0afcebc9420423acf1a87a1bd98a5d3483a296bd6f2501eb9b8aab93208f91a4",
+      "instruction_sha256": "06777a2aef88a8eec25a7aef8072c366f3b518d5bdf5af19dd88c98b0bea4f3a"
+    },
+    {
+      "task_id": "task_0334",
+      "stratum": "2d",
+      "selection_rank_sha256": "08f956959134b0d9c96a2decc4924c729ebf05b4520865ef1b0dbdae0304a022",
+      "instruction_sha256": "7b4aba08876b1c98589475b24921b8bcce8ffc1e6713a01c56d34a37b53a46f1"
+    }
+  ]
+}

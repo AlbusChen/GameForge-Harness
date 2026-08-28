@@ -1,0 +1,45 @@
+{
+  "claim_boundary": "The model-generated project's own smoke path advances gameplay state while an independent evaluator records rendered frames. This is not raw keyboard/mouse replay.",
+  "evaluator": {
+    "build_seconds": 5.936,
+    "editor_builder_sha256": "8f74453e20e96583cd277aee9c6de9323697d3baca36dcc1598055bb2cd63339",
+    "editor_script_in_temporary_copy": "${TEMP_DIRECTORY}/gameforge-unity-gameplay-dtb00zmc/project-20-local_coop_arena/Assets/GameForgeGameplayRecorder/Editor/BuildEntry.cs",
+    "runtime_recorder_sha256": "6dec1c8a8a102adbd44021d8c589ace8b3582bb671872cf46119e0752b42ad11",
+    "runtime_script_in_temporary_copy": "${TEMP_DIRECTORY}/gameforge-unity-gameplay-dtb00zmc/project-20-local_coop_arena/Assets/GameForgeGameplayRecorder/Runtime/FrameRecorder.cs",
+    "unity": "/Applications/Unity/Hub/Editor/6000.3.20f1/Unity.app/Contents/MacOS/Unity",
+    "unity_sha256": "0bb649811e4298aece941fc66d82ccc1e49ef5d82fa56cda8a769974aef21aa1"
+  },
+  "evidence_grade": "project-authored-behavior-smoke-replay",
+  "interaction": "project-authored enemy spawning, downing, and ally revive",
+  "recording": {
+    "distinct_frame_sha256_count": 104,
+    "encoder_return_code": 0,
+    "expected_marker": "STARHOLD_PLAYTEST PASS",
+    "finished_at": "2026-08-26T10:37:27.661291+00:00",
+    "fps": 30,
+    "frame_count": 104,
+    "marker_found": true,
+    "movie": "showcases/unity/local-coop-arena-scripted/gameplay.mp4",
+    "movie_bytes": 460195,
+    "movie_sha256": "42181d43db354ed471b820e0733a7b4331499c6f67934b14b71b7dc10289fb81",
+    "player_return_code": 0,
+    "project_smoke_flag": "-starholdValidate",
+    "runtime_error_count": 0,
+    "runtime_error_lines": [],
+    "started_at": "2026-08-26T10:37:16.923366+00:00",
+    "video_seconds": 3.467,
+    "wall_seconds": 9.867
+  },
+  "schema_version": 1,
+  "source": {
+    "benchmark_run": "${INTERNAL_RUNS}/experiments/unity-open-game-creation20-showcase-run3",
+    "public_file_count": 36,
+    "public_tree_sha256": "e4ab5f5bc5a01543b981e6c305237a4733d6bf2b05967d3981a4f88ec12ba7c9",
+    "receipt": "${INTERNAL_RUNS}/experiments/unity-open-game-creation20-showcase-run3/receipts/20-local_coop_arena.json",
+    "receipt_sha256": "55d9ce285f9e27e4941858e80b237e3ac9805692986f0af53fdc0786b5f86017",
+    "workspace": "${INTERNAL_RUNS}/game-open-workspaces/20260825T101204499159Z-unity20-20-local_coop_arena/project"
+  },
+  "status": "PASS",
+  "task_id": "local_coop_arena",
+  "title": "Local Co-op Arena"
+}

@@ -1,0 +1,78 @@
+{
+  "actions": [
+    {
+      "frames": 2,
+      "type": "mouse_click",
+      "x": 128,
+      "y": 175
+    },
+    {
+      "frames": 2,
+      "type": "mouse_click",
+      "x": 200,
+      "y": 175
+    },
+    {
+      "frames": 30,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "type": "mouse_click",
+      "x": 272,
+      "y": 247
+    },
+    {
+      "frames": 2,
+      "type": "mouse_click",
+      "x": 272,
+      "y": 319
+    },
+    {
+      "frames": 30,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "type": "mouse_click",
+      "x": 416,
+      "y": 391
+    },
+    {
+      "frames": 2,
+      "type": "mouse_click",
+      "x": 488,
+      "y": 391
+    },
+    {
+      "frames": 30,
+      "type": "wait"
+    },
+    {
+      "frames": 2,
+      "type": "mouse_click",
+      "x": 200,
+      "y": 535
+    },
+    {
+      "frames": 2,
+      "type": "mouse_click",
+      "x": 200,
+      "y": 607
+    },
+    {
+      "frames": 45,
+      "type": "wait"
+    }
+  ],
+  "fps": 30,
+  "height": 720,
+  "interaction": "mouse selection and multiple adjacent swaps",
+  "schema_version": 1,
+  "settle_frames": 30,
+  "showcase_id": "godot-match_three",
+  "tail_frames": 60,
+  "task_id": "match_three",
+  "title": "Match Three",
+  "width": 1280
+}

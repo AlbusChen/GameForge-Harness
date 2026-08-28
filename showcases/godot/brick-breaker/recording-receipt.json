@@ -1,0 +1,45 @@
+{
+  "claim_boundary": "Proves the preserved project launches, renders, receives the listed normal Godot InputEvent trace, and changes over time; it does not claim level completion.",
+  "evidence_grade": "engine-input-replay",
+  "interaction": "launch plus keyboard and mouse paddle control",
+  "recording": {
+    "distinct_frame_sha256_count": 455,
+    "duration_seconds": 15.167,
+    "encoder_return_code": 0,
+    "engine_return_code": 0,
+    "expected_action_count": 7,
+    "final_sha256": "dd44d61b0fe7b148a9545010f29c9a3941dbf989087294bc4e957e09dd1ec62f",
+    "finished_at": "2026-08-26T10:24:01.462668+00:00",
+    "fps": 30,
+    "frame_count": 455,
+    "initial_sha256": "a2aaf8895281ed00f45a481941053159dacec510909a076285be7ac741f58706",
+    "movie": "showcases/godot/brick-breaker/gameplay.mp4",
+    "movie_bytes": 1306835,
+    "movie_sha256": "21dc069cb83dcb35406e771c5d9b4c48acc644ef81d723fb39e9a48eb28495a4",
+    "passed_action_count": 7,
+    "started_at": "2026-08-26T10:23:49.347805+00:00",
+    "trace": "showcases/godot/brick-breaker/input-trace.json",
+    "trace_sha256": "51f0c3e232267b1e2d208bf5f15a9650c34e4e37d6c29577260c18d88ab94524",
+    "wall_seconds": 10.282
+  },
+  "runtime": {
+    "isolated_executable": "/Applications/Godot.app/Contents/MacOS/Godot",
+    "isolation_mode": "installed-executable-private-home",
+    "probe": "experiments/assets/showcase_record_probe.gd",
+    "probe_sha256": "ce5a8a3e5769b1a52f02eb690689df673eecfc65c231a84cbc9abfbe7ee516d3",
+    "source_godot": "/Applications/Godot.app/Contents/MacOS/Godot",
+    "source_godot_sha256": "ecc8da2d60100102cfca6e833d3860d7436b46ae062fa072ce89a6c95d664a3f"
+  },
+  "schema_version": 1,
+  "source": {
+    "benchmark_run": "${INTERNAL_RUNS}/experiments/godot-open-game-creation20-native-open-minimal-run2",
+    "receipt": "${INTERNAL_RUNS}/experiments/godot-open-game-creation20-native-open-minimal-run2/receipts/18.json",
+    "receipt_sha256": "b36a19e3097fdfd9b5a1d08e6a4a960683d0e2576a90337eb5030c131c45e9e4",
+    "workspace": "${INTERNAL_RUNS}/experiments/godot-open-game-creation20-native-open-minimal-run2/attempts/18-brick_breaker-native-open-minimal/workspace",
+    "workspace_file_count": 4,
+    "workspace_tree_sha256": "6eee6f5feeedc3db94013e71ec8335facca2e2802a58f237aebc38d4c58e0e18"
+  },
+  "status": "PASS",
+  "task_id": "brick_breaker",
+  "title": "Brick Breaker"
+}

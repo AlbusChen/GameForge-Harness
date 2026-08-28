@@ -1,0 +1,47 @@
+{
+  "claim_boundary": "Proves the preserved project launches, renders, receives the listed normal Godot InputEvent trace, and changes over time; it does not claim level completion.",
+  "evidence_grade": "engine-input-replay",
+  "interaction": "start, cast, hook timing, reel tension, and steering",
+  "recording": {
+    "distinct_frame_sha256_count": 574,
+    "duration_seconds": 19.133,
+    "encoder_return_code": 0,
+    "engine_return_code": 0,
+    "expected_action_count": 38,
+    "final_sha256": "89d4f594741a1f001e862341b600f88331966bb68ba2a017fa483debb239cd0d",
+    "finished_at": "2026-08-26T10:25:41.211667+00:00",
+    "fps": 30,
+    "frame_count": 574,
+    "initial_sha256": "0c90065a15c25b4c7c566e667be9d93f574be3ea1c3e9ae65c53e1eade5b676b",
+    "movie": "showcases/godot/fishing-challenge/gameplay.mp4",
+    "movie_bytes": 2550120,
+    "movie_sha256": "32ee75e0b73bcb2ebfcf7dcc2e8e3ea18c68639597e81316b0cd910e0faa4c63",
+    "passed_action_count": 38,
+    "started_at": "2026-08-26T10:25:21.051752+00:00",
+    "trace": "showcases/godot/fishing-challenge/input-trace.json",
+    "trace_sha256": "6f1208f5f074237a55ae6b5d9f0d01794c33450366ed7cf39baa5fadd501b05b",
+    "wall_seconds": 17.423
+  },
+  "runtime": {
+    "adhoc_signed": true,
+    "isolated_executable": "${TEMP_DIRECTORY}/gameforge-gameplay-showcase-2chmymwk/runtime/Godot.app/Contents/MacOS/Godot",
+    "isolation_mode": "macos-self-contained-app-clone-adhoc-signed",
+    "prepared_godot_sha256": "688b24b88cbb13a42c0ce79589d3d9fa9c4c73753c123209ce8140b0227c2596",
+    "probe": "experiments/assets/showcase_record_probe.gd",
+    "probe_sha256": "ce5a8a3e5769b1a52f02eb690689df673eecfc65c231a84cbc9abfbe7ee516d3",
+    "source_godot": "/private/tmp/godot-4.4.1/Godot.app/Contents/MacOS/Godot",
+    "source_godot_sha256": "8d402715e0b74db2d69ceeb86e78b8c6b270f1d9c16be1546958c8648d8e2e47"
+  },
+  "schema_version": 1,
+  "source": {
+    "benchmark_run": "${INTERNAL_RUNS}/experiments/godot-open-game-creation20-native-open-minimal-run2",
+    "receipt": "${INTERNAL_RUNS}/experiments/godot-open-game-creation20-native-open-minimal-run2/receipts/15.json",
+    "receipt_sha256": "e3ca7a35f4d1f3ab5c13bd6a94319c1649c31f55f4d0931013f7946affafa819",
+    "workspace": "${INTERNAL_RUNS}/experiments/godot-open-game-creation20-native-open-minimal-run2/attempts/15-fishing_challenge-native-open-minimal/workspace",
+    "workspace_file_count": 6,
+    "workspace_tree_sha256": "4592608732d42d66b63dce02dde9486a03121d0a037e292857c422e95d476069"
+  },
+  "status": "PASS",
+  "task_id": "fishing_challenge",
+  "title": "Fishing Challenge"
+}

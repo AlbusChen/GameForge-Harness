@@ -1,0 +1,45 @@
+{
+  "claim_boundary": "Proves the preserved project launches, renders, receives the listed normal Godot InputEvent trace, and changes over time; it does not claim level completion.",
+  "evidence_grade": "engine-input-replay",
+  "interaction": "start flow and four independent note lanes",
+  "recording": {
+    "distinct_frame_sha256_count": 583,
+    "duration_seconds": 19.433,
+    "encoder_return_code": 0,
+    "engine_return_code": 0,
+    "expected_action_count": 82,
+    "final_sha256": "742003e7ed638cd291222b9e35496a9d48ccf23606c90f44ab8f9097b9835d9e",
+    "finished_at": "2026-08-26T10:23:09.996389+00:00",
+    "fps": 30,
+    "frame_count": 583,
+    "initial_sha256": "1b638e87f48863a611d7ade946481b8f12b9b939dea5f02c6a8d00891f19d520",
+    "movie": "showcases/godot/rhythm-game/gameplay.mp4",
+    "movie_bytes": 3132534,
+    "movie_sha256": "1a104415a98faef939b668b0ca3ddd59f1397499a32566365cafde80e60a98d6",
+    "passed_action_count": 82,
+    "started_at": "2026-08-26T10:22:55.581162+00:00",
+    "trace": "showcases/godot/rhythm-game/input-trace.json",
+    "trace_sha256": "15171317a1cbf062b91a4787629871bc45b839229f8baa4ece8b17edea8dac0d",
+    "wall_seconds": 12.334
+  },
+  "runtime": {
+    "isolated_executable": "/Applications/Godot.app/Contents/MacOS/Godot",
+    "isolation_mode": "installed-executable-private-home",
+    "probe": "experiments/assets/showcase_record_probe.gd",
+    "probe_sha256": "ce5a8a3e5769b1a52f02eb690689df673eecfc65c231a84cbc9abfbe7ee516d3",
+    "source_godot": "/Applications/Godot.app/Contents/MacOS/Godot",
+    "source_godot_sha256": "ecc8da2d60100102cfca6e833d3860d7436b46ae062fa072ce89a6c95d664a3f"
+  },
+  "schema_version": 1,
+  "source": {
+    "benchmark_run": "${INTERNAL_RUNS}/experiments/godot-open-game-creation20-native-open-minimal-run2",
+    "receipt": "${INTERNAL_RUNS}/experiments/godot-open-game-creation20-native-open-minimal-run2/receipts/07.json",
+    "receipt_sha256": "ffc76bbc85b585b4d6a47f05c35da0a9328ae15ad9e00382f2afd37cf152c58c",
+    "workspace": "${INTERNAL_RUNS}/experiments/godot-open-game-creation20-native-open-minimal-run2/attempts/07-rhythm_game-native-open-minimal/workspace",
+    "workspace_file_count": 5,
+    "workspace_tree_sha256": "c8649ed3cf414a07aa95fa260313ae12f0aecaf8a915c0ad77bbe9b16a02bc12"
+  },
+  "status": "PASS",
+  "task_id": "rhythm_game",
+  "title": "Rhythm Game"
+}

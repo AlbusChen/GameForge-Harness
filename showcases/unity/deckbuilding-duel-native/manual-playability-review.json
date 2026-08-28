@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "evidence_grade": "human-reviewed-macos-native-input-gameplay-progression",
+  "recording_receipt": "recording-receipt.json",
+  "reviewed_at": "2026-08-26T15:40:00Z",
+  "project_modified": false,
+  "observations": [
+    {
+      "frame": "manual-review-frames/01-initial-turn1.png",
+      "state": "Turn 1, player HP 50, enemy HP 34, energy 3, no shield"
+    },
+    {
+      "frame": "manual-review-frames/02-after-pulse.png",
+      "state": "CoreGraphics click played Pulse; enemy HP 34 -> 27, energy 3 -> 2, discard 0 -> 1"
+    },
+    {
+      "frame": "manual-review-frames/03-after-ward.png",
+      "state": "CoreGraphics click played Ward; shield 0 -> 6, energy 2 -> 1, discard 1 -> 2"
+    },
+    {
+      "frame": "manual-review-frames/04-opponent-turn.png",
+      "state": "CoreGraphics Space key ended the turn and entered Opponent Turn"
+    },
+    {
+      "frame": "manual-review-frames/05-turn2.png",
+      "state": "Turn 2 began; shield absorbed six of seven attack damage, player HP 50 -> 49, enemy HP remained 27"
+    }
+  ],
+  "conclusion": "The unmodified generated Unity Player accepted operating-system mouse and keyboard events and advanced its core card-combat loop. This recording proves one Unity case, not the full Unity20 set."
+}

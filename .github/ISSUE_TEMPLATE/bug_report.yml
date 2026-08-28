@@ -1,0 +1,40 @@
+name: Bug report
+description: Report a reproducible harness, adapter, evaluator, or packaging defect.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include API keys, local environment files, or private project source.
+  - type: input
+    id: version
+    attributes:
+      label: Harness version
+      placeholder: Output of gameforge --version
+    validations:
+      required: true
+  - type: dropdown
+    id: engine
+    attributes:
+      label: Engine
+      options: [Unity, Godot, Engine-independent]
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Include commands, sanitized task/profile metadata, and the failing Gate.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sanitized evidence
+      description: Attach logs or result JSON after removing secrets and private absolute paths.

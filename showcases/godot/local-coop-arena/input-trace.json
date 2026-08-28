@@ -1,0 +1,63 @@
+{
+  "actions": [
+    {
+      "frames": 2,
+      "keys": [
+        "1"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 30,
+      "type": "wait"
+    },
+    {
+      "frames": 55,
+      "keys": [
+        "W",
+        "D"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 3,
+      "keys": [
+        "Q"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 30,
+      "type": "wait"
+    },
+    {
+      "frames": 65,
+      "keys": [
+        "S",
+        "A"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 3,
+      "keys": [
+        "Q"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 75,
+      "type": "wait"
+    }
+  ],
+  "fps": 30,
+  "height": 720,
+  "interaction": "mode selection, movement, combat pulse, and live enemies",
+  "schema_version": 1,
+  "settle_frames": 30,
+  "showcase_id": "godot-local_coop_arena",
+  "tail_frames": 60,
+  "task_id": "local_coop_arena",
+  "title": "Local Co-op Arena",
+  "width": 1280
+}

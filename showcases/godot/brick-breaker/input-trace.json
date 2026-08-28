@@ -1,0 +1,55 @@
+{
+  "actions": [
+    {
+      "frames": 2,
+      "keys": [
+        "SPACE"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 30,
+      "type": "wait"
+    },
+    {
+      "frames": 90,
+      "keys": [
+        "D"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 30,
+      "type": "mouse_move",
+      "x": 220,
+      "y": 650
+    },
+    {
+      "frames": 90,
+      "keys": [
+        "A"
+      ],
+      "type": "key"
+    },
+    {
+      "frames": 30,
+      "type": "mouse_move",
+      "x": 690,
+      "y": 650
+    },
+    {
+      "frames": 90,
+      "type": "wait"
+    }
+  ],
+  "fps": 30,
+  "height": 720,
+  "interaction": "launch plus keyboard and mouse paddle control",
+  "schema_version": 1,
+  "settle_frames": 30,
+  "showcase_id": "godot-brick_breaker",
+  "tail_frames": 60,
+  "task_id": "brick_breaker",
+  "title": "Brick Breaker",
+  "width": 1280
+}
