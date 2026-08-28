@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GameForge Harness — Open execution, independent proof</title>
+    <meta
+      name="description"
+      content="A game-development harness that gives capable models an open workspace, then independently builds, launches, replays, records, and verifies the games they deliver."
+    >
+    <meta name="theme-color" content="#070b14">
+    <link rel="canonical" href="https://albuschen.github.io/GameForge-Harness/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="GameForge Harness">
+    <meta
+      property="og:description"
+      content="Open execution for game agents. Independent proof for the games they deliver."
+    >
+    <meta
+      property="og:image"
+      content="https://albuschen.github.io/GameForge-Harness/showcases/godot/tower-defense/preview.png"
+    >
+    <meta property="og:url" content="https://albuschen.github.io/GameForge-Harness/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GameForge Harness">
+    <meta
+      name="twitter:description"
+      content="Open execution for game agents. Independent proof for the games they deliver."
+    >
+    <meta
+      name="twitter:image"
+      content="https://albuschen.github.io/GameForge-Harness/showcases/godot/tower-defense/preview.png"
+    >
+    <link rel="stylesheet" href="site/styles.css">
+    <script src="site/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="nav shell" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="GameForge Harness home">
+          <span class="brand-mark" aria-hidden="true">GF</span>
+          <span>GameForge <strong>Harness</strong></span>
+        </a>
+        <div class="nav-links">
+          <a href="#results">Results</a>
+          <a href="#showcases">Showcases</a>
+          <a href="#pipeline">How it works</a>
+          <a href="#quick-start">Quick start</a>
+        </div>
+        <a
+          class="button button-small button-ghost"
+          href="https://github.com/AlbusChen/GameForge-Harness"
+        >View on GitHub <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero shell" id="top">
+        <div class="hero-copy" data-reveal>
+          <div class="eyebrow">
+            <span class="status-dot" aria-hidden="true"></span>
+            v0.1.0 public alpha · Unity + Godot
+          </div>
+          <h1>Give game agents room to build.<br><span>Verify what they ship.</span></h1>
+          <p class="hero-lede">
+            GameForge is an open game-development harness. The solver gets a complete disposable
+            project and freedom to use code, shell, image, and official engine tools. A separate
+            evaluator builds, launches, replays, records, and verifies the result.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#quick-start">Start building</a>
+            <a class="button button-secondary" href="#results">Explore the evidence</a>
+          </div>
+          <div class="hero-meta" aria-label="Project properties">
+            <span>Apache-2.0</span>
+            <span>Python 3.11+</span>
+            <span>Codex subscription or API</span>
+          </div>
+        </div>
+
+        <div class="hero-media" data-reveal>
+          <div class="glow-orb glow-one" aria-hidden="true"></div>
+          <div class="glow-orb glow-two" aria-hidden="true"></div>
+          <a
+            class="game-window"
+            href="showcases/godot/arena-survivor/gameplay.mp4"
+            aria-label="Play the full Arena Survivor evidence video"
+          >
+            <div class="window-bar">
+              <div class="window-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+              <span>independent-replay.godot</span>
+              <span class="live-chip"><i></i> verified</span>
+            </div>
+            <img
+              src="showcases/godot/arena-survivor/preview.gif"
+              alt="Arena Survivor gameplay with player movement, projectiles, enemies, and score"
+              width="640"
+              height="360"
+              fetchpriority="high"
+            >
+            <div class="window-overlay">
+              <span class="play-mark" aria-hidden="true">▶</span>
+              <span><strong>Arena Survivor</strong><small>Engine-input replay · Godot</small></span>
+            </div>
+          </a>
+          <div class="receipt-card receipt-left">
+            <span class="receipt-icon" aria-hidden="true">✓</span>
+            <span><strong>Runtime gate</strong><small>Passed without script errors</small></span>
+          </div>
+          <div class="receipt-card receipt-right">
+            <span class="receipt-kicker">Evidence</span>
+            <strong>Input → state change</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="proof-strip" aria-label="Headline evidence">
+        <div class="shell proof-grid">
+          <div><strong>63.15%</strong><span>GameCraft full140</span></div>
+          <div><strong>64.16%</strong><span>GameDevBench full332</span></div>
+          <div><strong>40 / 40</strong><span>Open-ended hard gates</span></div>
+          <div><strong>13</strong><span>Playable evidence cases</span></div>
+        </div>
+      </section>
+
+      <section class="section philosophy shell" data-reveal>
+        <div class="section-kicker">The core separation</div>
+        <blockquote>
+          “Do not prescribe how the model builds the game.
+          <span>Do not let the model decide whether the game works.</span>”
+        </blockquote>
+        <p>
+          The solver owns exploration and implementation. The harness owns the reproducible project
+          boundary, engine lifecycle, execution profile, receipts, and independent evidence.
+        </p>
+      </section>
+
+      <section class="section section-panel" id="pipeline">
+        <div class="shell">
+          <div class="section-heading" data-reveal>
+            <div>
+              <div class="section-kicker">How it works</div>
+              <h2>One open loop. One independent verdict.</h2>
+            </div>
+            <p>
+              The model can inspect, improvise, call the engine, capture feedback, and change
+              strategy. Final acceptance remains outside that loop.
+            </p>
+          </div>
+          <ol class="pipeline" data-reveal>
+            <li>
+              <span class="step-number">01</span>
+              <div class="step-icon" aria-hidden="true">⌁</div>
+              <h3>Brief + project</h3>
+              <p>A game brief or change request enters a disposable full workspace.</p>
+            </li>
+            <li>
+              <span class="step-number">02</span>
+              <div class="step-icon" aria-hidden="true">⌘</div>
+              <h3>Open solver</h3>
+              <p>The model chooses its own files, tools, engine commands, and validation strategy.</p>
+            </li>
+            <li>
+              <span class="step-number">03</span>
+              <div class="step-icon" aria-hidden="true">◇</div>
+              <h3>Game artifact</h3>
+              <p>The output is a complete Unity or Godot project, not a chat answer.</p>
+            </li>
+            <li>
+              <span class="step-number">04</span>
+              <div class="step-icon" aria-hidden="true">◎</div>
+              <h3>Independent replay</h3>
+              <p>A solver-invisible evaluator builds, launches, injects input, and captures evidence.</p>
+            </li>
+            <li>
+              <span class="step-number">05</span>
+              <div class="step-icon" aria-hidden="true">✓</div>
+              <h3>Verified result</h3>
+              <p>Receipts separate solver, engine, host, runtime, evaluator, and gameplay outcomes.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section shell" id="results">
+        <div class="section-heading" data-reveal>
+          <div>
+            <div class="section-kicker">Benchmark results</div>
+            <h2>Fixed tasks, measured competitively.</h2>
+          </div>
+          <p>
+            Frozen suites and paired baselines show how the same open harness performs on repeatable
+            game-development tasks.
+          </p>
+        </div>
+
+        <div class="benchmark-grid">
+          <article class="benchmark-card benchmark-featured" data-reveal>
+            <div class="card-topline">
+              <span>GameCraft-Bench · full140</span>
+              <span class="engine-pill">Godot</span>
+            </div>
+            <div class="score-row">
+              <div>
+                <span class="score">63.15<small>%</small></span>
+                <span class="score-label">GameForge overall</span>
+              </div>
+              <span class="delta">+2.65 pp</span>
+            </div>
+            <div class="comparison" aria-label="GameForge 63.15 percent, published Codex 60.50 percent">
+              <div class="bar-row">
+                <span>GameForge</span>
+                <div class="bar-track"><i style="width: 84%"></i></div>
+                <strong>63.15</strong>
+              </div>
+              <div class="bar-row muted">
+                <span>Published Codex</span>
+                <div class="bar-track"><i style="width: 80%"></i></div>
+                <strong>60.50</strong>
+              </div>
+            </div>
+            <ul class="evidence-list">
+              <li><strong>140 / 140</strong> solver completions</li>
+              <li><strong>140 / 140</strong> official builds</li>
+              <li><strong>732 / 732</strong> official interaction replays</li>
+              <li><strong>0</strong> infrastructure failures or repair passes</li>
+            </ul>
+            <a
+              class="text-link"
+              href="https://github.com/AlbusChen/GameForge-Harness/blob/main/docs/gamecraft-bench-full140-unified-native-open-evaluation-2026-08-28.md"
+            >Read the full protocol <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="benchmark-card" data-reveal>
+            <div class="card-topline">
+              <span>GameDevBench · full332</span>
+              <span class="engine-pill">Godot</span>
+            </div>
+            <div class="score-row">
+              <div>
+                <span class="score">64.16<small>%</small></span>
+                <span class="score-label">213 of 332 tasks passed</span>
+              </div>
+              <span class="delta">+8.73 pp</span>
+            </div>
+            <div class="comparison" aria-label="GameForge 64.16 percent, local Official 55.42 percent">
+              <div class="bar-row">
+                <span>GameForge</span>
+                <div class="bar-track"><i style="width: 86%"></i></div>
+                <strong>64.16</strong>
+              </div>
+              <div class="bar-row muted">
+                <span>Local Official</span>
+                <div class="bar-track"><i style="width: 74%"></i></div>
+                <strong>55.42</strong>
+              </div>
+            </div>
+            <div class="stat-pair">
+              <div><strong>+29</strong><span>tasks passed</span></div>
+              <div><strong>4.87e−6</strong><span>paired McNemar p</span></div>
+            </div>
+            <a class="text-link" href="https://github.com/AlbusChen/GameForge-Harness/blob/main/docs/gamedevbench-full332-evaluation-2026-08-21.md">
+              Open the comparison <span aria-hidden="true">→</span>
+            </a>
+          </article>
+        </div>
+
+        <div class="open-results" data-reveal>
+          <div class="open-intro">
+            <div class="section-kicker">Open-ended results</div>
+            <h2>Broad briefs, without a prescribed path.</h2>
+            <p>
+              Empty or minimal projects. Natural-language game briefs. No required node names,
+              source layout, API, tool order, intermediate gate, or solver workflow.
+            </p>
+          </div>
+          <article class="open-card">
+            <span class="open-count">20 / 20</span>
+            <span class="engine-pill">Godot Open20</span>
+            <h3>Import + runtime hard gates</h3>
+            <p>Twenty genres from empty projects, with blinded quality parity against local Official.</p>
+            <a class="text-link" href="https://github.com/AlbusChen/GameForge-Harness/blob/main/docs/godot-open20-unified-native-open-evaluation-2026-08-24.md">
+              View evidence <span aria-hidden="true">→</span>
+            </a>
+          </article>
+          <article class="open-card">
+            <span class="open-count">20 / 20</span>
+            <span class="engine-pill">Unity Open20</span>
+            <h3>Build + Player hard gates</h3>
+            <p>Twenty genres from minimal projects, with 40 of 40 valid evaluator screenshots.</p>
+            <a class="text-link" href="https://github.com/AlbusChen/GameForge-Harness/blob/main/docs/unity-open-game-creation20-showcase-2026-08-25.md">
+              View evidence <span aria-hidden="true">→</span>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-showcases" id="showcases">
+        <div class="shell">
+          <div class="section-heading" data-reveal>
+            <div>
+              <div class="section-kicker">Playable showcases</div>
+              <h2>Watch generated games respond.</h2>
+            </div>
+            <p>
+              Animated previews link to full MP4 replays, with input traces and machine-readable
+              receipts in the repository.
+            </p>
+          </div>
+          <div class="showcase-grid">
+            <a class="showcase showcase-wide" href="showcases/godot/tower-defense/gameplay.mp4" data-reveal>
+              <img
+                src="showcases/godot/tower-defense/preview.gif"
+                alt="Tower Defense gameplay with placed towers, enemy waves, and combat"
+                width="640"
+                height="360"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="showcase-gradient"></span>
+              <span class="showcase-copy">
+                <small>Godot · engine-input replay</small>
+                <strong>Tower Defense</strong>
+                <em>Placement · waves · combat · speed control</em>
+              </span>
+              <span class="showcase-play" aria-hidden="true">▶</span>
+            </a>
+            <a class="showcase" href="showcases/godot/rhythm-game/gameplay.mp4" data-reveal>
+              <img
+                src="showcases/godot/rhythm-game/preview.gif"
+                alt="Rhythm Game four-lane gameplay with live score and accuracy"
+                width="640"
+                height="360"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="showcase-gradient"></span>
+              <span class="showcase-copy">
+                <small>Godot · engine-input replay</small>
+                <strong>Rhythm Game</strong>
+                <em>Four lanes · score · accuracy</em>
+              </span>
+              <span class="showcase-play" aria-hidden="true">▶</span>
+            </a>
+            <a class="showcase" href="showcases/godot/fishing-challenge/gameplay.mp4" data-reveal>
+              <img
+                src="showcases/godot/fishing-challenge/preview.gif"
+                alt="Fishing Challenge gameplay showing casting, hooking, and reeling"
+                width="640"
+                height="360"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="showcase-gradient"></span>
+              <span class="showcase-copy">
+                <small>Godot · engine-input replay</small>
+                <strong>Fishing Challenge</strong>
+                <em>Cast · hook · reel · tension</em>
+              </span>
+              <span class="showcase-play" aria-hidden="true">▶</span>
+            </a>
+            <a
+              class="showcase showcase-wide"
+              href="showcases/unity/deckbuilding-duel-native/gameplay.mp4"
+              data-reveal
+            >
+              <img
+                src="showcases/unity/deckbuilding-duel-native/preview.gif"
+                alt="Deckbuilding Duel gameplay responding to native mouse and keyboard input"
+                width="640"
+                height="360"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="showcase-gradient"></span>
+              <span class="showcase-copy">
+                <small>Unity · OS-native input replay</small>
+                <strong>Deckbuilding Duel</strong>
+                <em>Cards · shield · damage · turn progression</em>
+              </span>
+              <span class="showcase-play" aria-hidden="true">▶</span>
+            </a>
+            <a class="showcase" href="showcases/godot/brick-breaker/gameplay.mp4" data-reveal>
+              <img
+                src="showcases/godot/brick-breaker/preview.gif"
+                alt="Brick Breaker gameplay with paddle control, collisions, score, and lives"
+                width="640"
+                height="360"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="showcase-gradient"></span>
+              <span class="showcase-copy">
+                <small>Godot · engine-input replay</small>
+                <strong>Brick Breaker</strong>
+                <em>Paddle · collisions · score · lives</em>
+              </span>
+              <span class="showcase-play" aria-hidden="true">▶</span>
+            </a>
+            <a class="showcase" href="showcases/godot/arena-survivor/gameplay.mp4" data-reveal>
+              <img
+                src="showcases/godot/arena-survivor/preview.gif"
+                alt="Arena Survivor gameplay with movement, aiming, firing, and enemy progression"
+                width="640"
+                height="360"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="showcase-gradient"></span>
+              <span class="showcase-copy">
+                <small>Godot · engine-input replay</small>
+                <strong>Arena Survivor</strong>
+                <em>Movement · aim · fire · dash</em>
+              </span>
+              <span class="showcase-play" aria-hidden="true">▶</span>
+            </a>
+          </div>
+          <div class="center-action">
+            <a class="button button-secondary" href="https://github.com/AlbusChen/GameForge-Harness/blob/main/showcases/README.md">
+              Browse all 13 evidence cases <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section shell">
+        <div class="section-heading" data-reveal>
+          <div>
+            <div class="section-kicker">A general harness</div>
+            <h2>Freedom where it helps. Boundaries where they matter.</h2>
+          </div>
+          <p>
+            Solvers, engines, and authority profiles are independent choices behind one game
+            workspace and evidence contract.
+          </p>
+        </div>
+        <div class="capability-grid">
+          <article class="capability-card" data-reveal>
+            <span class="capability-index">01</span>
+            <h3>Replaceable solvers</h3>
+            <p>Use a saved Codex subscription login or a standard OpenAI Responses API tool loop.</p>
+            <div class="tag-row"><span>Codex</span><span>Responses API</span></div>
+          </article>
+          <article class="capability-card" data-reveal>
+            <span class="capability-index">02</span>
+            <h3>Thin engine adapters</h3>
+            <p>Unity and Godot share workspace, budget, receipt, backend, and result contracts.</p>
+            <div class="tag-row"><span>Unity</span><span>Godot</span><span>More planned</span></div>
+          </article>
+          <article class="capability-card" data-reveal>
+            <span class="capability-index">03</span>
+            <h3>Explicit authority</h3>
+            <p>Choose maximum native freedom, supervised engine transport, or external isolation.</p>
+            <div class="tag-row"><span>native-open</span><span>supervised</span><span>isolated</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section quick-start" id="quick-start">
+        <div class="shell quick-grid">
+          <div data-reveal>
+            <div class="section-kicker">Quick start</div>
+            <h2>From clone to an open game task.</h2>
+            <p>
+              Bring Python 3.11 or 3.12, uv, Git, and the engine you want to use. Authentication can
+              come from a local Codex login or an API key kept in the host environment.
+            </p>
+            <div class="quick-links">
+              <a class="text-link" href="https://github.com/AlbusChen/GameForge-Harness/blob/main/docs/AUTHENTICATION_AND_EXECUTION.md">
+                Authentication + execution <span aria-hidden="true">→</span>
+              </a>
+              <a class="text-link" href="https://github.com/AlbusChen/GameForge-Harness/blob/main/docs/architecture.md">
+                Architecture <span aria-hidden="true">→</span>
+              </a>
+              <a class="text-link" href="https://github.com/AlbusChen/GameForge-Harness/blob/main/docs/security.md">
+                Security model <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+          <div class="terminal" data-reveal>
+            <div class="terminal-bar">
+              <span><i></i><i></i><i></i></span>
+              <span>Terminal</span>
+              <button class="copy-button" type="button" data-copy-target="install-code">Copy</button>
+            </div>
+            <pre id="install-code"><code><span class="prompt">$</span> git clone https://github.com/AlbusChen/GameForge-Harness.git
+<span class="prompt">$</span> cd GameForge-Harness
+<span class="prompt">$</span> uv sync --locked --all-groups
+<span class="prompt">$</span> cp config/model.subscription.example.yaml \
+    config/model.local.yaml
+<span class="prompt">$</span> uv run gameforge run-game-workspace \
+    --project /path/to/game \
+    --engine auto \
+    --request "Add a playable dash mechanic." \
+    --model-profile config/model.local.yaml</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="section shell scope" data-reveal>
+        <div>
+          <div class="section-kicker">Current scope</div>
+          <h2>Evidence with named boundaries.</h2>
+        </div>
+        <ul>
+          <li>Unity and Godot are fully tested today; additional engine adapters are planned.</li>
+          <li>Automated gates cannot prove subjective fun or commercial readiness.</li>
+          <li>Unity Open20 demonstrates delivery breadth, not twenty complete human playthroughs.</li>
+          <li>Strong isolation defines a fail-closed provider contract; no VM provider is bundled yet.</li>
+        </ul>
+      </section>
+
+      <section class="cta">
+        <div class="shell cta-inner" data-reveal>
+          <div>
+            <div class="section-kicker">Build openly. Verify independently.</div>
+            <h2>Bring a solver, an engine, and a game worth testing.</h2>
+          </div>
+          <div class="cta-actions">
+            <a class="button button-primary" href="https://github.com/AlbusChen/GameForge-Harness">
+              Explore the repository <span aria-hidden="true">↗</span>
+            </a>
+            <a class="button button-secondary" href="https://github.com/AlbusChen/GameForge-Harness/blob/main/README.zh-CN.md">中文 README</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="shell footer-inner">
+        <a class="brand" href="#top">
+          <span class="brand-mark" aria-hidden="true">GF</span>
+          <span>GameForge Harness</span>
+        </a>
+        <p>Open execution for game agents. Independent proof for the games they deliver.</p>
+        <div>
+          <a href="https://github.com/AlbusChen/GameForge-Harness">GitHub</a>
+          <a href="https://github.com/AlbusChen/GameForge-Harness/blob/main/docs/harness-evaluation-index.md">Evaluation</a>
+          <a href="https://github.com/AlbusChen/GameForge-Harness/blob/main/SECURITY.md">Security</a>
+          <a href="https://github.com/AlbusChen/GameForge-Harness/blob/main/LICENSE">Apache-2.0</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

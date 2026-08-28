@@ -13,6 +13,7 @@
 
 <p align="center">
   <a href="README.zh-CN.md">简体中文</a> ·
+  <a href="https://albuschen.github.io/GameForge-Harness/">Project page</a> ·
   <a href="#results">Results</a> ·
   <a href="#playable-showcases">Showcases</a> ·
   <a href="#quick-start">Quick start</a> ·
@@ -326,8 +327,6 @@ or container runtime. See [Security](SECURITY.md) and the [detailed model](docs/
 
 - Unity and Godot are currently fully tested; support for engines such as Unreal is planned.
 - The project does not claim that automated checks can prove a game is fun or commercially ready.
-- GameCraft 63.15% still needs official API-judge rescoring for strict leaderboard comparability.
-- GameDevBench correctness improved at a substantial token/time cost relative to local Official.
 - Unity20 proves build/player delivery breadth, not 20 complete real-input playthroughs.
 - A concrete strong-isolation provider is not bundled yet.
 
