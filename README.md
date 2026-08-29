@@ -361,3 +361,23 @@ layers; GameForge focuses on the game-project boundary and independent engine/ru
 ## License
 
 Apache License 2.0. See [LICENSE](LICENSE).
+
+## Citation
+
+If you use GameForge Harness or its evaluation fixtures, please cite the versioned software release:
+
+> Huang, C. (2026). *GameForge Harness: Open execution and independent verification for game
+> agents* (Version 0.1.0) [Computer software]. GitHub.
+> https://github.com/AlbusChen/GameForge-Harness/releases/tag/v0.1.0
+
+```bibtex
+@misc{huang2026gameforge,
+  author       = {Huang, Chen},
+  title        = {GameForge Harness: Open Execution and Independent Verification for Game Agents},
+  year         = {2026},
+  month        = aug,
+  howpublished = {GitHub},
+  note         = {Version 0.1.0, computer software},
+  url          = {https://github.com/AlbusChen/GameForge-Harness/releases/tag/v0.1.0}
+}
+```
