@@ -244,3 +244,23 @@ uv build
 ```
 
 项目采用 Apache-2.0 许可证，见 [LICENSE](LICENSE)。
+
+## 引用
+
+如果你使用了 GameForge Harness 或其中的评测 fixtures，请引用对应的软件版本：
+
+> Huang, C. (2026). *GameForge Harness: Open execution and independent verification for game
+> agents* (Version 0.1.0) [Computer software]. GitHub.
+> https://github.com/AlbusChen/GameForge-Harness/releases/tag/v0.1.0
+
+```bibtex
+@misc{huang2026gameforge,
+  author       = {Huang, Chen},
+  title        = {GameForge Harness: Open Execution and Independent Verification for Game Agents},
+  year         = {2026},
+  month        = aug,
+  howpublished = {GitHub},
+  note         = {Version 0.1.0, computer software},
+  url          = {https://github.com/AlbusChen/GameForge-Harness/releases/tag/v0.1.0}
+}
+```

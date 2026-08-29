@@ -3,10 +3,11 @@ message: "If you use this harness or its evaluation fixtures, please cite this r
 title: "GameForge Harness: open execution and independent verification for game agents"
 type: software
 authors:
-  - family-names: Chen
-    given-names: Albus
+  - family-names: Huang
+    given-names: Chen
     alias: AlbusChen
 version: 0.1.0
-date-released: 2026-08-05
+date-released: 2026-08-28
 repository-code: "https://github.com/AlbusChen/GameForge-Harness"
+url: "https://github.com/AlbusChen/GameForge-Harness/releases/tag/v0.1.0"
 license: Apache-2.0
