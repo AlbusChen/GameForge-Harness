@@ -248,31 +248,17 @@ uv build
 
 ## 引用
 
-如果在研究中使用 GameForge，请引用[技术报告](docs/gameforge-report.pdf)：
+如果在研究中使用 GameForge，请引用[预印本](docs/gameforge-report.pdf)：
 
 > Huang, C. (2026). *GameForge: Open-Ended Game Development with Independent Artifact Verification*.
-> Technical report, Singapore University of Technology and Design.
+> Preprint.
 
 ```bibtex
-@techreport{huang2026gameforge,
+@misc{huang2026gameforge,
   author      = {Huang, Chen},
   title       = {{GameForge}: Open-Ended Game Development with Independent Artifact Verification},
-  institution = {Singapore University of Technology and Design},
   year        = {2026},
+  note        = {Preprint},
   url         = {https://github.com/AlbusChen/GameForge-Harness/blob/main/docs/gameforge-report.pdf}
-}
-```
-
-如需明确实验所用的软件版本，可另外引用 [v0.1.0 软件发布版](https://github.com/AlbusChen/GameForge-Harness/releases/tag/v0.1.0)：
-
-```bibtex
-@misc{huang2026gameforge_software,
-  author       = {Huang, Chen},
-  title        = {GameForge Harness: Open Execution and Independent Verification for Game Agents},
-  year         = {2026},
-  month        = aug,
-  howpublished = {GitHub},
-  note         = {Version 0.1.0, computer software},
-  url          = {https://github.com/AlbusChen/GameForge-Harness/releases/tag/v0.1.0}
 }
 ```
