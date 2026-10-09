@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this harness or its evaluation fixtures, please cite this repository."
+message: "If you use GameForge in your research, please cite the technical report below. Cite the versioned software release as well when needed for reproducibility."
 title: "GameForge Harness: open execution and independent verification for game agents"
 type: software
 authors:
@@ -11,3 +11,13 @@ date-released: 2026-08-28
 repository-code: "https://github.com/AlbusChen/GameForge-Harness"
 url: "https://github.com/AlbusChen/GameForge-Harness/releases/tag/v0.1.0"
 license: Apache-2.0
+preferred-citation:
+  type: report
+  authors:
+    - family-names: Huang
+      given-names: Chen
+  title: "GameForge: Open-Ended Game Development with Independent Artifact Verification"
+  institution:
+    name: "Singapore University of Technology and Design"
+  year: 2026
+  url: "https://github.com/AlbusChen/GameForge-Harness/blob/main/docs/gameforge-report.pdf"

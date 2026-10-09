@@ -14,6 +14,7 @@
 <p align="center">
   <a href="README.zh-CN.md">简体中文</a> ·
   <a href="https://albuschen.github.io/GameForge-Harness/">Project page</a> ·
+  <a href="docs/gameforge-report.pdf">Paper (PDF)</a> ·
   <a href="#results">Results</a> ·
   <a href="#playable-showcases">Showcases</a> ·
   <a href="#quick-start">Quick start</a> ·
@@ -364,14 +365,25 @@ Apache License 2.0. See [LICENSE](LICENSE).
 
 ## Citation
 
-If you use GameForge Harness or its evaluation fixtures, please cite the versioned software release:
+If you use GameForge in your research, please cite the [technical report](docs/gameforge-report.pdf):
 
-> Huang, C. (2026). *GameForge Harness: Open execution and independent verification for game
-> agents* (Version 0.1.0) [Computer software]. GitHub.
-> https://github.com/AlbusChen/GameForge-Harness/releases/tag/v0.1.0
+> Huang, C. (2026). *GameForge: Open-Ended Game Development with Independent Artifact Verification*.
+> Technical report, Singapore University of Technology and Design.
 
 ```bibtex
-@misc{huang2026gameforge,
+@techreport{huang2026gameforge,
+  author      = {Huang, Chen},
+  title       = {{GameForge}: Open-Ended Game Development with Independent Artifact Verification},
+  institution = {Singapore University of Technology and Design},
+  year        = {2026},
+  url         = {https://github.com/AlbusChen/GameForge-Harness/blob/main/docs/gameforge-report.pdf}
+}
+```
+
+For reproducibility of the software version, you can additionally cite the [v0.1.0 release](https://github.com/AlbusChen/GameForge-Harness/releases/tag/v0.1.0):
+
+```bibtex
+@misc{huang2026gameforge_software,
   author       = {Huang, Chen},
   title        = {GameForge Harness: Open Execution and Independent Verification for Game Agents},
   year         = {2026},

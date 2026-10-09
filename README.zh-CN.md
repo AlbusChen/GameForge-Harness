@@ -7,6 +7,7 @@
 <p align="center">
   <a href="README.md">English</a> ·
   <a href="https://albuschen.github.io/GameForge-Harness/">项目主页</a> ·
+  <a href="docs/gameforge-report.pdf">论文（PDF）</a> ·
   <a href="#实验结果">实验结果</a> ·
   <a href="#可玩案例">可玩案例</a> ·
   <a href="#快速开始">快速开始</a> ·
@@ -247,14 +248,25 @@ uv build
 
 ## 引用
 
-如果你使用了 GameForge Harness 或其中的评测 fixtures，请引用对应的软件版本：
+如果在研究中使用 GameForge，请引用[技术报告](docs/gameforge-report.pdf)：
 
-> Huang, C. (2026). *GameForge Harness: Open execution and independent verification for game
-> agents* (Version 0.1.0) [Computer software]. GitHub.
-> https://github.com/AlbusChen/GameForge-Harness/releases/tag/v0.1.0
+> Huang, C. (2026). *GameForge: Open-Ended Game Development with Independent Artifact Verification*.
+> Technical report, Singapore University of Technology and Design.
 
 ```bibtex
-@misc{huang2026gameforge,
+@techreport{huang2026gameforge,
+  author      = {Huang, Chen},
+  title       = {{GameForge}: Open-Ended Game Development with Independent Artifact Verification},
+  institution = {Singapore University of Technology and Design},
+  year        = {2026},
+  url         = {https://github.com/AlbusChen/GameForge-Harness/blob/main/docs/gameforge-report.pdf}
+}
+```
+
+如需明确实验所用的软件版本，可另外引用 [v0.1.0 软件发布版](https://github.com/AlbusChen/GameForge-Harness/releases/tag/v0.1.0)：
+
+```bibtex
+@misc{huang2026gameforge_software,
   author       = {Huang, Chen},
   title        = {GameForge Harness: Open Execution and Independent Verification for Game Agents},
   year         = {2026},
